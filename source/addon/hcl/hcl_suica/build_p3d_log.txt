@@ -1,0 +1,20 @@
+UNIFORME template hand texture/material kept: ('a3\\characters_f\\heads\\data\\hl_white_bald_co.tga', 'a3\\characters_f\\heads\\data\\hl_white_bald_muscular.rvmat')
+PESOS hcl_fr_pesos.blend: HCL_U_Fr1812_01_LOD0
+UNIFORME HCL_U_Fr1812_01_LOD0: Res 1 12459 faces (11 proxy faces from the template); View Pilot 12458 faces (10 proxy); 67 selections of bones; hand faces 2560
+P3D hcl_u_suica1812.p3d: 9 LODs 1:6791p/12459f, 1100:6788p/12458f, 10000:329p/607f, 10010:139p/264f, 1e+13:42p/54f, 1e+15:44p/4f, 2e+15:1p/0f, 5e+15:38p/0f, 7e+15:1000p/1770f
+PESOS hcl_fr_elite_pesos.blend: HCL_U_Fr1812_Elite_LOD0
+UNIFORME HCL_U_Fr1812_Elite_LOD0: Res 1 16425 faces (11 proxy faces from the template); View Pilot 16424 faces (10 proxy); 67 selections of bones; hand faces 2560
+P3D hcl_u_suica1812_elite.p3d: 9 LODs 1:9035p/16425f, 1100:9032p/16424f, 10000:329p/607f, 10010:139p/264f, 1e+13:42p/54f, 1e+15:44p/4f, 2e+15:1p/0f, 5e+15:38p/0f, 7e+15:1000p/1770f
+BARRETINA fuzileiro_1a_comp: de hcl_shako_fr_texturas_v3.blend
+BARRETINA fuzileiro_1a_comp: 14208 triangulos (Res 2: 5683), altura 0.569..0.989, sombra 734 triangulos
+P3D hcl_h_suica_fuzileiro_1a_comp.p3d: 5 LODs 1:7585p/14208f, 2:3216p/5683f, 1100:0p/0f, 10000:369p/734f, 1e+13:0p/0f
+BARRETINA voltigeur_gala: de hcl_shako_fr_texturas_v3.blend
+BARRETINA voltigeur_gala: 26258 triangulos (Res 2: 10503), altura 0.569..1.334, sombra 554 triangulos
+P3D hcl_h_suica_voltigeur_gala.p3d: 5 LODs 1:19238p/26258f, 2:10099p/10503f, 1100:0p/0f, 10000:279p/554f, 1e+13:0p/0f
+BARRETINA voltigeur_campanha: de hcl_shako_fr_texturas_v3.blend
+BARRETINA voltigeur_campanha: 14152 triangulos (Res 2: 5659), altura 0.569..1.003, sombra 700 triangulos
+P3D hcl_h_suica_voltigeur_campanha.p3d: 5 LODs 1:7557p/14152f, 2:3199p/5659f, 1100:0p/0f, 10000:352p/700f, 1e+13:0p/0f
+BARRETINA bonnet_granadeiro_gala: 46154 triangulos (Res 2: 22266), altura 0.671..1.334, sombra 430 triangulos
+P3D hcl_h_suica_bonnet_granadeiro_gala.p3d: 5 LODs 1:45716p/46154f, 2:18866p/22266f, 1100:0p/0f, 10000:217p/430f, 1e+13:0p/0f
+BARRETINA bonnet_granadeiro_campanha: 32800 triangulos (Res 2: 8936), altura 0.670..1.101, sombra 652 triangulos
+P3D hcl_h_suica_bonnet_granadeiro_campanha.p3d: 5 LODs 1:31502p/32800f, 2:4688p/8936f, 1100:0p/0f, 10000:328p/652f, 1e+13:0p/0f
