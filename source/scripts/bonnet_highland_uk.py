@@ -533,13 +533,13 @@ def fronds(tag, root, seed=11):
                     continue
                 emit(pts, n, d, W)
                 count["pena"] += 1
-    # tails on the wearer's right side (theta -150 .. -60 deg), rooted on the lower third of the mass
-    for i in range(9):
+    # tails on the wearer's right side (theta -150 .. -60 deg), rooted on the lower third of the mass, down to the ear
+    for i in range(7):
         th = math.radians(-150 + 90 * (i + rnd.uniform(0.2, 0.8)) / 9)
         s = rnd.uniform(0.18, 0.35)
-        L = rnd.uniform(0.16, 0.22)
-        pts, n, d = path(th, s, L, rnd.uniform(0.006, 0.012), rnd.uniform(0.02, 0.05), rnd.uniform(-0.2, 0.2))
-        emit(pts, n, d, rnd.uniform(0.034, 0.046))
+        L = rnd.uniform(0.11, 0.14)
+        pts, n, d = path(th, s, L, rnd.uniform(0.008, 0.014), rnd.uniform(0.008, 0.020), rnd.uniform(-0.2, 0.2))
+        emit(pts, n, d, rnd.uniform(0.040, 0.052))
         count["cauda"] += 1
     finish(bm, f"{tag}_pelo", "pelo", root, keep_normals=True)
     return f"{count['pena']} penas + {count['cauda']} caudas"
