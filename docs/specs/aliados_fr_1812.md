@@ -6,7 +6,7 @@ Versão 0.1, 2026-10-13. Pedido do usuário: *"agora adiciona os aliados frances
 3. Reino da Itália e Reino de Nápoles;
 4. Suíços a serviço da França (os 4 regimentos de casaca vermelha).
 
-**Estado:** ficha para aprovação. Nada foi modelado. A ordem de trabalho e o primeiro lote dependem das decisões A1–A6 (§8).
+**Estado (2026-10-13 18:56):** decisões A1–A4 e A6 respondidas (§8). **Suíços feitos**: `hcl_suica.pbo` montado e verificado fora do jogo (`docs/reports/suica_1812.md`). Próximo: Ducado de Varsóvia (falta a A5).
 
 Legenda: ✅ fonte lida (página aberta nesta fase) · 🔶 provável (fonte secundária, de hobby ou de loja; ou só citada, sem leitura) · ❓ incerto ou com fontes em conflito · 🎮 só visto na arte do mod (atlas Reto)
 
