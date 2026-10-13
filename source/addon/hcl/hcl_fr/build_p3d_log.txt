@@ -41,12 +41,12 @@ P3D hcl_h_fr_ligeira_carabineiro_gala.p3d: 5 LODs 1:18944p/25654f, 2:9966p/10261
 BARRETINA ligeira_voltigeur_gala: de hcl_shako_fr_texturas_v3.blend
 BARRETINA ligeira_voltigeur_gala: 25534 triangulos (Res 2: 10213), altura 0.569..1.334, sombra 592 triangulos
 P3D hcl_h_fr_ligeira_voltigeur_gala.p3d: 5 LODs 1:18884p/25534f, 2:9948p/10213f, 1100:0p/0f, 10000:298p/592f, 1e+13:0p/0f
-BARRETINA bonnet_granadeiro_gala: 31568 triangulos (Res 2: 15452), altura 0.663..1.333, sombra 330 triangulos
-P3D hcl_h_fr_bonnet_granadeiro_gala.p3d: 5 LODs 1:32889p/31568f, 2:12810p/15452f, 1100:0p/0f, 10000:167p/330f, 1e+13:0p/0f
-BARRETINA bonnet_granadeiro_campanha: 24630 triangulos (Res 2: 8562), altura 0.663..1.110, sombra 278 triangulos
-P3D hcl_h_fr_bonnet_granadeiro_campanha.p3d: 5 LODs 1:24378p/24630f, 2:4365p/8562f, 1100:0p/0f, 10000:141p/278f, 1e+13:0p/0f
-BARRETINA bonnet_cacador_gala: 31306 triangulos (Res 2: 13210), altura 0.663..1.334, sombra 334 triangulos
-P3D hcl_h_fr_bonnet_cacador_gala.p3d: 5 LODs 1:34235p/31306f, 2:11687p/13210f, 1100:0p/0f, 10000:169p/334f, 1e+13:0p/0f
+BARRETINA bonnet_granadeiro_gala: 46154 triangulos (Res 2: 22266), altura 0.671..1.334, sombra 430 triangulos
+P3D hcl_h_fr_bonnet_granadeiro_gala.p3d: 5 LODs 1:45716p/46154f, 2:18866p/22266f, 1100:0p/0f, 10000:217p/430f, 1e+13:0p/0f
+BARRETINA bonnet_granadeiro_campanha: 32800 triangulos (Res 2: 8936), altura 0.670..1.101, sombra 652 triangulos
+P3D hcl_h_fr_bonnet_granadeiro_campanha.p3d: 5 LODs 1:31502p/32800f, 2:4688p/8936f, 1100:0p/0f, 10000:328p/652f, 1e+13:0p/0f
+BARRETINA bonnet_cacador_gala: 45986 triangulos (Res 2: 20178), altura 0.671..1.334, sombra 440 triangulos
+P3D hcl_h_fr_bonnet_cacador_gala.p3d: 5 LODs 1:46842p/45986f, 2:17820p/20178f, 1100:0p/0f, 10000:222p/440f, 1e+13:0p/0f
 EQUIPAMENTO HCL_V_Fr1812_Correame_LOD0: producao, UV e textura hcl_v_fr1812_correame; 3176 triangulos; ossos ['LeftArm', 'LeftShoulder', 'LeftUpLeg', 'Pelvis', 'RightArm', 'RightShoulder', 'RightUpLeg', 'Spine', 'Spine1', 'Spine2', 'Spine3', 'neck']
 P3D hcl_v_fr1812_correame.p3d: 2 LODs 1:1627p/3176f, 1e+13:0p/0f
 EQUIPAMENTO HCL_B_Fr1812_Havresac_LOD0: producao, UV e textura hcl_b_fr1812_havresac; 3776 triangulos; ossos ['LeftArm', 'LeftShoulder', 'Pelvis', 'RightArm', 'RightShoulder', 'Spine', 'Spine1', 'Spine2', 'Spine3', 'neck']

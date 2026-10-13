@@ -82,3 +82,34 @@ As medidas do chapéu de pele foram refeitas pelas fontes listadas em `barretina
 | Mechas | ~1.300 curtas + ~1.360 longas |
 
 **Atenção, decisão G7 (nova):** as fontes dizem que a **cruz** do topo é do modelo **1804–1807**. De **1808 a 1815**, época do mod, o topo levava uma **granada branca**, como a arte do mod. A cruz foi mantida por escolha do usuário; trocar pela granada é só mudar a peça do topo.
+
+## 5. Realismo v5 (2026-10-13, pedido: "agora de mais realismo na barretina da velha guarda")
+
+| Item | Antes (v4) | Agora (v5) |
+|---|---|---|
+| Placa | Relevo tirado da arte do mod (180 × 72 px, ~1,6 px/mm na textura): virava uma mancha | Relevo redesenhado a 8 px/mm (`placa_guarda_relevo.py`): borda com cordão de bolinhas, águia *à l'antique* com penas sobrepostas, sobre o raio, duas granadas com chama, cártula na ponta. 3,2× mais resolução no atlas |
+| Contorno da placa | Traço em degraus, malha de 19,9 mil faces | Contorno suavizado, malha uniforme de 1,9 mil faces |
+| Pelo | Pontas levantadas para fora (aspecto de palha); pelo cobrindo os olhos | Mechas em curva, ponta deitada sobre a massa. Na testa o pelo termina na faixa; dos lados e atrás passa dela no máximo 2 cm. Franja irregular sobre a placa; cantos da placa cobertos |
+| Topo vermelho | Saltado acima do pelo | Mais rente; o pelo cobre a borda |
+| Cocar, pluma, trança | Cocar liso; pluma de penas largas; trança quebrada perto do cocar | Cocar plissado; pluma v4 de penas menores e densas; trança inteira até o cocar |
+
+**Desenho da placa:**
+- 🎮 a disposição da arte do mod: águia de asas abertas entre duas granadas, cártula na ponta;
+- 🔶 o desenho de cada detalhe;
+- não há coroa sobre a águia, porque a arte do mod não mostra uma com clareza (não inventada).
+
+**Triângulos:**
+
+| Chapéu | Res 1 | Res 2 |
+|---|---|---|
+| Gala | 46.154 | 22.266 |
+| Campanha | 32.800 | 8.936 |
+| Caçador | 45.986 | 20.178 |
+
+São mais pesados que na v4 (31,6 mil na gala); veja a decisão G6.
+
+**`hcl_fr.pbo`** de 18:01, com 144,9 MB:
+- 82 PAA convertidos, 0 falhas;
+- 120 referências, nenhuma faltando no PBO.
+
+Renders em `docs/reports/img/v5_guarda/`. **Nada foi visto no jogo.**
