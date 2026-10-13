@@ -1,0 +1,15 @@
+﻿
+UV out-of-bounds corners: 0
+UVISLAND 0 HCL_couro                texel=   1386 px/m  faces=1000  mirrored_faces=0
+UVISLAND 1 HCL_couro_envernizado    texel=   2003 px/m  faces=442  mirrored_faces=0
+UVISLAND 2 HCL_tecido_branco        texel=   4040 px/m  faces=308  mirrored_faces=0
+UVISLAND 3 HCL_la_amarela           texel=   3977 px/m  faces=80  mirrored_faces=0
+UVISLAND 4 HCL_latao                texel=   3676 px/m  faces=64  mirrored_faces=16
+UVISLAND 5 HCL_latao                texel=   3676 px/m  faces=64  mirrored_faces=16
+UVISLAND 6 HCL_latao                texel=   2076 px/m  faces=758  mirrored_faces=390
+UVISLAND 7 HCL_couro                texel=   1794 px/m  faces=288  mirrored_faces=0
+UV overlaps between islands: 0
+UV self-overlaps inside islands: 0
+OK layout C:\Users\lucas\Documents\HistoricalClothing\docs\reports\img\uv\shako_uv_layout.png
+
+

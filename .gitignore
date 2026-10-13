@@ -1,0 +1,20 @@
+# Historical Clothing: only the sources that are written by hand go in the repository.
+# Generated or heavy files stay on disk only (they are rebuilt by the scripts in source/scripts):
+release/
+work/
+docs/reports/img/
+*.pbo
+*.paa
+*.p3d
+*.blend
+*.blend1
+*.png
+*.jpg
+*.tga
+*.bisign
+*.bikey
+*.biprivatekey
+*.log
+__pycache__/
+*.pyc
+# exception: small reference images that the docs need can be added with git add -f

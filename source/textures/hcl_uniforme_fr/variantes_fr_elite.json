@@ -1,0 +1,602 @@
+{
+ "Granadeiro_F01": {
+  "prefixo": "hcl_u_fr1812_elite_gr01",
+  "viras_externas": true,
+  "ornamento": "granada",
+  "nome": "Linha, granadeiro: casaca F01 com dragonas vermelhas e granadas vermelhas nas viradas",
+  "mod": "FranceINF_diffuse c0 r3: dragonas vermelhas (lingua com borda e passante amarelos), granadas vermelhas nas viradas; gola, punhos e lapelas como F01",
+  "curto": "granadeiro, dragonas vermelhas",
+  "cores": {
+   "casaca": [
+    0.08,
+    0.12,
+    0.3
+   ],
+   "gola": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "punho": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "gola_debrum": [
+    0.86,
+    0.85,
+    0.8
+   ],
+   "punho_debrum": [
+    0.86,
+    0.85,
+    0.8
+   ],
+   "lapela": [
+    0.86,
+    0.85,
+    0.8
+   ],
+   "lapela_debrum": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "viras": [
+    0.86,
+    0.85,
+    0.8
+   ],
+   "viras_debrum": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "pala": [
+    0.86,
+    0.85,
+    0.8
+   ],
+   "debrum": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "platina": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "platina_borda": [
+    0.82,
+    0.64,
+    0.18
+   ],
+   "botoes": [
+    0.8,
+    0.62,
+    0.28
+   ],
+   "calca": [
+    0.84,
+    0.83,
+    0.78
+   ],
+   "polaina": [
+    0.045,
+    0.045,
+    0.045
+   ],
+   "sapato": [
+    0.03,
+    0.028,
+    0.025
+   ],
+   "sola": [
+    0.2,
+    0.13,
+    0.08
+   ],
+   "dragona": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "dragona_meialua": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "dragona_passante": [
+    0.82,
+    0.64,
+    0.18
+   ],
+   "ornamento_cor": [
+    0.62,
+    0.07,
+    0.07
+   ]
+  }
+ },
+ "Voltigeur_F01": {
+  "prefixo": "hcl_u_fr1812_elite_vo01",
+  "viras_externas": true,
+  "ornamento": "corneta",
+  "nome": "Linha, voltigeur: casaca F01 com gola camurca debruada de vermelho, dragonas verdes de meia-lua amarela e cornetas amarelas nas viradas",
+  "mod": "FranceINF_diffuse c2 r3: gola amarela (camurca) com debrum vermelho, dragonas verdes com meia-lua e passante amarelos, cornetas amarelas nas viradas",
+  "curto": "voltigeur, dragonas verdes",
+  "cores": {
+   "casaca": [
+    0.08,
+    0.12,
+    0.3
+   ],
+   "gola": [
+    0.84,
+    0.68,
+    0.24
+   ],
+   "punho": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "gola_debrum": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "punho_debrum": [
+    0.86,
+    0.85,
+    0.8
+   ],
+   "lapela": [
+    0.86,
+    0.85,
+    0.8
+   ],
+   "lapela_debrum": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "viras": [
+    0.86,
+    0.85,
+    0.8
+   ],
+   "viras_debrum": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "pala": [
+    0.86,
+    0.85,
+    0.8
+   ],
+   "debrum": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "platina": [
+    0.07,
+    0.26,
+    0.11
+   ],
+   "platina_borda": [
+    0.04,
+    0.15,
+    0.06
+   ],
+   "botoes": [
+    0.8,
+    0.62,
+    0.28
+   ],
+   "calca": [
+    0.84,
+    0.83,
+    0.78
+   ],
+   "polaina": [
+    0.045,
+    0.045,
+    0.045
+   ],
+   "sapato": [
+    0.03,
+    0.028,
+    0.025
+   ],
+   "sola": [
+    0.2,
+    0.13,
+    0.08
+   ],
+   "dragona": [
+    0.07,
+    0.26,
+    0.11
+   ],
+   "dragona_meialua": [
+    0.82,
+    0.64,
+    0.18
+   ],
+   "dragona_passante": [
+    0.82,
+    0.64,
+    0.18
+   ],
+   "ornamento_cor": [
+    0.82,
+    0.64,
+    0.18
+   ]
+  }
+ },
+ "Ligeira_Cacador": {
+  "prefixo": "hcl_u_fr1812_elite_lc01",
+  "viras_externas": true,
+  "ornamento": "corneta",
+  "nome": "Infantaria ligeira, cacadores: casaca azul, gola vermelha, dragonas verdes com meia-lua vermelha, cornetas",
+  "mod": "FranceINF_diffuse c0 r2 (Reto): casaca azul, lapelas azuis debruadas de branco, gola vermelha debruada de branco (voltigeur: camurca debruada de vermelho), dragonas verde / vermelha com borda de metal branco, botoes de metal branco, cornetas e granadas. Calca azul e cor dos ornamentos: suposicao",
+  "curto": "ligeira, cacador",
+  "cores": {
+   "casaca": [
+    0.08,
+    0.12,
+    0.3
+   ],
+   "gola": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "gola_debrum": [
+    0.86,
+    0.85,
+    0.8
+   ],
+   "punho": [
+    0.08,
+    0.12,
+    0.3
+   ],
+   "punho_debrum": [
+    0.86,
+    0.85,
+    0.8
+   ],
+   "pala": [
+    0.08,
+    0.12,
+    0.3
+   ],
+   "lapela": [
+    0.08,
+    0.12,
+    0.3
+   ],
+   "lapela_debrum": [
+    0.86,
+    0.85,
+    0.8
+   ],
+   "viras": [
+    0.08,
+    0.12,
+    0.3
+   ],
+   "viras_debrum": [
+    0.86,
+    0.85,
+    0.8
+   ],
+   "debrum": [
+    0.86,
+    0.85,
+    0.8
+   ],
+   "botoes": [
+    0.74,
+    0.75,
+    0.76
+   ],
+   "calca": [
+    0.1,
+    0.13,
+    0.28
+   ],
+   "polaina": [
+    0.045,
+    0.045,
+    0.045
+   ],
+   "sapato": [
+    0.03,
+    0.028,
+    0.025
+   ],
+   "sola": [
+    0.2,
+    0.13,
+    0.08
+   ],
+   "ornamento_cor": [
+    0.86,
+    0.85,
+    0.8
+   ],
+   "platina": [
+    0.05,
+    0.3,
+    0.12
+   ],
+   "platina_borda": [
+    0.74,
+    0.75,
+    0.76
+   ],
+   "dragona": [
+    0.05,
+    0.3,
+    0.12
+   ],
+   "dragona_meialua": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "dragona_passante": [
+    0.74,
+    0.75,
+    0.76
+   ]
+  }
+ },
+ "Ligeira_Carabineiro": {
+  "prefixo": "hcl_u_fr1812_elite_lk01",
+  "viras_externas": true,
+  "ornamento": "granada",
+  "nome": "Infantaria ligeira, carabineiros: casaca azul, gola vermelha, dragonas vermelhas, granadas",
+  "mod": "FranceINF_diffuse c0 r2 (Reto): casaca azul, lapelas azuis debruadas de branco, gola vermelha debruada de branco (voltigeur: camurca debruada de vermelho), dragonas verde / vermelha com borda de metal branco, botoes de metal branco, cornetas e granadas. Calca azul e cor dos ornamentos: suposicao",
+  "curto": "ligeira, carabineiro",
+  "cores": {
+   "casaca": [
+    0.08,
+    0.12,
+    0.3
+   ],
+   "gola": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "gola_debrum": [
+    0.86,
+    0.85,
+    0.8
+   ],
+   "punho": [
+    0.08,
+    0.12,
+    0.3
+   ],
+   "punho_debrum": [
+    0.86,
+    0.85,
+    0.8
+   ],
+   "pala": [
+    0.08,
+    0.12,
+    0.3
+   ],
+   "lapela": [
+    0.08,
+    0.12,
+    0.3
+   ],
+   "lapela_debrum": [
+    0.86,
+    0.85,
+    0.8
+   ],
+   "viras": [
+    0.08,
+    0.12,
+    0.3
+   ],
+   "viras_debrum": [
+    0.86,
+    0.85,
+    0.8
+   ],
+   "debrum": [
+    0.86,
+    0.85,
+    0.8
+   ],
+   "botoes": [
+    0.74,
+    0.75,
+    0.76
+   ],
+   "calca": [
+    0.1,
+    0.13,
+    0.28
+   ],
+   "polaina": [
+    0.045,
+    0.045,
+    0.045
+   ],
+   "sapato": [
+    0.03,
+    0.028,
+    0.025
+   ],
+   "sola": [
+    0.2,
+    0.13,
+    0.08
+   ],
+   "ornamento_cor": [
+    0.86,
+    0.85,
+    0.8
+   ],
+   "platina": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "platina_borda": [
+    0.74,
+    0.75,
+    0.76
+   ],
+   "dragona": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "dragona_meialua": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "dragona_passante": [
+    0.74,
+    0.75,
+    0.76
+   ]
+  }
+ },
+ "Ligeira_Voltigeur": {
+  "prefixo": "hcl_u_fr1812_elite_lv01",
+  "viras_externas": true,
+  "ornamento": "corneta",
+  "nome": "Infantaria ligeira, voltigeurs: casaca azul, gola camurca debruada de vermelho, dragonas verdes com meia-lua amarela, cornetas",
+  "mod": "FranceINF_diffuse c0 r2 (Reto): casaca azul, lapelas azuis debruadas de branco, gola vermelha debruada de branco (voltigeur: camurca debruada de vermelho), dragonas verde / vermelha com borda de metal branco, botoes de metal branco, cornetas e granadas. Calca azul e cor dos ornamentos: suposicao",
+  "curto": "ligeira, voltigeur",
+  "cores": {
+   "casaca": [
+    0.08,
+    0.12,
+    0.3
+   ],
+   "gola": [
+    0.8,
+    0.62,
+    0.18
+   ],
+   "gola_debrum": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "punho": [
+    0.08,
+    0.12,
+    0.3
+   ],
+   "punho_debrum": [
+    0.86,
+    0.85,
+    0.8
+   ],
+   "pala": [
+    0.08,
+    0.12,
+    0.3
+   ],
+   "lapela": [
+    0.08,
+    0.12,
+    0.3
+   ],
+   "lapela_debrum": [
+    0.86,
+    0.85,
+    0.8
+   ],
+   "viras": [
+    0.08,
+    0.12,
+    0.3
+   ],
+   "viras_debrum": [
+    0.86,
+    0.85,
+    0.8
+   ],
+   "debrum": [
+    0.86,
+    0.85,
+    0.8
+   ],
+   "botoes": [
+    0.74,
+    0.75,
+    0.76
+   ],
+   "calca": [
+    0.1,
+    0.13,
+    0.28
+   ],
+   "polaina": [
+    0.045,
+    0.045,
+    0.045
+   ],
+   "sapato": [
+    0.03,
+    0.028,
+    0.025
+   ],
+   "sola": [
+    0.2,
+    0.13,
+    0.08
+   ],
+   "ornamento_cor": [
+    0.86,
+    0.85,
+    0.8
+   ],
+   "platina": [
+    0.05,
+    0.3,
+    0.12
+   ],
+   "platina_borda": [
+    0.8,
+    0.62,
+    0.18
+   ],
+   "dragona": [
+    0.05,
+    0.3,
+    0.12
+   ],
+   "dragona_meialua": [
+    0.8,
+    0.62,
+    0.18
+   ],
+   "dragona_passante": [
+    0.8,
+    0.62,
+    0.18
+   ]
+  }
+ }
+}

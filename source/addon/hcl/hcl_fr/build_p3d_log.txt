@@ -1,0 +1,53 @@
+UNIFORME template hand texture/material kept: ('a3\\characters_f\\heads\\data\\hl_white_bald_co.tga', 'a3\\characters_f\\heads\\data\\hl_white_bald_muscular.rvmat')
+PESOS hcl_fr_pesos.blend: ['HCL_B_Fr1812_Havresac_LOD0', 'HCL_U_Fr1812_01_LOD0', 'HCL_V_Fr1812_Correame_LOD0']
+UNIFORME HCL_U_Fr1812_01_LOD0: Res 1 12459 faces (11 proxy faces from the template); View Pilot 12458 faces (10 proxy); 67 selections of bones; hand faces 2560
+P3D hcl_u_fr1812.p3d: 9 LODs 1:6791p/12459f, 1100:6788p/12458f, 10000:329p/607f, 10010:139p/264f, 1e+13:42p/54f, 1e+15:44p/4f, 2e+15:1p/0f, 5e+15:38p/0f, 7e+15:1000p/1770f
+PESOS hcl_fr_capote_pesos.blend: HCL_U_Fr1812_Capote_LOD0
+UNIFORME HCL_U_Fr1812_Capote_LOD0: Res 1 14235 faces (11 proxy faces from the template); View Pilot 14234 faces (10 proxy); 67 selections of bones; hand faces 2560
+P3D hcl_u_fr1812_capote.p3d: 9 LODs 1:7601p/14235f, 1100:7598p/14234f, 10000:329p/607f, 10010:139p/264f, 1e+13:42p/54f, 1e+15:44p/4f, 2e+15:1p/0f, 5e+15:38p/0f, 7e+15:1000p/1770f
+PESOS hcl_fr_elite_pesos.blend: HCL_U_Fr1812_Elite_LOD0
+UNIFORME HCL_U_Fr1812_Elite_LOD0: Res 1 16425 faces (11 proxy faces from the template); View Pilot 16424 faces (10 proxy); 67 selections of bones; hand faces 2560
+P3D hcl_u_fr1812_elite.p3d: 9 LODs 1:9035p/16425f, 1100:9032p/16424f, 10000:329p/607f, 10010:139p/264f, 1e+13:42p/54f, 1e+15:44p/4f, 2e+15:1p/0f, 5e+15:38p/0f, 7e+15:1000p/1770f
+PESOS hcl_fr_guarda_pesos.blend: HCL_U_Fr1812_Guarda_LOD0
+UNIFORME HCL_U_Fr1812_Guarda_LOD0: Res 1 16425 faces (11 proxy faces from the template); View Pilot 16424 faces (10 proxy); 67 selections of bones; hand faces 2560
+P3D hcl_u_fr1812_guarda.p3d: 9 LODs 1:9035p/16425f, 1100:9032p/16424f, 10000:329p/607f, 10010:139p/264f, 1e+13:42p/54f, 1e+15:44p/4f, 2e+15:1p/0f, 5e+15:38p/0f, 7e+15:1000p/1770f
+BARRETINA fuzileiro_1a_comp: de hcl_shako_fr_texturas_v3.blend
+BARRETINA fuzileiro_1a_comp: 14208 triangulos (Res 2: 5683), altura 0.569..0.989, sombra 734 triangulos
+P3D hcl_h_fr_fuzileiro_1a_comp.p3d: 5 LODs 1:7585p/14208f, 2:3216p/5683f, 1100:0p/0f, 10000:369p/734f, 1e+13:0p/0f
+BARRETINA granadeiro_gala: de hcl_shako_fr_texturas_v3.blend
+BARRETINA granadeiro_gala: 27546 triangulos (Res 2: 11018), altura 0.569..1.349, sombra 600 triangulos
+P3D hcl_h_fr_granadeiro_gala.p3d: 5 LODs 1:19881p/27546f, 2:10436p/11018f, 1100:0p/0f, 10000:302p/600f, 1e+13:0p/0f
+BARRETINA granadeiro_campanha: de hcl_shako_fr_texturas_v3.blend
+BARRETINA granadeiro_campanha: 15320 triangulos (Res 2: 6127), altura 0.569..1.017, sombra 718 triangulos
+P3D hcl_h_fr_granadeiro_campanha.p3d: 5 LODs 1:8140p/15320f, 2:3437p/6127f, 1100:0p/0f, 10000:361p/718f, 1e+13:0p/0f
+BARRETINA voltigeur_gala: de hcl_shako_fr_texturas_v3.blend
+BARRETINA voltigeur_gala: 26258 triangulos (Res 2: 10503), altura 0.569..1.334, sombra 554 triangulos
+P3D hcl_h_fr_voltigeur_gala.p3d: 5 LODs 1:19238p/26258f, 2:10099p/10503f, 1100:0p/0f, 10000:279p/554f, 1e+13:0p/0f
+BARRETINA voltigeur_campanha: de hcl_shako_fr_texturas_v3.blend
+BARRETINA voltigeur_campanha: 14152 triangulos (Res 2: 5659), altura 0.569..1.003, sombra 700 triangulos
+P3D hcl_h_fr_voltigeur_campanha.p3d: 5 LODs 1:7557p/14152f, 2:3199p/5659f, 1100:0p/0f, 10000:352p/700f, 1e+13:0p/0f
+BARRETINA oficial_coronel: de hcl_shako_fr_texturas_v3.blend
+BARRETINA oficial_coronel: 21538 triangulos (Res 2: 8615), altura 0.569..1.253, sombra 800 triangulos
+P3D hcl_h_fr_oficial_coronel.p3d: 5 LODs 1:15232p/21538f, 2:8072p/8615f, 1100:0p/0f, 10000:402p/800f, 1e+13:0p/0f
+BARRETINA fuzileiro_losango: de hcl_shako_fr_texturas_v3.blend
+BARRETINA fuzileiro_losango: 13484 triangulos (Res 2: 5392), altura 0.569..0.989, sombra 734 triangulos
+P3D hcl_h_fr_fuzileiro_losango.p3d: 5 LODs 1:7231p/13484f, 2:3089p/5392f, 1100:0p/0f, 10000:369p/734f, 1e+13:0p/0f
+BARRETINA fuzileiro_losango_branco: de hcl_shako_fr_texturas_v3.blend
+BARRETINA fuzileiro_losango_branco: 13484 triangulos (Res 2: 5393), altura 0.569..0.989, sombra 734 triangulos
+P3D hcl_h_fr_fuzileiro_losango_branco.p3d: 5 LODs 1:7231p/13484f, 2:3089p/5393f, 1100:0p/0f, 10000:369p/734f, 1e+13:0p/0f
+BARRETINA ligeira_carabineiro_gala: de hcl_shako_fr_texturas_v3.blend
+BARRETINA ligeira_carabineiro_gala: 25654 triangulos (Res 2: 10261), altura 0.569..1.351, sombra 554 triangulos
+P3D hcl_h_fr_ligeira_carabineiro_gala.p3d: 5 LODs 1:18944p/25654f, 2:9966p/10261f, 1100:0p/0f, 10000:279p/554f, 1e+13:0p/0f
+BARRETINA ligeira_voltigeur_gala: de hcl_shako_fr_texturas_v3.blend
+BARRETINA ligeira_voltigeur_gala: 25534 triangulos (Res 2: 10213), altura 0.569..1.334, sombra 592 triangulos
+P3D hcl_h_fr_ligeira_voltigeur_gala.p3d: 5 LODs 1:18884p/25534f, 2:9948p/10213f, 1100:0p/0f, 10000:298p/592f, 1e+13:0p/0f
+BARRETINA bonnet_granadeiro_gala: 31568 triangulos (Res 2: 15452), altura 0.663..1.333, sombra 330 triangulos
+P3D hcl_h_fr_bonnet_granadeiro_gala.p3d: 5 LODs 1:32889p/31568f, 2:12810p/15452f, 1100:0p/0f, 10000:167p/330f, 1e+13:0p/0f
+BARRETINA bonnet_granadeiro_campanha: 24630 triangulos (Res 2: 8562), altura 0.663..1.110, sombra 278 triangulos
+P3D hcl_h_fr_bonnet_granadeiro_campanha.p3d: 5 LODs 1:24378p/24630f, 2:4365p/8562f, 1100:0p/0f, 10000:141p/278f, 1e+13:0p/0f
+BARRETINA bonnet_cacador_gala: 31306 triangulos (Res 2: 13210), altura 0.663..1.334, sombra 334 triangulos
+P3D hcl_h_fr_bonnet_cacador_gala.p3d: 5 LODs 1:34235p/31306f, 2:11687p/13210f, 1100:0p/0f, 10000:169p/334f, 1e+13:0p/0f
+EQUIPAMENTO HCL_V_Fr1812_Correame_LOD0: producao, UV e textura hcl_v_fr1812_correame; 3176 triangulos; ossos ['LeftArm', 'LeftShoulder', 'LeftUpLeg', 'Pelvis', 'RightArm', 'RightShoulder', 'RightUpLeg', 'Spine', 'Spine1', 'Spine2', 'Spine3', 'neck']
+P3D hcl_v_fr1812_correame.p3d: 2 LODs 1:1627p/3176f, 1e+13:0p/0f
+EQUIPAMENTO HCL_B_Fr1812_Havresac_LOD0: producao, UV e textura hcl_b_fr1812_havresac; 3776 triangulos; ossos ['LeftArm', 'LeftShoulder', 'Pelvis', 'RightArm', 'RightShoulder', 'Spine', 'Spine1', 'Spine2', 'Spine3', 'neck']
+P3D hcl_b_fr1812_havresac.p3d: 2 LODs 1:1930p/3776f, 1e+13:0p/0f

@@ -1,0 +1,30 @@
+CHECK headgear example 'Head' point bytes: [1] (1 = full weight)
+CHECK template 'LeftHand': faces marked 268, faces with all points in it 268 (rule used: all points in)
+PESOS hcl_pruss_pesos_v2.blend: ['HCL_B_Pruss1813_Tornister_LOD0', 'HCL_U_Pruss1813_01_LOD0', 'HCL_V_Pruss1813_Correame_LOD0']
+UNIFORME template hand texture/material kept: ('a3\\characters_f\\heads\\data\\hl_white_bald_co.tga', 'a3\\characters_f\\heads\\data\\hl_white_bald_muscular.rvmat')
+CHECK hands vs template Res 1: 2560 faces matched; same vertex order 2560; same UV 2560
+UNIFORME Res 1: 11971 faces (11 proxy faces from the template); View Pilot: 11970 faces (10 proxy)
+P3D hcl_u_pruss1813.p3d: 9 LODs 1:6503p/11971f, 1100:6500p/11970f, 10000:329p/607f, 10010:139p/264f, 1e+13:42p/54f, 1e+15:44p/4f, 2e+15:1p/0f, 5e+15:38p/0f, 7e+15:1000p/1770f
+P3D hcl_h_pruss_fwr.p3d: 4 LODs 1:2605p/5194f, 1100:0p/0f, 10000:315p/626f, 1e+13:0p/0f
+P3D hcl_h_pruss_aguia.p3d: 4 LODs 1:2643p/5262f, 1100:0p/0f, 10000:315p/626f, 1e+13:0p/0f
+P3D hcl_h_pruss_estrela.p3d: 4 LODs 1:2905p/5778f, 1100:0p/0f, 10000:315p/626f, 1e+13:0p/0f
+BARRETINA hcl_h_pruss_fwr_plumet_verde.p3d: 11100 triangulos, z 0.586..1.260, sombra 470 triangulos
+P3D hcl_h_pruss_fwr_plumet_verde.p3d: 4 LODs 1:11053p/11100f, 1100:0p/0f, 10000:237p/470f, 1e+13:0p/0f
+   barretina 3004 faces (camo, hcl_shako_pruss_co.paa) + plumet 2966 faces (hcl_plumet_pruss_co.paa fixo)
+BARRETINA hcl_h_pruss_aguia_plumet_verde.p3d: 11168 triangulos, z 0.586..1.260, sombra 494 triangulos
+P3D hcl_h_pruss_aguia_plumet_verde.p3d: 4 LODs 1:11091p/11168f, 1100:0p/0f, 10000:249p/494f, 1e+13:0p/0f
+   barretina 2924 faces (camo, hcl_shako_pruss_aguia_amarela_co.paa) + plumet 2966 faces (hcl_plumet_pruss_co.paa fixo)
+BARRETINA hcl_h_pruss_estrela_plumet_verde.p3d: 11684 triangulos, z 0.586..1.259, sombra 498 triangulos
+P3D hcl_h_pruss_estrela_plumet_verde.p3d: 4 LODs 1:11353p/11684f, 1100:0p/0f, 10000:251p/498f, 1e+13:0p/0f
+   barretina 3266 faces (camo, hcl_shako_pruss_estrela_prata_co.paa) + plumet 2966 faces (hcl_plumet_pruss_co.paa fixo)
+BARRETINA hcl_h_pruss_estrela_stutz.p3d: 12468 triangulos, z 0.586..1.177, sombra 578 triangulos
+P3D hcl_h_pruss_estrela_stutz.p3d: 4 LODs 1:12529p/12468f, 1100:0p/0f, 10000:291p/578f, 1e+13:0p/0f
+   barretina 3266 faces (camo, hcl_shako_pruss_estrela_prata_co.paa) + plumet 3358 faces (hcl_plumet_pruss_co.paa fixo)
+BARRETINA hcl_h_pruss_bone.p3d: 4552 triangulos, z 0.699..0.851, sombra 1332 triangulos
+P3D hcl_h_pruss_bone.p3d: 4 LODs 1:2498p/4552f, 1100:0p/0f, 10000:668p/1332f, 1e+13:0p/0f
+EQUIPAMENTO HCL_V_Pruss1813_Correame_LOD0: producao, UV e textura hcl_v_pruss1813_correame; 3212 triangulos; ossos ['LeftArm', 'LeftShoulder', 'LeftUpLeg', 'LeftUpLegRoll', 'Pelvis', 'RightUpLeg', 'Spine', 'Spine1', 'Spine2', 'Spine3', 'neck']
+P3D hcl_v_pruss1813_correame_preto.p3d: 2 LODs 1:1651p/3212f, 1e+13:0p/0f
+P3D hcl_v_pruss1813_correame.p3d: 2 LODs 1:1651p/3212f, 1e+13:0p/0f
+EQUIPAMENTO HCL_B_Pruss1813_Tornister_LOD0: producao, UV e textura hcl_b_pruss1813_tornister; 3776 triangulos; ossos ['LeftArm', 'LeftShoulder', 'Pelvis', 'RightArm', 'RightShoulder', 'Spine', 'Spine1', 'Spine2', 'Spine3', 'neck']
+P3D hcl_b_pruss1813_tornister_preto.p3d: 2 LODs 1:1930p/3776f, 1e+13:0p/0f
+P3D hcl_b_pruss1813_tornister.p3d: 2 LODs 1:1930p/3776f, 1e+13:0p/0f

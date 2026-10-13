@@ -1,0 +1,21 @@
+﻿
+scabbard: top h 1.102, bottom h 0.665, length 0.447 m
+VEST tris 1996   BACKPACK tris 1492
+HCL_V_Pruss1813_Correame_blockout: vertices under the uniform surface 15 of 1024
+    near x+0.2 y+0.1 h1.0: 7 vertices, depth up to 2.1 mm
+    near x+0.2 y+0.0 h1.0: 6 vertices, depth up to 3.8 mm
+    near x+0.2 y+0.0 h1.1: 1 vertices, depth up to 0.1 mm
+    near x-0.2 y+0.0 h1.1: 1 vertices, depth up to 0.4 mm
+HCL_B_Pruss1813_Tornister_blockout: vertices under the uniform surface 0 of 764
+waist belt circumference 0.937 m; crossbelt front 0.857 m, back 0.653 m; pack lean 6.9 deg
+render C:\Users\lucas\Documents\HistoricalClothing\docs\reports\img\equipamento\equip_blockout_frente.png
+render C:\Users\lucas\Documents\HistoricalClothing\docs\reports\img\equipamento\equip_blockout_lado.png
+render C:\Users\lucas\Documents\HistoricalClothing\docs\reports\img\equipamento\equip_blockout_costas.png
+render C:\Users\lucas\Documents\HistoricalClothing\docs\reports\img\equipamento\equip_blockout_tres_quartos.png
+render C:\Users\lucas\Documents\HistoricalClothing\docs\reports\img\equipamento\equip_blockout_tres_quartos_costas.png
+render C:\Users\lucas\Documents\HistoricalClothing\docs\reports\img\equipamento\equip_blockout_detalhe_cartucheira.png
+render C:\Users\lucas\Documents\HistoricalClothing\docs\reports\img\equipamento\equip_blockout_detalhe_baioneta.png
+saved C:\Users\lucas\Documents\HistoricalClothing\source\models\accessories\hcl_equipamento_pruss\hcl_equipamento_pruss_blockout.blend
+
+
+

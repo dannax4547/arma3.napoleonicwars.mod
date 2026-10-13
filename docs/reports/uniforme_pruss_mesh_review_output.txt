@@ -1,0 +1,70 @@
+﻿
+REVIEW HCL_U_Pruss1813_01_LOD0: verts=6470 faces=8046 parts=21
+TRANSFORM loc=(0.0, 0.0, 0.0) rot=(0.0, 0.0, 0.0) scale=(1.0, 1.0, 1.0)
+U1 parts
+  casaco_corpo       tris= 1496 open_edges=  68 nonmanifold=0
+  gola               tris=  340 open_edges=   0 nonmanifold=0
+  manga_E            tris=  828 open_edges=  36 nonmanifold=0
+  punho_E            tris=  180 open_edges=  36 nonmanifold=0
+  pala_E             tris=   48 open_edges=  14 nonmanifold=0
+  manga_D            tris=  828 open_edges=  36 nonmanifold=0
+  punho_D            tris=  180 open_edges=  36 nonmanifold=0
+  pala_D             tris=   48 open_edges=  14 nonmanifold=0
+  aba_E              tris=  700 open_edges=  26 nonmanifold=0
+  aba_D              tris=  700 open_edges=  26 nonmanifold=0
+  platina_E          tris=   76 open_edges=  16 nonmanifold=0
+  platina_D          tris=   76 open_edges=  16 nonmanifold=0
+  calca_assento      tris=  504 open_edges=  56 nonmanifold=0
+  calca_perna_E      tris=  504 open_edges=  36 nonmanifold=0
+  calca_perna_D      tris=  504 open_edges=  36 nonmanifold=0
+  polaina_E          tris=  440 open_edges=  40 nonmanifold=0
+  polaina_D          tris=  440 open_edges=  40 nonmanifold=0
+  sapato_E           tris=  340 open_edges=  20 nonmanifold=0
+  sapato_D           tris=  340 open_edges=  20 nonmanifold=0
+  botoes             tris=  828 open_edges= 276 nonmanifold=0
+  maos_template      tris= 2560 open_edges=  24 nonmanifold=0
+U2 duplicate vertices=0 zero-area faces=0 loose verts=0 loose edges=0 max verts/face=4
+U3 self-intersections inside parts: 0
+U4 intersections between parts (pairs of triangles): hidden / VISIBLE
+  casaco_corpo       x gola               hidden    6  VISIBLE   62  e.g. h 1.552 x-0.005 y+0.107
+  casaco_corpo       x manga_E            hidden   38  VISIBLE   17  e.g. h 1.511 x+0.200 y+0.101
+  casaco_corpo       x manga_D            hidden   37  VISIBLE   17  e.g. h 1.487 x-0.164 y+0.125
+  casaco_corpo       x aba_E              hidden   37  VISIBLE    8  e.g. h 1.104 x+0.169 y-0.011
+  casaco_corpo       x aba_D              hidden   39  VISIBLE    8  e.g. h 1.116 x-0.026 y+0.122
+  casaco_corpo       x platina_E          hidden   17  VISIBLE    7  e.g. h 1.554 x+0.106 y+0.081
+  casaco_corpo       x platina_D          hidden   16  VISIBLE    8  e.g. h 1.554 x-0.106 y+0.081
+  casaco_corpo       x botoes             hidden   27  VISIBLE   73  e.g. h 1.442 x-0.010 y-0.092
+  gola               x platina_E          hidden    6  VISIBLE   10  e.g. h 1.572 x+0.104 y+0.069
+  gola               x platina_D          hidden    6  VISIBLE   10  e.g. h 1.575 x-0.104 y+0.064
+  manga_E            x punho_E            hidden    8  VISIBLE   28  e.g. h 1.149 x+0.570 y+0.062
+  manga_E            x pala_E             hidden    9  VISIBLE    8  e.g. h 1.169 x+0.550 y+0.107
+  manga_E            x platina_E          hidden    7  VISIBLE    9  e.g. h 1.518 x+0.232 y+0.023
+  punho_E            x pala_E             hidden    9  VISIBLE    8  e.g. h 1.132 x+0.589 y+0.062
+  pala_E             x botoes             hidden    0  VISIBLE   12  e.g. h 1.179 x+0.558 y+0.084
+  manga_D            x punho_D            hidden    8  VISIBLE   28  e.g. h 1.141 x-0.556 y+0.037
+  manga_D            x pala_D             hidden    8  VISIBLE    9  e.g. h 1.169 x-0.550 y+0.108
+  manga_D            x platina_D          hidden    7  VISIBLE    9  e.g. h 1.526 x-0.222 y+0.064
+  punho_D            x pala_D             hidden    9  VISIBLE    8  e.g. h 1.140 x-0.581 y+0.064
+  pala_D             x botoes             hidden    0  VISIBLE   12  e.g. h 1.179 x-0.558 y+0.084
+  aba_E              x calca_assento      hidden   44  VISIBLE    1  e.g. h 1.102 x+0.007 y+0.122
+  aba_E              x botoes             hidden    0  VISIBLE    5  e.g. h 1.089 x+0.035 y+0.128
+  aba_D              x calca_assento      hidden   45  VISIBLE    1  e.g. h 1.102 x-0.006 y+0.122
+  aba_D              x botoes             hidden    0  VISIBLE    5  e.g. h 1.090 x-0.021 y+0.127
+  platina_E          x botoes             hidden    0  VISIBLE    6  e.g. h 1.577 x+0.105 y+0.054
+  platina_D          x botoes             hidden    0  VISIBLE    6  e.g. h 1.575 x-0.104 y+0.060
+  calca_assento      x calca_perna_E      hidden   34  VISIBLE   11  e.g. h 0.895 x+0.182 y+0.052
+  calca_assento      x calca_perna_D      hidden   36  VISIBLE    8  e.g. h 0.895 x-0.183 y+0.051
+  calca_perna_E      x calca_perna_D      hidden   15  VISIBLE    4  e.g. h 0.820 x-0.005 y+0.089
+  calca_perna_E      x polaina_E          hidden   29  VISIBLE    1  e.g. h 0.410 x+0.193 y+0.099
+  calca_perna_D      x polaina_D          hidden   29  VISIBLE    1  e.g. h 0.410 x-0.193 y+0.099
+  polaina_E          x sapato_E           hidden   14  VISIBLE    4  e.g. h 0.073 x+0.197 y+0.005
+  polaina_E          x botoes             hidden    0  VISIBLE   38  e.g. h 0.352 x+0.232 y+0.054
+  polaina_D          x sapato_D           hidden   13  VISIBLE    5  e.g. h 0.073 x-0.157 y-0.015
+  polaina_D          x botoes             hidden    0  VISIBLE   41  e.g. h 0.394 x-0.229 y+0.044
+U4 total: hidden 553, VISIBLE 488
+U5 orientation of closed parts (signed volume > 0 = outward)
+  gola               volume     75.70 cm3 OK
+U6 triangles: total 11960 (garment 9400, official hands 2560); proposed budget 12000: within
+
+
+

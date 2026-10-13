@@ -1,0 +1,89 @@
+﻿
+TAIL CHECK side 1: lining outside the outer cloth at 0 vertices []
+TAIL CHECK side -1: lining outside the outer cloth at 0 vertices []
+buttons: 44
+hand textures/materials in the template: [('a3\\characters_f\\heads\\data\\hl_white_bald_co.tga', 'a3\\characters_f\\heads\\data\\hl_white_bald_muscular.rvmat')]; loose points removed: 38
+=== TRIANGLES by part
+  casaco_corpo             1496
+  gola                      340
+  manga_E                   828
+  punho_E                   180
+  pala_E                     48
+  manga_D                   828
+  punho_D                   180
+  pala_D                     48
+  aba_E                     700
+  aba_D                     700
+  platina_E                  76
+  platina_D                  76
+  calca_assento             504
+  calca_perna_E             504
+  calca_perna_D             504
+  polaina_E                 440
+  polaina_D                 440
+  sapato_E                  340
+  sapato_D                  340
+  botoes                    828
+  maos_template            2560
+  TOTAL 11960   (garment 9400, hands 2560)
+  by material: HCL_la_azul=3860, HCL_pele_hl=2560, HCL_la_cinza=1512, HCL_la_vermelha=1488, HCL_polaina_preta=880, HCL_latao=828, HCL_couro_sapato=480, HCL_sola=200, HCL_la_branca=152
+=== GARMENT VERTICES INSIDE THE OFFICIAL BODY (by part)
+  casaco_corpo           inside   24/ 782  min   -39.1 mm  at h 1.355-1.518
+  gola                   inside   37/ 170  min    -2.2 mm  at h 1.533-1.566
+  manga_E                inside   27/ 432  min   -63.7 mm  at h 1.359-1.494
+  punho_E                inside    0/ 108  min     7.4 mm
+  pala_E                 inside    0/  32  min     6.7 mm
+  manga_D                inside   27/ 432  min   -63.6 mm  at h 1.380-1.494
+  punho_D                inside    0/ 108  min     7.3 mm
+  pala_D                 inside    0/  32  min     6.7 mm
+  aba_E                  inside    0/ 364  min     0.3 mm
+  aba_D                  inside    0/ 364  min     0.3 mm
+  platina_E              inside    1/  47  min    -1.8 mm  at h 1.568-1.568
+  platina_D              inside    1/  47  min    -1.8 mm  at h 1.568-1.568
+  calca_assento          inside    0/ 280  min     0.1 mm
+  calca_perna_E          inside   13/ 270  min   -67.6 mm  at h 0.800-0.900
+  calca_perna_D          inside   15/ 270  min   -71.4 mm  at h 0.840-0.900
+  polaina_E              inside    0/ 240  min     2.9 mm
+  polaina_D              inside    0/ 240  min     2.8 mm
+  sapato_E               inside    0/ 181  min     1.3 mm
+  sapato_D               inside    0/ 181  min     1.3 mm
+=== EXPOSED SKIN: 3 of 1180 body vertices
+    x+0.000 y-0.064 h0.835
+    x-0.080 y+0.013 h1.548
+    x+0.007 y-0.019 h0.825
+=== OPEN EDGES: hidden / seen only from below the figure / VISIBLE from the side or above
+  casaco_corpo           hidden   32  below    6  VISIBLE   30  e.g. h 1.535 x+0.005 y+0.009
+  manga_E                hidden   33  below    3  VISIBLE    0
+  punho_E                hidden   10  below   19  VISIBLE    7  e.g. h 1.107 x+0.545 y+0.121
+  pala_E                 hidden   11  below    3  VISIBLE    0
+  manga_D                hidden   33  below    3  VISIBLE    0
+  punho_D                hidden   13  below   16  VISIBLE    7  e.g. h 1.146 x-0.563 y+0.050
+  pala_D                 hidden   10  below    4  VISIBLE    0
+  aba_E                  hidden   25  below    1  VISIBLE    0
+  aba_D                  hidden   25  below    1  VISIBLE    0
+  platina_E              hidden   16  below    0  VISIBLE    0
+  platina_D              hidden   16  below    0  VISIBLE    0
+  calca_assento          hidden   50  below    0  VISIBLE    6  e.g. h 0.860 x+0.014 y-0.100
+  calca_perna_E          hidden   36  below    0  VISIBLE    0
+  calca_perna_D          hidden   36  below    0  VISIBLE    0
+  polaina_E              hidden   34  below    5  VISIBLE    1  e.g. h 0.400 x+0.222 y+0.053
+  polaina_D              hidden   34  below    5  VISIBLE    1  e.g. h 0.400 x-0.222 y+0.053
+  sapato_E               hidden   20  below    0  VISIBLE    0
+  sapato_D               hidden   20  below    0  VISIBLE    0
+  maos_template          hidden   22  below    2  VISIBLE    0
+render C:\Users\lucas\Documents\HistoricalClothing\docs\reports\img\uniforme\producao_frente.png
+render C:\Users\lucas\Documents\HistoricalClothing\docs\reports\img\uniforme\producao_lado.png
+render C:\Users\lucas\Documents\HistoricalClothing\docs\reports\img\uniforme\producao_costas.png
+render C:\Users\lucas\Documents\HistoricalClothing\docs\reports\img\uniforme\producao_tres_quartos.png
+render C:\Users\lucas\Documents\HistoricalClothing\docs\reports\img\uniforme\producao_tres_quartos_costas.png
+render C:\Users\lucas\Documents\HistoricalClothing\docs\reports\img\uniforme\producao_detalhe_tronco.png
+render C:\Users\lucas\Documents\HistoricalClothing\docs\reports\img\uniforme\producao_detalhe_abas.png
+render C:\Users\lucas\Documents\HistoricalClothing\docs\reports\img\uniforme\producao_detalhe_punho.png
+render C:\Users\lucas\Documents\HistoricalClothing\docs\reports\img\uniforme\producao_detalhe_pernas.png
+render C:\Users\lucas\Documents\HistoricalClothing\docs\reports\img\uniforme\producao_malha_frente.png
+render C:\Users\lucas\Documents\HistoricalClothing\docs\reports\img\uniforme\producao_malha_tres_quartos.png
+render C:\Users\lucas\Documents\HistoricalClothing\docs\reports\img\uniforme\producao_malha_detalhe_tronco.png
+saved C:\Users\lucas\Documents\HistoricalClothing\source\models\coats\hcl_uniforme_pruss\hcl_uniforme_pruss_LOD0.blend
+
+
+

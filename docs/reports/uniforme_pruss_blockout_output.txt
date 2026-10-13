@@ -1,0 +1,66 @@
+﻿
+GROUND z = -1.0069
+JOINT ankle    R: x-0.166 y+0.077 h0.116
+JOINT elbow    R: x-0.416 y+0.116 h1.242
+JOINT hip      R: x-0.088 y+0.049 h0.841
+JOINT knee     R: x-0.140 y-0.022 h0.474
+JOINT shoulder R: x-0.207 y+0.052 h1.488
+JOINT wrist    R: x-0.589 y+0.071 h1.074
+JOINT ankle    L: x+0.166 y+0.077 h0.116
+JOINT elbow    L: x+0.416 y+0.115 h1.241
+JOINT hip      L: x+0.088 y+0.049 h0.841
+JOINT knee     L: x+0.140 y-0.022 h0.474
+JOINT shoulder L: x+0.207 y+0.051 h1.488
+JOINT wrist    L: x+0.589 y+0.071 h1.075
+neck section: 30 pts; collar centre y +0.055
+buttons: 44
+=== PARTS (evaluated, with thickness)
+  BLK_casaco_corpo         tris   3200
+  BLK_gola                 tris    384
+  BLK_manga_E              tris   2816
+  BLK_punho_E              tris    384
+  BLK_pala_punho_E         tris     68
+  BLK_manga_D              tris   2816
+  BLK_punho_D              tris    384
+  BLK_pala_punho_D         tris     68
+  BLK_abas                 tris   1672
+  BLK_platinas             tris    136
+  BLK_calca                tris   6016
+  BLK_polaina_E            tris   1664
+  BLK_polaina_D            tris   1664
+  BLK_sapato_E             tris    896
+  BLK_sapato_D             tris    896
+  BLK_botoes               tris   1584
+  TOTAL tris 24648
+=== CLEARANCE to the official body (original surface of each part; negative = inside the body)
+  BLK_casaco_corpo         min   -39.7 mm  median   11.1 mm  inside 26/800  inside at h 1.345-1.465; worst at x-0.258 y+0.084 h1.385
+  BLK_gola                 min    -0.0 mm  median   16.2 mm  inside 12/96  inside at h 1.533-1.563; worst at x-0.082 y+0.089 h1.547
+  BLK_manga_E              min   -64.6 mm  median   14.9 mm  inside 39/704  inside at h 1.392-1.490; worst at x+0.139 y+0.048 h1.469
+  BLK_punho_E              min    10.2 mm  median   14.4 mm  inside 0/96
+  BLK_pala_punho_E         min    17.2 mm  median   18.8 mm  inside 0/18
+  BLK_manga_D              min   -64.6 mm  median   14.9 mm  inside 38/704  inside at h 1.392-1.490; worst at x-0.139 y+0.048 h1.469
+  BLK_punho_D              min    10.4 mm  median   14.4 mm  inside 0/96
+  BLK_pala_punho_D         min    17.3 mm  median   18.8 mm  inside 0/18
+  BLK_abas                 min    15.4 mm  median   26.2 mm  inside 0/420
+  BLK_platinas             min    11.8 mm  median   16.1 mm  inside 0/36
+  BLK_calca                min   -73.8 mm  median   16.9 mm  inside 49/1504  inside at h 0.810-0.900; worst at x-0.021 y+0.046 h0.900
+  BLK_polaina_E            min     6.0 mm  median   13.6 mm  inside 0/416
+  BLK_polaina_D            min     6.0 mm  median   13.6 mm  inside 0/416
+  BLK_sapato_E             min     2.4 mm  median    7.7 mm  inside 0/225
+  BLK_sapato_D             min     2.2 mm  median    7.7 mm  inside 0/225
+=== COLLAR vs approximate head (not official): min distance -1.4 mm; collar vertices inside 3
+body normal sign: -1
+=== EXPOSED SKIN: 1 of 1180 body vertices (hands and neck excluded)
+    x+0.007 y-0.019 h0.825
+=== SHOES: lowest point h = 0.0 mm above the ground
+render C:\Users\lucas\Documents\HistoricalClothing\docs\reports\img\uniforme\blockout_frente.png
+render C:\Users\lucas\Documents\HistoricalClothing\docs\reports\img\uniforme\blockout_lado.png
+render C:\Users\lucas\Documents\HistoricalClothing\docs\reports\img\uniforme\blockout_costas.png
+render C:\Users\lucas\Documents\HistoricalClothing\docs\reports\img\uniforme\blockout_tres_quartos.png
+render C:\Users\lucas\Documents\HistoricalClothing\docs\reports\img\uniforme\blockout_tres_quartos_costas.png
+render C:\Users\lucas\Documents\HistoricalClothing\docs\reports\img\uniforme\blockout_detalhe_tronco.png
+render C:\Users\lucas\Documents\HistoricalClothing\docs\reports\img\uniforme\blockout_detalhe_pernas.png
+saved C:\Users\lucas\Documents\HistoricalClothing\source\models\coats\hcl_uniforme_pruss\hcl_uniforme_pruss_blockout.blend
+
+
+

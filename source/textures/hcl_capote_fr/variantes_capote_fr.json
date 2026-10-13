@@ -1,0 +1,367 @@
+{
+ "W01": {
+  "prefixo": "hcl_u_fr1812_capote_w01",
+  "nome": "Inverno: capote bege, calca branca",
+  "mod": "capote: FranceINF_diffuse c0 r1; calca branca e polainas pretas: c4 r1 (M6). Combinacao com a calca: proposta",
+  "cores": {
+   "botoes": [
+    0.8,
+    0.62,
+    0.28
+   ],
+   "polaina": [
+    0.045,
+    0.045,
+    0.045
+   ],
+   "sapato": [
+    0.03,
+    0.028,
+    0.025
+   ],
+   "sola": [
+    0.2,
+    0.13,
+    0.08
+   ],
+   "casaca": [
+    0.56,
+    0.48,
+    0.36
+   ],
+   "gola": [
+    0.56,
+    0.48,
+    0.36
+   ],
+   "punho": [
+    0.56,
+    0.48,
+    0.36
+   ],
+   "viras": [
+    0.56,
+    0.48,
+    0.36
+   ],
+   "pala": [
+    0.56,
+    0.48,
+    0.36
+   ],
+   "debrum": [
+    0.459,
+    0.394,
+    0.295
+   ],
+   "platina": [
+    0.56,
+    0.48,
+    0.36
+   ],
+   "platina_borda": [
+    0.504,
+    0.432,
+    0.324
+   ],
+   "calca": [
+    0.84,
+    0.83,
+    0.78
+   ]
+  },
+  "curto": "capote bege, calca branca"
+ },
+ "W02": {
+  "prefixo": "hcl_u_fr1812_capote_w02",
+  "nome": "Inverno: capote cinza, calca branca",
+  "mod": "capote: FranceINF_diffuse c3 r1 (e FranceINF_3 c3 r1); calca: c4 r1. Combinacao: proposta",
+  "cores": {
+   "botoes": [
+    0.8,
+    0.62,
+    0.28
+   ],
+   "polaina": [
+    0.045,
+    0.045,
+    0.045
+   ],
+   "sapato": [
+    0.03,
+    0.028,
+    0.025
+   ],
+   "sola": [
+    0.2,
+    0.13,
+    0.08
+   ],
+   "casaca": [
+    0.37,
+    0.36,
+    0.35
+   ],
+   "gola": [
+    0.37,
+    0.36,
+    0.35
+   ],
+   "punho": [
+    0.37,
+    0.36,
+    0.35
+   ],
+   "viras": [
+    0.37,
+    0.36,
+    0.35
+   ],
+   "pala": [
+    0.37,
+    0.36,
+    0.35
+   ],
+   "debrum": [
+    0.303,
+    0.295,
+    0.287
+   ],
+   "platina": [
+    0.37,
+    0.36,
+    0.35
+   ],
+   "platina_borda": [
+    0.333,
+    0.324,
+    0.315
+   ],
+   "calca": [
+    0.84,
+    0.83,
+    0.78
+   ]
+  },
+  "curto": "capote cinza, calca branca"
+ },
+ "W03": {
+  "prefixo": "hcl_u_fr1812_capote_w03",
+  "nome": "Inverno: capote bege, calca azul de campanha",
+  "mod": "capote: c0 r1; calca azul: FranceINF_diffuse c7 r1 (pecas azuis). Combinacao: proposta",
+  "cores": {
+   "botoes": [
+    0.8,
+    0.62,
+    0.28
+   ],
+   "polaina": [
+    0.045,
+    0.045,
+    0.045
+   ],
+   "sapato": [
+    0.03,
+    0.028,
+    0.025
+   ],
+   "sola": [
+    0.2,
+    0.13,
+    0.08
+   ],
+   "casaca": [
+    0.56,
+    0.48,
+    0.36
+   ],
+   "gola": [
+    0.56,
+    0.48,
+    0.36
+   ],
+   "punho": [
+    0.56,
+    0.48,
+    0.36
+   ],
+   "viras": [
+    0.56,
+    0.48,
+    0.36
+   ],
+   "pala": [
+    0.56,
+    0.48,
+    0.36
+   ],
+   "debrum": [
+    0.459,
+    0.394,
+    0.295
+   ],
+   "platina": [
+    0.56,
+    0.48,
+    0.36
+   ],
+   "platina_borda": [
+    0.504,
+    0.432,
+    0.324
+   ],
+   "calca": [
+    0.1,
+    0.15,
+    0.27
+   ]
+  },
+  "curto": "capote bege, calca azul"
+ },
+ "W04": {
+  "prefixo": "hcl_u_fr1812_capote_w04",
+  "nome": "Inverno: capote cinza, calca cinza de campanha",
+  "mod": "capote: c3 r1; calca cinza: FranceINF_diffuse c7 r1 (pecas cinza). Combinacao: proposta",
+  "cores": {
+   "botoes": [
+    0.8,
+    0.62,
+    0.28
+   ],
+   "polaina": [
+    0.045,
+    0.045,
+    0.045
+   ],
+   "sapato": [
+    0.03,
+    0.028,
+    0.025
+   ],
+   "sola": [
+    0.2,
+    0.13,
+    0.08
+   ],
+   "casaca": [
+    0.37,
+    0.36,
+    0.35
+   ],
+   "gola": [
+    0.37,
+    0.36,
+    0.35
+   ],
+   "punho": [
+    0.37,
+    0.36,
+    0.35
+   ],
+   "viras": [
+    0.37,
+    0.36,
+    0.35
+   ],
+   "pala": [
+    0.37,
+    0.36,
+    0.35
+   ],
+   "debrum": [
+    0.303,
+    0.295,
+    0.287
+   ],
+   "platina": [
+    0.37,
+    0.36,
+    0.35
+   ],
+   "platina_borda": [
+    0.333,
+    0.324,
+    0.315
+   ],
+   "calca": [
+    0.26,
+    0.27,
+    0.28
+   ]
+  },
+  "curto": "capote cinza, calca cinza"
+ },
+ "W05": {
+  "prefixo": "hcl_u_fr1812_capote_w05",
+  "nome": "Velha Guarda em campanha: capote azul-escuro, dragonas vermelhas pintadas na platina, calca azul",
+  "mod": "Sem bloco do mod; cores por conhecimento historico geral, sem fonte lida (suposicao). Ver docs/specs/velha_guarda.md",
+  "cores": {
+   "botoes": [
+    0.8,
+    0.62,
+    0.28
+   ],
+   "polaina": [
+    0.045,
+    0.045,
+    0.045
+   ],
+   "sapato": [
+    0.03,
+    0.028,
+    0.025
+   ],
+   "sola": [
+    0.2,
+    0.13,
+    0.08
+   ],
+   "casaca": [
+    0.09,
+    0.11,
+    0.24
+   ],
+   "gola": [
+    0.09,
+    0.11,
+    0.24
+   ],
+   "punho": [
+    0.09,
+    0.11,
+    0.24
+   ],
+   "viras": [
+    0.09,
+    0.11,
+    0.24
+   ],
+   "pala": [
+    0.09,
+    0.11,
+    0.24
+   ],
+   "debrum": [
+    0.075,
+    0.092,
+    0.2
+   ],
+   "platina": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "platina_borda": [
+    0.48,
+    0.05,
+    0.05
+   ],
+   "calca": [
+    0.12,
+    0.15,
+    0.3
+   ]
+  },
+  "curto": "Velha Guarda, capote azul de campanha"
+ }
+}

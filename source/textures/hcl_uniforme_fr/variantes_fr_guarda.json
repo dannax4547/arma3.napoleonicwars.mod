@@ -1,0 +1,242 @@
+{
+ "Guarda_Granadeiro": {
+  "prefixo": "hcl_u_fr1812_guarda_gr01",
+  "viras_externas": true,
+  "ornamento": "aguia+granada",
+  "nome": "Velha Guarda, Granadeiros a Pe: casaca de abas longas, lapelas brancas, punhos vermelhos com portinhola branca, dragonas vermelhas, aguias e granadas nas viradas",
+  "curto": "Velha Guarda, granadeiro",
+  "mod": "Corte e viradas vermelhas de abas longas: FranceINF c3 r3 (dragona vermelha, aguia de latao nas viradas). Gola azul, lapelas brancas sem debrum, portinhola branca, viradas sem debrum colorido e ornamentos cor de aurora: fonte historica nao lida (suposicao), ver docs/specs/velha_guarda.md",
+  "cores": {
+   "casaca": [
+    0.08,
+    0.12,
+    0.3
+   ],
+   "gola": [
+    0.08,
+    0.12,
+    0.3
+   ],
+   "gola_debrum": [
+    0.08,
+    0.12,
+    0.3
+   ],
+   "punho": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "punho_debrum": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "pala": [
+    0.86,
+    0.85,
+    0.8
+   ],
+   "lapela": [
+    0.86,
+    0.85,
+    0.8
+   ],
+   "lapela_debrum": [
+    0.86,
+    0.85,
+    0.8
+   ],
+   "viras": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "viras_debrum": [
+    0.86,
+    0.85,
+    0.8
+   ],
+   "debrum": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "platina": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "platina_borda": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "botoes": [
+    0.8,
+    0.62,
+    0.28
+   ],
+   "calca": [
+    0.84,
+    0.83,
+    0.78
+   ],
+   "polaina": [
+    0.045,
+    0.045,
+    0.045
+   ],
+   "sapato": [
+    0.03,
+    0.028,
+    0.025
+   ],
+   "sola": [
+    0.2,
+    0.13,
+    0.08
+   ],
+   "dragona": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "dragona_meialua": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "dragona_passante": [
+    0.48,
+    0.05,
+    0.05
+   ],
+   "ornamento_cor": [
+    0.88,
+    0.6,
+    0.22
+   ]
+  }
+ },
+ "Guarda_Cacador": {
+  "prefixo": "hcl_u_fr1812_guarda_ch01",
+  "viras_externas": true,
+  "ornamento": "corneta+granada",
+  "nome": "Velha Guarda, Cacadores a Pe: como o granadeiro, punhos vermelhos sem portinhola branca, dragonas verdes com meia-lua vermelha, cornetas e granadas nas viradas",
+  "curto": "Velha Guarda, cacador",
+  "mod": "Sem bloco proprio no mod; cores por fonte historica nao lida (suposicao), ver docs/specs/velha_guarda.md",
+  "cores": {
+   "casaca": [
+    0.08,
+    0.12,
+    0.3
+   ],
+   "gola": [
+    0.08,
+    0.12,
+    0.3
+   ],
+   "gola_debrum": [
+    0.08,
+    0.12,
+    0.3
+   ],
+   "punho": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "punho_debrum": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "pala": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "lapela": [
+    0.86,
+    0.85,
+    0.8
+   ],
+   "lapela_debrum": [
+    0.86,
+    0.85,
+    0.8
+   ],
+   "viras": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "viras_debrum": [
+    0.86,
+    0.85,
+    0.8
+   ],
+   "debrum": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "platina": [
+    0.05,
+    0.3,
+    0.12
+   ],
+   "platina_borda": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "botoes": [
+    0.8,
+    0.62,
+    0.28
+   ],
+   "calca": [
+    0.84,
+    0.83,
+    0.78
+   ],
+   "polaina": [
+    0.045,
+    0.045,
+    0.045
+   ],
+   "sapato": [
+    0.03,
+    0.028,
+    0.025
+   ],
+   "sola": [
+    0.2,
+    0.13,
+    0.08
+   ],
+   "dragona": [
+    0.05,
+    0.3,
+    0.12
+   ],
+   "dragona_meialua": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "dragona_passante": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "ornamento_cor": [
+    0.88,
+    0.6,
+    0.22
+   ]
+  }
+ }
+}

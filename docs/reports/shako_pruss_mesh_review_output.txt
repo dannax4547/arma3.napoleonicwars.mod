@@ -1,0 +1,12 @@
+﻿
+REVIEW object=HCL_Shako_Pruss_LOD0 verts=2605 faces=3004 islands=8
+M1 islands with non-positive volume (inverted or open): 0
+M2 duplicate vertices (<0.001 mm): same island=0  between islands=0
+M3 boundary edges=0 non-manifold edges=0
+M4 zero-area faces=0 loose verts=0 loose edges=0 max verts/face=4
+M5 island pairs that intersect: 0
+M5 self-intersections inside islands (non-adjacent face pairs): 0
+M7 triangles total=5194 by material: HCL_couro_envernizado=1330, HCL_couro=1208, HCL_latao=1156, 
+HCL_tecido_branco=476, HCL_feltro=440, HCL_forro=360, HCL_la_amarela=140, HCL_tecido_preto=84
+
+

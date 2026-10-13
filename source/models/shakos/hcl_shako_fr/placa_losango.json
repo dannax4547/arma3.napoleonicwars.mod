@@ -1,0 +1,47 @@
+{
+ "image": "C:/Users/lucas/Documents/HistoricalClothing/work/ntw/france/FranceINF_diffuse.png",
+ "box": [
+  1530,
+  2044,
+  1706,
+  2224
+ ],
+ "iso": null,
+ "nota": "Losango de 1810 (atlas FranceINF c3 r4, Reto). Contorno geometrico medido por limiar de cor (fundo escuro, sem alfa): rombo com cantos chanfrados de 7 px.",
+ "loops": [
+  [
+   [
+    80.25,
+    13.0
+   ],
+   [
+    93.75,
+    13.0
+   ],
+   [
+    161.0,
+    82.74
+   ],
+   [
+    161.0,
+    97.26
+   ],
+   [
+    93.75,
+    167.0
+   ],
+   [
+    80.25,
+    167.0
+   ],
+   [
+    13.0,
+    97.26
+   ],
+   [
+    13.0,
+    82.74
+   ]
+  ]
+ ]
+}

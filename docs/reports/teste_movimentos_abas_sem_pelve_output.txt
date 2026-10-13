@@ -1,0 +1,272 @@
+PESOS 6470 vertices, 62 ossos usados, abas=transfer; maximo de ossos por vertice = 4; soma 1 em todos = True
+EQUIPAMENTO (blockout da Fase 3): correame 1024 vertices (pesos copiados da casaca), mochila 764 vertices (corpo rigido: spine 0.08, spine1 0.38, spine2 0.30, spine3 0.23; 512 pontos das correias de ombro seguem a casaca)
+CABECA oficial (Male.p3d, Samples): 363 faces, 194 vertices, ossos ['head']...
+COBERTURA no repouso (vertices da camada de baixo cobertos pela de cima): calca_assento<aba_E=86, calca_assento<aba_D=86, calca_perna_E<aba_E=27, calca_perna_D<aba_D=27, calca_perna_E<aba_D=3, calca_assento<casaco_corpo=28, manga_E<punho_E=36, manga_D<punho_D=36, maos_template<punho_E=64, maos_template<punho_D=64, maos_template<manga_E=9, maos_template<manga_D=9, calca_perna_E<polaina_E=18, calca_perna_D<polaina_D=18, sapato_E<polaina_E=40, sapato_D<polaina_D=40, casaco_corpo<gola=34, casaco_corpo<platina_E=5, casaco_corpo<platina_D=5, casaco_corpo<manga_E=19, casaco_corpo<manga_D=18, punho_E<pala_E=9, punho_D<pala_D=9, casaco_corpo<correame=155, platina_E<correame=14, aba_E<correame=18, aba_D<correame=56, casaco_corpo<mochila=183, platina_E<mochila=12, platina_D<mochila=12, gola<mochila=2, correame<mochila=50
+REPOUSO cabeca oficial x gola/casaco/platinas: 0 pares; barretinas x uniforme/correame/mochila: fwr: 0/0/0; aguia: 0/0/0; estrela: 0/0/0; barretina x cabeca oficial (Male.p3d): 148 pares (a barretina foi ajustada ao template de item de cabeca, nao a esta cabeca)
+CONTATO no repouso: 420 vertices encostados (<= 5 mm) em outra peca da malha
+REPOUSO: 1532 pares de faces que já se cruzam de propósito (junções), usados como linha de base
+
+== em_pe: Em pé, fuzil erguido  (AmovPercMstpSrasWrflDnon.rtm, 3 quadros avaliados)
+   REFERENCIA corpo oficial posado com os proprios pesos: altura -0.000 .. +1.449 m;  7.7% das arestas fora de 0,7-1,3x (99% ate 2.04x)
+   CAMADA  casaco_corpo   sai por fora de manga_E      :    1 de   19 vertices, ate  34.1 mm
+   CAMADA  casaco_corpo   sai por fora de gola         :    2 de   34 vertices, ate   4.2 mm
+   CAMADA  casaco_corpo   sai por fora de manga_D      :    1 de   18 vertices, ate   3.0 mm
+   SEPARA  nenhuma peca se afastou > 5 mm da vizinha
+   CRUZA   maos_template  x maos_template :   258 pares de faces novos  (dedos da malha oficial do template fechando na empunhadura)
+   CRUZA   correame       x mochila       :    50 pares de faces novos
+   CRUZA   casaco_corpo   x manga_D       :    45 pares de faces novos  (corpo oficial tronco x braco_D: 0 pares novos)
+   CRUZA   casaco_corpo   x manga_E       :    38 pares de faces novos  (corpo oficial tronco x braco_E: 0 pares novos)
+   CRUZA   manga_D        x mochila       :    30 pares de faces novos  (corpo oficial tronco x braco_D: 0 pares novos)
+   CRUZA   mochila        x mochila       :    29 pares de faces novos
+   CRUZA   manga_D        x manga_D       :    27 pares de faces novos
+   CRUZA   aba_E          x correame      :    24 pares de faces novos
+   CRUZA   correame       x correame      :    16 pares de faces novos
+   CRUZA   casaco_corpo   x casaco_corpo  :    12 pares de faces novos
+   CRUZA   calca_perna_E  x calca_perna_D :    12 pares de faces novos  (corpo oficial perna_E x perna_D: 0 pares novos)
+   CRUZA   botoes         x correame      :    11 pares de faces novos
+   ESTICA  punho_E       : arestas 0.25x .. 2.00x do repouso; 16.7% fora de 0,7-1,3x
+   ESTICA  aba_E         : arestas 0.85x .. 2.91x do repouso; 14.6% fora de 0,7-1,3x
+   ESTICA  punho_D       : arestas 0.34x .. 1.71x do repouso; 13.1% fora de 0,7-1,3x
+   ESTICA  manga_E       : arestas 0.35x .. 3.02x do repouso; 11.2% fora de 0,7-1,3x
+   ESTICA  aba_D         : arestas 0.88x .. 2.18x do repouso; 10.8% fora de 0,7-1,3x
+   ESTICA  manga_D       : arestas 0.24x .. 2.54x do repouso; 10.8% fora de 0,7-1,3x
+   CABECA  cabeca oficial x gola/casaco/platinas: 0 pares de faces (repouso: 0)
+   BARRETINA x uniforme / correame / mochila (pares de faces; repouso entre parenteses): fwr: 0 (0) / 0 (0) / 0 (0); aguia: 0 (0) / 0 (0) / 0 (0); estrela: 0 (0) / 0 (0) / 0 (0)
+
+== agachado: Agachado (um joelho no chão), fuzil erguido  (AmovPknlMstpSrasWrflDnon.rtm, 2 quadros avaliados)
+   REFERENCIA corpo oficial posado com os proprios pesos: altura -0.005 .. +1.006 m; 10.3% das arestas fora de 0,7-1,3x (99% ate 2.16x)
+   CAMADA  casaco_corpo   sai por fora de manga_D      :    1 de   18 vertices, ate  17.2 mm
+   CAMADA  casaco_corpo   sai por fora de manga_E      :    1 de   19 vertices, ate  16.7 mm
+   CAMADA  casaco_corpo   sai por fora de gola         :    3 de   34 vertices, ate   4.3 mm
+   CAMADA  aba_D          sai por fora de correame     :    1 de   56 vertices, ate   5.6 mm
+   CAMADA  calca_assento  sai por fora de aba_E        :    1 de   86 vertices, ate   2.3 mm
+   SEPARA  calca_perna_D :    3 vertices se afastaram > 5 mm de outra peca; o maior,   9.2 mm, de polaina_D
+   SEPARA  polaina_D     :    3 vertices se afastaram > 5 mm de outra peca; o maior,   9.2 mm, de calca_perna_D
+   SEPARA  calca_perna_E :    3 vertices se afastaram > 5 mm de outra peca; o maior,   8.9 mm, de polaina_E
+   SEPARA  polaina_E     :    3 vertices se afastaram > 5 mm de outra peca; o maior,   8.9 mm, de calca_perna_E
+   SEPARA  correame      :    7 vertices se afastaram > 5 mm de outra peca; o maior,   7.4 mm, de botoes
+   SEPARA  botoes        :    7 vertices se afastaram > 5 mm de outra peca; o maior,   7.0 mm, de correame
+   CRUZA   maos_template  x maos_template :   257 pares de faces novos  (dedos da malha oficial do template fechando na empunhadura)
+   CRUZA   aba_E          x correame      :    90 pares de faces novos
+   CRUZA   aba_D          x polaina_D     :    59 pares de faces novos  (corpo oficial tronco x perna_D: 18 pares novos -> a pose encosta)
+   CRUZA   aba_E          x polaina_E     :    44 pares de faces novos  (corpo oficial tronco x perna_E: 28 pares novos -> a pose encosta)
+   CRUZA   aba_E          x calca_assento :    44 pares de faces novos
+   CRUZA   mochila        x mochila       :    42 pares de faces novos
+   CRUZA   casaco_corpo   x manga_D       :    41 pares de faces novos  (corpo oficial tronco x braco_D: 8 pares novos -> a pose encosta)
+   CRUZA   calca_perna_D  x polaina_D     :    40 pares de faces novos
+   CRUZA   casaco_corpo   x manga_E       :    39 pares de faces novos  (corpo oficial tronco x braco_E: 0 pares novos)
+   CRUZA   correame       x mochila       :    39 pares de faces novos
+   CRUZA   calca_assento  x calca_perna_E :    39 pares de faces novos  (corpo oficial tronco x perna_E: 28 pares novos -> a pose encosta)
+   CRUZA   aba_D          x correame      :    38 pares de faces novos
+   ESTICA  aba_E         : arestas 0.56x .. 4.82x do repouso; 23.0% fora de 0,7-1,3x
+   ESTICA  calca_perna_E : arestas 0.23x .. 3.32x do repouso; 22.8% fora de 0,7-1,3x
+   ESTICA  calca_perna_D : arestas 0.25x .. 1.98x do repouso; 18.8% fora de 0,7-1,3x
+   ESTICA  aba_D         : arestas 0.86x .. 1.92x do repouso; 14.5% fora de 0,7-1,3x
+   ESTICA  punho_E       : arestas 0.30x .. 1.80x do repouso; 14.1% fora de 0,7-1,3x
+   ESTICA  punho_D       : arestas 0.29x .. 1.67x do repouso; 12.6% fora de 0,7-1,3x
+   CABECA  cabeca oficial x gola/casaco/platinas: 26 pares de faces (repouso: 0)
+   BARRETINA x uniforme / correame / mochila (pares de faces; repouso entre parenteses): fwr: 0 (0) / 0 (0) / 0 (0); aguia: 0 (0) / 0 (0) / 0 (0); estrela: 0 (0) / 0 (0) / 0 (0)
+
+== deitado: Deitado, fuzil erguido  (AmovPpneMstpSrasWrflDnon.rtm, 11 quadros avaliados)
+   REFERENCIA corpo oficial posado com os proprios pesos: altura -0.032 .. +0.361 m;  7.4% das arestas fora de 0,7-1,3x (99% ate 2.00x)
+   CAMADA  correame       sai por fora de mochila      :    7 de   50 vertices, ate   5.3 mm
+   CAMADA  casaco_corpo   sai por fora de manga_E      :    1 de   19 vertices, ate  20.4 mm
+   CAMADA  casaco_corpo   sai por fora de gola         :    3 de   34 vertices, ate   5.6 mm
+   CAMADA  casaco_corpo   sai por fora de platina_E    :    1 de    5 vertices, ate   5.9 mm
+   CAMADA  casaco_corpo   sai por fora de mochila      :    1 de  183 vertices, ate   3.9 mm
+   CAMADA  casaco_corpo   sai por fora de manga_D      :    1 de   18 vertices, ate   3.8 mm
+   CAMADA  platina_E      sai por fora de correame     :    1 de   14 vertices, ate   2.6 mm
+   SEPARA  casaco_corpo  :    2 vertices se afastaram > 5 mm de outra peca; o maior,   8.1 mm, de gola
+   SEPARA  gola          :    4 vertices se afastaram > 5 mm de outra peca; o maior,   8.1 mm, de casaco_corpo
+   SEPARA  calca_perna_D :    1 vertices se afastaram > 5 mm de outra peca; o maior,   5.2 mm, de polaina_D
+   SEPARA  polaina_D     :    1 vertices se afastaram > 5 mm de outra peca; o maior,   5.2 mm, de calca_perna_D
+   CRUZA   maos_template  x maos_template :   281 pares de faces novos  (dedos da malha oficial do template fechando na empunhadura)
+   CRUZA   correame       x mochila       :   118 pares de faces novos
+   CRUZA   mochila        x mochila       :    65 pares de faces novos
+   CRUZA   casaco_corpo   x manga_D       :    38 pares de faces novos  (corpo oficial tronco x braco_D: 0 pares novos)
+   CRUZA   gola           x correame      :    38 pares de faces novos
+   CRUZA   casaco_corpo   x manga_E       :    36 pares de faces novos  (corpo oficial tronco x braco_E: 3 pares novos -> a pose encosta)
+   CRUZA   casaco_corpo   x gola          :    23 pares de faces novos
+   CRUZA   manga_D        x manga_D       :    21 pares de faces novos
+   CRUZA   platina_E      x correame      :    19 pares de faces novos
+   CRUZA   correame       x correame      :    18 pares de faces novos
+   CRUZA   gola           x mochila       :    16 pares de faces novos
+   CRUZA   gola           x platina_E     :    16 pares de faces novos
+   ESTICA  platina_E     : arestas 0.36x .. 1.19x do repouso; 19.8% fora de 0,7-1,3x
+   ESTICA  calca_perna_D : arestas 0.19x .. 2.65x do repouso; 14.6% fora de 0,7-1,3x
+   ESTICA  punho_E       : arestas 0.25x .. 2.03x do repouso; 14.1% fora de 0,7-1,3x
+   ESTICA  aba_D         : arestas 0.74x .. 3.40x do repouso; 13.6% fora de 0,7-1,3x
+   ESTICA  punho_D       : arestas 0.26x .. 1.59x do repouso; 13.1% fora de 0,7-1,3x
+   ESTICA  manga_D       : arestas 0.18x .. 2.92x do repouso; 12.5% fora de 0,7-1,3x
+   CABECA  cabeca oficial x gola/casaco/platinas: 0 pares de faces (repouso: 0)
+   BARRETINA x uniforme / correame / mochila (pares de faces; repouso entre parenteses): fwr: 0 (0) / 0 (0) / 0 (0); aguia: 0 (0) / 0 (0) / 0 (0); estrela: 0 (0) / 0 (0) / 0 (0)
+
+== inventario: Ajoelhado, mãos no chão (inventário)  (AinvPknlMstpSlayWrflDnon.rtm, 2 quadros avaliados)
+   REFERENCIA corpo oficial posado com os proprios pesos: altura -0.031 .. +0.798 m;  8.6% das arestas fora de 0,7-1,3x (99% ate 2.03x)
+   CAMADA  casaco_corpo   sai por fora de manga_D      :    1 de   18 vertices, ate  22.8 mm
+   CAMADA  casaco_corpo   sai por fora de gola         :    5 de   34 vertices, ate   4.5 mm
+   CAMADA  calca_assento  sai por fora de aba_E        :    3 de   86 vertices, ate   4.5 mm
+   CAMADA  casaco_corpo   sai por fora de manga_E      :    1 de   19 vertices, ate   9.6 mm
+   SEPARA  calca_perna_D :    3 vertices se afastaram > 5 mm de outra peca; o maior,  10.0 mm, de polaina_D
+   SEPARA  polaina_D     :    3 vertices se afastaram > 5 mm de outra peca; o maior,  10.0 mm, de calca_perna_D
+   SEPARA  botoes        :   10 vertices se afastaram > 5 mm de outra peca; o maior,   9.8 mm, de correame
+   SEPARA  correame      :    6 vertices se afastaram > 5 mm de outra peca; o maior,   9.8 mm, de botoes
+   SEPARA  calca_perna_E :    3 vertices se afastaram > 5 mm de outra peca; o maior,   9.4 mm, de polaina_E
+   SEPARA  polaina_E     :    3 vertices se afastaram > 5 mm de outra peca; o maior,   9.4 mm, de calca_perna_E
+   CRUZA   aba_D          x polaina_D     :    84 pares de faces novos  (corpo oficial tronco x perna_D: 3 pares novos -> a pose encosta)
+   CRUZA   aba_E          x calca_assento :    72 pares de faces novos
+   CRUZA   casaco_corpo   x calca_perna_E :    64 pares de faces novos  (corpo oficial tronco x perna_E: 93 pares novos -> a pose encosta)
+   CRUZA   manga_E        x calca_perna_E :    60 pares de faces novos  (corpo oficial braco_E x perna_E: 45 pares novos -> a pose encosta)
+   CRUZA   aba_E          x polaina_E     :    60 pares de faces novos  (corpo oficial tronco x perna_E: 93 pares novos -> a pose encosta)
+   CRUZA   aba_E          x calca_perna_E :    52 pares de faces novos  (corpo oficial tronco x perna_E: 93 pares novos -> a pose encosta)
+   CRUZA   calca_perna_D  x polaina_D     :    46 pares de faces novos
+   CRUZA   calca_perna_E  x polaina_E     :    43 pares de faces novos
+   CRUZA   calca_assento  x calca_perna_E :    36 pares de faces novos  (corpo oficial tronco x perna_E: 93 pares novos -> a pose encosta)
+   CRUZA   casaco_corpo   x manga_D       :    35 pares de faces novos  (corpo oficial tronco x braco_D: 0 pares novos)
+   CRUZA   calca_perna_E  x correame      :    32 pares de faces novos  (corpo oficial tronco x perna_E: 93 pares novos -> a pose encosta)
+   CRUZA   aba_E          x correame      :    29 pares de faces novos
+   ESTICA  aba_E         : arestas 0.48x .. 4.68x do repouso; 24.9% fora de 0,7-1,3x
+   ESTICA  calca_perna_E : arestas 0.22x .. 3.32x do repouso; 24.1% fora de 0,7-1,3x
+   ESTICA  calca_perna_D : arestas 0.14x .. 2.25x do repouso; 21.1% fora de 0,7-1,3x
+   ESTICA  casaco_corpo  : arestas 0.43x .. 2.26x do repouso; 18.6% fora de 0,7-1,3x
+   ESTICA  aba_D         : arestas 0.79x .. 3.04x do repouso; 18.2% fora de 0,7-1,3x
+   ESTICA  polaina_D     : arestas 0.40x .. 2.08x do repouso; 12.2% fora de 0,7-1,3x
+   CABECA  cabeca oficial x gola/casaco/platinas: 0 pares de faces (repouso: 0)
+   BARRETINA x uniforme / correame / mochila (pares de faces; repouso entre parenteses): fwr: 0 (0) / 0 (0) / 0 (0); aguia: 0 (0) / 0 (0) / 0 (0); estrela: 0 (0) / 0 (0) / 0 (0)
+
+== sentado: Sentado (passageiro, FFV)  (ffv_01_idle1.rtm, 26 quadros avaliados)
+   REFERENCIA corpo oficial posado com os proprios pesos: altura -0.267 .. +0.662 m;  9.9% das arestas fora de 0,7-1,3x (99% ate 2.24x)
+   CAMADA  maos_template  sai por fora de punho_D      :    7 de   64 vertices, ate  20.9 mm
+   CAMADA  manga_D        sai por fora de punho_D      :    4 de   36 vertices, ate  13.4 mm
+   CAMADA  casaco_corpo   sai por fora de manga_E      :    2 de   19 vertices, ate  22.7 mm
+   CAMADA  maos_template  sai por fora de punho_E      :    1 de   64 vertices, ate  19.7 mm
+   CAMADA  casaco_corpo   sai por fora de gola         :    4 de   34 vertices, ate   4.6 mm
+   CAMADA  casaco_corpo   sai por fora de manga_D      :    1 de   18 vertices, ate   5.4 mm
+   SEPARA  calca_perna_E :    3 vertices se afastaram > 5 mm de outra peca; o maior,   8.7 mm, de polaina_E
+   SEPARA  polaina_E     :    3 vertices se afastaram > 5 mm de outra peca; o maior,   8.7 mm, de calca_perna_E
+   SEPARA  calca_perna_D :    4 vertices se afastaram > 5 mm de outra peca; o maior,   8.6 mm, de polaina_D
+   SEPARA  polaina_D     :    3 vertices se afastaram > 5 mm de outra peca; o maior,   8.6 mm, de calca_perna_D
+   SEPARA  aba_D         :    1 vertices se afastaram > 5 mm de outra peca; o maior,   8.0 mm, de calca_perna_D
+   SEPARA  botoes        :    4 vertices se afastaram > 5 mm de outra peca; o maior,   6.3 mm, de correame
+   SEPARA  correame      :    3 vertices se afastaram > 5 mm de outra peca; o maior,   6.3 mm, de botoes
+   CRUZA   maos_template  x maos_template :   633 pares de faces novos  (dedos da malha oficial do template fechando na empunhadura)
+   CRUZA   casaco_corpo   x manga_E       :    56 pares de faces novos  (corpo oficial tronco x braco_E: 28 pares novos -> a pose encosta)
+   CRUZA   punho_D        x maos_template :    54 pares de faces novos
+   CRUZA   calca_assento  x calca_perna_D :    44 pares de faces novos  (corpo oficial tronco x perna_D: 39 pares novos -> a pose encosta)
+   CRUZA   manga_D        x mochila       :    44 pares de faces novos  (corpo oficial tronco x braco_D: 0 pares novos)
+   CRUZA   manga_D        x manga_D       :    39 pares de faces novos
+   CRUZA   calca_perna_E  x polaina_E     :    37 pares de faces novos
+   CRUZA   aba_E          x polaina_E     :    34 pares de faces novos  (corpo oficial tronco x perna_E: 26 pares novos -> a pose encosta)
+   CRUZA   calca_assento  x calca_perna_E :    32 pares de faces novos  (corpo oficial tronco x perna_E: 26 pares novos -> a pose encosta)
+   CRUZA   aba_D          x polaina_D     :    28 pares de faces novos  (corpo oficial tronco x perna_D: 39 pares novos -> a pose encosta)
+   CRUZA   aba_E          x correame      :    28 pares de faces novos
+   CRUZA   calca_perna_D  x calca_perna_D :    27 pares de faces novos
+   ESTICA  punho_D       : arestas 0.22x .. 2.94x do repouso; 23.2% fora de 0,7-1,3x
+   ESTICA  aba_E         : arestas 0.65x .. 4.39x do repouso; 22.6% fora de 0,7-1,3x
+   ESTICA  aba_D         : arestas 0.65x .. 4.18x do repouso; 22.4% fora de 0,7-1,3x
+   ESTICA  calca_perna_E : arestas 0.13x .. 3.00x do repouso; 22.4% fora de 0,7-1,3x
+   ESTICA  calca_perna_D : arestas 0.05x .. 3.03x do repouso; 21.6% fora de 0,7-1,3x
+   ESTICA  punho_E       : arestas 0.07x .. 2.72x do repouso; 15.7% fora de 0,7-1,3x
+   CABECA  cabeca oficial x gola/casaco/platinas: 31 pares de faces (repouso: 0)
+   BARRETINA x uniforme / correame / mochila (pares de faces; repouso entre parenteses): fwr: 0 (0) / 0 (0) / 0 (0); aguia: 0 (0) / 0 (0) / 0 (0); estrela: 0 (0) / 0 (0) / 0 (0)
+
+== sentado_mira: Sentado mirando (FFV)  (ffv_01_aim1.rtm, 17 quadros avaliados)
+   REFERENCIA corpo oficial posado com os proprios pesos: altura -0.266 .. +0.673 m; 10.3% das arestas fora de 0,7-1,3x (99% ate 2.23x)
+   CAMADA  casaco_corpo   sai por fora de gola         :    4 de   34 vertices, ate   4.3 mm
+   CAMADA  casaco_corpo   sai por fora de manga_E      :    1 de   19 vertices, ate   8.7 mm
+   CAMADA  casaco_corpo   sai por fora de manga_D      :    1 de   18 vertices, ate   5.4 mm
+   SEPARA  botoes        :   10 vertices se afastaram > 5 mm de outra peca; o maior,   9.9 mm, de correame
+   SEPARA  correame      :    6 vertices se afastaram > 5 mm de outra peca; o maior,   9.9 mm, de botoes
+   SEPARA  calca_perna_E :    3 vertices se afastaram > 5 mm de outra peca; o maior,   8.1 mm, de polaina_E
+   SEPARA  polaina_E     :    3 vertices se afastaram > 5 mm de outra peca; o maior,   8.1 mm, de calca_perna_E
+   SEPARA  calca_perna_D :    4 vertices se afastaram > 5 mm de outra peca; o maior,   7.9 mm, de polaina_D
+   SEPARA  polaina_D     :    3 vertices se afastaram > 5 mm de outra peca; o maior,   7.9 mm, de calca_perna_D
+   SEPARA  aba_D         :    1 vertices se afastaram > 5 mm de outra peca; o maior,   7.7 mm, de calca_perna_D
+   CRUZA   maos_template  x maos_template :   259 pares de faces novos  (dedos da malha oficial do template fechando na empunhadura)
+   CRUZA   casaco_corpo   x manga_D       :    48 pares de faces novos  (corpo oficial tronco x braco_D: 31 pares novos -> a pose encosta)
+   CRUZA   calca_assento  x calca_perna_D :    36 pares de faces novos  (corpo oficial tronco x perna_D: 35 pares novos -> a pose encosta)
+   CRUZA   aba_E          x correame      :    35 pares de faces novos
+   CRUZA   casaco_corpo   x manga_E       :    31 pares de faces novos  (corpo oficial tronco x braco_E: 0 pares novos)
+   CRUZA   correame       x correame      :    31 pares de faces novos
+   CRUZA   calca_perna_E  x polaina_E     :    30 pares de faces novos
+   CRUZA   manga_D        x mochila       :    30 pares de faces novos  (corpo oficial tronco x braco_D: 31 pares novos -> a pose encosta)
+   CRUZA   calca_perna_E  x calca_perna_E :    29 pares de faces novos
+   CRUZA   calca_assento  x calca_perna_E :    28 pares de faces novos  (corpo oficial tronco x perna_E: 18 pares novos -> a pose encosta)
+   CRUZA   calca_perna_D  x calca_perna_D :    23 pares de faces novos
+   CRUZA   manga_D        x manga_D       :    23 pares de faces novos
+   ESTICA  aba_D         : arestas 0.68x .. 4.08x do repouso; 24.1% fora de 0,7-1,3x
+   ESTICA  aba_E         : arestas 0.69x .. 4.28x do repouso; 22.6% fora de 0,7-1,3x
+   ESTICA  calca_perna_E : arestas 0.06x .. 2.93x do repouso; 21.5% fora de 0,7-1,3x
+   ESTICA  calca_perna_D : arestas 0.10x .. 2.97x do repouso; 20.5% fora de 0,7-1,3x
+   ESTICA  punho_E       : arestas 0.21x .. 2.06x do repouso; 15.7% fora de 0,7-1,3x
+   ESTICA  casaco_corpo  : arestas 0.29x .. 3.64x do repouso; 15.4% fora de 0,7-1,3x
+   CABECA  cabeca oficial x gola/casaco/platinas: 0 pares de faces (repouso: 0)
+   BARRETINA x uniforme / correame / mochila (pares de faces; repouso entre parenteses): fwr: 0 (0) / 0 (0) / 0 (0); aguia: 0 (0) / 0 (0) / 0 (0); estrela: 0 (0) / 0 (0) / 0 (0)
+
+== morte: Morte sentado (FFV)  (ffv_01_die.rtm, 26 quadros avaliados)
+   REFERENCIA corpo oficial posado com os proprios pesos: altura -0.266 .. +0.673 m; 10.3% das arestas fora de 0,7-1,3x (99% ate 2.23x)
+   CAMADA  casaco_corpo   sai por fora de manga_D      :    2 de   18 vertices, ate  24.1 mm
+   CAMADA  casaco_corpo   sai por fora de gola         :    8 de   34 vertices, ate   4.5 mm
+   CAMADA  casaco_corpo   sai por fora de manga_E      :    1 de   19 vertices, ate  29.5 mm
+   CAMADA  maos_template  sai por fora de punho_D      :    1 de   64 vertices, ate  12.7 mm
+   SEPARA  botoes        :   10 vertices se afastaram > 5 mm de outra peca; o maior,  12.0 mm, de correame
+   SEPARA  correame      :    8 vertices se afastaram > 5 mm de outra peca; o maior,  12.0 mm, de botoes
+   SEPARA  calca_perna_E :    3 vertices se afastaram > 5 mm de outra peca; o maior,   8.1 mm, de polaina_E
+   SEPARA  polaina_E     :    3 vertices se afastaram > 5 mm de outra peca; o maior,   8.1 mm, de calca_perna_E
+   SEPARA  aba_D         :    1 vertices se afastaram > 5 mm de outra peca; o maior,   8.0 mm, de calca_perna_D
+   SEPARA  calca_perna_D :    4 vertices se afastaram > 5 mm de outra peca; o maior,   8.0 mm, de aba_D
+   SEPARA  polaina_D     :    3 vertices se afastaram > 5 mm de outra peca; o maior,   8.0 mm, de calca_perna_D
+   CRUZA   maos_template  x maos_template :   265 pares de faces novos  (dedos da malha oficial do template fechando na empunhadura)
+   CRUZA   manga_E        x calca_perna_E :    96 pares de faces novos  (corpo oficial braco_E x perna_E: 112 pares novos -> a pose encosta)
+   CRUZA   casaco_corpo   x manga_D       :    55 pares de faces novos  (corpo oficial tronco x braco_D: 32 pares novos -> a pose encosta)
+   CRUZA   aba_E          x correame      :    42 pares de faces novos
+   CRUZA   manga_D        x mochila       :    42 pares de faces novos  (corpo oficial tronco x braco_D: 32 pares novos -> a pose encosta)
+   CRUZA   manga_D        x calca_perna_D :    42 pares de faces novos  (corpo oficial braco_D x perna_D: 36 pares novos -> a pose encosta)
+   CRUZA   manga_E        x polaina_E     :    37 pares de faces novos  (corpo oficial braco_E x perna_E: 112 pares novos -> a pose encosta)
+   CRUZA   calca_assento  x calca_perna_D :    36 pares de faces novos  (corpo oficial tronco x perna_D: 37 pares novos -> a pose encosta)
+   CRUZA   casaco_corpo   x manga_E       :    33 pares de faces novos  (corpo oficial tronco x braco_E: 0 pares novos)
+   CRUZA   calca_perna_D  x calca_perna_D :    31 pares de faces novos
+   CRUZA   aba_D          x correame      :    31 pares de faces novos
+   CRUZA   calca_perna_E  x polaina_E     :    30 pares de faces novos
+   ESTICA  aba_D         : arestas 0.68x .. 4.35x do repouso; 26.0% fora de 0,7-1,3x
+   ESTICA  aba_E         : arestas 0.69x .. 4.26x do repouso; 23.5% fora de 0,7-1,3x
+   ESTICA  calca_perna_E : arestas 0.06x .. 2.92x do repouso; 20.9% fora de 0,7-1,3x
+   ESTICA  calca_perna_D : arestas 0.08x .. 2.97x do repouso; 20.5% fora de 0,7-1,3x
+   ESTICA  casaco_corpo  : arestas 0.18x .. 3.64x do repouso; 19.0% fora de 0,7-1,3x
+   ESTICA  punho_E       : arestas 0.16x .. 2.04x do repouso; 15.7% fora de 0,7-1,3x
+   CABECA  cabeca oficial x gola/casaco/platinas: 64 pares de faces (repouso: 0)
+   BARRETINA x uniforme / correame / mochila (pares de faces; repouso entre parenteses): fwr: 0 (0) / 0 (0) / 0 (0); aguia: 0 (0) / 0 (0) / 0 (0); estrela: 0 (0) / 0 (0) / 0 (0)
+
+== binoculo: Sentado com binóculo (FFV)  (ffv_01_aim_binoc.rtm, 17 quadros avaliados)
+   REFERENCIA corpo oficial posado com os proprios pesos: altura -0.267 .. +0.741 m;  9.7% das arestas fora de 0,7-1,3x (99% ate 2.23x)
+   CAMADA  maos_template  sai por fora de punho_D      :    7 de   64 vertices, ate  20.0 mm
+   CAMADA  manga_D        sai por fora de punho_D      :    4 de   36 vertices, ate  13.5 mm
+   CAMADA  casaco_corpo   sai por fora de manga_E      :    1 de   19 vertices, ate  30.3 mm
+   CAMADA  casaco_corpo   sai por fora de gola         :    2 de   34 vertices, ate   4.1 mm
+   SEPARA  calca_perna_E :    3 vertices se afastaram > 5 mm de outra peca; o maior,   8.7 mm, de polaina_E
+   SEPARA  polaina_E     :    3 vertices se afastaram > 5 mm de outra peca; o maior,   8.7 mm, de calca_perna_E
+   SEPARA  calca_perna_D :    4 vertices se afastaram > 5 mm de outra peca; o maior,   8.5 mm, de polaina_D
+   SEPARA  polaina_D     :    3 vertices se afastaram > 5 mm de outra peca; o maior,   8.5 mm, de calca_perna_D
+   SEPARA  aba_D         :    1 vertices se afastaram > 5 mm de outra peca; o maior,   7.9 mm, de calca_perna_D
+   SEPARA  botoes        :    4 vertices se afastaram > 5 mm de outra peca; o maior,   6.0 mm, de correame
+   SEPARA  correame      :    3 vertices se afastaram > 5 mm de outra peca; o maior,   6.0 mm, de botoes
+   CRUZA   maos_template  x maos_template :   245 pares de faces novos  (dedos da malha oficial do template fechando na empunhadura)
+   CRUZA   punho_D        x maos_template :    54 pares de faces novos
+   CRUZA   casaco_corpo   x manga_E       :    46 pares de faces novos  (corpo oficial tronco x braco_E: 7 pares novos -> a pose encosta)
+   CRUZA   manga_E        x mochila       :    44 pares de faces novos  (corpo oficial tronco x braco_E: 7 pares novos -> a pose encosta)
+   CRUZA   calca_assento  x calca_perna_D :    41 pares de faces novos  (corpo oficial tronco x perna_D: 39 pares novos -> a pose encosta)
+   CRUZA   calca_perna_E  x polaina_E     :    37 pares de faces novos
+   CRUZA   manga_D        x manga_D       :    37 pares de faces novos
+   CRUZA   aba_E          x polaina_E     :    34 pares de faces novos  (corpo oficial tronco x perna_E: 24 pares novos -> a pose encosta)
+   CRUZA   calca_assento  x calca_perna_E :    32 pares de faces novos  (corpo oficial tronco x perna_E: 24 pares novos -> a pose encosta)
+   CRUZA   correame       x mochila       :    30 pares de faces novos
+   CRUZA   manga_E        x manga_E       :    29 pares de faces novos
+   CRUZA   calca_perna_E  x calca_perna_E :    27 pares de faces novos
+   ESTICA  punho_D       : arestas 0.22x .. 2.95x do repouso; 22.7% fora de 0,7-1,3x
+   ESTICA  aba_E         : arestas 0.66x .. 4.37x do repouso; 22.5% fora de 0,7-1,3x
+   ESTICA  calca_perna_E : arestas 0.13x .. 3.00x do repouso; 22.4% fora de 0,7-1,3x
+   ESTICA  aba_D         : arestas 0.66x .. 4.14x do repouso; 22.3% fora de 0,7-1,3x
+   ESTICA  calca_perna_D : arestas 0.06x .. 3.02x do repouso; 21.6% fora de 0,7-1,3x
+   ESTICA  punho_E       : arestas 0.30x .. 2.17x do repouso; 10.6% fora de 0,7-1,3x
+   CABECA  cabeca oficial x gola/casaco/platinas: 0 pares de faces (repouso: 0)
+   BARRETINA x uniforme / correame / mochila (pares de faces; repouso entre parenteses): fwr: 0 (0) / 0 (0) / 0 (0); aguia: 0 (0) / 0 (0) / 0 (0); estrela: 0 (0) / 0 (0) / 0 (0)

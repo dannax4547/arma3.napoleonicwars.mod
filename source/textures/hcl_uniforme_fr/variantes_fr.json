@@ -1,0 +1,379 @@
+{
+ "F01": {
+  "prefixo": "hcl_u_fr1812_v01",
+  "nome": "Linha, fuzileiro: azul imperial, lapelas e viradas brancas, gola e punhos vermelhos",
+  "mod": "FranceINF_diffuse c4 r2 (M1); calca branca e polainas pretas c4 r1 (M6). Pala do punho branca com debrum vermelho: nao legivel no mod (ficha F, 4)",
+  "cores": {
+   "casaca": [
+    0.08,
+    0.12,
+    0.3
+   ],
+   "gola": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "punho": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "gola_debrum": [
+    0.86,
+    0.85,
+    0.8
+   ],
+   "punho_debrum": [
+    0.86,
+    0.85,
+    0.8
+   ],
+   "lapela": [
+    0.86,
+    0.85,
+    0.8
+   ],
+   "lapela_debrum": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "viras": [
+    0.86,
+    0.85,
+    0.8
+   ],
+   "viras_debrum": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "pala": [
+    0.86,
+    0.85,
+    0.8
+   ],
+   "debrum": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "platina": [
+    0.08,
+    0.12,
+    0.3
+   ],
+   "platina_borda": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "botoes": [
+    0.8,
+    0.62,
+    0.28
+   ],
+   "calca": [
+    0.84,
+    0.83,
+    0.78
+   ],
+   "polaina": [
+    0.045,
+    0.045,
+    0.045
+   ],
+   "sapato": [
+    0.03,
+    0.028,
+    0.025
+   ],
+   "sola": [
+    0.2,
+    0.13,
+    0.08
+   ]
+  },
+  "curto": "azul, lapelas brancas"
+ },
+ "F02": {
+  "prefixo": "hcl_u_fr1812_v02",
+  "nome": "Linha: azul, lapelas, gola e punhos pretos com debrum vermelho, viradas vermelhas",
+  "mod": "FranceINF_2_diffuse c5 r0 (mesmo corte de M1); unidade nao identificada no mod",
+  "cores": {
+   "botoes": [
+    0.8,
+    0.62,
+    0.28
+   ],
+   "calca": [
+    0.84,
+    0.83,
+    0.78
+   ],
+   "polaina": [
+    0.045,
+    0.045,
+    0.045
+   ],
+   "sapato": [
+    0.03,
+    0.028,
+    0.025
+   ],
+   "sola": [
+    0.2,
+    0.13,
+    0.08
+   ],
+   "casaca": [
+    0.08,
+    0.12,
+    0.3
+   ],
+   "gola": [
+    0.035,
+    0.035,
+    0.04
+   ],
+   "punho": [
+    0.035,
+    0.035,
+    0.04
+   ],
+   "gola_debrum": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "punho_debrum": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "lapela": [
+    0.035,
+    0.035,
+    0.04
+   ],
+   "lapela_debrum": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "viras": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "pala": [
+    0.86,
+    0.85,
+    0.8
+   ],
+   "debrum": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "platina": [
+    0.08,
+    0.12,
+    0.3
+   ],
+   "platina_borda": [
+    0.62,
+    0.07,
+    0.07
+   ]
+  },
+  "curto": "azul, lapelas pretas"
+ },
+ "F03": {
+  "prefixo": "hcl_u_fr1812_v03",
+  "nome": "Casaca amarela, lapelas, gola, punhos e viradas vermelhos com debrum branco",
+  "mod": "FranceINF_3_diffuse c4 r0 (mesmo corte de M1); unidade nao identificada no mod (regimento estrangeiro?)",
+  "cores": {
+   "botoes": [
+    0.8,
+    0.62,
+    0.28
+   ],
+   "calca": [
+    0.84,
+    0.83,
+    0.78
+   ],
+   "polaina": [
+    0.045,
+    0.045,
+    0.045
+   ],
+   "sapato": [
+    0.03,
+    0.028,
+    0.025
+   ],
+   "sola": [
+    0.2,
+    0.13,
+    0.08
+   ],
+   "casaca": [
+    0.8,
+    0.6,
+    0.12
+   ],
+   "gola": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "punho": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "gola_debrum": [
+    0.86,
+    0.85,
+    0.8
+   ],
+   "punho_debrum": [
+    0.86,
+    0.85,
+    0.8
+   ],
+   "lapela": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "lapela_debrum": [
+    0.86,
+    0.85,
+    0.8
+   ],
+   "viras": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "pala": [
+    0.86,
+    0.85,
+    0.8
+   ],
+   "debrum": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "platina": [
+    0.8,
+    0.6,
+    0.12
+   ],
+   "platina_borda": [
+    0.62,
+    0.07,
+    0.07
+   ]
+  },
+  "curto": "casaca amarela, lapelas vermelhas"
+ },
+ "F04": {
+  "prefixo": "hcl_u_fr1812_v04",
+  "nome": "Casaca vermelha, lapelas, gola, punhos e viradas amarelos com debrum branco",
+  "mod": "FranceINF_3_diffuse c5 r0, c5 r1, c6 r1 (mesmo corte de M1); unidade nao identificada no mod (regimento estrangeiro?)",
+  "cores": {
+   "botoes": [
+    0.8,
+    0.62,
+    0.28
+   ],
+   "calca": [
+    0.84,
+    0.83,
+    0.78
+   ],
+   "polaina": [
+    0.045,
+    0.045,
+    0.045
+   ],
+   "sapato": [
+    0.03,
+    0.028,
+    0.025
+   ],
+   "sola": [
+    0.2,
+    0.13,
+    0.08
+   ],
+   "casaca": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "gola": [
+    0.8,
+    0.6,
+    0.12
+   ],
+   "punho": [
+    0.8,
+    0.6,
+    0.12
+   ],
+   "gola_debrum": [
+    0.86,
+    0.85,
+    0.8
+   ],
+   "punho_debrum": [
+    0.86,
+    0.85,
+    0.8
+   ],
+   "lapela": [
+    0.8,
+    0.6,
+    0.12
+   ],
+   "lapela_debrum": [
+    0.86,
+    0.85,
+    0.8
+   ],
+   "viras": [
+    0.8,
+    0.6,
+    0.12
+   ],
+   "pala": [
+    0.86,
+    0.85,
+    0.8
+   ],
+   "debrum": [
+    0.8,
+    0.6,
+    0.12
+   ],
+   "platina": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "platina_borda": [
+    0.8,
+    0.6,
+    0.12
+   ]
+  },
+  "curto": "casaca vermelha, lapelas amarelas"
+ }
+}
