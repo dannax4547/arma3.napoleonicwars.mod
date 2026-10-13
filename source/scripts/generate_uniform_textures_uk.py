@@ -705,6 +705,60 @@ def wool(rgb, mottle=1.0):
     return base[None, None, :] * v[..., None]
 
 
+KILT = json.loads(ob["hcl_kilt"]) if "hcl_kilt" in ob.keys() else None
+_TARTAN = {}
+
+
+def tartan_tile(spec):
+    """Crop of the mod art (Reto atlas, authorised) holding the tartan strip, as float RGB (row 0 = top)."""
+    key = (spec["imagem"], tuple(spec["caixa"]))
+    if key not in _TARTAN:
+        d_ = os.path.dirname(os.path.abspath(__file__)).replace("\\", "/").split("/")
+        root_ = "/".join(d_[:d_.index(".claude")]) if ".claude" in d_ else os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "..")
+        im = bpy.data.images.load(os.path.join(root_, "work", "ntw", "britain", spec["imagem"]))
+        W_, H_ = im.size
+        px = np.array(im.pixels[:], np.float32).reshape(H_, W_, 4)[::-1]
+        x0, y0, x1, y1 = spec["caixa"]
+        _TARTAN[key] = np.ascontiguousarray(px[y0:y1, x0:x1, :3])
+    return _TARTAN[key]
+
+
+def highland(v, col, C):
+    """Kilt in the tartan of the mod art, tiled at its real size along the cloth (arc around the body x height);
+    trousers legs painted as Highland legs: bare knee (skin) from the kilt hem down to the turned-down hose top with a
+    red garter flash, then diced hose (red and white, 45 deg) down to the black spat (lower part of the gaiter)."""
+    sp = v["tartan"]
+    tile = tartan_tile(sp)
+    th, tw = tile.shape[:2]
+    kilt_m = isp("saia")
+    ax_ = KILT["ax"]
+    ang = np.arctan2(X - ax_[0], -(Y - ax_[1]))
+    rad = np.hypot(X - ax_[0], Y - ax_[1])
+    arc = ang * np.where(kilt_m, rad, 0.20)
+    L_ = sp["largura_m"]; H_ = L_ * th / tw
+    iu = (np.mod(arc / L_, 1.0) * tw).astype(int) % tw
+    iv = (np.mod(-Hh / H_, 1.0) * th).astype(int) % th
+    tc = tile[iv, iu] * sp.get("ganho", 1.6)                       # the art is darker (light baked in the mod)
+    col = np.where(kilt_m[..., None], tc * (1 + 0.04 * N_MID[..., None]), col)
+    legs = isp("calca_perna")
+    hose_top = sp.get("meia_topo", 0.445)
+    skin = legs & (Hh > hose_top + 0.012)
+    col[skin] = (np.array(C["pele"], np.float32)[None, None, :] * (1 + 0.05 * N_BIG[..., None]))[skin]
+    turn = legs & (Hh <= hose_top + 0.012) & (Hh > hose_top - 0.025)        # turned-down hose top
+    s_ = 0.022
+    a_, b_ = (arc + Hh) / s_, (arc - Hh) / s_
+    dice = (np.floor(a_) + np.floor(b_)) % 2 == 0
+    hose = np.where(dice[..., None], wool(C["meia_a"], 0.5), wool(C["meia_b"], 0.5))
+    col[turn] = hose[turn]
+    flash = legs & (np.abs(Hh - (hose_top - 0.030)) < 0.004)                 # garter flash
+    col[flash] = wool(C["meia_liga"], 0.5)[flash]
+    g_ = gait & (Hh > sp.get("polaina_topo", 0.20))                       # hose over the upper gaiter
+    col[g_] = hose[g_]
+    leg_low = legs & (Hh <= hose_top - 0.025)
+    col[leg_low] = hose[leg_low]
+    return col
+
+
 def paint_variant(v):
     col = np.zeros((T, T, 3), np.float32)
     C = {k: np.array(c, np.float32) for k, c in v["cores"].items()}
@@ -770,6 +824,8 @@ def paint_variant(v):
         la = loop_a[..., None]
         col = col * (1 - la) + lc * la
     col[cinza] = wool(C["calca"], 1.3)[cinza]
+    if v.get("tartan"):                                 # UK Highland dress (build_kilt_uk.py), see highland() below
+        col = highland(v, col, C)
     col[gait] = wool(C["polaina"], 1.6)[gait]
     shoe = np.array(C["sapato"], np.float32)[None, None, :] * (1 + 0.20 * N_MID[..., None] + 0.08 * PIX[..., None])
     col[leather] = shoe[leather]

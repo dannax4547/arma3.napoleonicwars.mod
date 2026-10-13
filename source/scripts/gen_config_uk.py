@@ -16,13 +16,16 @@ P = r"\hcl\hcl_uk"
 GROUPS = []                        # (json file, p3d, soldier base class, its displayName)
 for fn, p3d, base in (("variantes_uk_linha.json", "hcl_u_uk1812_linha", "HCL_UK1812_Soldado_Base"),
                       ("variantes_uk_flanco.json", "hcl_u_uk1812_flanco", "HCL_UK1812_Soldado_Flanco_Base"),
-                      ("variantes_uk_rifles.json", "hcl_u_uk1812_rifles", "HCL_UK1812_Soldado_Rifles_Base")):
+                      ("variantes_uk_rifles.json", "hcl_u_uk1812_rifles", "HCL_UK1812_Soldado_Rifles_Base"),
+                      ("variantes_uk_kilt.json", "hcl_u_uk1812_kilt", "HCL_UK1812_Soldado_Kilt_Base")):
     GROUPS.append((json.load(open(os.path.join(JS, fn), encoding="utf-8")), p3d, base))
 # caps: P3D tag -> class suffix (blockout_shako_uk.py VARIANTS)
 CAPS = [("belgic_batalhao", "Belgic_Batalhao"), ("belgic_granadeiro", "Belgic_Granadeiro"), ("belgic_ligeira", "Belgic_Ligeira"),
         ("stovepipe_batalhao", "Stovepipe_Batalhao"), ("stovepipe_granadeiro", "Stovepipe_Granadeiro"),
         ("stovepipe_ligeira", "Stovepipe_Ligeira"), ("stovepipe_28th", "Stovepipe_28th"), ("stovepipe_rifles", "Stovepipe_Rifles")]
 HEAD = [(f"hcl_h_uk_{tg}", f"hcl_shako_uk_{tg}", f"HCL_H_UK1812_{cls}") for tg, cls in CAPS]
+# Highland feather bonnet (bonnet_highland_uk.py; textures hcl_uk_bonnet_highland_*)
+HEAD.append(("hcl_h_uk_bonnet_highland", "hcl_uk_bonnet_highland", "HCL_H_UK1812_Bonnet_Highland"))
 V_P3D, B_P3D = "hcl_v_uk1812_correame", "hcl_b_uk1812_mochila"
 
 # ---------------------------------------------------------------- config.cpp
@@ -190,7 +193,8 @@ def rvmat(base, spec, power):
     return t
 
 
-MATS = [(p3d, "0.4", 50) for _, p3d, _ in GROUPS] + [(m, "1.0", 80) for m in sorted({h[1] for h in HEAD})] + \
+MATS = [(p3d, "0.4", 50) for _, p3d, _ in GROUPS] + \
+    [(m, "0.6", 40) if "bonnet" in m else (m, "1.0", 80) for m in sorted({h[1] for h in HEAD})] + \
     [(V_P3D, "0.6", 60), (B_P3D, "0.6", 60)]
 for base, spec, power in MATS:
     open(os.path.join(SRC, "data", base + ".rvmat"), "w", encoding="ascii", newline="\r\n").write(rvmat(base, spec, power))

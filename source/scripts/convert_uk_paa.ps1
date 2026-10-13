@@ -15,13 +15,18 @@ foreach ($k in 1..4) {
     }
 }
 $jobs += , @("$uni\hcl_u_uk1812_rifles_v01_co.png", "$uni\paa\hcl_u_uk1812_rifles_v01_co.paa")
-foreach ($m in "linha", "flanco", "rifles") {
+foreach ($k in 1..2) {                                     # Highland dress (build_kilt_uk.py)
+    $jobs += , @(("$uni\hcl_u_uk1812_kilt_v{0:D2}_co.png" -f $k), ("$uni\paa\hcl_u_uk1812_kilt_v{0:D2}_co.paa" -f $k))
+}
+foreach ($m in "linha", "flanco", "rifles", "kilt") {
     foreach ($s in "nohq", "smdi") { $jobs += , @("$uni\hcl_u_uk1812_${m}_${s}.png", "$uni\paa\hcl_u_uk1812_${m}_${s}.paa") }
 }
 foreach ($t in "belgic_batalhao", "belgic_granadeiro", "belgic_ligeira", "stovepipe_batalhao", "stovepipe_granadeiro",
                "stovepipe_ligeira", "stovepipe_28th", "stovepipe_rifles") {
     foreach ($s in "co", "nohq", "smdi") { $jobs += , @("$shk\hcl_shako_uk_${t}_${s}.png", "$shk\paa\hcl_shako_uk_${t}_${s}.paa") }
 }
+# Highland feather bonnet (texturizar_shako_uk.py nome=HCL_UK_ textura=hcl_uk_)
+foreach ($s in "co", "nohq", "smdi") { $jobs += , @("$shk\hcl_uk_bonnet_highland_${s}.png", "$shk\paa\hcl_uk_bonnet_highland_${s}.paa") }
 foreach ($b in "hcl_v_uk1812_correame", "hcl_b_uk1812_mochila") {
     foreach ($s in "co", "nohq", "smdi") { $jobs += , @("$eq\${b}_${s}.png", "$eq\paa\${b}_${s}.paa") }
 }

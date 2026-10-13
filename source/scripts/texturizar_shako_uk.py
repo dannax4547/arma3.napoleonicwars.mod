@@ -50,12 +50,14 @@ COL = dict(feltro=(0.018, 0.018, 0.020), couro=(0.024, 0.021, 0.019), latao=(0.6
 _d = os.path.dirname(os.path.abspath(__file__)).replace("\\", "/").split("/")
 ROOT_DIR = "/".join(_d[:_d.index(".claude")]) if ".claude" in _d else os.path.abspath(os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", ".."))
 ATLAS = os.path.join(ROOT_DIR, "work", "ntw", "britain", "britainINF_diffuse.png")
+if "atlas" in OPT:                                   # e.g. atlas=britainINFb_diffuse.png (Highland bonnet band)
+    ATLAS = os.path.join(ROOT_DIR, "work", "ntw", "britain", OPT["atlas"])
 ART_GAIN = 1.55                                     # the art is darker than our brass (shading baked in the mod)
 # feathers are dyed brighter than the cloth of the same name (scarlet plume, light green, yellow, white)
 PENA = dict(vermelho=(0.74, 0.07, 0.05), verde=(0.07, 0.34, 0.11), amarelo=(0.93, 0.74, 0.12),
             branco=(0.93, 0.93, 0.89), preto=(0.03, 0.03, 0.03), verde_esc=(0.04, 0.22, 0.07))
 # kind -> (spec, gloss) for _smdi
-SMDI = dict(feltro=(0.05, 0.12), couro=(0.35, 0.55), verniz=(0.60, 0.85), latao=(0.85, 0.72), ouro=(0.80, 0.65), arte=(0.85, 0.72),
+SMDI = dict(arte_cor=(0.04, 0.10), feltro=(0.05, 0.12), couro=(0.35, 0.55), verniz=(0.60, 0.85), latao=(0.85, 0.72), ouro=(0.80, 0.65), arte=(0.85, 0.72),
             galao=(0.07, 0.18), cocar=(0.10, 0.25), la=(0.03, 0.08), cordao=(0.06, 0.15), pena=(0.08, 0.25),
             pano=(0.04, 0.10), pele=(0.10, 0.30))
 
@@ -70,6 +72,8 @@ def kind_of(part, colour):
         return "latao"
     if part.startswith("corneta"):
         return "arte"
+    if part.startswith("xadrez"):                       # Highland diced band: the art's own colours
+        return "arte_cor"
     if part == "frente":
         return "feltro"
     if part.startswith("pele_corpo"):                   # bearskin shell (blockout_bonnet_guarda.py)
@@ -170,7 +174,18 @@ def proc_material(kind, colour):
         w.inputs["Scale"].default_value = scale; w.inputs["Distortion"].default_value = distortion
         L(co, w.inputs["Vector"]); return w.outputs["Fac"]
 
-    if kind == "arte":                                  # relief and colour of the mod art, as polished brass
+    if kind == "arte_cor":                              # UK: the art's own colours (Highland diced band), x gain
+        uvn = node(nt, "ShaderNodeUVMap"); uvn.uv_map = "arte"
+        tx = node(nt, "ShaderNodeTexImage")
+        tx.image = bpy.data.images.get("ATLAS_FR") or bpy.data.images.load(ATLAS)
+        tx.image.name = "ATLAS_FR"; tx.interpolation = "Cubic"
+        L(uvn.outputs["UV"], tx.inputs["Vector"])
+        g = node(nt, "ShaderNodeVectorMath", operation="SCALE"); g.inputs["Scale"].default_value = float(OPT.get("ganho_cor", 1.5))
+        L(tx.outputs["Color"], g.inputs[0])
+        L(g.outputs["Vector"], b.inputs["Base Color"])
+        bw = node(nt, "ShaderNodeRGBToBW"); L(tx.outputs["Color"], bw.inputs["Color"])
+        bump(add(bw.outputs["Val"], mul(noise(700, 3, 0.6), 0.5)), 0.35, 0.0008)
+    elif kind == "arte":                                  # relief and colour of the mod art, as polished brass
         uvn = node(nt, "ShaderNodeUVMap"); uvn.uv_map = "arte"
         tx = node(nt, "ShaderNodeTexImage")
         if "arte" in OPT:                               # v5: redrawn relief (height, Non-Color)

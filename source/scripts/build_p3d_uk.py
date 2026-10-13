@@ -24,7 +24,9 @@ DATA = PREFIX + r"\data"
 LOG = []
 SHAKO_TAGS = ["belgic_batalhao", "belgic_granadeiro", "belgic_ligeira", "stovepipe_batalhao", "stovepipe_granadeiro",
               "stovepipe_ligeira", "stovepipe_28th", "stovepipe_rifles"]
-SHAKO_BLENDS = [r"source\models\shakos\hcl_shako_uk\hcl_shako_uk_texturas.blend"]
+# the newest blend that has the tag wins: the stovepipes were re-baked on a levels copy of the art (realce_arte_uk.py)
+SHAKO_BLENDS = [r"source\models\shakos\hcl_shako_uk\hcl_shako_uk_texturas_stovepipe.blend",
+                r"source\models\shakos\hcl_shako_uk\hcl_shako_uk_texturas.blend"]
 
 
 def log(s):
@@ -69,7 +71,8 @@ def build_uniform(uni, tex, rvmat, out_name):
 
 UNIS = [("linha", "HCL_U_UK1812_Linha_LOD0", "hcl_u_uk1812_linha_v01_co.paa"),
         ("flanco", "HCL_U_UK1812_Flanco_LOD0", "hcl_u_uk1812_flanco_v01_co.paa"),
-        ("rifles", "HCL_U_UK1812_Rifles_LOD0", "hcl_u_uk1812_rifles_v01_co.paa")]
+        ("rifles", "HCL_U_UK1812_Rifles_LOD0", "hcl_u_uk1812_rifles_v01_co.paa"),
+        ("kilt", "HCL_U_UK1812_Kilt_LOD0", "hcl_u_uk1812_kilt_v01_co.paa")]          # Highland dress (build_kilt_uk.py)
 objs = {}
 for k_, oname, tex0 in UNIS:
     PES = os.path.join(ROOT, rf"source\models\pesos\hcl_uk_{k_}_pesos.blend")
@@ -147,6 +150,15 @@ for tg in SHAKO_TAGS:
             break
     headgear(o, (DATA + rf"\hcl_shako_uk_{tg}_co.paa", DATA + rf"\hcl_shako_uk_{tg}.rvmat"), f"hcl_h_uk_{tg}.p3d", tg,
              lod2_decimate=0.4)
+# Highland feather bonnet (bonnet_highland_uk.py + texturizar_shako_uk.py nome=HCL_UK_ textura=hcl_uk_): Res 1 full,
+# Res 2 without the feather fronds (the shell carries the feather texture), like the French bearskins
+BONNET_BLEND = r"source\models\bonnet\hcl_bonnet_uk\hcl_bonnet_uk_texturas.blend"
+o = next(x for x in append(os.path.join(ROOT, BONNET_BLEND), ["HCL_UK_bonnet_highland_LOD0"]) if x.name.startswith("HCL_UK_bonnet_highland"))
+kinds = o["hcl_kinds"].split(",")
+fur = {i for i, k in enumerate(kinds) if k == "pena:pelo"}
+ka = o.data.attributes["hcl_kind_i"].data
+headgear(o, (DATA + r"\hcl_uk_bonnet_highland_co.paa", DATA + r"\hcl_uk_bonnet_highland.rvmat"), "hcl_h_uk_bonnet_highland.p3d",
+         "bonnet_highland", lod2_polys=[p.index for p in o.data.polygons if ka[p.index].value not in fur])
 
 # ---------------------------------------------------------------- vest and knapsack (production meshes)
 for ob_name, base in (("HCL_V_Fr1812_Correame_LOD0", "hcl_v_uk1812_correame"),

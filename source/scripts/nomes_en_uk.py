@@ -18,12 +18,18 @@ CAPS = {"Belgic_Batalhao": "British Belgic Cap 1812 - Battalion Company (white-o
         "Stovepipe_Granadeiro": "British Stovepipe Cap - Grenadier Company (white tuft)",
         "Stovepipe_Ligeira": "British Stovepipe Cap - Light Company (green tuft)",
         "Stovepipe_28th": "British Stovepipe Cap - 28th (North Gloucestershire) Regiment of Foot, back badge",
-        "Stovepipe_Rifles": "British Stovepipe Cap - 95th Regiment of Foot (Rifles), bugle"}
+        "Stovepipe_Rifles": "British Stovepipe Cap - 95th Regiment of Foot (Rifles), bugle",
+        "Bonnet_Highland": "British Highland Feather Bonnet (diced band, black ostrich feathers)"}
+# Highland dress (build_kilt_uk.py): 92nd = yellow facings (wtj.com) + Gordon tartan (forum; mod art) - 🔶
+KILT = {"K01": "92nd Regiment of Foot (Gordon Highlanders)",
+        "K02": "Highland Infantry, Government tartan, blue facings (regiment unidentified)"}
 
 
 def coat(v):
     if v.startswith("R"):
         return "95th Regiment of Foot (Rifles)"
+    if v.startswith("K"):
+        return KILT[v]
     k = "L" + v[-2:]
     company = "Flank Company (wings)" if v.startswith("FL") else "Battalion Company"
     if k in REG:
@@ -39,7 +45,7 @@ def name(cls):
         return f"British Infantryman 1812 - {coat(m[1])}{T}"
     m = re.fullmatch(r"HCL_U_UK1812_(\w+)", cls)
     if m:
-        kind = "British Rifle Jacket" if m[1].startswith("R") else "British Infantry Jacket 1812"
+        kind = {"R": "British Rifle Jacket", "K": "British Highland Jacket and Kilt"}.get(m[1][0], "British Infantry Jacket 1812")
         return f"[HCL] {kind} - {coat(m[1])}"
     m = re.fullmatch(r"HCL_H_UK1812_(\w+)", cls)
     if m:
