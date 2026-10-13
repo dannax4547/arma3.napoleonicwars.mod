@@ -1,0 +1,962 @@
+{
+ "Granadeiro_S1": {
+  "prefixo": "hcl_u_suica1812_elite_gr1",
+  "viras_externas": true,
+  "ornamento": "granada",
+  "curto": "1o suico, granadeiro",
+  "fonte": "1812 regulations, Wikipedia (✅); turnbacks/buttons from the mod (🎮); elite pattern of the French line 🔶",
+  "nome": "1o Regimento Suico, granadeiro: dragonas vermelhas, granadas nas viradas",
+  "cores": {
+   "casaca": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "gola": [
+    0.8,
+    0.6,
+    0.12
+   ],
+   "gola_debrum": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "lapela": [
+    0.8,
+    0.6,
+    0.12
+   ],
+   "lapela_debrum": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "punho": [
+    0.8,
+    0.6,
+    0.12
+   ],
+   "punho_debrum": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "pala": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "debrum": [
+    0.86,
+    0.85,
+    0.8
+   ],
+   "viras": [
+    0.8,
+    0.6,
+    0.12
+   ],
+   "viras_debrum": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "platina": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "platina_borda": [
+    0.8,
+    0.6,
+    0.12
+   ],
+   "botoes": [
+    0.8,
+    0.62,
+    0.28
+   ],
+   "calca": [
+    0.84,
+    0.83,
+    0.78
+   ],
+   "polaina": [
+    0.045,
+    0.045,
+    0.045
+   ],
+   "sapato": [
+    0.03,
+    0.028,
+    0.025
+   ],
+   "sola": [
+    0.2,
+    0.13,
+    0.08
+   ],
+   "dragona": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "dragona_meialua": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "dragona_passante": [
+    0.8,
+    0.6,
+    0.12
+   ],
+   "ornamento_cor": [
+    0.62,
+    0.07,
+    0.07
+   ]
+  }
+ },
+ "Voltigeur_S1": {
+  "prefixo": "hcl_u_suica1812_elite_vo1",
+  "viras_externas": true,
+  "ornamento": "corneta",
+  "curto": "1o suico, voltigeur",
+  "fonte": "1812 regulations, Wikipedia (✅); turnbacks/buttons from the mod (🎮); elite pattern of the French line 🔶",
+  "nome": "1o Regimento Suico, voltigeur: dragonas verdes de meia-lua amarela, cornetas nas viradas",
+  "cores": {
+   "casaca": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "gola": [
+    0.8,
+    0.6,
+    0.12
+   ],
+   "gola_debrum": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "lapela": [
+    0.8,
+    0.6,
+    0.12
+   ],
+   "lapela_debrum": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "punho": [
+    0.8,
+    0.6,
+    0.12
+   ],
+   "punho_debrum": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "pala": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "debrum": [
+    0.86,
+    0.85,
+    0.8
+   ],
+   "viras": [
+    0.8,
+    0.6,
+    0.12
+   ],
+   "viras_debrum": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "platina": [
+    0.07,
+    0.26,
+    0.11
+   ],
+   "platina_borda": [
+    0.8,
+    0.6,
+    0.12
+   ],
+   "botoes": [
+    0.8,
+    0.62,
+    0.28
+   ],
+   "calca": [
+    0.84,
+    0.83,
+    0.78
+   ],
+   "polaina": [
+    0.045,
+    0.045,
+    0.045
+   ],
+   "sapato": [
+    0.03,
+    0.028,
+    0.025
+   ],
+   "sola": [
+    0.2,
+    0.13,
+    0.08
+   ],
+   "dragona": [
+    0.07,
+    0.26,
+    0.11
+   ],
+   "dragona_meialua": [
+    0.8,
+    0.6,
+    0.12
+   ],
+   "dragona_passante": [
+    0.8,
+    0.6,
+    0.12
+   ],
+   "ornamento_cor": [
+    0.07,
+    0.26,
+    0.11
+   ]
+  }
+ },
+ "Granadeiro_S2": {
+  "prefixo": "hcl_u_suica1812_elite_gr2",
+  "viras_externas": true,
+  "ornamento": "granada",
+  "curto": "2o suico, granadeiro",
+  "fonte": "no colour source (❓): royal blue 🔶, accepted by the user (A6); elite pattern of the French line 🔶",
+  "nome": "2o Regimento Suico, granadeiro: dragonas vermelhas, granadas nas viradas",
+  "cores": {
+   "casaca": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "gola": [
+    0.1,
+    0.18,
+    0.46
+   ],
+   "gola_debrum": [
+    0.86,
+    0.85,
+    0.8
+   ],
+   "lapela": [
+    0.1,
+    0.18,
+    0.46
+   ],
+   "lapela_debrum": [
+    0.86,
+    0.85,
+    0.8
+   ],
+   "punho": [
+    0.1,
+    0.18,
+    0.46
+   ],
+   "punho_debrum": [
+    0.86,
+    0.85,
+    0.8
+   ],
+   "pala": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "debrum": [
+    0.86,
+    0.85,
+    0.8
+   ],
+   "viras": [
+    0.1,
+    0.18,
+    0.46
+   ],
+   "viras_debrum": [
+    0.86,
+    0.85,
+    0.8
+   ],
+   "platina": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "platina_borda": [
+    0.8,
+    0.6,
+    0.12
+   ],
+   "botoes": [
+    0.8,
+    0.62,
+    0.28
+   ],
+   "calca": [
+    0.84,
+    0.83,
+    0.78
+   ],
+   "polaina": [
+    0.045,
+    0.045,
+    0.045
+   ],
+   "sapato": [
+    0.03,
+    0.028,
+    0.025
+   ],
+   "sola": [
+    0.2,
+    0.13,
+    0.08
+   ],
+   "dragona": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "dragona_meialua": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "dragona_passante": [
+    0.8,
+    0.6,
+    0.12
+   ],
+   "ornamento_cor": [
+    0.62,
+    0.07,
+    0.07
+   ]
+  }
+ },
+ "Voltigeur_S2": {
+  "prefixo": "hcl_u_suica1812_elite_vo2",
+  "viras_externas": true,
+  "ornamento": "corneta",
+  "curto": "2o suico, voltigeur",
+  "fonte": "no colour source (❓): royal blue 🔶, accepted by the user (A6); elite pattern of the French line 🔶",
+  "nome": "2o Regimento Suico, voltigeur: dragonas verdes de meia-lua amarela, cornetas nas viradas",
+  "cores": {
+   "casaca": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "gola": [
+    0.1,
+    0.18,
+    0.46
+   ],
+   "gola_debrum": [
+    0.86,
+    0.85,
+    0.8
+   ],
+   "lapela": [
+    0.1,
+    0.18,
+    0.46
+   ],
+   "lapela_debrum": [
+    0.86,
+    0.85,
+    0.8
+   ],
+   "punho": [
+    0.1,
+    0.18,
+    0.46
+   ],
+   "punho_debrum": [
+    0.86,
+    0.85,
+    0.8
+   ],
+   "pala": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "debrum": [
+    0.86,
+    0.85,
+    0.8
+   ],
+   "viras": [
+    0.1,
+    0.18,
+    0.46
+   ],
+   "viras_debrum": [
+    0.86,
+    0.85,
+    0.8
+   ],
+   "platina": [
+    0.07,
+    0.26,
+    0.11
+   ],
+   "platina_borda": [
+    0.8,
+    0.6,
+    0.12
+   ],
+   "botoes": [
+    0.8,
+    0.62,
+    0.28
+   ],
+   "calca": [
+    0.84,
+    0.83,
+    0.78
+   ],
+   "polaina": [
+    0.045,
+    0.045,
+    0.045
+   ],
+   "sapato": [
+    0.03,
+    0.028,
+    0.025
+   ],
+   "sola": [
+    0.2,
+    0.13,
+    0.08
+   ],
+   "dragona": [
+    0.07,
+    0.26,
+    0.11
+   ],
+   "dragona_meialua": [
+    0.8,
+    0.6,
+    0.12
+   ],
+   "dragona_passante": [
+    0.8,
+    0.6,
+    0.12
+   ],
+   "ornamento_cor": [
+    0.8,
+    0.6,
+    0.12
+   ]
+  }
+ },
+ "Granadeiro_S3": {
+  "prefixo": "hcl_u_suica1812_elite_gr3",
+  "viras_externas": true,
+  "ornamento": "granada",
+  "curto": "3o suico, granadeiro",
+  "fonte": "Fieffé 1854 via Wikipedia (✅); turnbacks/straps 🔶; elite pattern of the French line 🔶",
+  "nome": "3o Regimento Suico, granadeiro: dragonas vermelhas, granadas nas viradas",
+  "cores": {
+   "casaca": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "gola": [
+    0.035,
+    0.035,
+    0.04
+   ],
+   "gola_debrum": [
+    0.86,
+    0.85,
+    0.8
+   ],
+   "lapela": [
+    0.035,
+    0.035,
+    0.04
+   ],
+   "lapela_debrum": [
+    0.86,
+    0.85,
+    0.8
+   ],
+   "punho": [
+    0.035,
+    0.035,
+    0.04
+   ],
+   "punho_debrum": [
+    0.86,
+    0.85,
+    0.8
+   ],
+   "pala": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "debrum": [
+    0.86,
+    0.85,
+    0.8
+   ],
+   "viras": [
+    0.035,
+    0.035,
+    0.04
+   ],
+   "viras_debrum": [
+    0.86,
+    0.85,
+    0.8
+   ],
+   "platina": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "platina_borda": [
+    0.8,
+    0.6,
+    0.12
+   ],
+   "botoes": [
+    0.8,
+    0.62,
+    0.28
+   ],
+   "calca": [
+    0.84,
+    0.83,
+    0.78
+   ],
+   "polaina": [
+    0.045,
+    0.045,
+    0.045
+   ],
+   "sapato": [
+    0.03,
+    0.028,
+    0.025
+   ],
+   "sola": [
+    0.2,
+    0.13,
+    0.08
+   ],
+   "dragona": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "dragona_meialua": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "dragona_passante": [
+    0.8,
+    0.6,
+    0.12
+   ],
+   "ornamento_cor": [
+    0.62,
+    0.07,
+    0.07
+   ]
+  }
+ },
+ "Voltigeur_S3": {
+  "prefixo": "hcl_u_suica1812_elite_vo3",
+  "viras_externas": true,
+  "ornamento": "corneta",
+  "curto": "3o suico, voltigeur",
+  "fonte": "Fieffé 1854 via Wikipedia (✅); turnbacks/straps 🔶; elite pattern of the French line 🔶",
+  "nome": "3o Regimento Suico, voltigeur: dragonas verdes de meia-lua amarela, cornetas nas viradas",
+  "cores": {
+   "casaca": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "gola": [
+    0.035,
+    0.035,
+    0.04
+   ],
+   "gola_debrum": [
+    0.86,
+    0.85,
+    0.8
+   ],
+   "lapela": [
+    0.035,
+    0.035,
+    0.04
+   ],
+   "lapela_debrum": [
+    0.86,
+    0.85,
+    0.8
+   ],
+   "punho": [
+    0.035,
+    0.035,
+    0.04
+   ],
+   "punho_debrum": [
+    0.86,
+    0.85,
+    0.8
+   ],
+   "pala": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "debrum": [
+    0.86,
+    0.85,
+    0.8
+   ],
+   "viras": [
+    0.035,
+    0.035,
+    0.04
+   ],
+   "viras_debrum": [
+    0.86,
+    0.85,
+    0.8
+   ],
+   "platina": [
+    0.07,
+    0.26,
+    0.11
+   ],
+   "platina_borda": [
+    0.8,
+    0.6,
+    0.12
+   ],
+   "botoes": [
+    0.8,
+    0.62,
+    0.28
+   ],
+   "calca": [
+    0.84,
+    0.83,
+    0.78
+   ],
+   "polaina": [
+    0.045,
+    0.045,
+    0.045
+   ],
+   "sapato": [
+    0.03,
+    0.028,
+    0.025
+   ],
+   "sola": [
+    0.2,
+    0.13,
+    0.08
+   ],
+   "dragona": [
+    0.07,
+    0.26,
+    0.11
+   ],
+   "dragona_meialua": [
+    0.8,
+    0.6,
+    0.12
+   ],
+   "dragona_passante": [
+    0.8,
+    0.6,
+    0.12
+   ],
+   "ornamento_cor": [
+    0.8,
+    0.6,
+    0.12
+   ]
+  }
+ },
+ "Granadeiro_S4": {
+  "prefixo": "hcl_u_suica1812_elite_gr4",
+  "viras_externas": true,
+  "ornamento": "granada",
+  "curto": "4o suico, granadeiro",
+  "fonte": "'blue facings' on shop pages only (🔶): sky blue 🔶 (A6); elite pattern of the French line 🔶",
+  "nome": "4o Regimento Suico, granadeiro: dragonas vermelhas, granadas nas viradas",
+  "cores": {
+   "casaca": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "gola": [
+    0.4,
+    0.6,
+    0.8
+   ],
+   "gola_debrum": [
+    0.86,
+    0.85,
+    0.8
+   ],
+   "lapela": [
+    0.4,
+    0.6,
+    0.8
+   ],
+   "lapela_debrum": [
+    0.86,
+    0.85,
+    0.8
+   ],
+   "punho": [
+    0.4,
+    0.6,
+    0.8
+   ],
+   "punho_debrum": [
+    0.86,
+    0.85,
+    0.8
+   ],
+   "pala": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "debrum": [
+    0.86,
+    0.85,
+    0.8
+   ],
+   "viras": [
+    0.4,
+    0.6,
+    0.8
+   ],
+   "viras_debrum": [
+    0.86,
+    0.85,
+    0.8
+   ],
+   "platina": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "platina_borda": [
+    0.8,
+    0.6,
+    0.12
+   ],
+   "botoes": [
+    0.8,
+    0.62,
+    0.28
+   ],
+   "calca": [
+    0.84,
+    0.83,
+    0.78
+   ],
+   "polaina": [
+    0.045,
+    0.045,
+    0.045
+   ],
+   "sapato": [
+    0.03,
+    0.028,
+    0.025
+   ],
+   "sola": [
+    0.2,
+    0.13,
+    0.08
+   ],
+   "dragona": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "dragona_meialua": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "dragona_passante": [
+    0.8,
+    0.6,
+    0.12
+   ],
+   "ornamento_cor": [
+    0.62,
+    0.07,
+    0.07
+   ]
+  }
+ },
+ "Voltigeur_S4": {
+  "prefixo": "hcl_u_suica1812_elite_vo4",
+  "viras_externas": true,
+  "ornamento": "corneta",
+  "curto": "4o suico, voltigeur",
+  "fonte": "'blue facings' on shop pages only (🔶): sky blue 🔶 (A6); elite pattern of the French line 🔶",
+  "nome": "4o Regimento Suico, voltigeur: dragonas verdes de meia-lua amarela, cornetas nas viradas",
+  "cores": {
+   "casaca": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "gola": [
+    0.4,
+    0.6,
+    0.8
+   ],
+   "gola_debrum": [
+    0.86,
+    0.85,
+    0.8
+   ],
+   "lapela": [
+    0.4,
+    0.6,
+    0.8
+   ],
+   "lapela_debrum": [
+    0.86,
+    0.85,
+    0.8
+   ],
+   "punho": [
+    0.4,
+    0.6,
+    0.8
+   ],
+   "punho_debrum": [
+    0.86,
+    0.85,
+    0.8
+   ],
+   "pala": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "debrum": [
+    0.86,
+    0.85,
+    0.8
+   ],
+   "viras": [
+    0.4,
+    0.6,
+    0.8
+   ],
+   "viras_debrum": [
+    0.86,
+    0.85,
+    0.8
+   ],
+   "platina": [
+    0.07,
+    0.26,
+    0.11
+   ],
+   "platina_borda": [
+    0.8,
+    0.6,
+    0.12
+   ],
+   "botoes": [
+    0.8,
+    0.62,
+    0.28
+   ],
+   "calca": [
+    0.84,
+    0.83,
+    0.78
+   ],
+   "polaina": [
+    0.045,
+    0.045,
+    0.045
+   ],
+   "sapato": [
+    0.03,
+    0.028,
+    0.025
+   ],
+   "sola": [
+    0.2,
+    0.13,
+    0.08
+   ],
+   "dragona": [
+    0.07,
+    0.26,
+    0.11
+   ],
+   "dragona_meialua": [
+    0.8,
+    0.6,
+    0.12
+   ],
+   "dragona_passante": [
+    0.8,
+    0.6,
+    0.12
+   ],
+   "ornamento_cor": [
+    0.8,
+    0.6,
+    0.12
+   ]
+  }
+ }
+}

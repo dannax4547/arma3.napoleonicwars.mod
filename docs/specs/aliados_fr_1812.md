@@ -227,16 +227,20 @@ Alternativa: Reno primeiro, se o usuário preferir a peça nova (Raupenhelm) log
 
 Alternativa: um único `hcl_aliados_fr` com subpastas por grupo.
 
-## 8. Decisões pendentes
+## 8. Decisões
 
-| # | Pergunta | Recomendação |
+Respostas do usuário em 2026-10-13 (AskUserQuestion):
+
+| # | Pergunta | Resposta |
 |---|---|---|
-| A1 | Ordem dos grupos | Suíços → Varsóvia → Itália/Nápoles → Reno (§6) |
-| A2 | Um PBO por grupo ou um só | Um por grupo (§7) |
-| A3 | Estados do Reno no primeiro lote; Baden e Hesse sem arte do mod | Württemberg + Baviera |
-| A4 | Unidades além dos fuzileiros de linha (elite, ligeira/Jäger) | Fuzileiros + granadeiros no primeiro lote; voltigeurs e ligeira depois |
-| A5 | Varsóvia: barretina (com placa de sol) ou czapka | Barretina (é o que o atlas mostra) |
-| A6 | Suíços 2º e 4º sem fonte de cor confiável | Fazer só o 1º e o 3º agora |
+| A1 | Ordem dos grupos | ✅ **Suíços → Varsóvia → Itália/Nápoles → Reno** |
+| A2 | Um PBO por grupo ou um só | ✅ **Um PBO por grupo** (`hcl_suica`, `hcl_varsovia`, `hcl_italia`, `hcl_reno`) |
+| A3 | Estados do Reno no primeiro lote | ✅ **Württemberg, Baviera, Saxônia e Vestfália** (Baden e Hesse continuam sem arte) |
+| A4 | Unidades além dos fuzileiros de linha | ✅ **Granadeiros, voltigeurs e ligeira/Jäger** (casacas verdes dos atlas) |
+| A5 | Varsóvia: barretina ou czapka | Pendente; recomendação: barretina com placa de sol (é o que o atlas mostra) |
+| A6 | Suíços 2º e 4º sem fonte firme | ✅ **Entram**, por recolor da F04, marcados 🔶 |
+
+Consequência da A2: cada addon é **autônomo** (cópias próprias dos modelos, com prefixo próprio). Nenhum depende do `hcl_fr`, conforme o pedido ("em CÓPIAS próprias").
 
 ## 9. Fontes
 
