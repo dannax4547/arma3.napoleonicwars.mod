@@ -2,13 +2,13 @@
 # module (the shared nomes_en.py of hcl_fr / hcl_pruss is not edited); same contract: gen_config_<group>.py calls
 # apply() on the finished config text, every displayName is replaced and a class without an English name fails the
 # build. Regiment names only where a cited source supports them (docs/specs/aliados_fr_1812.md):
-#   Swiss (French service), 1812: 1st yellow facings (Wikipedia, 1812 regulations ✅), 3rd black facings (Wikipedia
-#   citing Fieffé 1854 ✅); 2nd royal blue and 4th sky blue are NOT sourced (🔶, user decision A6) -> the name says so.
+#   Swiss (French service), 1812: 1st yellow (Wikipedia, 1812 regulations), 2nd royal blue, 3rd black, 4th sky blue
+#   (Fieffé, Geschichte der Fremdtruppen II, 1860, p. 183, via de.wikipedia, read 2026-10-18; until then the 2nd and
+#   4th were named "facing colour unconfirmed").
 import re
 
 T = " (HCL test)"
-SUICA_REG = {"1": "1st Swiss Regiment", "2": "2nd Swiss Regiment (facing colour unconfirmed)",
-             "3": "3rd Swiss Regiment", "4": "4th Swiss Regiment (facing colour unconfirmed)"}
+SUICA_REG = {"1": "1st Swiss Regiment", "2": "2nd Swiss Regiment", "3": "3rd Swiss Regiment", "4": "4th Swiss Regiment"}
 SUICA_COMP = {"": "Fusiliers", "Granadeiro": "Grenadier Company", "Voltigeur": "Voltigeur Company"}
 SUICA_HEAD = {
     "Bonnet_Granadeiro_Gala": "Grenadier Bearskin - full dress (grenade plate, cords, plume)",
@@ -22,7 +22,30 @@ SUICA_HEAD = {
 }
 
 
+# Duchy of Warsaw, regulation of 3 September 1810 (📜 Gembarzewski 1905 / Zygulski & Wielecki 1988); 7th and 9th
+# Regiments from Askenazy & Gembarzewski (Wikipedia regiment pages); the czapka plate shows "4" (mod art polandINF).
+VARS_UNI = {"L1810": "Line Infantry, 1810 regulation", "R07": "7th Infantry Regiment", "R09": "9th Infantry Regiment"}
+VARS_COMP = {"": "Fusiliers", "Granadeiro": "Grenadier Company", "Voltigeur": "Voltigeur Company"}
+VARS_HEAD = {"Czapka_Fuzileiro": "Czapka 1810 - Fusilier, black pompom, plate of the 4th Regiment",
+             "Czapka_Voltigeur": "Czapka 1810 - Voltigeur, yellow-green plume, plate of the 4th Regiment",
+             "Bonnet_Granadeiro_Gala": "Grenadier Bearskin 1810 - full dress (eagle and grenades plate, cords, plume)",
+             "Bonnet_Granadeiro_Campanha": "Grenadier Bearskin 1810 - campaign (eagle and grenades plate)"}
+
+
 def name(cls):
+    m = re.fullmatch(r"HCL_Varsovia1810_Soldado_(?:(Granadeiro|Voltigeur)_)?(L1810|R07|R09)", cls)
+    if m:
+        return f"Duchy of Warsaw Infantryman - {VARS_UNI[m[2]]}, {VARS_COMP[m[1] or '']}{T}"
+    if cls == "HCL_Varsovia1810_Soldado_Base":
+        return "Duchy of Warsaw Infantryman 1810" + T
+    if cls == "HCL_Varsovia1810_Soldado_Elite_Base":
+        return "Duchy of Warsaw Infantryman 1810, elite company" + T
+    m = re.fullmatch(r"HCL_U_Varsovia1810_(?:(Granadeiro|Voltigeur)_)?(L1810|R07|R09)", cls)
+    if m:
+        return f"[HCL] Duchy of Warsaw Kurtka 1810 - {VARS_UNI[m[2]]}, {VARS_COMP[m[1] or '']}"
+    m = re.fullmatch(r"HCL_H_Varsovia1810_(\w+)", cls)
+    if m and m[1] in VARS_HEAD:
+        return f"[HCL] Duchy of Warsaw {VARS_HEAD[m[1]]}"
     m = re.fullmatch(r"HCL_Suica1812_Soldado_(?:(Granadeiro|Voltigeur)_)?S(\d)", cls)
     if m:
         return f"Swiss Infantryman (French service) - {SUICA_REG[m[2]]}, {SUICA_COMP[m[1] or '']}{T}"

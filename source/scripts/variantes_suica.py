@@ -12,8 +12,9 @@
 #        epaulettes (✅ read). Turnbacks yellow and brass buttons as the mod tile FranceINF_3 c5 r0 (🎮).
 #   3rd: Wikipedia "3rd Swiss Regiment (France)" citing Fieffé 1854 p. 299: red coat, black facings, white piping
 #        (✅ read). Turnbacks, straps and buttons follow the 1st's pattern (🔶).
-#   2nd: no colour source found (❓); royal blue facings, white piping 🔶 (general knowledge, user accepted A6).
-#   4th: "blue facings" only on miniature shop pages (🔶); sky blue, white piping 🔶.
+#   2nd: royal blue facings ("koenigsblau"), 4th: sky blue ("himmelblau") - Fieffé, Geschichte der Fremdtruppen II
+#        (1860) p. 183, via de.wikipedia "Schweizerregimenter im Russlandfeldzug 1812" (found 2026-10-18; the colours
+#        had been chosen before as 🔶 and match). White piping 🔶 (pattern of the 3rd).
 # Elite companies follow the French line pattern of variantes_fr_elite.json (🔶 for the Swiss): grenadiers red
 # epaulettes with yellow keeper and red grenades on the turnbacks; voltigeurs green epaulettes with yellow crescent and
 # horns on the turnbacks. The regiment's collar is kept for voltigeurs (no source for a chamois collar on Swiss coats).
@@ -29,9 +30,9 @@ LOWER = {"calca": [0.84, 0.83, 0.78], "polaina": [0.045, 0.045, 0.045], "sapato"
 # regiment: (facing, piping of collar/lapels, piping of cuffs/turnbacks, flap piping, english colour word, confidence)
 REG = {
     1: (YEL, RED, RED, WHI, "yellow", "1812 regulations, Wikipedia (✅); turnbacks/buttons from the mod (🎮)"),
-    2: (ROYAL, WHI, WHI, WHI, "royal blue", "no colour source (❓): royal blue 🔶, accepted by the user (A6)"),
+    2: (ROYAL, WHI, WHI, WHI, "royal blue", "Fieffé 1860 p. 183 via de.wikipedia (royal blue); piping 🔶"),
     3: (BLK, WHI, WHI, WHI, "black", "Fieffé 1854 via Wikipedia (✅); turnbacks/straps 🔶"),
-    4: (SKY, WHI, WHI, WHI, "sky blue", "'blue facings' on shop pages only (🔶): sky blue 🔶 (A6)"),
+    4: (SKY, WHI, WHI, WHI, "sky blue", "Fieffé 1860 p. 183 via de.wikipedia (sky blue); piping 🔶"),
 }
 PT = {1: "amarelas", 2: "azul-real", 3: "pretas", 4: "azul-celeste"}
 

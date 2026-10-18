@@ -6,7 +6,7 @@ Versão 0.1, 2026-10-13. Pedido do usuário: *"agora adiciona os aliados frances
 3. Reino da Itália e Reino de Nápoles;
 4. Suíços a serviço da França (os 4 regimentos de casaca vermelha).
 
-**Estado (2026-10-13 18:56):** decisões A1–A4 e A6 respondidas (§8). **Suíços feitos**: `hcl_suica.pbo` montado e verificado fora do jogo (`docs/reports/suica_1812.md`). Próximo: Ducado de Varsóvia (falta a A5).
+**Estado (2026-10-18):** decisões A1–A6 fechadas (§8). **Suíços feitos** (`hcl_suica.pbo`, verificado fora do jogo, `docs/reports/suica_1812.md`). **Varsóvia em curso**, com fontes documentais (§1.1): czapka rogata do regulamento de 1810.
 
 Legenda: ✅ fonte lida (página aberta nesta fase) · 🔶 provável (fonte secundária, de hobby ou de loja; ou só citada, sem leitura) · ❓ incerto ou com fontes em conflito · 🎮 só visto na arte do mod (atlas Reto)
 
@@ -43,8 +43,24 @@ Pacote `(N)_Reto_BattleMOV11-15\variantmodels\units\atlas` (autorizado). Só os 
 | 9º Regimento (depois de 1810) | Gola carmesim com vivo azul-escuro, lapelas brancas, canhões carmesim com vivo branco, portinholas azul-escuras, botões brancos | ✅ [WP-PL9] (Askenazy e Gembarzewski 2003) |
 | 7º Regimento | Mesmo corte do 4º; gola azul-escura com vivo carmesim, platinas carmesim e azul, botões brancos | ✅ [WP-PL] (resumo da busca, página do 7º) 🔶 |
 | 1º Regimento | Fuzileiros com dragonas de lã branca com franja | ✅ [WP-PL1] |
-| Cobertura | **Em disputa**: czapka (quepe quadrado polonês) × barretina. O regulamento de março de 1807 previa barretina; há relatos de czapka em 1807–1809 | ❓ [F-PEN] (fórum, citando Gembarzewski de segunda mão) |
+| Cobertura (antes de 1810) | Em disputa: czapka × barretina. O regulamento de março de 1807 previa barretina; há relatos de czapka em 1807–1809 | ❓ [F-PEN] (fórum) |
 | Granadeiros do 6º | Barretina de pelo sem pala, sem placa nem granada; cordões vermelho-claros | ✅ [WP-PL] (página do 6º) 🔶 |
+
+**Fontes documentais (pedido do usuário de 2026-10-18: "utilize fontes históricas de museus e documentos").** O regulamento *Przepis ubiorów* de **3 de setembro de 1810** (texto publicado por Gembarzewski 1905, pp. 48–49 e 106–109, a partir dos documentos da época) e o resumo de Żygulski (jun.) e Wielecki, *Polski mundur wojskowy* (Kraków 1988), pp. 57–62:
+
+| Item (regulamento de 1810) | Valor | Fonte |
+|---|---|---|
+| Kurtka | **Azul-marinho** (granatowa), **lapelas brancas** abotoadas dos dois lados, **gola, canhões e vivos carmesim** (*karmazynowe*); viras (*poły*); portinhola do punho | 📜 [REG1810] via [WP-MUN] e [NOP-1810] |
+| Voltigeurs | **Gola amarela** | 📜 idem |
+| Botões | Metal amarelo, **com o número do regimento** | 📜 [NOP-1810] |
+| Platinas / dragonas | Fuzileiros: patkas azul-marinho; granadeiros: dragonas **carmesim**; voltigeurs: **verdes** (cordão de fio verde) | 📜 [WP-MUN] (Żygulski p. 58) |
+| Calça e polainas | Verão: calça de linho branca; outono–inverno: calça azul-marinho e polainas de pano escuro | 📜 [WP-MUN], [NOP-1810] |
+| **Cobertura: czapka rogata** (fuzileiros e voltigeurs) | Feltro preto, papelão e linho, **~22,5 cm de altura, lados do topo ~25 cm**; pala de couro debruada de metal amarelo; **águia de metal branco sobre placa amarela com o número do regimento**; botão de metal amarelo com estrela (fuzileiro) ou corneta (voltigeur); **cocar branco**; **cordões brancos**; **pompom preto** (fuzileiros) ou **penacho amarelo-verde** (voltigeurs) | 📜 [WP-MUN] (Żygulski pp. 60–61), [NOP-1810] |
+| Granadeiros: barretina de pelo (*bermyca*) | Placa amarela com o **número do regimento, águia branca e duas granadas** dos lados; **plumet carmesim**; cordões brancos; **topo redondo de pano carmesim** | 📜 idem |
+| Peça de museu | Barretina (czako) do **2º Regimento** no **Museu Nacional de Cracóvia** (MNK); catálogo da exposição *Militaria Księstwa Warszawskiego* (MNK 1959) | 🏛 [NOP-1810] (citada; ficha do objeto **não encontrada** online) |
+| Iconografia da época | Aquarela de **Józef Kosiński, 1810**, base das pranchas do napoleon.org.pl | 🖼 [NOP-1810] (não vista) |
+
+Legenda nova: 📜 documento da época (regulamento) lido por meio de historiador que o publicou · 🏛 objeto de museu · 🖼 imagem da época.
 
 ### 1.2 Arte do mod (`polandINF`) 🎮
 
@@ -61,9 +77,12 @@ Pacote `(N)_Reto_BattleMOV11-15\variantmodels\units\atlas` (autorizado). Só os 
 
 ### 1.3 Proposta de peças
 
-- **Casaca:** a de abas curtas francesa serve como base 🔶. O que muda é a cor e a lapela (branca na fonte × colorida no atlas ❓: a fonte diz lapela branca para o 9º; o mod tem lapelas vermelhas e amarelas).
-- **Cobertura:** barretina francesa v4 com a **placa de sol raiado e águia** traçada do atlas (c0–c5 r5) 🎮. Czapka/quepe quadrado só se o usuário quiser (A5).
-- **Nomes:** "Duchy of Warsaw, Line Infantry, <cor> facings (regiment unidentified)". O 9º só se o recorte do atlas mostrar gola carmesim com vivo azul e lapelas brancas.
+Revisão de 2026-10-18, pelas fontes documentais (substitui a proposta da v0.1):
+- **Casaca:** a de abas curtas francesa como base do corte 🔶. As cores seguem o **regulamento de 1810** 📜: azul-marinho, lapelas brancas, gola, canhões e vivos carmesim, e gola amarela nos voltigeurs. O bloco `polandINF` c4 r0 (lapelas brancas) é o único do atlas que bate com o regulamento 🎮. Os blocos com lapelas vermelhas, amarelas e azul-claras não têm documento e **ficam fora**.
+- **Variantes com documento:** além do padrão de 1810, o **9º Regimento** (gola carmesim com vivo azul, lapelas brancas, botões brancos) e o **7º** (gola azul-marinho com vivo carmesim, botões brancos), segundo Askenazy e Gembarzewski [WP-PL9], [WP-PL].
+- **Cobertura (A5, revista):** a **czapka rogata** do regulamento 📜, peça nova (`blockout_czapka_varsovia.py`). Granadeiros: chapéu de pele com placa de águia e granadas (cópia do da Guarda, como no suíço).
+- **Infantaria ligeira:** o Ducado não tinha regimentos ligeiros; os voltigeurs são as companhias ligeiras de cada regimento.
+- **Nomes:** "Duchy of Warsaw, Line Infantry (1810 regulation)"; 7th e 9th com o nome do regimento.
 
 ---
 
@@ -176,8 +195,10 @@ Arte do mod (`NaplesINF`) 🎮: casaca **branca** com peças **azul-claras** (c5
 | **1º Suíço**, regulamento de 1812 | Casaca vermelha, **gola amarela, lapelas amarelas fechadas** com vivo vermelho; portinholas com vivo branco; fuzileiros com platinas vermelhas de vivo amarelo; granadeiros com dragonas vermelhas e **barretina de pelo com placa de cobre e granada** | ✅ [WP-SW1] |
 | 1º Suíço, 1809–1812 | Barretina preta com cordões brancos | ✅ [WP-SW1] |
 | **3º Suíço** | Casaca vermelha, **gola, lapelas e canhões pretos, vivo branco**; barretina para fuzileiros, sargentos e voltigeurs, pelo para granadeiros | ✅ [WP-SW3] citando **Fieffé 1854**, p. 299 |
-| **2º Suíço** | Só uma ilustração de Herbert Knötel (voltigeur, 1812) na página; **sem texto de cores** | ❓ [WP-SW2] |
-| **4º Suíço** | "Lapelas azuis" só em páginas de loja de miniaturas; sem o tom | ❓ [LOJA-SW4] |
+| **2º Suíço** | Vistas **azul-real** (*königsblau*) | 📜 Fieffé (ed. alemã 1860, II p. 183) via [WP-DE-SW] (lida em 2026-10-18; antes ❓) |
+| **4º Suíço** | Vistas **azul-celeste** (*himmelblau*) | 📜 Fieffé via [WP-DE-SW] (antes: só lojas [LOJA-SW4]) |
+| Os 4 regimentos | Casaca **vermelho-garança** (*krapprot*) igual para todos, calça branca justa; cor distintiva nas **platinas, portinholas e golas** | 📜 Fieffé via [WP-DE-SW] |
+| Peça de museu | Casaca de capitão de voltigeurs do **1º Suíço**, de Abraham Rey (1778–1859), modificada em 1812 (posição dos botões); e a barretina dele, furada por bala em Polotsk (out. 1812) | 🏛 [MUS-MORGES] (Château de Morges; ficha não lida, a página recusou o certificado) |
 | Referências | Greentree e Campbell, *Napoleon's Swiss Troops* (Osprey 2012); Jouineau, *Les suisses au service de la France* | 🔶 (não lidos) |
 
 Arte do mod: só a casaca de lapelas **amarelas** (`FranceINF_3` c5 r0, c5 r1, c6 r1), já feita como **F04** no `hcl_fr`. O vivo do mod é branco; a fonte diz vermelho (nota já registrada em `nomes_en.py`). **Não há arte** para o 2º, 3º e 4º.
@@ -237,8 +258,8 @@ Respostas do usuário em 2026-10-13 (AskUserQuestion):
 | A2 | Um PBO por grupo ou um só | ✅ **Um PBO por grupo** (`hcl_suica`, `hcl_varsovia`, `hcl_italia`, `hcl_reno`) |
 | A3 | Estados do Reno no primeiro lote | ✅ **Württemberg, Baviera, Saxônia e Vestfália** (Baden e Hesse continuam sem arte) |
 | A4 | Unidades além dos fuzileiros de linha | ✅ **Granadeiros, voltigeurs e ligeira/Jäger** (casacas verdes dos atlas) |
-| A5 | Varsóvia: barretina ou czapka | Pendente; recomendação: barretina com placa de sol (é o que o atlas mostra) |
-| A6 | Suíços 2º e 4º sem fonte firme | ✅ **Entram**, por recolor da F04, marcados 🔶 |
+| A5 | Varsóvia: barretina ou czapka | ✅ **Czapka rogata**, pelo regulamento de 3/9/1810 📜 (2026-10-18: "continuar" + "utilize fontes históricas de museus e documentos"). A barretina com placa de sol do atlas fica fora (sem documento) |
+| A6 | Suíços 2º e 4º sem fonte firme | ✅ **Entram**, por recolor da F04. Em 2026-10-18 a fonte apareceu (Fieffé): azul-real e azul-celeste, as cores usadas. O nome "(facing colour unconfirmed)" sai na próxima montagem do `hcl_suica` |
 
 Consequência da A2: cada addon é **autônomo** (cópias próprias dos modelos, com prefixo próprio). Nenhum depende do `hcl_fr`, conforme o pedido ("em CÓPIAS próprias").
 
@@ -263,3 +284,9 @@ Consequência da A2: cada addon é **autônomo** (cópias próprias dos modelos,
 - [WP-SW3] Wikipedia, "3rd Swiss Regiment (France)" — https://en.wikipedia.org/wiki/3rd_Swiss_Regiment_(France) (cita Fieffé 1854).
 - [OSP-SW] Osprey, *Napoleon's Swiss Troops* (descrição) — https://www.ospreypublishing.com/uk/napoleons-swiss-troops-9781849086790
 - [LOJA-SW4] Treefrog Treasures, "Swiss 4th Line Infantry Officer" — https://www.treefrogtreasures.com/p-31390-swiss-4th-line-infantry-officer.aspx (página de venda).
+- [WP-DE-SW] Wikipedia (de), "Schweizerregimenter im Russlandfeldzug 1812", seção Uniform, citando Fieffé, *Geschichte der Fremdtruppen im Dienste Frankreichs*, Bd. II, München 1860, S. 183 — https://de.wikipedia.org/wiki/Schweizerregimenter_im_Russlandfeldzug_1812
+- [MUS-MORGES] Château de Morges (museu), "Veste d'uniforme du 1er régiment suisse" — https://chateau-morges.ch/collections-et-bibliotheque/objets-choisis/veste-duniforme-du-1er-regiment-suisse/
+- [REG1810] *Przepis ubiorów* do Księstwa Warszawskiego, 3 de setembro de 1810 (regulamento). Texto em Gembarzewski, *Wojsko polskie. Księstwo Warszawskie 1807–1814*, Warszawa 1905, pp. 48–49, 106–109 (digitalizado: Dolnośląska Biblioteca Digital — https://www.dbc.wroc.pl/publication/10484; não lido diretamente).
+- [WP-MUN] Wikipedia (pl), "Mundur Armii Księstwa Warszawskiego", citando Żygulski (jun.) e Wielecki, *Polski mundur wojskowy*, KAW, Kraków 1988, pp. 57–62 — https://pl.wikipedia.org/wiki/Mundur_Armii_Ksi%C4%99stwa_Warszawskiego
+- [NOP-1810] napoleon.org.pl, "Piechota XW wg przepisu 3 września 1810" (pranchas sobre a aquarela de J. Kosiński, 1810; cita o regulamento, Gembarzewski e a barretina do 2º Regimento no Museu Nacional de Cracóvia) — https://napoleon.org.pl/index.php/biblioteka-barwy-i-broni/piechota-xw-wg-przepisu-3-wrzesnia-1810
+- [MNK-1959] Muzeum Narodowe w Krakowie, *Militaria Księstwa Warszawskiego. Katalog wystawy w 150 rocznicę oswobodzenia Krakowa przez wojska polskie 1809–1959* (catálogo; só o registro bibliográfico foi visto).
