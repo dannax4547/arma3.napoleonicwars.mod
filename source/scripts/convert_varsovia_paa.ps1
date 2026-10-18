@@ -8,14 +8,17 @@ $tool = "C:\Program Files (x86)\Steam\steamapps\common\Arma 3 Tools\ImageToPAA\I
 $t = Join-Path $root "source\textures"
 $dst = "$t\hcl_varsovia_paa"
 $jobs = @()
-foreach ($n in "l1810", "r09", "r07") { $jobs += , @("$t\hcl_uniforme_varsovia\hcl_u_varsovia1810_${n}_co.png", "$dst\hcl_u_varsovia1810_${n}_co.paa") }
+foreach ($n in "l1810", "r09", "r07", "r13", "r15") { $jobs += , @("$t\hcl_uniforme_varsovia\hcl_u_varsovia1810_${n}_co.png", "$dst\hcl_u_varsovia1810_${n}_co.paa") }
 foreach ($s in "nohq", "smdi") { $jobs += , @("$t\hcl_uniforme_fr\hcl_u_fr1812_${s}.png", "$dst\hcl_u_varsovia1810_${s}.paa") }
-foreach ($k in "gr", "vo") { $jobs += , @("$t\hcl_uniforme_varsovia_elite\hcl_u_varsovia1810_elite_${k}_co.png", "$dst\hcl_u_varsovia1810_elite_${k}_co.paa") }
+foreach ($k in "gr", "vo", "fu01", "gr13", "vo13", "gr15", "vo15") { $jobs += , @("$t\hcl_uniforme_varsovia_elite\hcl_u_varsovia1810_elite_${k}_co.png", "$dst\hcl_u_varsovia1810_elite_${k}_co.paa") }
 foreach ($s in "nohq", "smdi") { $jobs += , @("$t\hcl_uniforme_fr_elite\hcl_u_fr1812_elite_${s}.png", "$dst\hcl_u_varsovia1810_elite_${s}.paa") }
-foreach ($g in "fuzileiro", "voltigeur") {
+foreach ($g in "fuzileiro", "voltigeur", "fuzileiro_kita") {
     foreach ($s in "co", "nohq", "smdi") { $jobs += , @("$t\hcl_czapka_varsovia\hcl_czapka_varsovia_${g}_${s}.png", "$dst\hcl_czapka_varsovia_${g}_${s}.paa") }
 }
-foreach ($g in "granadeiro_gala", "granadeiro_campanha") {
+# numbered fusilier czapkas (numerar_placa_varsovia.py): _co only, model and _nohq/_smdi of the base czapka
+foreach ($n in "02","03","05","06","07","08","09","11","12","14","15","16","17") { $jobs += , @("$thcl_czapka_varsoviahcl_czapka_varsovia_fuzileiro_rgt${n}_co.png", "$dsthcl_czapka_varsovia_fuzileiro_rgt${n}_co.paa") }
+$jobs += , @("$thcl_czapka_varsoviahcl_czapka_varsovia_fuzileiro_kita_rgt01_co.png", "$dsthcl_czapka_varsovia_fuzileiro_kita_rgt01_co.paa")
+foreach ($g in "granadeiro_gala", "granadeiro_campanha", "granadeiro_r05", "granadeiro_r06", "granadeiro_lisa") {
     foreach ($s in "co", "nohq", "smdi") { $jobs += , @("$t\hcl_bonnet_varsovia\hcl_bonnet_varsovia_${g}_${s}.png", "$dst\hcl_bonnet_varsovia_${g}_${s}.paa") }
 }
 

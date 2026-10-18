@@ -54,6 +54,7 @@ AGUIA_JSON = os.path.abspath(OPTB["aguia"])               # outline of the white
 COL = dict(pelo=(0.010, 0.009, 0.008), latao=(0.70, 0.50, 0.16), vermelho=(0.55, 0.03, 0.03), branco=(0.82, 0.82, 0.80),
            azul=(0.04, 0.08, 0.35), verde=(0.03, 0.20, 0.06))
 COL["prata"] = (0.72, 0.72, 0.70)                       # white metal of the eagle
+COL["carmesim"] = (0.40, 0.02, 0.07)                    # crimson ("pasowy") cords of the 5th and 6th
 MATS, PMATS, PARTS = {}, {}, []
 
 
@@ -389,7 +390,7 @@ def cords(tag, root):
         rows.append([bm.verts.new(p + sd * w * 0.013 - n * 0.001) for w in (-1, 1)])
     for r0, r1 in zip(rows, rows[1:]):
         bm.faces.new((r0[0], r0[1], r1[1], r1[0]))
-    finish(bm, f"{tag}_cordao_base", "branco", root)
+    finish(bm, f"{tag}_cordao_base", CORD_COL, root)
     # plaits
     bm = bmesh.new()
     L = [0.0]
@@ -421,28 +422,28 @@ def cords(tag, root):
                     f.normal_flip()
         d += step / 2
         k_ += 1
-    finish(bm, f"{tag}_cordao_trancas", "branco", root, keep_normals=True)
+    finish(bm, f"{tag}_cordao_trancas", CORD_COL, root, keep_normals=True)
     # tassel from the braid's upper end, hanging on the front
     top = path[0] + nrm[0][1] * 0.004
-    tube(f"{tag}_cordao_borla", [top, top + Vector((0, 0, -0.018)) + nrm[0][1] * 0.006], 0.0028, "branco", root)
-    fringe_tassel(f"{tag}_borla_frente", top + Vector((0, 0, -0.018)) + nrm[0][1] * 0.006, "branco", root, r=0.009,
+    tube(f"{tag}_cordao_borla", [top, top + Vector((0, 0, -0.018)) + nrm[0][1] * 0.006], 0.0028, CORD_COL, root)
+    fringe_tassel(f"{tag}_borla_frente", top + Vector((0, 0, -0.018)) + nrm[0][1] * 0.006, CORD_COL, root, r=0.009,
                   length=0.042, seed=11)
     # round the right side to the raquettes
     side = S(math.radians(-102), s_of_z(0.250), 0.016, False)
     hang = catmull([path[0], S(math.radians(-85), s_of_z(0.29), 0.016, False), side, side + Vector((0, 0, -0.04))], 6)
-    tube(f"{tag}_cordao_lado", hang, 0.0036, "branco", root)
+    tube(f"{tag}_cordao_lado", hang, 0.0036, CORD_COL, root)
     n = Sn(math.radians(-102), s_of_z(0.10)); n.z = 0; n.normalize()
     for k, dz in enumerate((-0.060, -0.112)):
         rq = side + Vector((0, 0, dz)) + n * (0.005 + 0.003 * k)
         ob = lathe_obj(f"{tag}_raquete_{k}", [(-0.030, 0.002), (-0.021, 0.013), (0.0, 0.0175), (0.021, 0.013), (0.030, 0.002)],
-                       rq, "branco", root, segs=16)
+                       rq, CORD_COL, root, segs=16)
         for v in ob.data.vertices:                         # a raquette is a flat woven oval, not a ball
             dv = v.co - rq
             v.co = rq + dv - n * dv.dot(n) * 0.62
     tb = side + Vector((0, 0, -0.140)) + n * 0.010
     for dx, sd_ in ((-0.012, 7), (0.012, 8)):
         t0 = tb + Vector((dx * n.y, -dx * n.x, 0.0))
-        fringe_tassel(f"{tag}_borla_{sd_}", t0, "branco", root, seed=sd_)
+        fringe_tassel(f"{tag}_borla_{sd_}", t0, CORD_COL, root, seed=sd_)
 
 
 def plume_and_cockade(tag, root, colours):
@@ -669,7 +670,26 @@ def aguia(tag, root):
 
 
 # ---------------------------------------------------------------- variants
-def bonnet(tag, x_off, with_plate, plume_cols, with_cords):
+CORD_COL = "branco"
+
+
+def front_grenade(tag, root):
+    """5th Regiment (📜 pl.wikipedia citing Gembarzewski): no plate, "posrodku z przodu granat mosiezny" - a brass
+    grenade in the middle of the front, laid on the fur (ball 22 mm, flame 34 mm; sizes 🔶)."""
+    z = 0.105
+    s = s_of_z(z)
+    c = S(0.0, s, 0.024, lumps=False)
+    n = Sn(0.0, s)
+    up = Vector((0, 0, 1))
+    lathe_obj(f"{tag}_granada_bola", [(-0.022 * math.cos(math.pi * i / 10), 0.0005 + 0.022 * math.sin(math.pi * i / 10))
+                                      for i in range(11)], c, "latao", root, axis=n, segs=20)
+    lathe_obj(f"{tag}_granada_chama", [(0.0, 0.009), (0.010, 0.008), (0.022, 0.004), (0.034, 0.0005)],
+              c + up * 0.020, "latao", root, axis=up, segs=12)
+
+
+def bonnet(tag, x_off, with_plate, plume_cols, with_cords, cord="branco", granada=False):
+    global CORD_COL
+    CORD_COL = cord
     root = bpy.data.objects.new(f"PB_{tag}", None)
     root.matrix_world = Matrix.Translation(Vector((x_off, 0, 0))) @ ROOT
     scene.collection.objects.link(root)
@@ -677,6 +697,8 @@ def bonnet(tag, x_off, with_plate, plume_cols, with_cords):
     pb = plate(tag, root) if with_plate else None
     if with_plate:
         aguia(tag, root)
+    if granada:
+        front_grenade(tag, root)
     patch = top_patch(tag, root)
     plume_and_cockade(tag, root, plume_cols)
     if with_cords:
@@ -686,8 +708,17 @@ def bonnet(tag, x_off, with_plate, plume_cols, with_cords):
     return root
 
 
+# regimental differences of the grenadiers' bearskin (user 2026-10-18 "so adiciona mais regimentos para a polonia";
+# pl.wikipedia regiment articles quoting the regimental deviations from the 1810 regulation, after Gembarzewski):
+#   5th: no peak, no plate, a brass grenade in the middle of the front, crimson cords ("kordony pasowe")
+#   6th: no peak, no plate, no grenade, crimson cords
+#   8th, 11th, 12th: plain bearskins with white cords ("bermyce gladkie z bialymi kordonami")
+# The crimson plume of the regulation is kept on all of them (the deviations do not mention the plume).
 VARIANTS = [("granadeiro_gala", True, [(0.0, "vermelho")], True),
-            ("granadeiro_campanha", True, None, False)]
+            ("granadeiro_campanha", True, None, False),
+            ("granadeiro_r05", False, [(0.0, "vermelho")], True, "carmesim", True),
+            ("granadeiro_r06", False, [(0.0, "vermelho")], True, "carmesim", False),
+            ("granadeiro_lisa", False, [(0.0, "vermelho")], True, "branco", False)]
 SPACING = 0.55
 roots = [bonnet(t, i * SPACING, *rest) for i, (t, *rest) in enumerate(VARIANTS)]
 

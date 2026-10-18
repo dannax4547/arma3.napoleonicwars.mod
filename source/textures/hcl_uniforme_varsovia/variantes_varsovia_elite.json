@@ -226,5 +226,574 @@
     0.11
    ]
   }
+ },
+ "Fuzileiro_R01": {
+  "prefixo": "hcl_u_varsovia1810_elite_fu01",
+  "curto": "1o regimento, fuzileiro",
+  "nome": "1o Regimento, fuzileiro: dragonas de la branca com franja",
+  "fonte": "pl.wikipedia (1 Pulk Piechoty): szlify biale wloczkowe z fredzlami",
+  "cores": {
+   "casaca": [
+    0.07,
+    0.09,
+    0.22
+   ],
+   "gola": [
+    0.52,
+    0.04,
+    0.12
+   ],
+   "gola_debrum": [
+    0.52,
+    0.04,
+    0.12
+   ],
+   "lapela": [
+    0.86,
+    0.85,
+    0.8
+   ],
+   "lapela_debrum": [
+    0.52,
+    0.04,
+    0.12
+   ],
+   "punho": [
+    0.52,
+    0.04,
+    0.12
+   ],
+   "punho_debrum": [
+    0.52,
+    0.04,
+    0.12
+   ],
+   "pala": [
+    0.07,
+    0.09,
+    0.22
+   ],
+   "debrum": [
+    0.52,
+    0.04,
+    0.12
+   ],
+   "viras": [
+    0.86,
+    0.85,
+    0.8
+   ],
+   "viras_debrum": [
+    0.52,
+    0.04,
+    0.12
+   ],
+   "platina": [
+    0.86,
+    0.85,
+    0.8
+   ],
+   "platina_borda": [
+    0.86,
+    0.85,
+    0.8
+   ],
+   "botoes": [
+    0.8,
+    0.62,
+    0.28
+   ],
+   "calca": [
+    0.84,
+    0.83,
+    0.78
+   ],
+   "polaina": [
+    0.06,
+    0.06,
+    0.07
+   ],
+   "sapato": [
+    0.03,
+    0.028,
+    0.025
+   ],
+   "sola": [
+    0.2,
+    0.13,
+    0.08
+   ],
+   "dragona": [
+    0.86,
+    0.85,
+    0.8
+   ],
+   "dragona_meialua": [
+    0.86,
+    0.85,
+    0.8
+   ],
+   "dragona_passante": [
+    0.86,
+    0.85,
+    0.8
+   ]
+  }
+ },
+ "Granadeiro_R13": {
+  "prefixo": "hcl_u_varsovia1810_elite_gr13",
+  "viras_externas": true,
+  "curto": "13o, granadeiro",
+  "nome": "13o Regimento, granadeiro: casaca branca, dragonas vermelhas",
+  "fonte": "pl.wikipedia (13 Pulk Piechoty): Epolety czerwone",
+  "cores": {
+   "casaca": [
+    0.86,
+    0.85,
+    0.8
+   ],
+   "gola": [
+    0.86,
+    0.85,
+    0.8
+   ],
+   "gola_debrum": [
+    0.2,
+    0.38,
+    0.7
+   ],
+   "lapela": [
+    0.2,
+    0.38,
+    0.7
+   ],
+   "lapela_debrum": [
+    0.86,
+    0.85,
+    0.8
+   ],
+   "punho": [
+    0.86,
+    0.85,
+    0.8
+   ],
+   "punho_debrum": [
+    0.2,
+    0.38,
+    0.7
+   ],
+   "pala": [
+    0.86,
+    0.85,
+    0.8
+   ],
+   "debrum": [
+    0.2,
+    0.38,
+    0.7
+   ],
+   "viras": [
+    0.86,
+    0.85,
+    0.8
+   ],
+   "viras_debrum": [
+    0.2,
+    0.38,
+    0.7
+   ],
+   "platina": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "platina_borda": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "botoes": [
+    0.8,
+    0.62,
+    0.28
+   ],
+   "calca": [
+    0.84,
+    0.83,
+    0.78
+   ],
+   "polaina": [
+    0.06,
+    0.06,
+    0.07
+   ],
+   "sapato": [
+    0.03,
+    0.028,
+    0.025
+   ],
+   "sola": [
+    0.2,
+    0.13,
+    0.08
+   ],
+   "dragona": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "dragona_meialua": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "dragona_passante": [
+    0.62,
+    0.07,
+    0.07
+   ]
+  }
+ },
+ "Voltigeur_R13": {
+  "prefixo": "hcl_u_varsovia1810_elite_vo13",
+  "viras_externas": true,
+  "curto": "13o, voltigeur",
+  "nome": "13o Regimento, voltigeur: casaca branca, dragonas verdes",
+  "fonte": "pl.wikipedia (13 Pulk Piechoty): zielone ... epolety",
+  "cores": {
+   "casaca": [
+    0.86,
+    0.85,
+    0.8
+   ],
+   "gola": [
+    0.86,
+    0.85,
+    0.8
+   ],
+   "gola_debrum": [
+    0.2,
+    0.38,
+    0.7
+   ],
+   "lapela": [
+    0.2,
+    0.38,
+    0.7
+   ],
+   "lapela_debrum": [
+    0.86,
+    0.85,
+    0.8
+   ],
+   "punho": [
+    0.86,
+    0.85,
+    0.8
+   ],
+   "punho_debrum": [
+    0.2,
+    0.38,
+    0.7
+   ],
+   "pala": [
+    0.86,
+    0.85,
+    0.8
+   ],
+   "debrum": [
+    0.2,
+    0.38,
+    0.7
+   ],
+   "viras": [
+    0.86,
+    0.85,
+    0.8
+   ],
+   "viras_debrum": [
+    0.2,
+    0.38,
+    0.7
+   ],
+   "platina": [
+    0.07,
+    0.26,
+    0.11
+   ],
+   "platina_borda": [
+    0.07,
+    0.26,
+    0.11
+   ],
+   "botoes": [
+    0.8,
+    0.62,
+    0.28
+   ],
+   "calca": [
+    0.84,
+    0.83,
+    0.78
+   ],
+   "polaina": [
+    0.06,
+    0.06,
+    0.07
+   ],
+   "sapato": [
+    0.03,
+    0.028,
+    0.025
+   ],
+   "sola": [
+    0.2,
+    0.13,
+    0.08
+   ],
+   "dragona": [
+    0.07,
+    0.26,
+    0.11
+   ],
+   "dragona_meialua": [
+    0.07,
+    0.26,
+    0.11
+   ],
+   "dragona_passante": [
+    0.07,
+    0.26,
+    0.11
+   ]
+  }
+ },
+ "Granadeiro_R15": {
+  "prefixo": "hcl_u_varsovia1810_elite_gr15",
+  "viras_externas": true,
+  "curto": "15o, granadeiro",
+  "nome": "15o Regimento, granadeiro: lapelas, gola e dragonas carmesim",
+  "fonte": "pl.wikipedia (15 Pulk Piechoty)",
+  "cores": {
+   "casaca": [
+    0.07,
+    0.09,
+    0.22
+   ],
+   "gola": [
+    0.52,
+    0.04,
+    0.12
+   ],
+   "gola_debrum": [
+    0.52,
+    0.04,
+    0.12
+   ],
+   "lapela": [
+    0.52,
+    0.04,
+    0.12
+   ],
+   "lapela_debrum": [
+    0.86,
+    0.85,
+    0.8
+   ],
+   "punho": [
+    0.52,
+    0.04,
+    0.12
+   ],
+   "punho_debrum": [
+    0.86,
+    0.85,
+    0.8
+   ],
+   "pala": [
+    0.07,
+    0.09,
+    0.22
+   ],
+   "debrum": [
+    0.52,
+    0.04,
+    0.12
+   ],
+   "viras": [
+    0.86,
+    0.85,
+    0.8
+   ],
+   "viras_debrum": [
+    0.52,
+    0.04,
+    0.12
+   ],
+   "platina": [
+    0.52,
+    0.04,
+    0.12
+   ],
+   "platina_borda": [
+    0.52,
+    0.04,
+    0.12
+   ],
+   "botoes": [
+    0.8,
+    0.62,
+    0.28
+   ],
+   "calca": [
+    0.84,
+    0.83,
+    0.78
+   ],
+   "polaina": [
+    0.06,
+    0.06,
+    0.07
+   ],
+   "sapato": [
+    0.03,
+    0.028,
+    0.025
+   ],
+   "sola": [
+    0.2,
+    0.13,
+    0.08
+   ],
+   "dragona": [
+    0.52,
+    0.04,
+    0.12
+   ],
+   "dragona_meialua": [
+    0.52,
+    0.04,
+    0.12
+   ],
+   "dragona_passante": [
+    0.52,
+    0.04,
+    0.12
+   ]
+  }
+ },
+ "Voltigeur_R15": {
+  "prefixo": "hcl_u_varsovia1810_elite_vo15",
+  "viras_externas": true,
+  "curto": "15o, voltigeur",
+  "nome": "15o Regimento, voltigeur: gola amarela, lapelas amaranto, dragonas verdes",
+  "fonte": "pl.wikipedia (15 Pulk Piechoty)",
+  "cores": {
+   "casaca": [
+    0.07,
+    0.09,
+    0.22
+   ],
+   "gola": [
+    0.8,
+    0.6,
+    0.12
+   ],
+   "gola_debrum": [
+    0.52,
+    0.04,
+    0.12
+   ],
+   "lapela": [
+    0.55,
+    0.08,
+    0.3
+   ],
+   "lapela_debrum": [
+    0.86,
+    0.85,
+    0.8
+   ],
+   "punho": [
+    0.52,
+    0.04,
+    0.12
+   ],
+   "punho_debrum": [
+    0.86,
+    0.85,
+    0.8
+   ],
+   "pala": [
+    0.07,
+    0.09,
+    0.22
+   ],
+   "debrum": [
+    0.52,
+    0.04,
+    0.12
+   ],
+   "viras": [
+    0.86,
+    0.85,
+    0.8
+   ],
+   "viras_debrum": [
+    0.52,
+    0.04,
+    0.12
+   ],
+   "platina": [
+    0.07,
+    0.26,
+    0.11
+   ],
+   "platina_borda": [
+    0.07,
+    0.26,
+    0.11
+   ],
+   "botoes": [
+    0.8,
+    0.62,
+    0.28
+   ],
+   "calca": [
+    0.84,
+    0.83,
+    0.78
+   ],
+   "polaina": [
+    0.06,
+    0.06,
+    0.07
+   ],
+   "sapato": [
+    0.03,
+    0.028,
+    0.025
+   ],
+   "sola": [
+    0.2,
+    0.13,
+    0.08
+   ],
+   "dragona": [
+    0.07,
+    0.26,
+    0.11
+   ],
+   "dragona_meialua": [
+    0.07,
+    0.26,
+    0.11
+   ],
+   "dragona_passante": [
+    0.07,
+    0.26,
+    0.11
+   ]
+  }
  }
 }

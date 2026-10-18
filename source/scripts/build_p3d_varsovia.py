@@ -21,9 +21,9 @@ TC = os.path.join(SAMPLES, r"Addons\Test_Character_01")
 PREFIX = r"hcl\hcl_varsovia"
 DATA = PREFIX + r"\data"
 LOG = []
-SHAKO_TAGS = ["fuzileiro", "voltigeur"]
+SHAKO_TAGS = ["fuzileiro", "voltigeur", "fuzileiro_kita"]          # fuzileiro_kita: 1st Regiment, black tuft
 SHAKO_BLEND = r"source\models\czapka\hcl_czapka_varsovia\hcl_czapka_varsovia_texturas.blend"
-BONNET_TAGS = ["granadeiro_gala", "granadeiro_campanha"]
+BONNET_TAGS = ["granadeiro_gala", "granadeiro_campanha", "granadeiro_r05", "granadeiro_r06", "granadeiro_lisa"]
 BONNET_BLEND = r"source\models\bonnet\hcl_bonnet_varsovia\hcl_bonnet_varsovia_texturas.blend"
 
 

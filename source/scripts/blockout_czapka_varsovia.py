@@ -547,8 +547,11 @@ def czapka(tag, x_off, top, boss_art):
     return root
 
 
+# fuzileiro_kita: 1st Regiment, "kity czarne na czapkach fizylierow" - black tufts on the fusiliers' caps (pl.wikipedia,
+# deviations from the 1810 regulation after Gembarzewski); the tuft is the voltigeur's plume shape in black (🔶 size)
 VARIANTS = [("fuzileiro", ("lentilha", "preto"), True),
-            ("voltigeur", ("plumet", [(0.0, "verde"), (0.55, "amarelo")]), False)]
+            ("voltigeur", ("plumet", [(0.0, "verde"), (0.55, "amarelo")]), False),
+            ("fuzileiro_kita", ("plumet", [(0.0, "preto")]), True)]
 SPACING = 0.50
 roots = [czapka(t, i * SPACING, *rest) for i, (t, *rest) in enumerate(VARIANTS)]
 

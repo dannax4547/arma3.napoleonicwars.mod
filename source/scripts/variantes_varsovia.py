@@ -46,14 +46,67 @@ line = {
             "fonte": "Wikipedia (7th Infantry Regiment), resumo; lapelas e punhos do regulamento 🔶",
             "cores": coat(gola=NAVY, gola_debrum=CRIM, botoes=TIN)},
 }
-g = coat(); g.update({"platina": CRIM, "platina_borda": CRIM, "dragona": CRIM, "dragona_meialua": CRIM, "dragona_passante": CRIM})
-v = coat(gola=YEL, gola_debrum=CRIM)
-v.update({"platina": GREEN, "platina_borda": GREEN, "dragona": GREEN, "dragona_meialua": GREEN, "dragona_passante": GREEN})
+
+# ---- more regiments (user 2026-10-18: "so adiciona mais regimentos para a polonia"); deviations from the 1810
+# regulation as quoted by the pl.wikipedia regiment articles (after Gembarzewski), shades 🔶:
+#   1st: fusiliers with white woollen epaulettes with fringes ("szlify biale wloczkowe z fredzlami") -> elite coat mesh
+#   13th: dressed at Zamosc in WHITE coats with BLUE piping from Austrian army stores, collars, cuffs and gold buttons
+#         kept, BLUE lapels added; white trousers. Grenadiers red epaulettes, voltigeurs green ("Epolety czerwone",
+#         "zielone ... epolety").
+#   15th: fusiliers crimson lapels and collars, YELLOW shoulder straps; grenadiers crimson lapels, collars and shoulder
+#         straps; voltigeurs green shoulder straps, YELLOW collars, AMARANTH lapels.
+BLUE, AMAR, RED = [0.2, 0.38, 0.7], [0.55, 0.08, 0.3], [0.62, 0.07, 0.07]
+
+
+def white13():
+    c = coat(gola=WHI, gola_debrum=BLUE, punho=WHI, punho_debrum=BLUE)
+    c.update({"casaca": WHI, "lapela": BLUE, "lapela_debrum": WHI, "pala": WHI, "debrum": BLUE, "viras": WHI,
+              "viras_debrum": BLUE, "platina": WHI, "platina_borda": BLUE})
+    return c
+
+
+def r15(gola=CRIM, lapela=CRIM, platina=YEL):
+    c = coat(gola=gola, gola_debrum=CRIM)
+    c.update({"lapela": lapela, "lapela_debrum": WHI, "punho_debrum": WHI, "platina": platina, "platina_borda": platina})
+    return c
+
+
+line["R13"] = {"prefixo": "hcl_u_varsovia1810_r13", "curto": "13o regimento",
+               "nome": "13o Regimento: casaca branca austriaca, vivos e lapelas azuis, botoes dourados",
+               "fonte": "pl.wikipedia (13 Pulk Piechoty): mundury biale z niebieskimi wypustkami, niebieskie wyloki; tom de azul 🔶",
+               "cores": white13()}
+line["R15"] = {"prefixo": "hcl_u_varsovia1810_r15", "curto": "15o regimento",
+               "nome": "15o Regimento, fuzileiros: lapelas e gola carmesim, platinas amarelas",
+               "fonte": "pl.wikipedia (15 Pulk Piechoty); punhos e vivos 🔶", "cores": r15()}
+
+
+def ep(c, col):
+    c.update({"platina": col, "platina_borda": col, "dragona": col, "dragona_meialua": col, "dragona_passante": col})
+    return c
+
+
+g = ep(coat(), CRIM)
+v = ep(coat(gola=YEL, gola_debrum=CRIM), GREEN)
 elite = {
     "Granadeiro_L1810": {"prefixo": "hcl_u_varsovia1810_elite_gr", "viras_externas": True, "curto": "granadeiro",
                          "nome": "Linha 1810, granadeiro: dragonas carmesim", "fonte": "📜 regulamento de 1810", "cores": g},
     "Voltigeur_L1810": {"prefixo": "hcl_u_varsovia1810_elite_vo", "viras_externas": True, "curto": "voltigeur",
                         "nome": "Linha 1810, voltigeur: gola amarela, dragonas verdes", "fonte": "📜 regulamento de 1810", "cores": v},
+    "Fuzileiro_R01": {"prefixo": "hcl_u_varsovia1810_elite_fu01", "curto": "1o regimento, fuzileiro",
+                      "nome": "1o Regimento, fuzileiro: dragonas de la branca com franja",
+                      "fonte": "pl.wikipedia (1 Pulk Piechoty): szlify biale wloczkowe z fredzlami", "cores": ep(coat(), WHI)},
+    "Granadeiro_R13": {"prefixo": "hcl_u_varsovia1810_elite_gr13", "viras_externas": True, "curto": "13o, granadeiro",
+                       "nome": "13o Regimento, granadeiro: casaca branca, dragonas vermelhas",
+                       "fonte": "pl.wikipedia (13 Pulk Piechoty): Epolety czerwone", "cores": ep(white13(), RED)},
+    "Voltigeur_R13": {"prefixo": "hcl_u_varsovia1810_elite_vo13", "viras_externas": True, "curto": "13o, voltigeur",
+                      "nome": "13o Regimento, voltigeur: casaca branca, dragonas verdes",
+                      "fonte": "pl.wikipedia (13 Pulk Piechoty): zielone ... epolety", "cores": ep(white13(), GREEN)},
+    "Granadeiro_R15": {"prefixo": "hcl_u_varsovia1810_elite_gr15", "viras_externas": True, "curto": "15o, granadeiro",
+                       "nome": "15o Regimento, granadeiro: lapelas, gola e dragonas carmesim",
+                       "fonte": "pl.wikipedia (15 Pulk Piechoty)", "cores": ep(r15(), CRIM)},
+    "Voltigeur_R15": {"prefixo": "hcl_u_varsovia1810_elite_vo15", "viras_externas": True, "curto": "15o, voltigeur",
+                      "nome": "15o Regimento, voltigeur: gola amarela, lapelas amaranto, dragonas verdes",
+                      "fonte": "pl.wikipedia (15 Pulk Piechoty)", "cores": ep(r15(gola=YEL, lapela=AMAR), GREEN)},
 }
 out = sys.argv[1]
 os.makedirs(out, exist_ok=True)

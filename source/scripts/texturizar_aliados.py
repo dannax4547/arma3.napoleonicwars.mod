@@ -41,7 +41,7 @@ scene = bpy.context.scene
 # colour names of the blockout materials (BO_<colour>, BO_plumet_<colour>)
 COL = dict(feltro=(0.018, 0.018, 0.020), couro=(0.024, 0.021, 0.019), latao=(0.62, 0.44, 0.15),
            vermelho=(0.55, 0.035, 0.035), amarelo=(0.80, 0.60, 0.08), verde=(0.04, 0.20, 0.07),
-           branco=(0.83, 0.82, 0.78), azul=(0.04, 0.09, 0.36), verde_esc=(0.02, 0.15, 0.05),
+           branco=(0.83, 0.82, 0.78), azul=(0.04, 0.09, 0.36), verde_esc=(0.02, 0.15, 0.05), carmesim=(0.40, 0.02, 0.07),
            ouro=(0.80, 0.60, 0.22), preto=(0.02, 0.02, 0.02), ganse=(0.55, 0.54, 0.50),
            prata=(0.60, 0.60, 0.58),   # white metal (tin-plated) of the lozenge-plate variant
            # Prussian cloth cap (blockout_bone_landwehr.py; linear values of the sRGB uniform palette)
