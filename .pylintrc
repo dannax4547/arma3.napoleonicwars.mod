@@ -1,0 +1,18 @@
+# Pylint configuration for Historical Clothing (user decision 2026-10-18: "configurar para o projeto").
+# The Python files here are Blender scripts (run with `blender -b --python ...`) and small helpers. The GitHub runner of
+# .github/workflows/pylint.yml has no Blender, so bpy / bmesh / mathutils cannot be imported there, and the project
+# does not follow PEP 8 naming or docstring conventions. The check therefore fails only on real ERRORS.
+
+[MAIN]
+# modules that exist only inside Blender (numpy is Blender's bundled copy, not installed on the runner)
+ignored-modules=bpy,bmesh,mathutils,bpy_extras,numpy
+# old copies kept for reference (2026-10-12 backups of the Old Guard scripts), not run any more
+ignore=_backup_2026-10-12_guarda
+
+[MESSAGES CONTROL]
+# C/R/W/I: style, refactoring, warnings and information - not enforced in this project
+# import-error: Blender-only modules (see ignored-modules)
+# too-many-function-args, unsubscriptable-object: false positives of the inference without numpy and bpy (31 x E1121
+#   on ndarray.reshape(...), 1 x E1136 on a tuple that starts as None; checked 2026-10-18)
+# possibly-used-before-assignment: the template button of build_uniforme_fr.py / _uk.py is always found before use
+disable=C,R,W,I,import-error,too-many-function-args,unsubscriptable-object,possibly-used-before-assignment
