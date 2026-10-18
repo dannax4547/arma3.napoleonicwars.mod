@@ -164,3 +164,5 @@ player forceAddUniform "HCL_U_UK1812_K01"; removeHeadgear player; player addHead
 | U5 | Barretinas | `HCL_H_UK1812_Belgic_*` (3), `HCL_H_UK1812_Stovepipe_*` (5) | Placa legível a 1–2 m; "28" atrás na `_28th`; cordões |
 | U6 | Bonnet de penas | `HCL_H_UK1812_Bonnet_Highland` | Penas sem cobrir o rosto; caudas à direita; Res 2 ao se afastar; desempenho (24 mil triângulos) |
 | U7 | Equipamento | `HCL_V_UK1812_Correame`, `HCL_B_UK1812_Mochila` | Correias acompanhando a casaca |
+
+**Resultado no jogo (relato do usuário, 2026-10-18):** *"já testei, ficou bom"*. O teste foi feito pelo usuário, sem capturas nem log anexados, e não houve detalhe por item. U1–U7 ficam aprovados de forma geral pelo relato.
