@@ -1,0 +1,242 @@
+{
+ "K01": {
+  "prefixo": "hcl_u_uk1812_kilt_v01",
+  "galao_forma": "quadrado",
+  "nome": "92nd Gordon Highlanders: casaca de vista amarela, kilt de tartan Gordon, meias xadrez vermelho e branco",
+  "mod": "tartan britainINFb c7 r2 (verde e azul com listra amarela); meias, liga e polainas curtas britainINF c3 r3; vista amarela britainINF c0 r0",
+  "curto": "92nd, tartan Gordon",
+  "cores": {
+   "calca": [
+    0.42,
+    0.43,
+    0.45
+   ],
+   "polaina": [
+    0.045,
+    0.045,
+    0.045
+   ],
+   "sapato": [
+    0.03,
+    0.028,
+    0.025
+   ],
+   "sola": [
+    0.2,
+    0.13,
+    0.08
+   ],
+   "botoes": [
+    0.6,
+    0.6,
+    0.58
+   ],
+   "casaca": [
+    0.55,
+    0.11,
+    0.07
+   ],
+   "gola": [
+    0.82,
+    0.66,
+    0.12
+   ],
+   "punho": [
+    0.82,
+    0.66,
+    0.12
+   ],
+   "gola_debrum": [
+    0.88,
+    0.87,
+    0.82
+   ],
+   "viras": [
+    0.84,
+    0.83,
+    0.78
+   ],
+   "pala": [
+    0.82,
+    0.66,
+    0.12
+   ],
+   "galoes": [
+    0.88,
+    0.87,
+    0.82
+   ],
+   "debrum": [
+    0.55,
+    0.11,
+    0.07
+   ],
+   "platina": [
+    0.82,
+    0.66,
+    0.12
+   ],
+   "platina_borda": [
+    0.88,
+    0.87,
+    0.82
+   ],
+   "galao_frente": [
+    0.88,
+    0.87,
+    0.82
+   ],
+   "pele": [
+    0.78,
+    0.58,
+    0.47
+   ],
+   "meia_a": [
+    0.62,
+    0.08,
+    0.07
+   ],
+   "meia_b": [
+    0.86,
+    0.85,
+    0.8
+   ],
+   "meia_liga": [
+    0.62,
+    0.08,
+    0.07
+   ]
+  },
+  "tartan": {
+   "imagem": "britainINFb_diffuse.png",
+   "caixa": [
+    3584,
+    1024,
+    4096,
+    1226
+   ],
+   "largura_m": 0.7,
+   "ganho": 1.6
+  }
+ },
+ "K02": {
+  "prefixo": "hcl_u_uk1812_kilt_v02",
+  "galao_forma": "quadrado",
+  "nome": "Highlander: casaca de vista azul, kilt de tartan azul e verde (Government), regimento nao identificado",
+  "mod": "tartan britainINF c3 r3 (azul e verde sem listra); vista azul britainINF c2 r0 (combinacao proposta)",
+  "curto": "tartan Government",
+  "cores": {
+   "calca": [
+    0.42,
+    0.43,
+    0.45
+   ],
+   "polaina": [
+    0.045,
+    0.045,
+    0.045
+   ],
+   "sapato": [
+    0.03,
+    0.028,
+    0.025
+   ],
+   "sola": [
+    0.2,
+    0.13,
+    0.08
+   ],
+   "botoes": [
+    0.6,
+    0.6,
+    0.58
+   ],
+   "casaca": [
+    0.55,
+    0.11,
+    0.07
+   ],
+   "gola": [
+    0.08,
+    0.12,
+    0.34
+   ],
+   "punho": [
+    0.08,
+    0.12,
+    0.34
+   ],
+   "gola_debrum": [
+    0.88,
+    0.87,
+    0.82
+   ],
+   "viras": [
+    0.84,
+    0.83,
+    0.78
+   ],
+   "pala": [
+    0.08,
+    0.12,
+    0.34
+   ],
+   "galoes": [
+    0.88,
+    0.87,
+    0.82
+   ],
+   "debrum": [
+    0.55,
+    0.11,
+    0.07
+   ],
+   "platina": [
+    0.08,
+    0.12,
+    0.34
+   ],
+   "platina_borda": [
+    0.88,
+    0.87,
+    0.82
+   ],
+   "galao_frente": [
+    0.88,
+    0.87,
+    0.82
+   ],
+   "pele": [
+    0.78,
+    0.58,
+    0.47
+   ],
+   "meia_a": [
+    0.62,
+    0.08,
+    0.07
+   ],
+   "meia_b": [
+    0.86,
+    0.85,
+    0.8
+   ],
+   "meia_liga": [
+    0.62,
+    0.08,
+    0.07
+   ]
+  },
+  "tartan": {
+   "imagem": "britainINF_diffuse.png",
+   "caixa": [
+    1536,
+    1536,
+    2048,
+    1738
+   ],
+   "largura_m": 0.7,
+   "ganho": 1.7
+  }
+ }
+}

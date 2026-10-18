@@ -1,0 +1,358 @@
+{
+ "L01": {
+  "prefixo": "hcl_u_uk1812_linha_v01",
+  "galao_forma": "quadrado",
+  "nome": "Linha, companhia de batalhao: casaca vermelha, vista amarela, galao branco em pares, calca cinza",
+  "mod": "britainINF c0 r0-r1 (vista e galao); calca cinza britainINF c1 r3. Cor da vista calibrada (o mod escurece)",
+  "curto": "vista amarela",
+  "cores": {
+   "calca": [
+    0.42,
+    0.43,
+    0.45
+   ],
+   "polaina": [
+    0.045,
+    0.045,
+    0.045
+   ],
+   "sapato": [
+    0.03,
+    0.028,
+    0.025
+   ],
+   "sola": [
+    0.2,
+    0.13,
+    0.08
+   ],
+   "botoes": [
+    0.6,
+    0.6,
+    0.58
+   ],
+   "casaca": [
+    0.55,
+    0.11,
+    0.07
+   ],
+   "gola": [
+    0.82,
+    0.66,
+    0.12
+   ],
+   "punho": [
+    0.82,
+    0.66,
+    0.12
+   ],
+   "gola_debrum": [
+    0.88,
+    0.87,
+    0.82
+   ],
+   "viras": [
+    0.84,
+    0.83,
+    0.78
+   ],
+   "pala": [
+    0.82,
+    0.66,
+    0.12
+   ],
+   "galoes": [
+    0.88,
+    0.87,
+    0.82
+   ],
+   "debrum": [
+    0.55,
+    0.11,
+    0.07
+   ],
+   "platina": [
+    0.82,
+    0.66,
+    0.12
+   ],
+   "platina_borda": [
+    0.88,
+    0.87,
+    0.82
+   ],
+   "galao_frente": [
+    0.88,
+    0.87,
+    0.82
+   ]
+  }
+ },
+ "L02": {
+  "prefixo": "hcl_u_uk1812_linha_v02",
+  "galao_forma": "quadrado",
+  "nome": "Linha, companhia de batalhao: casaca vermelha, vista verde, galao branco em pares, calca cinza",
+  "mod": "britainINF c1 r0-r1 (vista e galao); calca cinza britainINF c1 r3. Cor da vista calibrada (o mod escurece)",
+  "curto": "vista verde",
+  "cores": {
+   "calca": [
+    0.42,
+    0.43,
+    0.45
+   ],
+   "polaina": [
+    0.045,
+    0.045,
+    0.045
+   ],
+   "sapato": [
+    0.03,
+    0.028,
+    0.025
+   ],
+   "sola": [
+    0.2,
+    0.13,
+    0.08
+   ],
+   "botoes": [
+    0.6,
+    0.6,
+    0.58
+   ],
+   "casaca": [
+    0.55,
+    0.11,
+    0.07
+   ],
+   "gola": [
+    0.1,
+    0.28,
+    0.12
+   ],
+   "punho": [
+    0.1,
+    0.28,
+    0.12
+   ],
+   "gola_debrum": [
+    0.88,
+    0.87,
+    0.82
+   ],
+   "viras": [
+    0.84,
+    0.83,
+    0.78
+   ],
+   "pala": [
+    0.1,
+    0.28,
+    0.12
+   ],
+   "galoes": [
+    0.88,
+    0.87,
+    0.82
+   ],
+   "debrum": [
+    0.55,
+    0.11,
+    0.07
+   ],
+   "platina": [
+    0.1,
+    0.28,
+    0.12
+   ],
+   "platina_borda": [
+    0.88,
+    0.87,
+    0.82
+   ],
+   "galao_frente": [
+    0.88,
+    0.87,
+    0.82
+   ]
+  }
+ },
+ "L03": {
+  "prefixo": "hcl_u_uk1812_linha_v03",
+  "galao_forma": "quadrado",
+  "nome": "Linha, companhia de batalhao: casaca vermelha, vista azul, galao branco em pares, calca cinza",
+  "mod": "britainINF c2 r0-r1 (vista e galao); calca cinza britainINF c1 r3. Cor da vista calibrada (o mod escurece)",
+  "curto": "vista azul",
+  "cores": {
+   "calca": [
+    0.42,
+    0.43,
+    0.45
+   ],
+   "polaina": [
+    0.045,
+    0.045,
+    0.045
+   ],
+   "sapato": [
+    0.03,
+    0.028,
+    0.025
+   ],
+   "sola": [
+    0.2,
+    0.13,
+    0.08
+   ],
+   "botoes": [
+    0.6,
+    0.6,
+    0.58
+   ],
+   "casaca": [
+    0.55,
+    0.11,
+    0.07
+   ],
+   "gola": [
+    0.08,
+    0.12,
+    0.34
+   ],
+   "punho": [
+    0.08,
+    0.12,
+    0.34
+   ],
+   "gola_debrum": [
+    0.88,
+    0.87,
+    0.82
+   ],
+   "viras": [
+    0.84,
+    0.83,
+    0.78
+   ],
+   "pala": [
+    0.08,
+    0.12,
+    0.34
+   ],
+   "galoes": [
+    0.88,
+    0.87,
+    0.82
+   ],
+   "debrum": [
+    0.55,
+    0.11,
+    0.07
+   ],
+   "platina": [
+    0.08,
+    0.12,
+    0.34
+   ],
+   "platina_borda": [
+    0.88,
+    0.87,
+    0.82
+   ],
+   "galao_frente": [
+    0.88,
+    0.87,
+    0.82
+   ]
+  }
+ },
+ "L04": {
+  "prefixo": "hcl_u_uk1812_linha_v04",
+  "galao_forma": "quadrado",
+  "nome": "Linha, companhia de batalhao: casaca vermelha, vista branca, galao branco em pares, calca cinza",
+  "mod": "britainINF c3 r0-r1 (vista e galao); calca cinza britainINF c1 r3. Cor da vista calibrada (o mod escurece)",
+  "curto": "vista branca",
+  "cores": {
+   "calca": [
+    0.42,
+    0.43,
+    0.45
+   ],
+   "polaina": [
+    0.045,
+    0.045,
+    0.045
+   ],
+   "sapato": [
+    0.03,
+    0.028,
+    0.025
+   ],
+   "sola": [
+    0.2,
+    0.13,
+    0.08
+   ],
+   "botoes": [
+    0.6,
+    0.6,
+    0.58
+   ],
+   "casaca": [
+    0.55,
+    0.11,
+    0.07
+   ],
+   "gola": [
+    0.86,
+    0.85,
+    0.8
+   ],
+   "punho": [
+    0.86,
+    0.85,
+    0.8
+   ],
+   "gola_debrum": [
+    0.88,
+    0.87,
+    0.82
+   ],
+   "viras": [
+    0.84,
+    0.83,
+    0.78
+   ],
+   "pala": [
+    0.86,
+    0.85,
+    0.8
+   ],
+   "galoes": [
+    0.88,
+    0.87,
+    0.82
+   ],
+   "debrum": [
+    0.55,
+    0.11,
+    0.07
+   ],
+   "platina": [
+    0.86,
+    0.85,
+    0.8
+   ],
+   "platina_borda": [
+    0.88,
+    0.87,
+    0.82
+   ],
+   "galao_frente": [
+    0.88,
+    0.87,
+    0.82
+   ]
+  }
+ }
+}

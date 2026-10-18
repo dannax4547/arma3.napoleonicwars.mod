@@ -18,3 +18,16 @@ docs/reports/img/
 __pycache__/
 *.pyc
 # exception: small reference images that the docs need can be added with git add -f
+# Since 2026-10-13 the project's own assets in source/ (blend, textures, P3D, PAA) and the renders in docs/renders are versioned too.
+# work/ (NTW extracts, Arma 3 game files, builds), release/ (PBOs) and docs/references stay out: third-party or over the 100 MB GitHub limit.
+!source/**/*.blend
+!source/**/*.p3d
+!source/**/*.paa
+!source/**/*.png
+!source/**/*.jpg
+!source/**/*.tga
+!docs/renders/**/*.png
+!docs/renders/**/*.jpg
+# obsolete/exploratory shako v1-v2: crops of the NTW atlas without authorization (docs/asset_inventory.md)
+source/**/_obsoleto/
+source/**/_exploratorio/
