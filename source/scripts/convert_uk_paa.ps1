@@ -32,6 +32,21 @@ foreach ($b in "hcl_v_uk1812_correame", "hcl_b_uk1812_mochila") {
 }
 # Rifles: black crossbelts (generate_equipment_textures_uk.py couro=preto), _co only (same model)
 $jobs += , @("$eq\hcl_v_uk1812_correame_preto_co.png", "$eq\paa\hcl_v_uk1812_correame_preto_co.paa")
+# Portugal (docs/specs/portugal_1812.md): 24 line + 12 Cacadores jackets, 4 stovepipes, 36 number bands
+foreach ($k in 1..24) {
+    $jobs += , @(("$uni\hcl_u_por1812_linha_v{0:D2}_co.png" -f $k), ("$uni\paa\hcl_u_por1812_linha_v{0:D2}_co.paa" -f $k))
+    $jobs += , @(("$shk\numeros\hcl_por_numero_l{0:D2}_co.png" -f $k), ("$shk\paa\hcl_por_numero_l{0:D2}_co.paa" -f $k))
+}
+foreach ($k in 1..12) {
+    $jobs += , @(("$uni\hcl_u_por1812_cacadores_v{0:D2}_co.png" -f $k), ("$uni\paa\hcl_u_por1812_cacadores_v{0:D2}_co.paa" -f $k))
+    $jobs += , @(("$shk\numeros\hcl_por_numero_c{0:D2}_co.png" -f $k), ("$shk\paa\hcl_por_numero_c{0:D2}_co.paa" -f $k))
+}
+foreach ($m in "linha", "cacadores") {
+    foreach ($s in "nohq", "smdi") { $jobs += , @("$uni\hcl_u_por1812_${m}_${s}.png", "$uni\paa\hcl_u_por1812_${m}_${s}.paa") }
+}
+foreach ($t in "por_batalhao", "por_granadeiro", "por_ligeira", "por_cacadores") {
+    foreach ($s in "co", "nohq", "smdi") { $jobs += , @("$shk\hcl_shako_uk_${t}_${s}.png", "$shk\paa\hcl_shako_uk_${t}_${s}.paa") }
+}
 
 $fail = 0
 foreach ($j in $jobs) {

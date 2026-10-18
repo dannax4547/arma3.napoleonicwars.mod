@@ -26,6 +26,12 @@ J = lambda *p: os.path.join(ROOT, *p)
 TU = J("source", "textures", "hcl_uniforme_uk")
 UNI = {k: (J("source", "models", "coats", "hcl_uniforme_uk", f"hcl_uniforme_uk_{k}_LOD0.blend"), f"HCL_U_UK1812_{k.capitalize()}_LOD0",
            TU, f"hcl_u_uk1812_{k}_{{}}_co.png", f"hcl_u_uk1812_{k}_nohq.png") for k in ("linha", "flanco", "rifles", "kilt")}
+# Portugal (docs/specs/portugal_1812.md): por_linha v01..v24, por_cacadores v01..v12; the cap's number band shows the
+# variant's number (gen_numeros_por.py), mapped like build_p3d_uk.py does
+for k in ("linha", "cacadores"):
+    UNI[f"por_{k}"] = (J("source", "models", "coats", "hcl_uniforme_uk", f"hcl_uniforme_uk_por_{k}_LOD0.blend"),
+                       f"HCL_U_POR1812_{k.capitalize()}_LOD0", TU, f"hcl_u_por1812_{k}_{{}}_co.png", f"hcl_u_por1812_{k}_nohq.png")
+BLACK_BELTS = ("rifles", "por_cacadores")
 
 
 def load(blend, names):
@@ -92,7 +98,8 @@ hm.materials.append(skin)
 head = bpy.data.objects.new("REF_cabeca_jogo_bust_p3d", hm)
 # caps: the newest blend that has the tag wins; the Highland bonnet has its own blend and prefix
 TS = J("source", "textures", "hcl_shako_uk")
-SRCS = [(J("source", "models", "shakos", "hcl_shako_uk", "hcl_shako_uk_texturas_stovepipe.blend"), "HCL_Shako_UK_", "hcl_shako_uk_"),
+SRCS = [(J("source", "models", "shakos", "hcl_shako_uk", "hcl_shako_uk_texturas_por.blend"), "HCL_Shako_UK_", "hcl_shako_uk_"),
+        (J("source", "models", "shakos", "hcl_shako_uk", "hcl_shako_uk_texturas_stovepipe.blend"), "HCL_Shako_UK_", "hcl_shako_uk_"),
         (J("source", "models", "shakos", "hcl_shako_uk", "hcl_shako_uk_texturas.blend"), "HCL_Shako_UK_", "hcl_shako_uk_"),
         (J("source", "models", "bonnet", "hcl_bonnet_uk", "hcl_bonnet_uk_texturas.blend"), "HCL_UK_", "hcl_uk_")]
 tags = sorted({t for _, _, t in SOLD})
@@ -121,9 +128,29 @@ for i, (kind, var, tag) in enumerate(SOLD):
         cc = src.copy(); cc.location = (x, 0, 0); sc.collection.objects.link(cc)
         cc.material_slots[0].link = "OBJECT"
         vest = src.name.startswith("HCL_V")
-        cc.material_slots[0].material = EQMAT[("hcl_v_uk1812_correame_preto" if kind == "rifles" else "hcl_v_uk1812_correame")
+        cc.material_slots[0].material = EQMAT[("hcl_v_uk1812_correame_preto" if kind in BLACK_BELTS else "hcl_v_uk1812_correame")
                                               if vest else "hcl_b_uk1812_mochila"]
     s = shk[tag].copy(); s.location = (x, 0, 0); s.hide_render = False; sc.collection.objects.link(s)
+    if kind.startswith("por_"):                       # number band: the regiment's / battalion's number texture
+        s.data = s.data.copy()
+        kinds = s.get("hcl_kinds", "").split(",")
+        num_k = {j for j, kk in enumerate(kinds) if kk.startswith("latao_num")}
+        ka = s.data.attributes["hcl_kind_i"].data
+        polys = [p for p in s.data.polygons if ka[p.index].value in num_k]
+        if polys:
+            import numpy as np
+            vids = sorted({v for p in polys for v in p.vertices})
+            V = np.array([s.data.vertices[j].co[:] for j in vids]); c0 = V.mean(axis=0); D = V - c0; D[:, 0] = 0
+            up = np.linalg.eigh(D.T @ D)[1][:, -1]; up = -up if up[2] < 0 else up
+            hv = D @ up; h0, hb = hv.min(), max(hv.max() - hv.min(), 1e-4)
+            uvd = s.data.uv_layers["UVMap"].data
+            for p in polys:
+                for li in p.loop_indices:
+                    co = np.array(s.data.vertices[s.data.loops[li].vertex_index].co[:]) - c0
+                    uvd[li].uv = (0.5 + co[0] / (8 * hb), (co @ up - h0) / hb)
+                p.material_index = 1
+            key = ("c" if kind == "por_cacadores" else "l") + var[-2:]
+            s.data.materials.append(texmat(f"num_{key}", os.path.join(TS, "numeros", f"hcl_por_numero_{key}_co.png"), None, 0.35))
 
 for n_, en, rot in (("s", 3.2, (50, 0, 25)), ("p", 1.4, (65, 0, 200)), ("c", 1.2, (60, 0, 120))):
     lo = bpy.data.objects.new(n_, bpy.data.lights.new(n_, "SUN")); lo.data.energy = en

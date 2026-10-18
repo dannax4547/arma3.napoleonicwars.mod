@@ -57,7 +57,7 @@ ART_GAIN = 1.55                                     # the art is darker than our
 PENA = dict(vermelho=(0.74, 0.07, 0.05), verde=(0.07, 0.34, 0.11), amarelo=(0.93, 0.74, 0.12),
             branco=(0.93, 0.93, 0.89), preto=(0.03, 0.03, 0.03), verde_esc=(0.04, 0.22, 0.07))
 # kind -> (spec, gloss) for _smdi
-SMDI = dict(arte_cor=(0.04, 0.10), feltro=(0.05, 0.12), couro=(0.35, 0.55), verniz=(0.60, 0.85), latao=(0.85, 0.72), ouro=(0.80, 0.65), arte=(0.85, 0.72),
+SMDI = dict(arte_cor=(0.04, 0.10), feltro=(0.05, 0.12), couro=(0.35, 0.55), verniz=(0.60, 0.85), latao=(0.85, 0.72), latao_num=(0.85, 0.72), ouro=(0.80, 0.65), arte=(0.85, 0.72),
             galao=(0.07, 0.18), cocar=(0.10, 0.25), la=(0.03, 0.08), cordao=(0.06, 0.15), pena=(0.08, 0.25),
             pano=(0.04, 0.10), pele=(0.10, 0.30))
 
@@ -68,6 +68,12 @@ def kind_of(part, colour):
     # badge traced from the art, felt false front
     if part == "topo" and colour == "feltro":
         return "feltro"
+    # Portugal (blockout_shako_uk.py conjunto=por): the regimental number band gets its own kind, so build_p3d_uk.py
+    # can give those faces the per-regiment "numero" texture; oval plate with the arms, grenade badge
+    if part.startswith("numfaixa"):
+        return "latao_num"
+    if part.startswith(("brasao", "granada")):
+        return "latao"
     if part.startswith(("numero", "botao")):
         return "latao"
     if part.startswith("corneta"):
@@ -219,7 +225,7 @@ def proc_material(kind, colour):
         bump(vo.outputs["Distance"], 0.25)
     elif kind == "verniz":
         colour_out(mix_mul(noise(40), 0.85, 1.15)); bump(noise(300), 0.04)
-    elif kind in ("latao", "ouro"):
+    elif kind in ("latao", "ouro", "latao_num"):
         tarn = noise(55, 3, 0.6)
         scratch = wave(400, "BANDS", "Z", "SIN", 6.0)
         colour_out(add(mix_mul(tarn, 0.55, 1.15), mul(scratch, 0.08))); bump(add(tarn, mul(scratch, 0.3)), 0.12)

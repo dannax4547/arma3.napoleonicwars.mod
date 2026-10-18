@@ -3,6 +3,7 @@
 # head band (shako_fit.py, read-only Samples), parts with flat identification colours; texturizar_shako_uk.py joins
 # and bakes them. Spec: docs/specs/uk_1812.md sections 2.2, 3.1, 3.2, 8 (sources H1, H2, W1, W2, AR, F1).
 #   blender -b --factory-startup --python blockout_shako_uk.py -- <Samples Test_Character_01 dir> <out.blend> <render dir>
+#           [conjunto=uk|por]   por = the Portuguese stovepipes (docs/specs/portugal_1812.md), see "Portugal" below
 # The helper functions (bands, sweeps, lathes, traced plate, tassels, twisted cords, pleated cockade) are copied from
 # blockout_shako_fr.py, which is left untouched. Measures (spec section 8, x the fit scale k ~1.03):
 #   Belgic: felt body 165 mm (6 1/2"), cylindrical; tombstone FALSE FRONT 210 mm (8 1/4") bound with black worsted
@@ -614,8 +615,119 @@ VARIANTS = [  # tag, kind, tuft, plate, cords, back number
     ("stovepipe_28th", "stovepipe", BAT, "placa", None, "28"),
     ("stovepipe_rifles", "stovepipe", [(0.0, "verde_esc")], "corneta", "verde_esc", None),
 ]
+
+
+# ---------------------------------------------------------------- Portugal (conjunto=por; docs/specs/portugal_1812.md)
+# Stovepipe 1810-15 (decision D1): the brass band with the regimental number kept at the bottom front, the oval plate
+# with the arms of Portugal above it, plume and cockade (blue and red) at the front, no cords on the line caps
+# (P1, P6). Grenade / small bugle between band and plate for the flank companies (P1, barretina 1806; kept on the
+# stovepipe: 🔶). Cacadores: the traced bugle with the numbered plate below it (P8), green plume and cords.
+# The oval plate has no art and no measured size in the sources: a 56 x 70 mm oval with a crowned shield and the five
+# escutcheons in relief, drawn simply (🔶, no fine heraldry). The number band is its own part "numfaixa" (kind
+# latao_num): build_p3d_uk.py gives it the per-regiment texture of the hidden selection "numero".
+COL.update(azul=(0.04, 0.09, 0.36))
+
+
+def ellipse(cs, cz, w, h, n=40):
+    return [(cs + w / 2 * math.cos(2 * math.pi * i / n), cz + h / 2 * math.sin(2 * math.pi * i / n)) for i in range(n)]
+
+
+def shield(cs, cz, w, h, n=10):
+    """Portuguese shield outline: straight top and sides, round bottom (s, z), centred on (cs, cz)."""
+    top, side_bot = cz + h / 2, cz + h / 2 - (h - w / 2)
+    pts = [(cs - w / 2, top), (cs + w / 2, top), (cs + w / 2, side_bot)]
+    for i in range(1, n):
+        a = -math.pi * i / n
+        pts.append((cs + w / 2 * math.cos(a), side_bot + w / 2 * math.sin(a)))
+    pts.append((cs - w / 2, side_bot))
+    return pts
+
+
+def oval_plate(tag, root, zc, w=0.056, h=0.070):
+    o = 0.0008
+    flat_on_front(f"{tag}_brasao_placa", ellipse(0, zc, w, h, 48), 0.0012, "latao", root, off=o)
+    flat_on_front(f"{tag}_brasao_orla", ellipse(0, zc, w - 0.006, h - 0.006, 48), 0.0004, "latao", root, off=o + 0.0012)
+    sz = zc - 0.006
+    flat_on_front(f"{tag}_brasao_escudo", shield(0, sz, 0.028, 0.032), 0.0009, "latao", root, off=o + 0.0016)
+    for ds, dz in ((0, 0.0085), (-0.0085, 0), (0, 0), (0.0085, 0), (0, -0.0085)):   # the five escutcheons, in cross
+        flat_on_front(f"{tag}_brasao_quina_{len(PARTS)}", shield(ds, sz + dz, 0.005, 0.006, 6), 0.0006, "latao", root,
+                      off=o + 0.0025)
+    ct = sz + 0.016 + 0.0025                                   # crown: a band with five points (silhouette only)
+    crown = [(x, ct + z) for x, z in ((-0.012, 0.0), (0.012, 0.0), (0.012, 0.004), (0.0115, 0.010), (0.0070, 0.0060),
+                                      (0.0, 0.0125), (-0.0070, 0.0060), (-0.0115, 0.010), (-0.012, 0.004))]
+    flat_on_front(f"{tag}_brasao_coroa", crown, 0.0010, "latao", root, off=o + 0.0016)
+
+
+def num_band(tag, root, z0, z1, half_th, t=0.0010, segs=18):
+    """Brass band on the front wall carrying the number (its texture comes from the hidden selection "numero")."""
+    bm = bmesh.new()
+    ths = [half_th * (2 * i / segs - 1) for i in range(segs + 1)]
+    out_ = [[bm.verts.new(P(th, z, 0.0008 + t)) for th in ths] for z in (z0, z1)]
+    in_ = [[bm.verts.new(P(th, z, 0.0008)) for th in ths] for z in (z0, z1)]
+    grid(bm, out_, closed_u=False)
+    for i in range(segs):
+        bm.faces.new((in_[0][i], out_[0][i], out_[0][i + 1], in_[0][i + 1]))
+        bm.faces.new((out_[1][i], in_[1][i], in_[1][i + 1], out_[1][i + 1]))
+    for i in (0, segs):
+        bm.faces.new((in_[0][i], in_[1][i], out_[1][i], out_[0][i]))
+    return finish(bm, f"{tag}_numfaixa", "latao", root)
+
+
+def granada(tag, root, zc):
+    c = P(0, zc - 0.004, 0.0008); n = wall_n(0, zc)
+    lathe_obj(f"{tag}_granada_bola", [(0, 0.0004), (0.0, 0.0075), (0.0025, 0.0068), (0.0042, 0.0045), (0.0050, 0.0004)],
+              c, "latao", root, axis=n, segs=20)
+    fl = [(-0.006, zc + 0.002), (-0.0075, zc + 0.012), (-0.0035, zc + 0.008), (0.0, zc + 0.016), (0.0035, zc + 0.008),
+          (0.0075, zc + 0.012), (0.006, zc + 0.002)]
+    flat_on_front(f"{tag}_granada_chama", fl, 0.0010, "latao", root, off=0.0008)
+
+
+def cockade_por(tag, root, centre, normal, r=0.021):
+    pleated(f"{tag}_cocar", centre, normal, r * 0.35, r, 0.0026, 30, "azul", root)
+    disc(f"{tag}_cocar_centro", centre + normal * 0.0020, normal, r * 0.42, 0.0012, "vermelho", root, segs=20)
+
+
+def shako_por(tag, x_off, tuft_cols, badge=None, cacadores=False):
+    global H, top_hw, top_hd
+    H = STOVE_H * k; top_hw, top_hd = base_hw - STOVE_TAPER, base_hd - STOVE_TAPER * base_hd / base_hw
+    root = bpy.data.objects.new(f"UK_{tag}", None)
+    root.matrix_world = Matrix.Translation(Vector((x_off, 0, 0))) @ ROOT
+    scene.collection.objects.link(root)
+    body(tag, root, "couro")
+    visor(tag, root)
+    zc = H - 0.004
+    if cacadores:
+        traced_plate(f"{tag}_corneta", PLATES["corneta"], 0.062, 0.122, 0.075, 0.0022, "latao", root)
+        num_band(tag, root, 0.036, 0.054, math.radians(15))
+        o = 0.006
+        pts = [P(math.radians(70), H - 0.030, o), P(math.radians(40), 0.050, o), P(0, 0.024, o + 0.003),
+               P(math.radians(-40), 0.050, o), P(math.radians(-70), H - 0.030, o)]
+        cords(tag, root, pts, "verde", P(math.radians(-74), H - 0.060, o + 0.002), o)
+    else:
+        num_band(tag, root, TAPE + 0.004, TAPE + 0.022, math.radians(34))
+        if badge == "granada":
+            granada(tag, root, 0.050)
+        elif badge == "corneta":
+            traced_plate(f"{tag}_corneta", PLATES["corneta"], 0.037, 0.068, 0.044, 0.0018, "latao", root)
+        oval_plate(tag, root, 0.112)
+    cockade_por(tag, root, P(0, zc, 0.0034), wall_n(0, zc))
+    tuft(tag, root, P(0, H + 0.010, -0.004) + Vector((0, -0.010, 0)), Vector((0, -0.10, 1)), 0.170, 0.024, tuft_cols)
+    return root
+
+
+POR_VARIANTS = [  # tag, plume, badge, cacadores
+    ("por_batalhao", [(0.0, "branco")], None, False),
+    ("por_granadeiro", [(0.0, "branco")], "granada", False),
+    ("por_ligeira", [(0.0, "verde_esc")], "corneta", False),
+    ("por_cacadores", [(0.0, "verde_esc")], None, True),
+]
+CONJ = dict(x.split("=", 1) for x in args[3:] if "=" in x).get("conjunto", "uk")
 SPACING = 0.42
-roots = [shako(t, i * SPACING, *rest) for i, (t, *rest) in enumerate(VARIANTS)]
+if CONJ == "por":
+    VARIANTS = [(t, "stovepipe", c, None, None, None) for t, c, *_ in POR_VARIANTS]
+    roots = [shako_por(t, i * SPACING, c, b, cz) for i, (t, c, b, cz) in enumerate(POR_VARIANTS)]
+else:
+    roots = [shako(t, i * SPACING, *rest) for i, (t, *rest) in enumerate(VARIANTS)]
 
 # ---------------------------------------------------------------- references: approximate head under every cap
 hb = bmesh.new(); bmesh.ops.create_uvsphere(hb, u_segments=40, v_segments=20, radius=1.0)
@@ -677,11 +789,17 @@ def solo(i):
             o.hide_render = j != i
 
 
-for i, nm_ in ((0, "belgic_batalhao_lado"), (3, "stovepipe_batalhao_lado")):
+SIDE_SHOTS = ((0, "por_batalhao_lado"), (3, "por_cacadores_lado")) if CONJ == "por" else     ((0, "belgic_batalhao_lado"), (3, "stovepipe_batalhao_lado"))
+for i, nm_ in SIDE_SHOTS:
     solo(i)
     shot(nm_, (i * SPACING - 2.0, F["head_cy"], zc), (i * SPACING, F["head_cy"], zc), ortho=0.75, res=(900, 1000))
-solo(6)
-shot("stovepipe_28th_costas", (6 * SPACING, 2.5, zc), (6 * SPACING, 0, zc), ortho=0.6, res=(900, 1000))
+if CONJ == "por":                                         # close-up of the front: plate, badge, number band
+    for i, nm_ in ((1, "por_granadeiro_frente"), (2, "por_ligeira_frente")):
+        solo(i)
+        shot(nm_, (i * SPACING, -2.5, zc), (i * SPACING, 0, zc), ortho=0.40, res=(900, 1000))
+else:
+    solo(6)
+    shot("stovepipe_28th_costas", (6 * SPACING, 2.5, zc), (6 * SPACING, 0, zc), ortho=0.6, res=(900, 1000))
 solo(-1)
 for o in PARTS + heads:
     o.hide_render = False

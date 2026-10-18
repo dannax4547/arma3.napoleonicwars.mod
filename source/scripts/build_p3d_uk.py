@@ -69,30 +69,66 @@ def build_uniform(uni, tex, rvmat, out_name):
          out(out_name), log)
 
 
-UNIS = [("linha", "HCL_U_UK1812_Linha_LOD0", "hcl_u_uk1812_linha_v01_co.paa"),
-        ("flanco", "HCL_U_UK1812_Flanco_LOD0", "hcl_u_uk1812_flanco_v01_co.paa"),
-        ("rifles", "HCL_U_UK1812_Rifles_LOD0", "hcl_u_uk1812_rifles_v01_co.paa"),
-        ("kilt", "HCL_U_UK1812_Kilt_LOD0", "hcl_u_uk1812_kilt_v01_co.paa")]          # Highland dress (build_kilt_uk.py)
+UNIS = [("linha", "HCL_U_UK1812_Linha_LOD0", "hcl_u_uk1812_linha"),
+        ("flanco", "HCL_U_UK1812_Flanco_LOD0", "hcl_u_uk1812_flanco"),
+        ("rifles", "HCL_U_UK1812_Rifles_LOD0", "hcl_u_uk1812_rifles"),
+        ("kilt", "HCL_U_UK1812_Kilt_LOD0", "hcl_u_uk1812_kilt"),            # Highland dress (build_kilt_uk.py)
+        # Portugal (docs/specs/portugal_1812.md): line (frente=simples) and Cacadores (frente=alamares)
+        ("por_linha", "HCL_U_POR1812_Linha_LOD0", "hcl_u_por1812_linha"),
+        ("por_cacadores", "HCL_U_POR1812_Cacadores_LOD0", "hcl_u_por1812_cacadores")]
 objs = {}
-for k_, oname, tex0 in UNIS:
+for k_, oname, base in UNIS:
     PES = os.path.join(ROOT, rf"source\models\pesos\hcl_uk_{k_}_pesos.blend")
     got = {o.name: o for o in append(PES, [oname] + (["HCL_V_Fr1812_Correame_LOD0", "HCL_B_Fr1812_Havresac_LOD0"] if k_ == "linha" else []))}
     log(f"PESOS {os.path.basename(PES)}: {sorted(got)}")
     objs.update(got)
-    build_uniform(got[oname], tex0, f"hcl_u_uk1812_{k_}.rvmat", f"hcl_u_uk1812_{k_}.p3d")
+    build_uniform(got[oname], f"{base}_v01_co.paa", f"{base}.rvmat", f"{base}.p3d")
 
 # ---------------------------------------------------------------- shakos and bearskins (rigid on Head)
 TS = next(x for x in hgt["lods"] if abs(x["res"] - 10000) < 0.5)
 T2 = next(x for x in hgt["lods"] if abs(x["res"] - 2.0) < 0.01)
 
 
-def headgear(o, tx, fname, tg, lod2_polys=None, lod2_decimate=None):
+def number_faces(me, kinds_str):
+    """Faces of kind latao_num (Portuguese number band, texturizar_shako_uk.py); their UVMap is rewritten so the
+    band shows the 1024 x 128 number texture (gen_numeros_por.py) at its real aspect: v = 0..1 over the band height,
+    u = 0.5 +- (along X) / (8 x height), centred."""
+    kinds = kinds_str.split(",")
+    if "hcl_kind_i" not in me.attributes or not any(k.startswith("latao_num") for k in kinds):
+        return set()
+    num_k = {i for i, k in enumerate(kinds) if k.startswith("latao_num")}
+    ka = me.attributes["hcl_kind_i"].data
+    polys = {p.index for p in me.polygons if ka[p.index].value in num_k}
+    if not polys:
+        return polys
+    import numpy as np
+    vids = sorted({v for pi in polys for v in me.polygons[pi].vertices})
+    V = np.array([me.vertices[i].co[:] for i in vids])
+    c = V.mean(axis=0); D = V - c; D[:, 0] = 0
+    w_, ev = np.linalg.eigh(D.T @ D); up = ev[:, -1]                  # the band's height direction (not X)
+    if up[2] < 0:
+        up = -up
+    hv = D @ up; h0, h1 = hv.min(), hv.max(); hb = max(h1 - h0, 1e-4)
+    uvd = me.uv_layers["UVMap"].data
+    for pi in polys:
+        for li in me.polygons[pi].loop_indices:
+            co = np.array(me.vertices[me.loops[li].vertex_index].co[:]) - c
+            uvd[li].uv = (0.5 + co[0] / (8 * hb), (co @ up - h0) / hb)
+    return polys
+
+
+def headgear(o, tx, fname, tg, lod2_polys=None, lod2_decimate=None, numero=None):
     """Res 1 = the whole textured mesh (selection camo); optional Res 2 = only the polygons lod2_polys, or the mesh
     decimated to lod2_decimate of its triangles (2026-10-13: the v4 shakos are 14-28k triangles); shadow = convex
-    hull; everything rigid on Head."""
+    hull; everything rigid on Head. numero = (paa, rvmat) of the Portuguese number band: its faces get that texture
+    and the selection "numero" (hiddenSelections in the config), the rest stays "camo"."""
     o.data.uv_layers.active = o.data.uv_layers["UVMap"]
     allp = {p.index for p in o.data.polygons}
-    Lr = lod_from_mesh(o, 1.0, props_of(hgt["lods"][0]), lambda pi, tx=tx: tx, {"camo": allp}, weights=False)
+    nump = number_faces(o.data, o.get("hcl_kinds", "")) if numero else set()
+    if numero:
+        log(f"BARRETINA {tg}: faixa do numero {len(nump)} faces (selecao numero)")
+    Lr = lod_from_mesh(o, 1.0, props_of(hgt["lods"][0]), lambda pi, tx=tx: numero if pi in nump else tx,
+                       {"camo": allp - nump, **({"numero": nump} if nump else {})}, weights=False)
     Lr["sels"]["Head"] = ({i: 1 for i in range(len(Lr["points"]))}, list(range(len(Lr["faces"]))))
     extra = []
     if lod2_decimate:
@@ -104,9 +140,14 @@ def headgear(o, tx, fname, tg, lod2_polys=None, lod2_decimate=None):
         bpy.data.objects.remove(o2)
         o2 = bpy.data.objects.new(f"lod2m_{tg}", m2)
         m2.uv_layers.active = m2.uv_layers["UVMap"]
-        L2 = lod_from_mesh(o2, 2.0, props_of(T2), lambda pi, tx=tx: tx, {"camo": {p.index for p in m2.polygons}}, weights=False)
+        num2 = number_faces(m2, o.get("hcl_kinds", "")) if numero else set()
+        L2 = lod_from_mesh(o2, 2.0, props_of(T2), lambda pi, tx=tx: numero if pi in num2 else tx,
+                           {"camo": {p.index for p in m2.polygons} - num2, **({"numero": num2} if num2 else {})},
+                           weights=False)
         L2["sels"]["Head"] = ({i: 1 for i in range(len(L2["points"]))}, list(range(len(L2["faces"]))))
         extra = [finish(L2)]
+        if numero:
+            log(f"BARRETINA {tg}: Res 2 faixa do numero {len(num2)} faces")
     if lod2_polys is not None:
         bm = bmesh.new(); bm.from_mesh(o.data)
         keep = set(lod2_polys)
@@ -150,6 +191,14 @@ for tg in SHAKO_TAGS:
             break
     headgear(o, (DATA + rf"\hcl_shako_uk_{tg}_co.paa", DATA + rf"\hcl_shako_uk_{tg}.rvmat"), f"hcl_h_uk_{tg}.p3d", tg,
              lod2_decimate=0.4)
+# Portuguese stovepipes (blockout_shako_uk.py conjunto=por): number band in the hidden selection "numero"; the P3D
+# carries the 1st regiment's number, the config sets each regiment's own (gen_numeros_por.py)
+POR_BLEND = r"source\models\shakos\hcl_shako_uk\hcl_shako_uk_texturas_por.blend"
+for tg, num0 in (("por_batalhao", "l01"), ("por_granadeiro", "l01"), ("por_ligeira", "l01"), ("por_cacadores", "c01")):
+    name = f"HCL_Shako_UK_{tg}_LOD0"
+    o = next(x for x in append(os.path.join(ROOT, POR_BLEND), [name]) if x.name.startswith(name))
+    headgear(o, (DATA + rf"\hcl_shako_uk_{tg}_co.paa", DATA + rf"\hcl_shako_uk_{tg}.rvmat"), f"hcl_h_uk_{tg}.p3d", tg,
+             lod2_decimate=0.4, numero=(DATA + rf"\hcl_por_numero_{num0}_co.paa", DATA + r"\hcl_por_numero.rvmat"))
 # Highland feather bonnet (bonnet_highland_uk.py + texturizar_shako_uk.py nome=HCL_UK_ textura=hcl_uk_): Res 1 full,
 # Res 2 without the feather fronds (the shell carries the feather texture), like the French bearskins
 BONNET_BLEND = r"source\models\bonnet\hcl_bonnet_uk\hcl_bonnet_uk_texturas.blend"

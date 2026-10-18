@@ -13,19 +13,31 @@ JS = os.path.join(HERE, "..", "textures", "hcl_uniforme_uk")
 SRC = os.path.join(ROOT, r"source\addon\hcl\hcl_uk")
 os.makedirs(os.path.join(SRC, "data"), exist_ok=True)
 P = r"\hcl\hcl_uk"
-GROUPS = []                        # (json file, p3d, soldier base class, its displayName)
-for fn, p3d, base in (("variantes_uk_linha.json", "hcl_u_uk1812_linha", "HCL_UK1812_Soldado_Base"),
-                      ("variantes_uk_flanco.json", "hcl_u_uk1812_flanco", "HCL_UK1812_Soldado_Flanco_Base"),
-                      ("variantes_uk_rifles.json", "hcl_u_uk1812_rifles", "HCL_UK1812_Soldado_Rifles_Base"),
-                      ("variantes_uk_kilt.json", "hcl_u_uk1812_kilt", "HCL_UK1812_Soldado_Kilt_Base")):
-    GROUPS.append((json.load(open(os.path.join(JS, fn), encoding="utf-8")), p3d, base))
+GROUPS = []                        # (variants, p3d, soldier base class, nation tag of the class names)
+for fn, p3d, base, nat in (("variantes_uk_linha.json", "hcl_u_uk1812_linha", "HCL_UK1812_Soldado_Base", "UK1812"),
+                           ("variantes_uk_flanco.json", "hcl_u_uk1812_flanco", "HCL_UK1812_Soldado_Flanco_Base", "UK1812"),
+                           ("variantes_uk_rifles.json", "hcl_u_uk1812_rifles", "HCL_UK1812_Soldado_Rifles_Base", "UK1812"),
+                           ("variantes_uk_kilt.json", "hcl_u_uk1812_kilt", "HCL_UK1812_Soldado_Kilt_Base", "UK1812"),
+                           # Portugal (docs/specs/portugal_1812.md): 24 line regiments, 12 Cacadores battalions
+                           ("variantes_por_linha.json", "hcl_u_por1812_linha", "HCL_POR1812_Soldado_Base", "POR1812"),
+                           ("variantes_por_cacadores.json", "hcl_u_por1812_cacadores", "HCL_POR1812_Soldado_Cacadores_Base",
+                            "POR1812")):
+    GROUPS.append((json.load(open(os.path.join(JS, fn), encoding="utf-8")), p3d, base, nat))
 # caps: P3D tag -> class suffix (blockout_shako_uk.py VARIANTS)
 CAPS = [("belgic_batalhao", "Belgic_Batalhao"), ("belgic_granadeiro", "Belgic_Granadeiro"), ("belgic_ligeira", "Belgic_Ligeira"),
         ("stovepipe_batalhao", "Stovepipe_Batalhao"), ("stovepipe_granadeiro", "Stovepipe_Granadeiro"),
         ("stovepipe_ligeira", "Stovepipe_Ligeira"), ("stovepipe_28th", "Stovepipe_28th"), ("stovepipe_rifles", "Stovepipe_Rifles")]
-HEAD = [(f"hcl_h_uk_{tg}", f"hcl_shako_uk_{tg}", f"HCL_H_UK1812_{cls}") for tg, cls in CAPS]
+HEAD = [(f"hcl_h_uk_{tg}", f"hcl_shako_uk_{tg}", f"HCL_H_UK1812_{cls}", None) for tg, cls in CAPS]
 # Highland feather bonnet (bonnet_highland_uk.py; textures hcl_uk_bonnet_highland_*)
-HEAD.append(("hcl_h_uk_bonnet_highland", "hcl_uk_bonnet_highland", "HCL_H_UK1812_Bonnet_Highland"))
+HEAD.append(("hcl_h_uk_bonnet_highland", "hcl_uk_bonnet_highland", "HCL_H_UK1812_Bonnet_Highland", None))
+# Portuguese stovepipes: one class per regiment / battalion, the number band in the hidden selection "numero"
+# (gen_numeros_por.py: hcl_por_numero_lNN / cNN)
+for tg, cls in (("por_batalhao", "Batalhao"), ("por_granadeiro", "Granadeiro"), ("por_ligeira", "Ligeira")):
+    for n in range(1, 25):
+        HEAD.append((f"hcl_h_uk_{tg}", f"hcl_shako_uk_{tg}", f"HCL_H_POR1812_Stovepipe_{cls}_{n:02d}", f"hcl_por_numero_l{n:02d}"))
+for n in range(1, 13):
+    HEAD.append(("hcl_h_uk_por_cacadores", "hcl_shako_uk_por_cacadores", f"HCL_H_POR1812_Stovepipe_Cacadores_{n:02d}",
+                 f"hcl_por_numero_c{n:02d}"))
 V_P3D, B_P3D = "hcl_v_uk1812_correame", "hcl_b_uk1812_mochila"
 
 # ---------------------------------------------------------------- config.cpp
@@ -40,7 +52,7 @@ w("class CfgPatches\n{\n\tclass HCL_UK_Teste\n\t{")
 w('\t\tauthor = "Historical Clothing";')
 units = ["HCL_B_UK1812_Mochila"]
 w("\t\tunits[] = {" + ", ".join(f'"{x}"' for x in units) + "};")
-weapons = [f"HCL_U_UK1812_{v}" for g, _, _ in GROUPS for v in sorted(g)] + [h[2] for h in HEAD] + \
+weapons = [f"HCL_U_{nat}_{v}" for g, _, _, nat in GROUPS for v in sorted(g)] + [h[2] for h in HEAD] + \
     ["HCL_V_UK1812_Correame", "HCL_V_UK1812_Correame_Preto"]
 w("\t\tweapons[] = {" + ", ".join(f'"{x}"' for x in weapons) + "};")
 w("\t\trequiredVersion = 0.1;")
@@ -51,7 +63,7 @@ w("class CfgVehicles\n{")
 w("\tclass B_Soldier_base_F;\n\tclass Bag_Base;\n")
 first = True
 nsold = 0
-for var, p3d, base in GROUPS:
+for var, p3d, base, nat in GROUPS:
     ids = sorted(var)
     parent = "B_Soldier_base_F" if first else "HCL_UK1812_Soldado_Base"
     w(f"\tclass {base}: {parent}\n\t{{")
@@ -62,7 +74,7 @@ for var, p3d, base in GROUPS:
     w(f'\t\tmodel = "{P}\\{p3d}.p3d";')
     if first:
         w("\t\tmodelSides[] = {0, 1, 2, 3};")
-    w(f'\t\tuniformClass = "HCL_U_UK1812_{ids[0]}";')
+    w(f'\t\tuniformClass = "HCL_U_{nat}_{ids[0]}";')
     if first:
         w('\t\thiddenSelections[] = {"Camo"};')
     w(f'\t\thiddenSelectionsTextures[] = {{"{P}\\data\\{var[ids[0]]["prefixo"]}_co.paa"}};')
@@ -73,9 +85,9 @@ for var, p3d, base in GROUPS:
         w('\t\trespawnLinkedItems[] = {"ItemMap", "ItemCompass", "ItemWatch"};')
     w("\t};")
     for v in ids:
-        w(f"\tclass HCL_UK1812_Soldado_{v}: {base}\n\t{{")
+        w(f"\tclass HCL_{nat}_Soldado_{v}: {base}\n\t{{")
         w('\t\tdisplayName = "x";')
-        w(f'\t\tuniformClass = "HCL_U_UK1812_{v}";')
+        w(f'\t\tuniformClass = "HCL_U_{nat}_{v}";')
         w(f'\t\thiddenSelectionsTextures[] = {{"{P}\\data\\{var[v]["prefixo"]}_co.paa"}};')
         w("\t};")
         nsold += 1
@@ -95,9 +107,9 @@ w("class CfgWeapons\n{")
 w("\tclass ItemCore;\n\tclass UniformItem;\n\tclass Uniform_Base;")
 w("\tclass H_HelmetB: ItemCore\n\t{\n\t\tclass ItemInfo;\n\t};")
 w("\tclass Vest_Camo_Base: ItemCore\n\t{\n\t\tclass ItemInfo;\n\t};\n")
-for var, p3d, base in GROUPS:
+for var, p3d, base, nat in GROUPS:
     for v in sorted(var):
-        w(f"\tclass HCL_U_UK1812_{v}: Uniform_Base\n\t{{")
+        w(f"\tclass HCL_U_{nat}_{v}: Uniform_Base\n\t{{")
         w('\t\tauthor = "Historical Clothing";\n\t\tscope = 2;')
         w('\t\tdisplayName = "x";')
         w('\t\tpicture = "\\A3\\characters_f\\data\\ui\\icon_U_BasicBody_ca.paa";')
@@ -106,24 +118,26 @@ for var, p3d, base in GROUPS:
         w('\t\thiddenSelectionsTextures[] = {"\\A3\\Characters_F\\Common\\Suitpacks\\data\\suitpack_soldier_blufor_co.paa"};')
         w("\t\tclass ItemInfo: UniformItem\n\t\t{")
         w('\t\t\tuniformModel = "-";')
-        w(f'\t\t\tuniformClass = "HCL_UK1812_Soldado_{v}";')
+        w(f'\t\t\tuniformClass = "HCL_{nat}_Soldado_{v}";')
         w('\t\t\tcontainerClass = "Supply40";\n\t\t\tmass = 40;')
         w("\t\t};\n\t};")
-for p3d_base, mat_base, cls in HEAD:
+for p3d_base, mat_base, cls, num in HEAD:
     p3d = p3d_base + ".p3d"
+    sels = '{"camo", "numero"}' if num else '{"camo"}'
     w(f"\tclass {cls}: H_HelmetB\n\t{{")
     w('\t\tauthor = "Historical Clothing";\n\t\tscope = 2;')
     w('\t\tdisplayName = "x";')
     w('\t\tdescriptionShort = "HCL test - no protection";')
     w('\t\tpicture = "\\A3\\characters_f\\Data\\UI\\icon_H_helmet_plain_ca.paa";')
     w(f'\t\tmodel = "{P}\\{p3d}";')
-    w('\t\thiddenSelections[] = {"camo"};')
-    w(f'\t\thiddenSelectionsTextures[] = {{"{P}\\data\\{mat_base}_co.paa"}};')
+    w(f'\t\thiddenSelections[] = {sels};')
+    texs = f'"{P}\\data\\{mat_base}_co.paa"' + (f', "{P}\\data\\{num}_co.paa"' if num else "")
+    w(f'\t\thiddenSelectionsTextures[] = {{{texs}}};')
     w("\t\tclass ItemInfo: ItemInfo\n\t\t{")
     w("\t\t\tmass = 15;")
     w(f'\t\t\tuniformModel = "{P}\\{p3d}";')
     w("\t\t\tmodelSides[] = {0, 1, 2, 3};")
-    w('\t\t\thiddenSelections[] = {"camo"};')
+    w(f'\t\t\thiddenSelections[] = {sels};')
     w("\t\t\tclass HitpointsProtectionInfo\n\t\t\t{\n\t\t\t\tclass Head\n\t\t\t\t{")
     w('\t\t\t\t\thitpointName = "HitHead";\n\t\t\t\t\tarmor = 0;\n\t\t\t\t\tpassThrough = 1;')
     w("\t\t\t\t};\n\t\t\t};\n\t\t};\n\t};")
@@ -152,7 +166,7 @@ print("OK config.cpp", len(txt), "bytes;", len(weapons), "items +", nsold, "sold
 
 # ---------------------------------------------------------------- model.cfg: skeleton from hcl_pruss, our classes
 mc = open(os.path.join(ROOT, r"source\addon\hcl\hcl_pruss\model.cfg"), encoding="latin-1").read()
-models = [p3d for _, p3d, _ in GROUPS] + sorted({h[0] for h in HEAD}) + [V_P3D, B_P3D]
+models = [p3d for _, p3d, _, _ in GROUPS] + sorted({h[0] for h in HEAD}) + [V_P3D, B_P3D]
 mc = re.sub(r"(\tclass hcl_\w+: ArmaMan \{\};\r?\n)+", "".join(f"\tclass {m}: ArmaMan {{}};\n" for m in models), mc)
 mc = mc.replace("test addon hcl_pruss", "test addon hcl_uk")
 assert all(f"class {m}: ArmaMan" in mc for m in models) and "hcl_pruss" not in mc
@@ -193,9 +207,14 @@ def rvmat(base, spec, power):
     return t
 
 
-MATS = [(p3d, "0.4", 50) for _, p3d, _ in GROUPS] + \
+MATS = [(p3d, "0.4", 50) for _, p3d, _, _ in GROUPS] + \
     [(m, "0.6", 40) if "bonnet" in m else (m, "1.0", 80) for m in sorted({h[1] for h in HEAD})] + \
     [(V_P3D, "0.6", 60), (B_P3D, "0.6", 60)]
 for base, spec, power in MATS:
     open(os.path.join(SRC, "data", base + ".rvmat"), "w", encoding="ascii", newline="\r\n").write(rvmat(base, spec, power))
-print("OK", len(MATS), "rvmat")
+# number band of the Portuguese caps: flat brass, procedural normal and specular maps (no _nohq / _smdi files)
+num_mat = rvmat("x", "1.0", 80).replace("hcl\\hcl_uk\\data\\x_nohq.paa", "#(argb,8,8,3)color(0.5,0.5,1,1,NOHQ)") \
+    .replace("hcl\\hcl_uk\\data\\x_smdi.paa", "#(argb,8,8,3)color(1,0.85,0.72,1,SMDI)")
+assert "x_nohq" not in num_mat and "x_smdi" not in num_mat
+open(os.path.join(SRC, "data", "hcl_por_numero.rvmat"), "w", encoding="ascii", newline="\r\n").write(num_mat)
+print("OK", len(MATS) + 1, "rvmat")

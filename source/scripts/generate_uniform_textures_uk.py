@@ -580,6 +580,36 @@ if UKF and UKF["estilo"] == "linha":
     gap = -0.35 * gauss(loop_ac / 0.0005)
     hgt += loop_a * (0.50 + rib + gap)
     print(f"GALOES DA FRENTE: {len(UKF['botoes'])} botoes x 2 lados, forma {FORMA}; {int((loop_a > 0.5).sum())} texels")
+# Portuguese Cacadores (build_uniforme_uk.py frente=alamares; docs/specs/portugal_1812.md section 2): black lace
+# frogging, one braid from each side button to the centre button of its row (6th Cacadores 1811: 8 rows with buttons
+# at the ends and the centre). Braid FROG_W wide (not in the sources, 🔶), raised 0.6 mm, two cords with a groove.
+FROG_W = 0.008
+frog_a = np.zeros((T, T), np.float32); frog_al = np.zeros((T, T), np.float32); frog_ac = np.zeros((T, T), np.float32)
+if UKF and UKF["estilo"] == "alamares":
+    front_m = coat & (Y < 0.02) & (nrm[..., 1] < -0.2)
+    B_ = UKF["botoes"]
+    rows = {}
+    for bx, by, bz, side in B_:
+        rows.setdefault(round(bz, 3), {})[side] = (bx, bz)
+    for rz, r_ in rows.items():
+        if 0 not in r_:
+            continue
+        cx, cz = r_[0]
+        for s_ in (1, -1):
+            if s_ not in r_:
+                continue
+            sx, sz = r_[s_]
+            dx, dz = cx - sx, cz - sz
+            L_ = math.hypot(dx, dz); ux, uz = dx / L_, dz / L_
+            al = (X - sx) * ux + (Zc - sz) * uz                 # along the braid, from the side button
+            ac = -(X - sx) * uz + (Zc - sz) * ux                # across it
+            a_ = np.clip((FROG_W / 2 - np.abs(ac)) / 0.0006, 0, 1) * np.clip((al + 0.004) / 0.0006, 0, 1) * \
+                np.clip((L_ + 0.004 - al) / 0.0006, 0, 1)
+            a_ = np.where(front_m, a_, 0)
+            take = a_ > frog_a
+            frog_a[take], frog_al[take], frog_ac[take] = a_[take], al[take], ac[take]
+    hgt += frog_a * (0.6 - 0.25 * gauss(frog_ac / 0.0006))
+    print(f"ALAMARES: {len(rows)} fileiras; {int((frog_a > 0.5).sum())} texels")
 wing_bar = np.zeros((T, T), np.float32)
 if DRG:
     for s in "ED":
@@ -845,6 +875,10 @@ def paint_variant(v):
             lc = lc * (1 - wm) + wool(C["galao_listra"], 0.4) * wm
         la = loop_a[..., None]
         col = col * (1 - la) + lc * la
+    if "alamar" in C and frog_a.any():                  # Portuguese Cacadores frogging (see above)
+        fc = wool(C["alamar"], 0.4) * (0.88 + 0.12 * (np.mod(frog_al / 0.0012, 1.0) < 0.5))[..., None]
+        fa = frog_a[..., None]
+        col = col * (1 - fa) + fc * fa
     col[cinza] = wool(C["calca"], 1.3)[cinza]
     if v.get("tartan"):                                 # UK Highland dress (build_kilt_uk.py), see highland() below
         col = highland(v, col, C)

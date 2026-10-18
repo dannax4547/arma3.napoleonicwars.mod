@@ -37,7 +37,53 @@ def coat(v):
     return f"Line Infantry, {FACING[k]} facings, {company} (regiment unidentified)"
 
 
+# Portugal (docs/specs/portugal_1812.md): every line regiment and Cacadores battalion is named by the sources (P1, P3,
+# P8), with the spelling of the English-language sources; read from the variant JSONs next to this script
+import json, os
+_JS = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "textures", "hcl_uniforme_uk")
+POR_L = {k: v for k, v in json.load(open(os.path.join(_JS, "variantes_por_linha.json"), encoding="utf-8")).items()}
+POR_C = {k: v for k, v in json.load(open(os.path.join(_JS, "variantes_por_cacadores.json"), encoding="utf-8")).items()}
+
+
+def ordinal(n):
+    return f"{n}{'th' if 10 <= n % 100 <= 20 else {1: 'st', 2: 'nd', 3: 'rd'}.get(n % 10, 'th')}"
+
+
+def por_unit(v):
+    if v.startswith("L"):
+        d = POR_L[v]
+        return f"{ordinal(d['regimento'])} Line Infantry Regiment ({d['nome_regimento']})"
+    d = POR_C[v]
+    return f"{ordinal(d['batalhao'])} Cacadores Battalion ({d['provincia']})"
+
+
+POR_CAP = {"Batalhao": "Battalion Company (white plume)", "Granadeiro": "Grenadier Company (white plume, grenade)",
+           "Ligeira": "Light Company (green plume, bugle)", "Cacadores": "green plume and cords, bugle"}
+
+
+def name_por(cls):
+    m = re.fullmatch(r"HCL_POR1812_Soldado_(\w+)", cls)
+    if m:
+        if m[1] == "Base":
+            return "Portuguese Line Infantryman 1812" + T
+        if m[1] == "Cacadores_Base":
+            return "Portuguese Cacador 1812" + T
+        kind = "Cacador" if m[1].startswith("C") else "Line Infantryman"
+        return f"Portuguese {kind} 1812 - {por_unit(m[1])}{T}"
+    m = re.fullmatch(r"HCL_U_POR1812_(\w+)", cls)
+    if m:
+        kind = "Portuguese Cacadores Jacket (brown)" if m[1].startswith("C") else "Portuguese Infantry Jacket 1812"
+        return f"[HCL] {kind} - {por_unit(m[1])}"
+    m = re.fullmatch(r"HCL_H_POR1812_Stovepipe_(\w+)_(\d\d)", cls)
+    if m:
+        unit = por_unit(("C" if m[1] == "Cacadores" else "L") + m[2])
+        return f"[HCL] Portuguese Stovepipe Cap - {unit}, {POR_CAP[m[1]]}"
+    return None
+
+
 def name(cls):
+    if "POR1812" in cls:
+        return name_por(cls)
     m = re.fullmatch(r"HCL_UK1812_Soldado_(\w+)", cls)
     if m:
         if m[1].endswith("Base"):

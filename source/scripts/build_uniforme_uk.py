@@ -10,10 +10,12 @@
 #                       loops of the line are PAINTED by generate_uniform_textures_uk.py from the button list
 #        frente=rifles  3 rows of 10: centre + one on each side diverging toward the shoulders (mod art britainINF
 #                       c3 r2, the 95th jacket; count and spread read on the art, no source read)
+#        frente=simples   Portugal, line: 10 buttons evenly spaced, no lace (docs/specs/portugal_1812.md)
+#        frente=alamares  Portugal, Cacadores: 8 rows of 3 (frogging painted between them)
 #      the centres go in ob["hcl_botoes_frente"] (JSON: style, list of [x, y, z, side]) for the painter
 #   No lapels: every UV is kept, so the painter's maps stay valid.
 #   blender -b --factory-startup --python build_uniforme_uk.py -- <prussian LOD0 .blend> <out .blend> [hem=0.92]
-#                                                               [frente=linha|rifles] [nome=HCL_U_UK1812_Linha_LOD0]
+#                                                               [frente=linha|rifles|simples|alamares] [nome=...]
 import bpy, bmesh, sys, os, math, json
 import numpy as np
 from mathutils import Vector
@@ -193,6 +195,18 @@ elif FRENTE == "rifles":
         t = (h - H_BOT) / (H_TOP - H_BOT)
         for side in (0, 1, -1):
             pos.append((side * (0.055 + 0.040 * t), h, side))
+elif FRENTE == "simples":
+    # Portuguese line 1806 regulation (docs/specs/portugal_1812.md 1.1): single-breasted, no lace; 10 buttons evenly
+    # spaced on the closing (count not in the sources read, kept from the British jacket)
+    for h in np.linspace(H_TOP, H_BOT + 0.012, 10):
+        pos.append((0.0, h, 0))
+elif FRENTE == "alamares":
+    # Portuguese Cacadores (portugal_1812.md section 2; 6th Cacadores 1811, Napoleon Series): 8 rows of black lace
+    # frogging with a button at each end and in the centre; the frogging is PAINTED by the painter (key "alamar")
+    for h in np.linspace(H_TOP, H_BOT + 0.020, 8):
+        t = (h - H_BOT) / (H_TOP - H_BOT)
+        for side in (0, 1, -1):
+            pos.append((side * (0.055 + 0.040 * t), h, side))
 else:
     raise SystemExit(f"frente desconhecida: {FRENTE}")
 loc0, n0, _, _ = COAT.find_nearest(tmpl_c)
@@ -218,7 +232,7 @@ bm.to_mesh(ob.data)
 ob.data.update()
 ob["hcl_partes"] = ",".join(parts)
 ob["hcl_botoes_frente"] = json.dumps({"estilo": FRENTE, "botoes": btn_list})
-ob["hcl_origem"] = f"derivado de HCL_U_Pruss1813_01_LOD0 (gola v2) por build_uniforme_uk.py frente={FRENTE}, 2026-10-13"
+ob["hcl_origem"] = f"derivado de HCL_U_Pruss1813_01_LOD0 (gola v2) por build_uniforme_uk.py frente={FRENTE}"
 tris = sum(len(p.vertices) - 2 for p in ob.data.polygons)
 print(f"UNIFORME UK: {len(ob.data.vertices)} vertices, {tris} triangulos (Res 1; o prussiano tem 11960 + gola)")
 os.makedirs(os.path.dirname(OUT), exist_ok=True)

@@ -1,0 +1,1142 @@
+{
+ "C01": {
+  "prefixo": "hcl_u_por1812_cacadores_v01",
+  "batalhao": 1,
+  "provincia": "Estremadura",
+  "nome": "Cacadores 1 (Estremadura): jaqueta castanha, gola preto, punhos celeste, debrum e alamares pretos",
+  "fonte": "docs/specs/portugal_1812.md 2 [P8][P9]",
+  "curto": "Cacadores 1",
+  "cores": {
+   "polaina": [
+    0.045,
+    0.045,
+    0.045
+   ],
+   "sapato": [
+    0.03,
+    0.028,
+    0.025
+   ],
+   "sola": [
+    0.2,
+    0.13,
+    0.08
+   ],
+   "calca": [
+    0.21,
+    0.11,
+    0.08
+   ],
+   "botoes": [
+    0.05,
+    0.05,
+    0.05
+   ],
+   "casaca": [
+    0.21,
+    0.11,
+    0.08
+   ],
+   "gola": [
+    0.035,
+    0.035,
+    0.04
+   ],
+   "punho": [
+    0.4,
+    0.6,
+    0.8
+   ],
+   "pala": [
+    0.4,
+    0.6,
+    0.8
+   ],
+   "gola_debrum": [
+    0.035,
+    0.035,
+    0.04
+   ],
+   "punho_debrum": [
+    0.035,
+    0.035,
+    0.04
+   ],
+   "viras": [
+    0.21,
+    0.11,
+    0.08
+   ],
+   "viras_debrum": [
+    0.035,
+    0.035,
+    0.04
+   ],
+   "debrum": [
+    0.035,
+    0.035,
+    0.04
+   ],
+   "platina": [
+    0.21,
+    0.11,
+    0.08
+   ],
+   "platina_borda": [
+    0.035,
+    0.035,
+    0.04
+   ],
+   "alamar": [
+    0.035,
+    0.035,
+    0.04
+   ]
+  }
+ },
+ "C02": {
+  "prefixo": "hcl_u_por1812_cacadores_v02",
+  "batalhao": 2,
+  "provincia": "Algarve",
+  "nome": "Cacadores 2 (Algarve): jaqueta castanha, gola preto, punhos escarlate, debrum e alamares pretos",
+  "fonte": "docs/specs/portugal_1812.md 2 [P8][P9]",
+  "curto": "Cacadores 2",
+  "cores": {
+   "polaina": [
+    0.045,
+    0.045,
+    0.045
+   ],
+   "sapato": [
+    0.03,
+    0.028,
+    0.025
+   ],
+   "sola": [
+    0.2,
+    0.13,
+    0.08
+   ],
+   "calca": [
+    0.21,
+    0.11,
+    0.08
+   ],
+   "botoes": [
+    0.05,
+    0.05,
+    0.05
+   ],
+   "casaca": [
+    0.21,
+    0.11,
+    0.08
+   ],
+   "gola": [
+    0.035,
+    0.035,
+    0.04
+   ],
+   "punho": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "pala": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "gola_debrum": [
+    0.035,
+    0.035,
+    0.04
+   ],
+   "punho_debrum": [
+    0.035,
+    0.035,
+    0.04
+   ],
+   "viras": [
+    0.21,
+    0.11,
+    0.08
+   ],
+   "viras_debrum": [
+    0.035,
+    0.035,
+    0.04
+   ],
+   "debrum": [
+    0.035,
+    0.035,
+    0.04
+   ],
+   "platina": [
+    0.21,
+    0.11,
+    0.08
+   ],
+   "platina_borda": [
+    0.035,
+    0.035,
+    0.04
+   ],
+   "alamar": [
+    0.035,
+    0.035,
+    0.04
+   ]
+  }
+ },
+ "C03": {
+  "prefixo": "hcl_u_por1812_cacadores_v03",
+  "batalhao": 3,
+  "provincia": "Beira",
+  "nome": "Cacadores 3 (Beira): jaqueta castanha, gola preto, punhos preto, debrum e alamares pretos",
+  "fonte": "docs/specs/portugal_1812.md 2 [P8][P9]",
+  "curto": "Cacadores 3",
+  "cores": {
+   "polaina": [
+    0.045,
+    0.045,
+    0.045
+   ],
+   "sapato": [
+    0.03,
+    0.028,
+    0.025
+   ],
+   "sola": [
+    0.2,
+    0.13,
+    0.08
+   ],
+   "calca": [
+    0.21,
+    0.11,
+    0.08
+   ],
+   "botoes": [
+    0.05,
+    0.05,
+    0.05
+   ],
+   "casaca": [
+    0.21,
+    0.11,
+    0.08
+   ],
+   "gola": [
+    0.035,
+    0.035,
+    0.04
+   ],
+   "punho": [
+    0.035,
+    0.035,
+    0.04
+   ],
+   "pala": [
+    0.035,
+    0.035,
+    0.04
+   ],
+   "gola_debrum": [
+    0.035,
+    0.035,
+    0.04
+   ],
+   "punho_debrum": [
+    0.035,
+    0.035,
+    0.04
+   ],
+   "viras": [
+    0.21,
+    0.11,
+    0.08
+   ],
+   "viras_debrum": [
+    0.035,
+    0.035,
+    0.04
+   ],
+   "debrum": [
+    0.035,
+    0.035,
+    0.04
+   ],
+   "platina": [
+    0.21,
+    0.11,
+    0.08
+   ],
+   "platina_borda": [
+    0.035,
+    0.035,
+    0.04
+   ],
+   "alamar": [
+    0.035,
+    0.035,
+    0.04
+   ]
+  }
+ },
+ "C04": {
+  "prefixo": "hcl_u_por1812_cacadores_v04",
+  "batalhao": 4,
+  "provincia": "Estremadura",
+  "nome": "Cacadores 4 (Estremadura): jaqueta castanha, gola celeste, punhos celeste, debrum e alamares pretos",
+  "fonte": "docs/specs/portugal_1812.md 2 [P8][P9]",
+  "curto": "Cacadores 4",
+  "cores": {
+   "polaina": [
+    0.045,
+    0.045,
+    0.045
+   ],
+   "sapato": [
+    0.03,
+    0.028,
+    0.025
+   ],
+   "sola": [
+    0.2,
+    0.13,
+    0.08
+   ],
+   "calca": [
+    0.21,
+    0.11,
+    0.08
+   ],
+   "botoes": [
+    0.05,
+    0.05,
+    0.05
+   ],
+   "casaca": [
+    0.21,
+    0.11,
+    0.08
+   ],
+   "gola": [
+    0.4,
+    0.6,
+    0.8
+   ],
+   "punho": [
+    0.4,
+    0.6,
+    0.8
+   ],
+   "pala": [
+    0.4,
+    0.6,
+    0.8
+   ],
+   "gola_debrum": [
+    0.035,
+    0.035,
+    0.04
+   ],
+   "punho_debrum": [
+    0.035,
+    0.035,
+    0.04
+   ],
+   "viras": [
+    0.21,
+    0.11,
+    0.08
+   ],
+   "viras_debrum": [
+    0.035,
+    0.035,
+    0.04
+   ],
+   "debrum": [
+    0.035,
+    0.035,
+    0.04
+   ],
+   "platina": [
+    0.21,
+    0.11,
+    0.08
+   ],
+   "platina_borda": [
+    0.035,
+    0.035,
+    0.04
+   ],
+   "alamar": [
+    0.035,
+    0.035,
+    0.04
+   ]
+  }
+ },
+ "C05": {
+  "prefixo": "hcl_u_por1812_cacadores_v05",
+  "batalhao": 5,
+  "provincia": "Alentejo",
+  "nome": "Cacadores 5 (Alentejo): jaqueta castanha, gola escarlate, punhos escarlate, debrum e alamares pretos",
+  "fonte": "docs/specs/portugal_1812.md 2 [P8][P9]",
+  "curto": "Cacadores 5",
+  "cores": {
+   "polaina": [
+    0.045,
+    0.045,
+    0.045
+   ],
+   "sapato": [
+    0.03,
+    0.028,
+    0.025
+   ],
+   "sola": [
+    0.2,
+    0.13,
+    0.08
+   ],
+   "calca": [
+    0.21,
+    0.11,
+    0.08
+   ],
+   "botoes": [
+    0.05,
+    0.05,
+    0.05
+   ],
+   "casaca": [
+    0.21,
+    0.11,
+    0.08
+   ],
+   "gola": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "punho": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "pala": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "gola_debrum": [
+    0.035,
+    0.035,
+    0.04
+   ],
+   "punho_debrum": [
+    0.035,
+    0.035,
+    0.04
+   ],
+   "viras": [
+    0.21,
+    0.11,
+    0.08
+   ],
+   "viras_debrum": [
+    0.035,
+    0.035,
+    0.04
+   ],
+   "debrum": [
+    0.035,
+    0.035,
+    0.04
+   ],
+   "platina": [
+    0.21,
+    0.11,
+    0.08
+   ],
+   "platina_borda": [
+    0.035,
+    0.035,
+    0.04
+   ],
+   "alamar": [
+    0.035,
+    0.035,
+    0.04
+   ]
+  }
+ },
+ "C06": {
+  "prefixo": "hcl_u_por1812_cacadores_v06",
+  "batalhao": 6,
+  "provincia": "Minho",
+  "nome": "Cacadores 6 (Minho): jaqueta castanha, gola amarelo, punhos amarelo, debrum e alamares pretos",
+  "fonte": "docs/specs/portugal_1812.md 2 [P8][P9]",
+  "curto": "Cacadores 6",
+  "cores": {
+   "polaina": [
+    0.045,
+    0.045,
+    0.045
+   ],
+   "sapato": [
+    0.03,
+    0.028,
+    0.025
+   ],
+   "sola": [
+    0.2,
+    0.13,
+    0.08
+   ],
+   "calca": [
+    0.21,
+    0.11,
+    0.08
+   ],
+   "botoes": [
+    0.05,
+    0.05,
+    0.05
+   ],
+   "casaca": [
+    0.21,
+    0.11,
+    0.08
+   ],
+   "gola": [
+    0.8,
+    0.62,
+    0.14
+   ],
+   "punho": [
+    0.8,
+    0.62,
+    0.14
+   ],
+   "pala": [
+    0.8,
+    0.62,
+    0.14
+   ],
+   "gola_debrum": [
+    0.035,
+    0.035,
+    0.04
+   ],
+   "punho_debrum": [
+    0.035,
+    0.035,
+    0.04
+   ],
+   "viras": [
+    0.21,
+    0.11,
+    0.08
+   ],
+   "viras_debrum": [
+    0.035,
+    0.035,
+    0.04
+   ],
+   "debrum": [
+    0.035,
+    0.035,
+    0.04
+   ],
+   "platina": [
+    0.21,
+    0.11,
+    0.08
+   ],
+   "platina_borda": [
+    0.035,
+    0.035,
+    0.04
+   ],
+   "alamar": [
+    0.035,
+    0.035,
+    0.04
+   ]
+  }
+ },
+ "C07": {
+  "prefixo": "hcl_u_por1812_cacadores_v07",
+  "batalhao": 7,
+  "provincia": "Estremadura",
+  "nome": "Cacadores 7 (Estremadura): jaqueta castanha, gola preto, punhos amarelo, debrum e alamares pretos",
+  "fonte": "docs/specs/portugal_1812.md 2 [P8][P9]",
+  "curto": "Cacadores 7",
+  "cores": {
+   "polaina": [
+    0.045,
+    0.045,
+    0.045
+   ],
+   "sapato": [
+    0.03,
+    0.028,
+    0.025
+   ],
+   "sola": [
+    0.2,
+    0.13,
+    0.08
+   ],
+   "calca": [
+    0.21,
+    0.11,
+    0.08
+   ],
+   "botoes": [
+    0.05,
+    0.05,
+    0.05
+   ],
+   "casaca": [
+    0.21,
+    0.11,
+    0.08
+   ],
+   "gola": [
+    0.035,
+    0.035,
+    0.04
+   ],
+   "punho": [
+    0.8,
+    0.62,
+    0.14
+   ],
+   "pala": [
+    0.8,
+    0.62,
+    0.14
+   ],
+   "gola_debrum": [
+    0.035,
+    0.035,
+    0.04
+   ],
+   "punho_debrum": [
+    0.035,
+    0.035,
+    0.04
+   ],
+   "viras": [
+    0.21,
+    0.11,
+    0.08
+   ],
+   "viras_debrum": [
+    0.035,
+    0.035,
+    0.04
+   ],
+   "debrum": [
+    0.035,
+    0.035,
+    0.04
+   ],
+   "platina": [
+    0.21,
+    0.11,
+    0.08
+   ],
+   "platina_borda": [
+    0.035,
+    0.035,
+    0.04
+   ],
+   "alamar": [
+    0.035,
+    0.035,
+    0.04
+   ]
+  }
+ },
+ "C08": {
+  "prefixo": "hcl_u_por1812_cacadores_v08",
+  "batalhao": 8,
+  "provincia": "Beira",
+  "nome": "Cacadores 8 (Beira): jaqueta castanha, gola celeste, punhos preto, debrum e alamares pretos",
+  "fonte": "docs/specs/portugal_1812.md 2 [P8][P9]",
+  "curto": "Cacadores 8",
+  "cores": {
+   "polaina": [
+    0.045,
+    0.045,
+    0.045
+   ],
+   "sapato": [
+    0.03,
+    0.028,
+    0.025
+   ],
+   "sola": [
+    0.2,
+    0.13,
+    0.08
+   ],
+   "calca": [
+    0.21,
+    0.11,
+    0.08
+   ],
+   "botoes": [
+    0.05,
+    0.05,
+    0.05
+   ],
+   "casaca": [
+    0.21,
+    0.11,
+    0.08
+   ],
+   "gola": [
+    0.4,
+    0.6,
+    0.8
+   ],
+   "punho": [
+    0.035,
+    0.035,
+    0.04
+   ],
+   "pala": [
+    0.035,
+    0.035,
+    0.04
+   ],
+   "gola_debrum": [
+    0.035,
+    0.035,
+    0.04
+   ],
+   "punho_debrum": [
+    0.035,
+    0.035,
+    0.04
+   ],
+   "viras": [
+    0.21,
+    0.11,
+    0.08
+   ],
+   "viras_debrum": [
+    0.035,
+    0.035,
+    0.04
+   ],
+   "debrum": [
+    0.035,
+    0.035,
+    0.04
+   ],
+   "platina": [
+    0.21,
+    0.11,
+    0.08
+   ],
+   "platina_borda": [
+    0.035,
+    0.035,
+    0.04
+   ],
+   "alamar": [
+    0.035,
+    0.035,
+    0.04
+   ]
+  }
+ },
+ "C09": {
+  "prefixo": "hcl_u_por1812_cacadores_v09",
+  "batalhao": 9,
+  "provincia": "Minho",
+  "nome": "Cacadores 9 (Minho): jaqueta castanha, gola escarlate, punhos preto, debrum e alamares pretos",
+  "fonte": "docs/specs/portugal_1812.md 2 [P8][P9]",
+  "curto": "Cacadores 9",
+  "cores": {
+   "polaina": [
+    0.045,
+    0.045,
+    0.045
+   ],
+   "sapato": [
+    0.03,
+    0.028,
+    0.025
+   ],
+   "sola": [
+    0.2,
+    0.13,
+    0.08
+   ],
+   "calca": [
+    0.21,
+    0.11,
+    0.08
+   ],
+   "botoes": [
+    0.05,
+    0.05,
+    0.05
+   ],
+   "casaca": [
+    0.21,
+    0.11,
+    0.08
+   ],
+   "gola": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "punho": [
+    0.035,
+    0.035,
+    0.04
+   ],
+   "pala": [
+    0.035,
+    0.035,
+    0.04
+   ],
+   "gola_debrum": [
+    0.035,
+    0.035,
+    0.04
+   ],
+   "punho_debrum": [
+    0.035,
+    0.035,
+    0.04
+   ],
+   "viras": [
+    0.21,
+    0.11,
+    0.08
+   ],
+   "viras_debrum": [
+    0.035,
+    0.035,
+    0.04
+   ],
+   "debrum": [
+    0.035,
+    0.035,
+    0.04
+   ],
+   "platina": [
+    0.21,
+    0.11,
+    0.08
+   ],
+   "platina_borda": [
+    0.035,
+    0.035,
+    0.04
+   ],
+   "alamar": [
+    0.035,
+    0.035,
+    0.04
+   ]
+  }
+ },
+ "C10": {
+  "prefixo": "hcl_u_por1812_cacadores_v10",
+  "batalhao": 10,
+  "provincia": "Porto",
+  "nome": "Cacadores 10 (Porto): jaqueta castanha, gola amarelo, punhos preto, debrum e alamares pretos",
+  "fonte": "docs/specs/portugal_1812.md 2 [P8][P9]",
+  "curto": "Cacadores 10",
+  "cores": {
+   "polaina": [
+    0.045,
+    0.045,
+    0.045
+   ],
+   "sapato": [
+    0.03,
+    0.028,
+    0.025
+   ],
+   "sola": [
+    0.2,
+    0.13,
+    0.08
+   ],
+   "calca": [
+    0.21,
+    0.11,
+    0.08
+   ],
+   "botoes": [
+    0.05,
+    0.05,
+    0.05
+   ],
+   "casaca": [
+    0.21,
+    0.11,
+    0.08
+   ],
+   "gola": [
+    0.8,
+    0.62,
+    0.14
+   ],
+   "punho": [
+    0.035,
+    0.035,
+    0.04
+   ],
+   "pala": [
+    0.035,
+    0.035,
+    0.04
+   ],
+   "gola_debrum": [
+    0.035,
+    0.035,
+    0.04
+   ],
+   "punho_debrum": [
+    0.035,
+    0.035,
+    0.04
+   ],
+   "viras": [
+    0.21,
+    0.11,
+    0.08
+   ],
+   "viras_debrum": [
+    0.035,
+    0.035,
+    0.04
+   ],
+   "debrum": [
+    0.035,
+    0.035,
+    0.04
+   ],
+   "platina": [
+    0.21,
+    0.11,
+    0.08
+   ],
+   "platina_borda": [
+    0.035,
+    0.035,
+    0.04
+   ],
+   "alamar": [
+    0.035,
+    0.035,
+    0.04
+   ]
+  }
+ },
+ "C11": {
+  "prefixo": "hcl_u_por1812_cacadores_v11",
+  "batalhao": 11,
+  "provincia": "Beira",
+  "nome": "Cacadores 11 (Beira): jaqueta castanha, gola celeste, punhos escarlate, debrum e alamares pretos",
+  "fonte": "docs/specs/portugal_1812.md 2 [P8][P9]",
+  "curto": "Cacadores 11",
+  "cores": {
+   "polaina": [
+    0.045,
+    0.045,
+    0.045
+   ],
+   "sapato": [
+    0.03,
+    0.028,
+    0.025
+   ],
+   "sola": [
+    0.2,
+    0.13,
+    0.08
+   ],
+   "calca": [
+    0.21,
+    0.11,
+    0.08
+   ],
+   "botoes": [
+    0.05,
+    0.05,
+    0.05
+   ],
+   "casaca": [
+    0.21,
+    0.11,
+    0.08
+   ],
+   "gola": [
+    0.4,
+    0.6,
+    0.8
+   ],
+   "punho": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "pala": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "gola_debrum": [
+    0.035,
+    0.035,
+    0.04
+   ],
+   "punho_debrum": [
+    0.035,
+    0.035,
+    0.04
+   ],
+   "viras": [
+    0.21,
+    0.11,
+    0.08
+   ],
+   "viras_debrum": [
+    0.035,
+    0.035,
+    0.04
+   ],
+   "debrum": [
+    0.035,
+    0.035,
+    0.04
+   ],
+   "platina": [
+    0.21,
+    0.11,
+    0.08
+   ],
+   "platina_borda": [
+    0.035,
+    0.035,
+    0.04
+   ],
+   "alamar": [
+    0.035,
+    0.035,
+    0.04
+   ]
+  }
+ },
+ "C12": {
+  "prefixo": "hcl_u_por1812_cacadores_v12",
+  "batalhao": 12,
+  "provincia": "Tras-os-Montes",
+  "nome": "Cacadores 12 (Tras-os-Montes): jaqueta castanha, gola escarlate, punhos celeste, debrum e alamares pretos",
+  "fonte": "docs/specs/portugal_1812.md 2 [P8][P9]",
+  "curto": "Cacadores 12",
+  "cores": {
+   "polaina": [
+    0.045,
+    0.045,
+    0.045
+   ],
+   "sapato": [
+    0.03,
+    0.028,
+    0.025
+   ],
+   "sola": [
+    0.2,
+    0.13,
+    0.08
+   ],
+   "calca": [
+    0.21,
+    0.11,
+    0.08
+   ],
+   "botoes": [
+    0.05,
+    0.05,
+    0.05
+   ],
+   "casaca": [
+    0.21,
+    0.11,
+    0.08
+   ],
+   "gola": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "punho": [
+    0.4,
+    0.6,
+    0.8
+   ],
+   "pala": [
+    0.4,
+    0.6,
+    0.8
+   ],
+   "gola_debrum": [
+    0.035,
+    0.035,
+    0.04
+   ],
+   "punho_debrum": [
+    0.035,
+    0.035,
+    0.04
+   ],
+   "viras": [
+    0.21,
+    0.11,
+    0.08
+   ],
+   "viras_debrum": [
+    0.035,
+    0.035,
+    0.04
+   ],
+   "debrum": [
+    0.035,
+    0.035,
+    0.04
+   ],
+   "platina": [
+    0.21,
+    0.11,
+    0.08
+   ],
+   "platina_borda": [
+    0.035,
+    0.035,
+    0.04
+   ],
+   "alamar": [
+    0.035,
+    0.035,
+    0.04
+   ]
+  }
+ }
+}
