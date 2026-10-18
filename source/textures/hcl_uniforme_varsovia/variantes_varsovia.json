@@ -1,0 +1,492 @@
+{
+ "L1810": {
+  "prefixo": "hcl_u_varsovia1810_l1810",
+  "curto": "regulamento de 1810",
+  "nome": "Linha, regulamento de 3/9/1810: azul-marinho, lapelas brancas, gola e punhos carmesim",
+  "fonte": "📜 regulamento de 1810 (Gembarzewski 1905; Zygulski & Wielecki 1988); viras e portinholas 🔶",
+  "cores": {
+   "casaca": [
+    0.07,
+    0.09,
+    0.22
+   ],
+   "gola": [
+    0.52,
+    0.04,
+    0.12
+   ],
+   "gola_debrum": [
+    0.52,
+    0.04,
+    0.12
+   ],
+   "lapela": [
+    0.86,
+    0.85,
+    0.8
+   ],
+   "lapela_debrum": [
+    0.52,
+    0.04,
+    0.12
+   ],
+   "punho": [
+    0.52,
+    0.04,
+    0.12
+   ],
+   "punho_debrum": [
+    0.52,
+    0.04,
+    0.12
+   ],
+   "pala": [
+    0.07,
+    0.09,
+    0.22
+   ],
+   "debrum": [
+    0.52,
+    0.04,
+    0.12
+   ],
+   "viras": [
+    0.86,
+    0.85,
+    0.8
+   ],
+   "viras_debrum": [
+    0.52,
+    0.04,
+    0.12
+   ],
+   "platina": [
+    0.07,
+    0.09,
+    0.22
+   ],
+   "platina_borda": [
+    0.52,
+    0.04,
+    0.12
+   ],
+   "botoes": [
+    0.8,
+    0.62,
+    0.28
+   ],
+   "calca": [
+    0.84,
+    0.83,
+    0.78
+   ],
+   "polaina": [
+    0.06,
+    0.06,
+    0.07
+   ],
+   "sapato": [
+    0.03,
+    0.028,
+    0.025
+   ],
+   "sola": [
+    0.2,
+    0.13,
+    0.08
+   ]
+  }
+ },
+ "R09": {
+  "prefixo": "hcl_u_varsovia1810_r09",
+  "curto": "9o regimento",
+  "nome": "9o Regimento: gola carmesim debruada de azul, punhos carmesim debruados de branco, botoes brancos",
+  "fonte": "Askenazy & Gembarzewski via Wikipedia (9th Infantry Regiment)",
+  "cores": {
+   "casaca": [
+    0.07,
+    0.09,
+    0.22
+   ],
+   "gola": [
+    0.52,
+    0.04,
+    0.12
+   ],
+   "gola_debrum": [
+    0.07,
+    0.09,
+    0.22
+   ],
+   "lapela": [
+    0.86,
+    0.85,
+    0.8
+   ],
+   "lapela_debrum": [
+    0.52,
+    0.04,
+    0.12
+   ],
+   "punho": [
+    0.52,
+    0.04,
+    0.12
+   ],
+   "punho_debrum": [
+    0.86,
+    0.85,
+    0.8
+   ],
+   "pala": [
+    0.07,
+    0.09,
+    0.22
+   ],
+   "debrum": [
+    0.52,
+    0.04,
+    0.12
+   ],
+   "viras": [
+    0.86,
+    0.85,
+    0.8
+   ],
+   "viras_debrum": [
+    0.52,
+    0.04,
+    0.12
+   ],
+   "platina": [
+    0.07,
+    0.09,
+    0.22
+   ],
+   "platina_borda": [
+    0.52,
+    0.04,
+    0.12
+   ],
+   "botoes": [
+    0.74,
+    0.75,
+    0.76
+   ],
+   "calca": [
+    0.84,
+    0.83,
+    0.78
+   ],
+   "polaina": [
+    0.06,
+    0.06,
+    0.07
+   ],
+   "sapato": [
+    0.03,
+    0.028,
+    0.025
+   ],
+   "sola": [
+    0.2,
+    0.13,
+    0.08
+   ]
+  }
+ },
+ "R07": {
+  "prefixo": "hcl_u_varsovia1810_r07",
+  "curto": "7o regimento",
+  "nome": "7o Regimento: gola azul-marinho debruada de carmesim, botoes brancos",
+  "fonte": "Wikipedia (7th Infantry Regiment), resumo; lapelas e punhos do regulamento 🔶",
+  "cores": {
+   "casaca": [
+    0.07,
+    0.09,
+    0.22
+   ],
+   "gola": [
+    0.07,
+    0.09,
+    0.22
+   ],
+   "gola_debrum": [
+    0.52,
+    0.04,
+    0.12
+   ],
+   "lapela": [
+    0.86,
+    0.85,
+    0.8
+   ],
+   "lapela_debrum": [
+    0.52,
+    0.04,
+    0.12
+   ],
+   "punho": [
+    0.52,
+    0.04,
+    0.12
+   ],
+   "punho_debrum": [
+    0.52,
+    0.04,
+    0.12
+   ],
+   "pala": [
+    0.07,
+    0.09,
+    0.22
+   ],
+   "debrum": [
+    0.52,
+    0.04,
+    0.12
+   ],
+   "viras": [
+    0.86,
+    0.85,
+    0.8
+   ],
+   "viras_debrum": [
+    0.52,
+    0.04,
+    0.12
+   ],
+   "platina": [
+    0.07,
+    0.09,
+    0.22
+   ],
+   "platina_borda": [
+    0.52,
+    0.04,
+    0.12
+   ],
+   "botoes": [
+    0.74,
+    0.75,
+    0.76
+   ],
+   "calca": [
+    0.84,
+    0.83,
+    0.78
+   ],
+   "polaina": [
+    0.06,
+    0.06,
+    0.07
+   ],
+   "sapato": [
+    0.03,
+    0.028,
+    0.025
+   ],
+   "sola": [
+    0.2,
+    0.13,
+    0.08
+   ]
+  }
+ },
+ "R13": {
+  "prefixo": "hcl_u_varsovia1810_r13",
+  "curto": "13o regimento",
+  "nome": "13o Regimento: casaca branca austriaca, vivos e lapelas azuis, botoes dourados",
+  "fonte": "pl.wikipedia (13 Pulk Piechoty): mundury biale z niebieskimi wypustkami, niebieskie wyloki; tom de azul 🔶",
+  "cores": {
+   "casaca": [
+    0.86,
+    0.85,
+    0.8
+   ],
+   "gola": [
+    0.86,
+    0.85,
+    0.8
+   ],
+   "gola_debrum": [
+    0.2,
+    0.38,
+    0.7
+   ],
+   "lapela": [
+    0.2,
+    0.38,
+    0.7
+   ],
+   "lapela_debrum": [
+    0.86,
+    0.85,
+    0.8
+   ],
+   "punho": [
+    0.86,
+    0.85,
+    0.8
+   ],
+   "punho_debrum": [
+    0.2,
+    0.38,
+    0.7
+   ],
+   "pala": [
+    0.86,
+    0.85,
+    0.8
+   ],
+   "debrum": [
+    0.2,
+    0.38,
+    0.7
+   ],
+   "viras": [
+    0.86,
+    0.85,
+    0.8
+   ],
+   "viras_debrum": [
+    0.2,
+    0.38,
+    0.7
+   ],
+   "platina": [
+    0.86,
+    0.85,
+    0.8
+   ],
+   "platina_borda": [
+    0.2,
+    0.38,
+    0.7
+   ],
+   "botoes": [
+    0.8,
+    0.62,
+    0.28
+   ],
+   "calca": [
+    0.84,
+    0.83,
+    0.78
+   ],
+   "polaina": [
+    0.06,
+    0.06,
+    0.07
+   ],
+   "sapato": [
+    0.03,
+    0.028,
+    0.025
+   ],
+   "sola": [
+    0.2,
+    0.13,
+    0.08
+   ]
+  }
+ },
+ "R15": {
+  "prefixo": "hcl_u_varsovia1810_r15",
+  "curto": "15o regimento",
+  "nome": "15o Regimento, fuzileiros: lapelas e gola carmesim, platinas amarelas",
+  "fonte": "pl.wikipedia (15 Pulk Piechoty); punhos e vivos 🔶",
+  "cores": {
+   "casaca": [
+    0.07,
+    0.09,
+    0.22
+   ],
+   "gola": [
+    0.52,
+    0.04,
+    0.12
+   ],
+   "gola_debrum": [
+    0.52,
+    0.04,
+    0.12
+   ],
+   "lapela": [
+    0.52,
+    0.04,
+    0.12
+   ],
+   "lapela_debrum": [
+    0.86,
+    0.85,
+    0.8
+   ],
+   "punho": [
+    0.52,
+    0.04,
+    0.12
+   ],
+   "punho_debrum": [
+    0.86,
+    0.85,
+    0.8
+   ],
+   "pala": [
+    0.07,
+    0.09,
+    0.22
+   ],
+   "debrum": [
+    0.52,
+    0.04,
+    0.12
+   ],
+   "viras": [
+    0.86,
+    0.85,
+    0.8
+   ],
+   "viras_debrum": [
+    0.52,
+    0.04,
+    0.12
+   ],
+   "platina": [
+    0.8,
+    0.6,
+    0.12
+   ],
+   "platina_borda": [
+    0.8,
+    0.6,
+    0.12
+   ],
+   "botoes": [
+    0.8,
+    0.62,
+    0.28
+   ],
+   "calca": [
+    0.84,
+    0.83,
+    0.78
+   ],
+   "polaina": [
+    0.06,
+    0.06,
+    0.07
+   ],
+   "sapato": [
+    0.03,
+    0.028,
+    0.025
+   ],
+   "sola": [
+    0.2,
+    0.13,
+    0.08
+   ]
+  }
+ }
+}

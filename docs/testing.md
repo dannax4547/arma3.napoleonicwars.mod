@@ -46,6 +46,7 @@ Três categorias, como pede o briefing:
 | 2026-10-12 | **Addon de teste francês `hcl_fr.pbo`** (`convert_fr_paa.ps1`, `build_mod_fr.ps1`): uniforme F01, 6 barretinas, correame, havresac | 27/27 PAA com cabeçalho certo; P3D lidos de volta; binarize 0, 9/9 modelos com `OFP2_ManSkeleton` (avisos só dos 3 materiais do jogo, como na Prússia); `CfgConvert` 0 (config e 9 rvmat); PBO de 44,2 MB em `release/@Historical_Clothing/Addons/`; `pbo_verify`: prefixo `hcl\hcl_fr`, 46 arquivos, sem fontes, 45 referências, nenhuma faltando. **G1–G12 não executados** | `docs/reports/frances_1812_prototipo.md`, `work/build/binarize_fr_log.txt` |
 | 2026-10-12 | **França: mais regimentos, capote de inverno, barretinas da época** (`frances_1812_prototipo.md` §8) | Casacas F02–F04 e capote W01–W04; capote: 0 pontos da calça fora da saia em repouso, 27 pontos do correame encostados até 2,1 mm; teste de movimentos do capote, pior caso 38,9 mm ajoelhado (casaco longo); barretinas com placa traçada, escamas e plumet v3; PAA 36/36; binarize 0, 10/10 modelos com esqueleto; `CfgConvert` 0; `hcl_fr.pbo` 61,2 MB, 57 arquivos, 56 referências, nenhuma faltando. **G1–G12 não executados** | `docs/reports/img/soldado_fr/`, `work/teste_movimentos_fr_capote_c.log` |
 | 2026-10-12 | **França: casacas de granadeiro e voltigeur com dragonas** (`frances_1812_prototipo.md` §9) | Casaca de elite 16.414 tris, 0 vértices da franja/meia-lua dentro do pano; pesos: corpo rígido, nenhuma aresta fora do limite nas 8 animações (franja toca a manga até 6 mm em poses extremas); PAA 40/40; binarize 0, 11/11 modelos com esqueleto; `CfgConvert` 0; `hcl_fr.pbo` 68,7 MB, 62 referências, nenhuma faltando. **G1–G12 não executados** | `docs/reports/img/soldado_fr/elite_fr_*`, `work/teste_movimentos_fr_elite.log` |
+| 2026-10-13 | **Suíços a serviço da França, addon `hcl_suica.pbo`** (`docs/reports/suica_1812.md`): 4 regimentos × fuzileiro, granadeiro e voltigeur; chapéu de pele do granadeiro com placa de granada; barretinas francesas de fuzileiro (4 companhias) e voltigeur | 12 texturas de casaca pintadas; PAA 34/34 com cabeçalho certo; binarize 0, 7/7 modelos com `OFP2_ManSkeleton` (avisos só dos 3 materiais do jogo); `CfgConvert` 0 (config e 7 rvmat); PBO de 59,2 MB em `release/@Historical_Clothing/Addons/` às 18:56; `pbo_verify`: prefixo `hcl\hcl_suica`, 48 referências, nenhuma faltando. Sem dependência do `hcl_fr`. **G1–G12 não executados** | `docs/reports/img/suica/`, `work/build_suica.log`, `work/build/binarize_suica_log.txt` |
 
 ## 2. Verificações previstas por fase
 
@@ -134,3 +135,38 @@ player forceAddUniform "HCL_U_Fr1812_Guarda_Granadeiro"; removeHeadgear player; 
 | L5 | Prússia: plumet verde e Stutz | `HCL_H_Pruss1813_*_PlumetVerde` (14), `HCL_H_Pruss1813_Estrela_Prata_StutzGarde` | Pluma no lugar; textura da barretina trocada pela classe |
 | L6 | Boné da Landwehr | `HCL_H_Pruss1813_Bone_C01` … `C05` | Encaixe na cabeça; cores da faixa |
 | L7 | Infantaria ligeira e regimentos numerados (13/10) | `HCL_U_Fr1812_Ligeira_Cacador` / `_Carabineiro` / `_Voltigeur`; `HCL_H_Fr1812_Ligeira_Carabineiro_Gala`, `..._Voltigeur_Gala`; `HCL_H_Fr1812_Linha_018` / `_046` / `_057` / `_084` | Número legível na placa a 1–2 m; plumet v4 (penas com nervura); topo de couro, forro e pala debruada |
+
+## 6. Suíços a serviço da França, `hcl_suica.pbo` (2026-10-13, não testado no jogo)
+
+**Antes de testar:** Arma 3 **sem BattlEye** e sem o Blender trabalhando (ver §5). O `hcl_suica` não precisa do `hcl_fr`.
+
+Texto para o console de depuração (granadeiro do 1º Suíço):
+
+```sqf
+player forceAddUniform "HCL_U_Suica1812_Granadeiro_S1"; removeHeadgear player; player addHeadgear "HCL_H_Suica1812_Bonnet_Granadeiro_Gala";
+```
+
+| ID | Item | Classes | Observar |
+|---|---|---|---|
+| S1 | Casacas de linha | `HCL_U_Suica1812_S1` … `_S4` | Vistas amarela, azul-real, preta e azul-celeste; vivos |
+| S2 | Casacas de elite | `HCL_U_Suica1812_Granadeiro_S1` … `_S4`, `HCL_U_Suica1812_Voltigeur_S1` … `_S4` | Dragonas com o braço erguido; granadas e cornetas nas viradas |
+| S3 | Chapéu de pele suíço | `HCL_H_Suica1812_Bonnet_Granadeiro_Gala`, `..._Campanha` | Placa com granada legível a 1–2 m; troca para a Res 2; desempenho (46 mil triângulos na gala) |
+| S4 | Barretinas | `HCL_H_Suica1812_Fuzileiro_1aComp` … `_4aComp`, `HCL_H_Suica1812_Voltigeur_Gala`, `..._Campanha` | Mesmo modelo da França; pompom da companhia |
+| S5 | Nomes no Arsenal | todos | Inglês; 2º e 4º com "facing colour unconfirmed" |
+
+## 7. Ducado de Varsóvia, `hcl_varsovia.pbo` (2026-10-18, não testado no jogo)
+
+**Antes de testar:** Arma 3 **sem BattlEye** e sem o Blender trabalhando (ver §5). O `hcl_varsovia` não precisa do `hcl_fr`. Relatório: `docs/reports/varsovia_1810.md`.
+
+Texto para o console de depuração (fuzileiro do regulamento de 1810):
+
+```sqf
+player forceAddUniform "HCL_U_Varsovia1810_L1810"; removeHeadgear player; player addHeadgear "HCL_H_Varsovia1810_Czapka_Fuzileiro";
+```
+
+| ID | Item | Classes | Observar |
+|---|---|---|---|
+| V1 | Kurtkas | `HCL_U_Varsovia1810_L1810`, `_R07`, `_R09`, `_Granadeiro_L1810`, `_Voltigeur_L1810` | Lapelas brancas, gola e punhos carmesim; botões brancos no 7º e 9º; gola amarela do voltigeur |
+| V2 | Czapka | `HCL_H_Varsovia1810_Czapka_Fuzileiro`, `..._Czapka_Voltigeur` | Topo quadrado sem atravessar nada ao olhar para cima/baixo; águia e "4" legíveis a 1–2 m; troca para a Res 2 |
+| V3 | Chapéu de pele | `HCL_H_Varsovia1810_Bonnet_Granadeiro_Gala`, `..._Campanha` | Águia branca sobre a placa de latão; cocar branco; desempenho (47 mil triângulos na gala) |
+| V4 | Nomes no Arsenal | todos | Inglês; "7th/9th Infantry Regiment", "1810 regulation" |
