@@ -177,6 +177,51 @@ def r_at(j, th):
     return R[j, i0] * (1 - f) + R[j, (i0 + 1) % NTH] * f
 
 
+# ---------------------------------------------------------------- 1b. tails OVER the kilt (2026-10-18)
+# The tails hang within 3 mm of the seat, closer than the kilt's minimum clearance, so the kilt could not be tucked
+# under them and showed through (90 of 676 tail points). As on the real dress the tails are lifted over the kilt: the
+# shortfall (kilt radius + 4 mm - tail point radius) is collected on an angle x ring grid, dilated, and every tail point
+# is moved out radially by the grid value, so a tail moves as one piece and keeps its thickness. Points shared with the
+# body (the waist seam) stay put.
+def frac_j(h):
+    return min(max((TOP - h) / (TOP - HEM) * (NR - 1), 0.0), NR - 1.0)
+
+
+def r_kilt(h, th):
+    jf = frac_j(h); j0 = int(math.floor(jf)); j1 = min(j0 + 1, NR - 1); f = jf - j0
+    return r_at(j0, th) * (1 - f) + r_at(j1, th) * f
+
+
+tail_v = [v for v in bm.verts if vp.get(v, set()) & {PID["aba_E"], PID["aba_D"]}
+          and not vp[v] & {PID["casaco_corpo"]} and Z(HEM) < v.co.z < Z(TOP)]
+NEED = np.zeros((NR, NTH))
+for v in tail_v:
+    th = math.atan2(v.co.x - AX.x, -(v.co.y - AX.y))
+    r = math.hypot(v.co.x - AX.x, v.co.y - AX.y)
+    need = r_kilt(v.co.z - GROUND, th) + 0.004 - r
+    if need > 0:
+        j = int(round(frac_j(v.co.z - GROUND))); i = int((th + math.pi) / (2 * math.pi) * NTH) % NTH
+        NEED[j, i] = max(NEED[j, i], need)
+need_d = NEED.copy()
+for di in range(-6, 7):
+    for dj in (-1, 0, 1):
+        sh = np.roll(np.roll(NEED, di, axis=1), dj, axis=0)
+        if dj == 1: sh[0] = 0
+        if dj == -1: sh[-1] = 0
+        need_d = np.maximum(need_d, sh * (1 - abs(di) / 7.0))
+moved = 0
+for v in tail_v:
+    th = math.atan2(v.co.x - AX.x, -(v.co.y - AX.y))
+    jf = frac_j(v.co.z - GROUND); j0 = int(math.floor(jf)); j1 = min(j0 + 1, NR - 1); f = jf - j0
+    x = (th + math.pi) / (2 * math.pi) * NTH; i0 = int(math.floor(x)) % NTH; fi = x - math.floor(x); i1 = (i0 + 1) % NTH
+    dlt = ((need_d[j0, i0] * (1 - fi) + need_d[j0, i1] * fi) * (1 - f) + (need_d[j1, i0] * (1 - fi) + need_d[j1, i1] * fi) * f)
+    if dlt > 0:
+        q = Vector((v.co.x - AX.x, v.co.y - AX.y, 0)).normalized()
+        v.co += q * dlt
+        moved += 1
+print(f"ABAS: {moved} de {len(tail_v)} pontos das abas levados para fora do kilt (ate {NEED.max() * 1000:.1f} mm)")
+
+
 # ---------------------------------------------------------------- 2. the kilt halves (outer, lining, edges)
 DENS = 0.402
 NC = 78

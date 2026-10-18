@@ -134,3 +134,33 @@ player forceAddUniform "HCL_U_Fr1812_Guarda_Granadeiro"; removeHeadgear player; 
 | L5 | Prússia: plumet verde e Stutz | `HCL_H_Pruss1813_*_PlumetVerde` (14), `HCL_H_Pruss1813_Estrela_Prata_StutzGarde` | Pluma no lugar; textura da barretina trocada pela classe |
 | L6 | Boné da Landwehr | `HCL_H_Pruss1813_Bone_C01` … `C05` | Encaixe na cabeça; cores da faixa |
 | L7 | Infantaria ligeira e regimentos numerados (13/10) | `HCL_U_Fr1812_Ligeira_Cacador` / `_Carabineiro` / `_Voltigeur`; `HCL_H_Fr1812_Ligeira_Carabineiro_Gala`, `..._Voltigeur_Gala`; `HCL_H_Fr1812_Linha_018` / `_046` / `_057` / `_084` | Número legível na placa a 1–2 m; plumet v4 (penas com nervura); topo de couro, forro e pala debruada |
+
+## 6. Reino Unido `hcl_uk.pbo` (2026-10-18; não testado no jogo)
+
+Detalhes em `docs/reports/reino_unido_prototipo.md` §4.
+
+**Executado fora do jogo:**
+- pesos das 4 casacas (soma 1, no máximo 4 ossos);
+- PAA: 53 conversões, 0 falhas;
+- binarize 0, com 15/15 modelos com `OFP2_ManSkeleton` (avisos só dos 3 materiais do jogo);
+- `CfgConvert` 0;
+- `pbo_verify`: prefixo `hcl\hcl_uk`, 84 arquivos, 83 referências, nenhuma faltando;
+- kilt: 0 pontos da calça e 1 de 676 pontos das abas com o kilt por fora.
+
+**Antes de testar:** abra o Arma 3 **sem BattlEye** e **nunca** com o Blender trabalhando.
+
+Comando para o console (Highlander do 92nd):
+
+```sqf
+player forceAddUniform "HCL_U_UK1812_K01"; removeHeadgear player; player addHeadgear "HCL_H_UK1812_Bonnet_Highland"; player addVest "HCL_V_UK1812_Correame"; player addBackpack "HCL_B_UK1812_Mochila";
+```
+
+| ID | Item | Classes | Observar |
+|---|---|---|---|
+| U1 | Casaca de linha | `HCL_U_UK1812_L01` … `L04` | Presilhas de galão em pares; gola e punhos nas 4 cores de vista |
+| U2 | Companhias de flanco | `HCL_U_UK1812_FL01` … `FL04` | Wings com o braço erguido; franja sem atravessar a manga |
+| U3 | Rifles | `HCL_U_UK1812_R01`, `HCL_V_UK1812_Correame_Preto`, `HCL_H_UK1812_Stovepipe_Rifles` | 3 fileiras de botões; correame preto; corneta na barretina |
+| U4 | Highlanders | `HCL_U_UK1812_K01`, `K02` | Kilt sentado, ajoelhado e correndo; **abas por cima do kilt**; joelho e meias xadrez |
+| U5 | Barretinas | `HCL_H_UK1812_Belgic_*` (3), `HCL_H_UK1812_Stovepipe_*` (5) | Placa legível a 1–2 m; "28" atrás na `_28th`; cordões |
+| U6 | Bonnet de penas | `HCL_H_UK1812_Bonnet_Highland` | Penas sem cobrir o rosto; caudas à direita; Res 2 ao se afastar; desempenho (24 mil triângulos) |
+| U7 | Equipamento | `HCL_V_UK1812_Correame`, `HCL_B_UK1812_Mochila` | Correias acompanhando a casaca |

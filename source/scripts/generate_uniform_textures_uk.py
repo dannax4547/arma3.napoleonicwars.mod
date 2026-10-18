@@ -734,11 +734,33 @@ def highland(v, col, C):
     ax_ = KILT["ax"]
     ang = np.arctan2(X - ax_[0], -(Y - ax_[1]))
     rad = np.hypot(X - ax_[0], Y - ax_[1])
-    arc = ang * np.where(kilt_m, rad, 0.20)
+    # Arc along a SMOOTH radius per height (2026-10-18): with the texel's own radius the 3.5 mm pleat ripple moved the
+    # sett by ang*dr (up to ~11 mm at the back, ang ~ pi) and smeared the tartan into wood grain behind.
+    hb = np.clip(((Hh - Hh[kilt_m].min()) / 0.01).astype(int), 0, None)
+    nb = int(hb[kilt_m].max()) + 1
+    r_bin = np.bincount(hb[kilt_m], weights=rad[kilt_m], minlength=nb) / np.maximum(np.bincount(hb[kilt_m], minlength=nb), 1)
+    r_bin = np.where(r_bin > 0, r_bin, np.median(rad[kilt_m]))
+    r_s = r_bin[np.minimum(hb, nb - 1)]
+    arc = ang * np.where(kilt_m, r_s, 0.20)
     L_ = sp["largura_m"]; H_ = L_ * th / tw
-    iu = (np.mod(arc / L_, 1.0) * tw).astype(int) % tw
-    iv = (np.mod(-Hh / H_, 1.0) * th).astype(int) % th
-    tc = tile[iv, iu] * sp.get("ganho", 1.6)                       # the art is darker (light baked in the mod)
+    fu = np.mod(arc / L_, 1.0) * tw
+    fv = np.mod(-Hh / H_, 1.0) * th
+    # Anti-aliasing (2026-10-18: nearest sampling gave wood-grain moire, one texel covers ~1.5 tile pixels): measure
+    # the texel footprint in tile pixels, blur the tile (wrapping) by that much, then sample bilinearly.
+    du = np.hypot(*np.gradient(arc / L_ * tw)); dv = np.hypot(*np.gradient(-Hh / H_ * th))
+    fp_ = np.maximum(du, dv)[kilt_m]
+    fp_ = fp_[np.isfinite(fp_) & (fp_ < 20)]
+    sig = 0.5 * float(np.median(fp_)) if fp_.size else 0.0
+    tile_f = tile.copy()
+    if sig > 0.3:
+        r_ = int(math.ceil(3 * sig)); k_ = np.exp(-0.5 * (np.arange(-r_, r_ + 1) / sig) ** 2); k_ /= k_.sum()
+        for ax in (0, 1):
+            tile_f = sum(w * np.roll(tile_f, s, axis=ax) for s, w in zip(range(-r_, r_ + 1), k_))
+    u0 = np.floor(fu).astype(int); v0 = np.floor(fv).astype(int); au = (fu - u0)[..., None]; av = (fv - v0)[..., None]
+    u0 %= tw; v0 %= th; u1 = (u0 + 1) % tw; v1 = (v0 + 1) % th
+    tc = ((tile_f[v0, u0] * (1 - au) + tile_f[v0, u1] * au) * (1 - av)
+          + (tile_f[v1, u0] * (1 - au) + tile_f[v1, u1] * au) * av) * sp.get("ganho", 1.6)   # the art is darker
+    print(f"TARTAN {sp['imagem']}: texel = {np.median(fp_) if fp_.size else 0:.2f} px do recorte, desfoque sigma {sig:.2f}")
     col = np.where(kilt_m[..., None], tc * (1 + 0.04 * N_MID[..., None]), col)
     legs = isp("calca_perna")
     hose_top = sp.get("meia_topo", 0.445)

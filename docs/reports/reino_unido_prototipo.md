@@ -75,7 +75,24 @@ Todos com 🔶 (fonte secundária). O resto fica *"(regiment unidentified)"*.
 
 ## 4. Verificações (fora do jogo)
 
-PREENCHER_VERIFICACOES
+Cadeia rodada em 13/10 e 18/10, sempre com o Arma 3 e o BattlEye fechados. Log em `work/cadeia_uk_etapa2.log` e `work/cadeia_uk_kilt2.log`.
+
+| Verificação | Resultado |
+|---|---|
+| Pesos (`teste_movimentos.py`, transferidos do corpo oficial) | Linha 6.402, flanco 8.546, Rifles 6.742 e kilt 9.154 vértices; 62 ossos; no máximo 4 ossos por vértice; soma 1 em todos |
+| Kilt (`build_kilt_uk.py`) | 0 de 604 pontos da calça fora do kilt; **1 de 676** pontos das abas com kilt por fora (antes: 90); 4 pontos do correame/mochila; 17.152 triângulos |
+| PAA (`convert_uk_paa.ps1`) | 53 conversões, 0 falhas |
+| P3D MLOD | 4 casacas com 9 LODs; 9 barretinas/bonnet com 5 LODs; correame e mochila com 2 LODs |
+| Binarize | Código 0; **15/15 modelos com `OFP2_ManSkeleton`**. Avisos só dos 3 materiais do jogo que o binarize não acha fora do P: (`hl_white_bald_muscular`, `meat`, `meatbones`), como na Prússia e na França |
+| CfgConvert | `config.bin` e 15 rvmat com código 0; 22 itens, 11 soldados, 1 mochila, 15 `CfgModels` |
+| `pbo_verify.py` | `hcl_uk.pbo` 93,7 MB; prefixo `hcl\hcl_uk`; 84 arquivos; nenhum fonte dentro; **83 referências, nenhuma faltando** |
+| Renders | `docs/reports/img/soldado_uk/`: linha (Belgic), especiais (28th, Rifles, 92nd) e os dois kilts, com a cabeça do jogo |
+
+**Defeitos achados nos renders e corrigidos (18/10):**
+- **Tartan das costas do kilt borrado** ("veio de madeira"). A amostragem usava o raio de cada ponto, e a ondulação das pregas (3,5 mm) deslocava o padrão em até ~11 mm nas costas. Agora o arco usa um raio suavizado por altura; também há filtro e amostragem bilinear (o texel mede ~1 px do recorte).
+- **Kilt aparecendo através das abas.** As abas ficam a menos de 3 mm do assento, sem espaço para o kilt passar por baixo. No modelo do kilt elas agora são levadas para fora, por cima do kilt, como na peça real (até 47 mm na parte de baixo de trás). Os pontos da costura com o corpo ficam parados.
+
+**Não visto no jogo.** G1–G12 não executados.
 
 ## 5. Pendências e pontos 🔶
 
@@ -83,6 +100,9 @@ PREENCHER_VERIFICACOES
 - As wings são aproximadas pela dragona francesa.
 - O correame e a mochila britânicos usam a malha francesa (K4). Falta a chapa de cinto oval no cruzamento; a mochila Trotter real é uma caixa mais estreita (~381 × 432 × 102 mm).
 - O kilt fica com a calça por baixo (as pernas são a malha da calça, pintada como pele e meias).
+- No kilt, as abas da casaca sobem até 47 mm para passar por cima das pregas. Falta conferir no jogo, sentado e ajoelhado.
+- O tartan do K02 (Government, `britainINF` c3 r3) traz manchas de sujeira da própria arte do mod 🎮.
+- Rifles: as correias da mochila saem brancas, porque há uma mochila só. Correias pretas pedem uma 2ª textura de mochila. A pala do ombro (verde sobre verde) quase não aparece; só o debrum branco.
 - Hackle do bonnet: sem fonte para a cor; usei a convenção do tufo de batalhão.
 - Tambores, músicos e oficiais (K6): depois.
 - Próximas etapas, na ordem pedida: Portugal → KGL/Hanôver → Brunswick.
