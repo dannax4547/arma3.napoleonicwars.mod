@@ -1,6 +1,8 @@
 # COPY of texturizar_shako_fr.py for the French allies (2026-10-18). One addition: atlas=<png> replaces the French mod
 # atlas (FranceINF_diffuse.png) as the source of the kind "arte" (traced plates, art discs), e.g. the Polish infantry
-# atlas polandINF_diffuse.png for the czapka's plate, eagle and star boss. Everything else is unchanged.
+# atlas polandINF_diffuse.png for the czapka's plate, eagle and star boss; arte_faixa=<lo>,<hi> sets the luminance range of
+# that art in LINEAR values (default 0.05,0.45 as the French brass; the dark polandINF filigree needs 0.005,0.045).
+# Everything else is unchanged.
 # Original description:
 # Textures (Phase 6 style) for the French line infantry shakos of the blockout (blockout_shako_fr.py): every variant's
 # parts are joined into one mesh in character space (on the head at x = 0), get an atlas UV and baked textures:
@@ -184,7 +186,10 @@ def proc_material(kind, colour):
             colour_out(add(lum.outputs["Result"], mul(noise(55, 3, 0.6), 0.10)))
             bump(bw.outputs["Val"], 1.0, 0.0012)
         else:
-            lum.inputs["From Min"].default_value = 0.05; lum.inputs["From Max"].default_value = 0.45
+            # allies: arte_faixa=<lo>,<hi> = luminance range of the mod art (linear) mapped onto the metal; the French
+            # atlas brass needs 0.05..0.45, the dark Polish filigree (polandINF eagle ~0.006..0.04 linear) needs 0.005..0.045
+            lo_, hi_ = (float(x) for x in OPT.get("arte_faixa", "0.05,0.45").split(","))
+            lum.inputs["From Min"].default_value = lo_; lum.inputs["From Max"].default_value = hi_
             lum.inputs["To Min"].default_value = 0.40; lum.inputs["To Max"].default_value = ART_GAIN * 0.85
             colour_out(lum.outputs["Result"])
             bump(bw.outputs["Val"], 0.6, 0.0008)

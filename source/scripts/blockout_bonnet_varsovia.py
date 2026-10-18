@@ -451,9 +451,10 @@ def plume_and_cockade(tag, root, colours):
     s = s_of_z(zc)
     n = Sn(th, s)
     c0 = S(th, s, 0.009, False)
-    pleated(f"{tag}_cocar_vermelho", c0, n, COCK_R * 0.62, COCK_R, 0.003, 36, "vermelho", root)   # v5: pleated
-    pleated(f"{tag}_cocar_branco", c0 + n * 0.0012, n, COCK_R * 0.30, COCK_R * 0.66, 0.003, 28, "branco", root)
-    disc(f"{tag}_cocar_azul", c0 + n * 0.0036, n, COCK_R * 0.33, 0.0015, "azul", root, segs=32)
+    # Duchy of Warsaw: WHITE cockade (📜 "kokarda biala" of the 1810 regulation), not the French tricolour
+    pleated(f"{tag}_cocar_fora", c0, n, COCK_R * 0.62, COCK_R, 0.003, 36, "branco", root)
+    pleated(f"{tag}_cocar_dentro", c0 + n * 0.0012, n, COCK_R * 0.30, COCK_R * 0.66, 0.003, 28, "branco", root)
+    disc(f"{tag}_cocar_centro", c0 + n * 0.0036, n, COCK_R * 0.33, 0.0015, "branco", root, segs=32)
     if not colours:
         return
     sb = s_of_z(0.240)                                    # socket 24 cm above the band (source)

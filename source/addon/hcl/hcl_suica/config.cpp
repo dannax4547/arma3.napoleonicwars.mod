@@ -46,7 +46,7 @@ class CfgVehicles
 	};
 	class HCL_Suica1812_Soldado_S2: HCL_Suica1812_Soldado_Base
 	{
-		displayName = "Swiss Infantryman (French service) - 2nd Swiss Regiment (facing colour unconfirmed), Fusiliers (HCL test)";
+		displayName = "Swiss Infantryman (French service) - 2nd Swiss Regiment, Fusiliers (HCL test)";
 		uniformClass = "HCL_U_Suica1812_S2";
 		hiddenSelectionsTextures[] = {"\hcl\hcl_suica\data\hcl_u_suica1812_s2_co.paa"};
 	};
@@ -58,7 +58,7 @@ class CfgVehicles
 	};
 	class HCL_Suica1812_Soldado_S4: HCL_Suica1812_Soldado_Base
 	{
-		displayName = "Swiss Infantryman (French service) - 4th Swiss Regiment (facing colour unconfirmed), Fusiliers (HCL test)";
+		displayName = "Swiss Infantryman (French service) - 4th Swiss Regiment, Fusiliers (HCL test)";
 		uniformClass = "HCL_U_Suica1812_S4";
 		hiddenSelectionsTextures[] = {"\hcl\hcl_suica\data\hcl_u_suica1812_s4_co.paa"};
 	};
@@ -77,7 +77,7 @@ class CfgVehicles
 	};
 	class HCL_Suica1812_Soldado_Granadeiro_S2: HCL_Suica1812_Soldado_Elite_Base
 	{
-		displayName = "Swiss Infantryman (French service) - 2nd Swiss Regiment (facing colour unconfirmed), Grenadier Company (HCL test)";
+		displayName = "Swiss Infantryman (French service) - 2nd Swiss Regiment, Grenadier Company (HCL test)";
 		uniformClass = "HCL_U_Suica1812_Granadeiro_S2";
 		hiddenSelectionsTextures[] = {"\hcl\hcl_suica\data\hcl_u_suica1812_elite_gr2_co.paa"};
 	};
@@ -89,7 +89,7 @@ class CfgVehicles
 	};
 	class HCL_Suica1812_Soldado_Granadeiro_S4: HCL_Suica1812_Soldado_Elite_Base
 	{
-		displayName = "Swiss Infantryman (French service) - 4th Swiss Regiment (facing colour unconfirmed), Grenadier Company (HCL test)";
+		displayName = "Swiss Infantryman (French service) - 4th Swiss Regiment, Grenadier Company (HCL test)";
 		uniformClass = "HCL_U_Suica1812_Granadeiro_S4";
 		hiddenSelectionsTextures[] = {"\hcl\hcl_suica\data\hcl_u_suica1812_elite_gr4_co.paa"};
 	};
@@ -101,7 +101,7 @@ class CfgVehicles
 	};
 	class HCL_Suica1812_Soldado_Voltigeur_S2: HCL_Suica1812_Soldado_Elite_Base
 	{
-		displayName = "Swiss Infantryman (French service) - 2nd Swiss Regiment (facing colour unconfirmed), Voltigeur Company (HCL test)";
+		displayName = "Swiss Infantryman (French service) - 2nd Swiss Regiment, Voltigeur Company (HCL test)";
 		uniformClass = "HCL_U_Suica1812_Voltigeur_S2";
 		hiddenSelectionsTextures[] = {"\hcl\hcl_suica\data\hcl_u_suica1812_elite_vo2_co.paa"};
 	};
@@ -113,7 +113,7 @@ class CfgVehicles
 	};
 	class HCL_Suica1812_Soldado_Voltigeur_S4: HCL_Suica1812_Soldado_Elite_Base
 	{
-		displayName = "Swiss Infantryman (French service) - 4th Swiss Regiment (facing colour unconfirmed), Voltigeur Company (HCL test)";
+		displayName = "Swiss Infantryman (French service) - 4th Swiss Regiment, Voltigeur Company (HCL test)";
 		uniformClass = "HCL_U_Suica1812_Voltigeur_S4";
 		hiddenSelectionsTextures[] = {"\hcl\hcl_suica\data\hcl_u_suica1812_elite_vo4_co.paa"};
 	};
@@ -150,7 +150,7 @@ class CfgWeapons
 	{
 		author = "Historical Clothing";
 		scope = 2;
-		displayName = "[HCL] Swiss Coat 1812 (French service) - 2nd Swiss Regiment (facing colour unconfirmed), Fusiliers";
+		displayName = "[HCL] Swiss Coat 1812 (French service) - 2nd Swiss Regiment, Fusiliers";
 		picture = "\A3\characters_f\data\ui\icon_U_BasicBody_ca.paa";
 		model = "\A3\Characters_F\Common\Suitpacks\suitpack_universal_F.p3d";
 		hiddenSelections[] = {"camo"};
@@ -184,7 +184,7 @@ class CfgWeapons
 	{
 		author = "Historical Clothing";
 		scope = 2;
-		displayName = "[HCL] Swiss Coat 1812 (French service) - 4th Swiss Regiment (facing colour unconfirmed), Fusiliers";
+		displayName = "[HCL] Swiss Coat 1812 (French service) - 4th Swiss Regiment, Fusiliers";
 		picture = "\A3\characters_f\data\ui\icon_U_BasicBody_ca.paa";
 		model = "\A3\Characters_F\Common\Suitpacks\suitpack_universal_F.p3d";
 		hiddenSelections[] = {"camo"};
@@ -218,7 +218,7 @@ class CfgWeapons
 	{
 		author = "Historical Clothing";
 		scope = 2;
-		displayName = "[HCL] Swiss Coat 1812 (French service) - 2nd Swiss Regiment (facing colour unconfirmed), Grenadier Company";
+		displayName = "[HCL] Swiss Coat 1812 (French service) - 2nd Swiss Regiment, Grenadier Company";
 		picture = "\A3\characters_f\data\ui\icon_U_BasicBody_ca.paa";
 		model = "\A3\Characters_F\Common\Suitpacks\suitpack_universal_F.p3d";
 		hiddenSelections[] = {"camo"};
@@ -252,7 +252,7 @@ class CfgWeapons
 	{
 		author = "Historical Clothing";
 		scope = 2;
-		displayName = "[HCL] Swiss Coat 1812 (French service) - 4th Swiss Regiment (facing colour unconfirmed), Grenadier Company";
+		displayName = "[HCL] Swiss Coat 1812 (French service) - 4th Swiss Regiment, Grenadier Company";
 		picture = "\A3\characters_f\data\ui\icon_U_BasicBody_ca.paa";
 		model = "\A3\Characters_F\Common\Suitpacks\suitpack_universal_F.p3d";
 		hiddenSelections[] = {"camo"};
@@ -286,7 +286,7 @@ class CfgWeapons
 	{
 		author = "Historical Clothing";
 		scope = 2;
-		displayName = "[HCL] Swiss Coat 1812 (French service) - 2nd Swiss Regiment (facing colour unconfirmed), Voltigeur Company";
+		displayName = "[HCL] Swiss Coat 1812 (French service) - 2nd Swiss Regiment, Voltigeur Company";
 		picture = "\A3\characters_f\data\ui\icon_U_BasicBody_ca.paa";
 		model = "\A3\Characters_F\Common\Suitpacks\suitpack_universal_F.p3d";
 		hiddenSelections[] = {"camo"};
@@ -320,7 +320,7 @@ class CfgWeapons
 	{
 		author = "Historical Clothing";
 		scope = 2;
-		displayName = "[HCL] Swiss Coat 1812 (French service) - 4th Swiss Regiment (facing colour unconfirmed), Voltigeur Company";
+		displayName = "[HCL] Swiss Coat 1812 (French service) - 4th Swiss Regiment, Voltigeur Company";
 		picture = "\A3\characters_f\data\ui\icon_U_BasicBody_ca.paa";
 		model = "\A3\Characters_F\Common\Suitpacks\suitpack_universal_F.p3d";
 		hiddenSelections[] = {"camo"};

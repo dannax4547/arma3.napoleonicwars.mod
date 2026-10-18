@@ -39,7 +39,13 @@ UNI = {"casaca": (J(r"source\models\coats\hcl_uniforme_fr\hcl_uniforme_fr_LOD0.b
                  J(r"source\textures\hcl_uniforme_suica"), "hcl_u_suica1812_{}_co.png", J(r"source\textures\hcl_uniforme_fr\hcl_u_fr1812_nohq.png")),
        "suica_elite": (J(r"source\models\coats\hcl_uniforme_fr\hcl_uniforme_fr_elite_LOD0.blend"), "HCL_U_Fr1812_Elite_LOD0",
                        J(r"source\textures\hcl_uniforme_suica_elite"), "hcl_u_suica1812_elite_{}_co.png",
-                       J(r"source\textures\hcl_uniforme_fr_elite\hcl_u_fr1812_elite_nohq.png"))}
+                       J(r"source\textures\hcl_uniforme_fr_elite\hcl_u_fr1812_elite_nohq.png")),
+       # Duchy of Warsaw (2026-10-18): variants l1810 / r07 / r09; elite gr / vo
+       "varsovia": (J(r"source\models\coats\hcl_uniforme_fr\hcl_uniforme_fr_LOD0.blend"), "HCL_U_Fr1812_01_LOD0",
+                    J(r"source\textures\hcl_uniforme_varsovia"), "hcl_u_varsovia1810_{}_co.png", J(r"source\textures\hcl_uniforme_fr\hcl_u_fr1812_nohq.png")),
+       "varsovia_elite": (J(r"source\models\coats\hcl_uniforme_fr\hcl_uniforme_fr_elite_LOD0.blend"), "HCL_U_Fr1812_Elite_LOD0",
+                          J(r"source\textures\hcl_uniforme_varsovia_elite"), "hcl_u_varsovia1810_elite_{}_co.png",
+                          J(r"source\textures\hcl_uniforme_fr_elite\hcl_u_fr1812_elite_nohq.png"))}
 
 
 def load(blend, names):
@@ -111,9 +117,11 @@ shk = {}
 SRCS = [(J(r"source\models\shakos\hcl_shako_fr\hcl_shako_fr_texturas_v3.blend"), "HCL_Shako_Fr_", TS, "hcl_shako_fr_", ""),
         (J(r"source\models\shakos\hcl_shako_fr\hcl_shako_fr_texturas_lote3.blend"), "HCL_Shako_Fr_", TS, "hcl_shako_fr_", ""),
         (J(r"source\models\bonnet\hcl_bonnet_fr\hcl_bonnet_fr_texturas.blend"), "HCL_Bonnet_Fr_", J(r"source\textures\hcl_bonnet_fr"), "hcl_bonnet_fr_", "bonnet_"),
-        (J(r"source\models\bonnet\hcl_bonnet_suica\hcl_bonnet_suica_texturas.blend"), "HCL_Bonnet_Suica_", J(r"source\textures\hcl_bonnet_suica"), "hcl_bonnet_suica_", "suica_")]
+        (J(r"source\models\bonnet\hcl_bonnet_suica\hcl_bonnet_suica_texturas.blend"), "HCL_Bonnet_Suica_", J(r"source\textures\hcl_bonnet_suica"), "hcl_bonnet_suica_", "suica_"),
+        (J(r"source\models\czapka\hcl_czapka_varsovia\hcl_czapka_varsovia_texturas.blend"), "HCL_Czapka_Varsovia_", J(r"source\textures\hcl_czapka_varsovia"), "hcl_czapka_varsovia_", "czapka_"),
+        (J(r"source\models\bonnet\hcl_bonnet_varsovia\hcl_bonnet_varsovia_texturas.blend"), "HCL_Bonnet_Varsovia_", J(r"source\textures\hcl_bonnet_varsovia"), "hcl_bonnet_varsovia_", "bonnetpl_")]
 for blend, pre, tdir_, tpre, tagp in SRCS:
-    mine = lambda t: (t.startswith(tagp) if tagp else not (t.startswith("bonnet_") or t.startswith("suica_")))
+    mine = lambda t: (t.startswith(tagp) if tagp else not t.startswith(("bonnet_", "suica_", "czapka_", "bonnetpl_")))
     want = [t[len(tagp):] for t in tags if t not in shk and mine(t)]
     if not want or not os.path.exists(blend):
         continue

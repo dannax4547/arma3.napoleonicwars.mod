@@ -153,3 +153,20 @@ player forceAddUniform "HCL_U_Suica1812_Granadeiro_S1"; removeHeadgear player; p
 | S3 | Chapéu de pele suíço | `HCL_H_Suica1812_Bonnet_Granadeiro_Gala`, `..._Campanha` | Placa com granada legível a 1–2 m; troca para a Res 2; desempenho (46 mil triângulos na gala) |
 | S4 | Barretinas | `HCL_H_Suica1812_Fuzileiro_1aComp` … `_4aComp`, `HCL_H_Suica1812_Voltigeur_Gala`, `..._Campanha` | Mesmo modelo da França; pompom da companhia |
 | S5 | Nomes no Arsenal | todos | Inglês; 2º e 4º com "facing colour unconfirmed" |
+
+## 7. Ducado de Varsóvia, `hcl_varsovia.pbo` (2026-10-18, não testado no jogo)
+
+**Antes de testar:** Arma 3 **sem BattlEye** e sem o Blender trabalhando (ver §5). O `hcl_varsovia` não precisa do `hcl_fr`. Relatório: `docs/reports/varsovia_1810.md`.
+
+Texto para o console de depuração (fuzileiro do regulamento de 1810):
+
+```sqf
+player forceAddUniform "HCL_U_Varsovia1810_L1810"; removeHeadgear player; player addHeadgear "HCL_H_Varsovia1810_Czapka_Fuzileiro";
+```
+
+| ID | Item | Classes | Observar |
+|---|---|---|---|
+| V1 | Kurtkas | `HCL_U_Varsovia1810_L1810`, `_R07`, `_R09`, `_Granadeiro_L1810`, `_Voltigeur_L1810` | Lapelas brancas, gola e punhos carmesim; botões brancos no 7º e 9º; gola amarela do voltigeur |
+| V2 | Czapka | `HCL_H_Varsovia1810_Czapka_Fuzileiro`, `..._Czapka_Voltigeur` | Topo quadrado sem atravessar nada ao olhar para cima/baixo; águia e "4" legíveis a 1–2 m; troca para a Res 2 |
+| V3 | Chapéu de pele | `HCL_H_Varsovia1810_Bonnet_Granadeiro_Gala`, `..._Campanha` | Águia branca sobre a placa de latão; cocar branco; desempenho (47 mil triângulos na gala) |
+| V4 | Nomes no Arsenal | todos | Inglês; "7th/9th Infantry Regiment", "1810 regulation" |

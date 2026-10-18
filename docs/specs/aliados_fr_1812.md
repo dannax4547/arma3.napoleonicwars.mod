@@ -6,7 +6,7 @@ Versão 0.1, 2026-10-13. Pedido do usuário: *"agora adiciona os aliados frances
 3. Reino da Itália e Reino de Nápoles;
 4. Suíços a serviço da França (os 4 regimentos de casaca vermelha).
 
-**Estado (2026-10-18):** decisões A1–A6 fechadas (§8). **Suíços feitos** (`hcl_suica.pbo`, verificado fora do jogo, `docs/reports/suica_1812.md`). **Varsóvia em curso**, com fontes documentais (§1.1): czapka rogata do regulamento de 1810.
+**Estado (2026-10-18):** decisões A1–A6 fechadas (§8). **Suíços feitos** (`hcl_suica.pbo`, verificado fora do jogo, `docs/reports/suica_1812.md`). **Varsóvia feita** (`hcl_varsovia.pbo`, verificado fora do jogo, `docs/reports/varsovia_1810.md`). Próximo: Itália e Nápoles.
 
 Legenda: ✅ fonte lida (página aberta nesta fase) · 🔶 provável (fonte secundária, de hobby ou de loja; ou só citada, sem leitura) · ❓ incerto ou com fontes em conflito · 🎮 só visto na arte do mod (atlas Reto)
 
