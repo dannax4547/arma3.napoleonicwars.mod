@@ -88,6 +88,92 @@ Revisão de 2026-10-18, pelas fontes documentais (substitui a proposta da v0.1):
 
 ## 2. Confederação do Reno
 
+### 2.0 Inventário pelas pranchas de época (2026-10-19, pedido do usuário: "adicionar TODOS estes regimentos")
+
+Fonte comum: aquarelas e gravuras da **coleção Vinkhuijzen (NYPL)**, vistas pelo Commons [VK-REN]. Os números entre parênteses são o índice da prancha nas folhas de contato da sessão (`scratchpad/fontes_reno/<estado>_thumbs/indice.txt`, com o ID NYPL de cada prancha). Regras de leitura:
+- a **legenda é do colecionador** (escrita à mão em alemão), não da imagem → o nome do regimento vem da legenda, 🔶;
+- a **cor** é lida da aquarela (tons de aguada) → 🔶;
+- quando a prancha contradiz a tabela de 1813 [MD-W], vale a prancha da data certa (1810–1812), e o conflito fica anotado.
+
+Ficam fora deste lote: cavalaria, artilharia, trem, generais e oficiais de estado-maior (a mesma regra da Itália: não há malha de cavalo, bicorne nem sobrecasaca).
+
+#### Württemberg — álbum "1811" (aquarelas; todas com Raupenhelm de latão e crista preta)
+
+| Prancha | Legenda (transcrição) | Casaca / peças | Cabeça |
+|---|---|---|---|
+| 022 (b14896507-1525642) | "1. Regiment Linie Prinz Paul" | azul-escura, gola, canhões e vivos **amarelos** | Raupenhelm |
+| 020 (-1525640) | "2. Linie Regiment Herzog Wilhelm" | azul-escura, **laranja** | Raupenhelm |
+| 021 (-1525641) | "3. Linie Regiment Infanterie" | azul-escura, **branco** (gola clara) | Raupenhelm |
+| 019 (-1525639) | "Linie Infanterie Regiment No 4" | azul-escura, **rosa** | Raupenhelm |
+| 018 (-1525638) | "Lin. Regiment No 5 Prinz Friedrich, Grenadier" | azul-escura, **azul-claro** | **barretina de pele** (granadeiro) |
+| 017 (-1525637) | "Linie Infanterie Regiment No 6 Kronprinz" | azul-escura, gola vermelha, canhões **brancos com vivo vermelho** | Raupenhelm |
+| 016, 015 (-1525636/35) | "Linie Regiment Infanterie No 8 Neubronn, Officier" / "No 8 Grenadier Leutnant" | azul-escura, **vermelho** | Raupenhelm (016), pele (015) |
+| 014 (-1525634) | "Linie Infanterie Regiment No 9" | azul-escura, **vermelho** | Raupenhelm |
+| 012 (-1525632) | "Leichte Infanterie Reg. No 10" | **verde-escura, peças pretas**, vivo vermelho | barretina, pluma vermelha |
+| 013 (-1525633) | "Regiment Leichte Infanterie No 10" | verde-escura, peças **azul-claras** | barretina, pluma vermelha |
+| 011 (-1525631) | "Erstes Bataillon Jäger König" | verde-escura, peças pretas | barretina, pluma verde |
+
+Conflitos: o 9º aparece **vermelho** em 1811, mas preto/amarelo na lista de 1813 [MD-W]. Vale a prancha de 1811 🔶. As duas pranchas da ligeira dizem "No 10", com cores diferentes (preto e azul-claro). Uma das legendas deve estar errada, e por isso as duas entram com o nome da legenda e a cor no nome. O 7º não tem prancha em 1811: entra pela lista [MD-W] (vermelho, botão amarelo) 🔶. O álbum "1813–1814" já mostra a barretina de 1813, que fica para outro lote.
+
+#### Baviera — álbum "1811" (aquarelas; casaca azul-clara, Raupenhelm com crista de pele)
+
+| Prancha | Legenda | Gola / lapelas |
+|---|---|---|
+| 003 | "Infanterie Regiment König No 1" | **vermelho** / vermelho |
+| 005 | "Infanterie Regiment Kronprinz No 2" | vermelho / vermelho, **com alamares amarelos** |
+| 006 | "Infanterie Regiment Sachsen-Hildburghausen No 4" (oficial) | **amarelo** / amarelo |
+| 015 | "Infanterie Regiment Herzog Wilhelm No 6" (oficial) | vermelho / vermelho |
+| 014 | "Infanterie Regiment Löwenstein No 7" | **rosa-carmim** / rosa-carmim |
+| 013 | "Infanterie Regiment Herzog Pius No 8" | amarelo / amarelo |
+| 012 | "Infanterie Regiment Ysenburg No 9" | vermelho / **amarelo** |
+| 011 | "Infanterie Regiment Junker No 10" | vermelho / **amarelo** (como o 9º; a diferença deve ser o botão ❓) |
+| 010 | "Infanterie Regiment Kinkel No 11" | três figuras: lapelas **laranja**, **verdes** e **pretas**, gola vermelha. Pela legenda, só uma é do 11º ❓ |
+| 009 | "Infanterie Regiment No 13" | vermelho / **preto** com vivo vermelho |
+| 008 | "Infanterie Regiment No 14, Tambour" | tambor; só o corte |
+| 007 | "Leichte Infanterie Bataillon No 1 Gedoni (Carabinier)" | **verde**, lapelas pretas, gola **vermelha**, calça cinza |
+| 019 | "Leichte Infanterie Bataillon No 2 Wreden" | verde, lapelas pretas, gola **vermelha** |
+| 018 | "Leichte Infanterie Bataillon No 3 Bernclau" | verde, lapelas pretas, gola **clara** (amarelo-pálido? ❓) |
+| 017 | "Leichte Infanterie Bataillon No 4 Theobald" | verde, lapelas pretas, gola **preta** com vivo vermelho |
+| 016 | "Leichte Infanterie Bataillon No 5 Butler" | verde, lapelas pretas, gola **amarela** |
+| 021 | "Leichte Infanterie Bataillon No 6 La Roche" | verde, lapelas pretas, gola **amarela** |
+| 020 | "Leichte Infanterie Bataillon No 7 Günther" | verde, lapelas pretas, gola **azul-clara** |
+
+O 3º, o 5º e o 12º de linha não têm prancha no álbum. Ficam fora até haver fonte.
+
+#### Saxônia — álbum "1810" (aquarelas; reforma de 1810: casaca branca, barretina)
+
+| Prancha | Legenda | Peças (gola, lapelas, canhões) |
+|---|---|---|
+| 036 | "Linie Infanterie Regiment König" | **vermelho** |
+| 010 | "Linie Infanterie Regiment Niesemeuschel" | **vermelho** |
+| 007 | "Linie Infanterie Regiment Prinz Anton" | **azul-claro** |
+| 043 | "Infanterie Regiment von Löw" | **azul** (médio) |
+| 035 | "Infanterie Regiment Prinz Max" | **amarelo** |
+| 008 | "Linie Infanterie Regiment Rechten" | **amarelo** |
+| 044 | "Infanterie Regiment Prinz Friedrich August" | **verde-escuro** |
+| 005 | "Linie Infanterie Regiment Prinz Clemens" | **verde-claro** |
+| 006 | "Grenadier ... Prinz Clemens" | granadeiro com as peças verdes, dragonas vermelhas, pluma vermelha |
+| 037, 038 | "Garde Grenadier" | casaca **vermelha**, peças **amarelas**, barretina de pele |
+| 020 | "Leichte Infanterie" | **verde**, peças pretas, vivo vermelho |
+| 019 | "Jaeger" | verde, peças pretas, calça cinza |
+
+Os oito regimentos de linha da reforma de 1810 estão todos. Pares com a mesma cor (König/Niesemeuschel, Max/Rechten) se distinguem pelo botão, que a aquarela não mostra ❓.
+
+#### Vestfália — álbuns "1809" e "1810–1815" (gravuras em fila + aquarelas)
+
+| Prancha | Legenda | Casaca / peças |
+|---|---|---|
+| 060, 062 | "Linien Infanterie" / "Grenadier ... tenue de campagne" | branca, lapelas e gola **azul-escuras** |
+| 005 | "Linie Grenadier" | branca, lapelas **azul-claras**, pluma vermelha |
+| 006 | "Linie Voltigeur" | branca, lapelas **azul-claras**, pluma verde-amarela |
+| 003 | "5. Linie Regiment, Grenadier" | branca, lapelas **laranja** |
+| 004 | "5. Linie Regiment, Voltigeur" | branca, lapelas **laranja** |
+| 058 | "Voltigeur 7me R. d'Inf. d. L." | branca, gola **amarela**, dragonas verdes |
+| 092 | "Sergeant ... Linie Infanterie 1812" | branca, peças azul-escuras |
+| 008 | "Garde Grenadier" | Guarda; casaca branca de peças vermelhas, barretina de pele |
+| 007 | "Garde Jäger" | verde-escura |
+| 009 | "Leichte Infanterie" | verde-escura, calça com faixa amarela |
+
 ### 2.1 Württemberg — o grupo com melhor fonte de cores
 
 | Item | Valor | Confiança |
@@ -320,4 +406,5 @@ Consequência da A2: cada addon é **autônomo** (cópias próprias dos modelos,
 - [KN-VI-23] R. Knötel, *Uniformenkunde* VI, nº 23, "Linien-Infanterie, Königl. Neapolitanische Truppen, 1812" (NYPL b14896507-1608373)
 - [GA-7NAP] M. Gärtner, "The 7th Neapolitan Line Infantry Regiment 1812–1813", *Depesche* 1 (trad. J. Howard), The Napoleon Series, 2010 — https://www.napoleon-series.org/military-info/Despeche/Issue1/c_7thNeapolitanInfantry.html (cita a *Freiberger Bilderhandschrift*, Boisselier, Brauer, Forthoffer, Knötel, San Martino e Rastatt)
 - [FREIBERG] *Freiberger Bilderhandschrift* (aquarelas de 1813, atribuídas a K. A. Winkler), via [GA-7NAP]; edição: A. Umhey, *Napoleon's Last Grande Armée* (não lida)
+- [VK-REN] New York Public Library, *Vinkhuijzen collection of military uniforms*, via Wikimedia Commons, "Category:Vinkhuijzen: Military uniforms of Germany, Württemberg / Bavaria / Saxony / Westphalia" (álbuns de aquarelas "1810", "1811" e "1809", legendados à mão pelo colecionador; IDs NYPL na tabela §2.0 e em `indice.txt`)
 - [NAP-ADAM] Fondation Napoléon, "L'Infanteria del Regno d'Italia", A. Adam, água-tinta aquarelada, Bibliothèque Marmottan — https://www.napoleon.org/en/history-of-the-two-empires/images/linfanteria-del-regno-ditalia-the-infantry-of-the-kindgom-of-italy
