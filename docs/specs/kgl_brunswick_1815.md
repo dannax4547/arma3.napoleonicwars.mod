@@ -31,6 +31,21 @@ O mod **não** mostra a KGL de linha. Ela usa a casaca vermelha britânica, com 
 | Placa | Placa de barretina do 1º batalhão de linha, **1812**, no acervo do **National Army Museum** [K4] (o detalhe não foi lido: a página não abriu) | ❓ | ❓ |
 | Correame e mochila | Correame **branco**, cartucheira preta, **mochila azul-escura** (e não preta, como a britânica) | Preto | 🔶 [K1] |
 
+**Placa da Belgic da KGL (2026-10-19):**
+- Um exemplar de Celle, atribuído ao **7º batalhão de linha**, tem a cifra **GR** sobre uma **jarreteira com "King's German Legion"** e o **número do batalhão** no centro (JSAHR 1953, citado em [K6]) 🔶.
+- O objeto do NAM [K4] confirma que existe uma placa do 1º batalhão de c. 1812, mas a página não descreve o desenho.
+
+**Plano (o usuário escolheu todas as unidades):**
+- **Linha (8 batalhões):**
+  - casaca britânica (`frente=linha`, galão em pares 🔶) com vistas **azul-escuras**, galão branco e calça cinza;
+  - variante de flanco com wings;
+  - Belgic com a placa britânica traçada e o **número do batalhão** na seleção `numero`, como em Portugal;
+  - classes `HCL_H_KGL1812_Belgic_{Batalhao,Granadeiro,Ligeira}_1..8`.
+- **Ligeiros (1º e 2º):**
+  - jaqueta dos Rifles com vistas pretas e correame preto;
+  - 1º: stovepipe com corneta e pluma em pé;
+  - 2º: cordões e pompom em bola [K3] 🔶.
+
 **Técnica (linha):** é a casaca britânica com as vistas azul-escuras (já existe a variante L03, de vista azul). A mochila ganha uma textura azul-escura. A barretina é a Belgic, com a placa de um batalhão KGL quando houver fonte.
 
 **Técnica (ligeira):** é a jaqueta dos Rifles com vistas pretas (a R01 já é assim). Muda só o nome e a barretina.
@@ -39,7 +54,11 @@ O mod **não** mostra a KGL de linha. Ela usa a casaca vermelha britânica, com 
 
 - **Batalhões de campo:** quase todos de **vermelho**, com vistas variadas; vários com azul-escuro (Lauenburg, Calenberg, York, Hoya). Os ligeiros e os Jäger de verde. 🔶 [H1][H2]
 - **Landwehr:** vermelho com vistas azul-escuras e calça cinza (Osnabrück, Quakenbrück, Lüneburg); Peine com amarelo-claro. Muito equipamento britânico misturado. Lüneburg e Verden têm cor discutida (verde ou vermelho). 🔶 [H1][H3]
-- **Placa de barretina:** oval, de latão, com borda recortada, coroa e cifra. 🔶 [K5] (resenha de Rawkins; o texto do PDF não pôde ser lido)
+- **Placa de barretina:** oval, de latão, com borda recortada, **coroa** em cima e a cifra **GR** entrelaçada. 🔶 [K5][K6]. A jarreteira com o número só veio com o regulamento de **junho de 1814** [K6].
+- **Plano:**
+  - casaca vermelha britânica **sem galões** (`frente=simples`), vistas azul-escuras, calça cinza;
+  - barretina stovepipe com a placa oval portuguesa adaptada: borda recortada, coroa e **"GR"** em relevo, 🔶;
+  - a Landwehr usa o mesmo, com calça cinza e equipamento misturado.
 
 ## 4. Brunswick (campanha de 1815)
 
@@ -80,6 +99,7 @@ O mod **não** mostra a KGL de linha. Ela usa a casaca vermelha britânica, com 
 | K3 | [TMP: KGL Light Infantry](http://theminiaturespage.com/boards/msg.mv?id=141811) (cita Haythornthwaite, *Wellington's Army*) | Ligeiros em verde, vistas pretas; diferenças de barretina entre o 1º e o 2º |
 | K4 | [National Army Museum: placa de barretina do 1º batalhão de linha da KGL, 1812](https://collection.nam.ac.uk/detail.php?acc=1970-09-23-2) | Objeto de museu (a página não carregou; a descrição falta) |
 | K5 | [Rawkins, resenha de uniformes de Hanôver e KGL (Napoleon Series, PDF)](https://www.napoleon-series.org/reviews/uniforms/RawkinsHanover&KGL.pdf) | Placa oval com coroa e cifra (Hanôver); regulamento de junho de 1814 |
+| K6 | [2/95th Rifles Forum: "In search of the Belgic"](https://www.tapatalk.com/groups/2nd95thrifles/in-search-of-the-belgic-t999.html) (cita JSAHR 1953, Rawkins, Grehan) e [militaria.co.uk: placa Belgic de 1812](https://militaria.co.uk/?product=1812-belgic-shako-plate-ors-smooth-background) | Placa da KGL com jarreteira e número (exemplar de Celle, 7º batalhão); a placa de Hanôver oval com GR e coroa; o número só a partir de 1814 |
 | H1 | [TMP: Hannoverians at Waterloo](http://theminiaturespage.com/boards/msg.mv?id=200578) e [Napoleon Series forum](http://www.napoleon-series.org/cgi-bin/forum/archive2005_config.pl?id=46144&md=read) | Batalhões de campo em vermelho; Landwehr; discordâncias |
 | H2 | [Napoleon Series: Hanoverian Light Battalions 1813–1815](https://www.napoleon-series.org/military-info/organization/c_hanlight.html) | Ligeiros e Jäger de verde, com base na KGL (Sichart) |
 | H3 | [Pancerni: Hanoverian Militia 1815](https://pancerni-fishtales.blogspot.com/2013/11/hanoverian-militia-1815.html) | Landwehr |
