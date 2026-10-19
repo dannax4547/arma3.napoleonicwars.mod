@@ -219,3 +219,21 @@ player forceAddUniform "HCL_U_BRU1815_B06"; removeHeadgear player; player addHea
 | B5 | Mochila | `HCL_B_BRU1815_Tornister` | Cavalo na aba; correias pretas |
 
 **2026-10-19 (tarde):** jugular de couro em todas as barretinas do `hcl_uk` (menos o bonnet highland) e crina nova do Leib-Bataillon. PBO de 194,7 MB; `pbo_verify` sem referência faltando. Não testado no jogo. Observar: **J1** a jugular sob o queixo não atravessa o rosto ao virar a cabeça, mirar ou deitar (ela é rígida no osso `Head`); **J2** a crina do Leib não bloqueia a visão em primeira pessoa (190 mm de altura).
+
+## 9. KGL e Hanôver no `hcl_uk.pbo` (2026-10-19; não testado no jogo)
+
+Detalhes em `docs/reports/kgl_hanover_prototipo.md`. **Executado fora do jogo:** 183 PAA, 0 falhas; build sem modelo sem esqueleto; `pbo_verify`: 245 arquivos, 244 referências, nenhuma faltando (223,0 MB).
+
+Comando para o console:
+
+```sqf
+player forceAddUniform "HCL_U_KGL1812_KL1"; removeHeadgear player; player addHeadgear "HCL_H_KGL1812_Belgic_Batalhao_5"; player addVest "HCL_V_UK1812_Correame"; player addBackpack "HCL_B_UK1812_Mochila";
+```
+
+| ID | Item | Classes | Observar |
+|---|---|---|---|
+| K1 | KGL linha e flanco | `HCL_U_KGL1812_KL1`, `KF1` | Vistas azul-escuras; wings |
+| K2 | Belgic da KGL | `HCL_H_KGL1812_Belgic_*_1` … `_8` | O número muda com a classe |
+| K3 | KGL ligeiros | `HCL_U_KGL1812_KR1`, `KR2`, `HCL_H_KGL1812_Stovepipe_Ligeira` | Jaqueta verde, correame preto |
+| K4 | Hanôver | `HCL_U_HAN1815_H01` … `H08`, `HCL_H_HAN1815_Stovepipe` | Placa oval com GR; Peine com vistas amarelo-claro |
+| K5 | Calça (correção da outra sessão) | Linha e flanco britânicos e KGL | Emenda do assento lisa, sem degrau |
