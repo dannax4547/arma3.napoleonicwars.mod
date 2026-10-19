@@ -1,0 +1,170 @@
+{
+ "KR1": {
+  "prefixo": "hcl_u_uk1812_rifles_v01",
+  "nome": "KGL, 1o batalhao ligeiro (jaqueta dos Rifles)",
+  "mod": "britainINF c3 r2 (jaqueta), c2 r3 (calca verde)",
+  "curto": "rifles verde",
+  "cores": {
+   "calca": [
+    0.07,
+    0.13,
+    0.08
+   ],
+   "polaina": [
+    0.045,
+    0.045,
+    0.045
+   ],
+   "sapato": [
+    0.03,
+    0.028,
+    0.025
+   ],
+   "sola": [
+    0.2,
+    0.13,
+    0.08
+   ],
+   "botoes": [
+    0.55,
+    0.55,
+    0.53
+   ],
+   "casaca": [
+    0.07,
+    0.15,
+    0.09
+   ],
+   "gola": [
+    0.035,
+    0.035,
+    0.04
+   ],
+   "punho": [
+    0.035,
+    0.035,
+    0.04
+   ],
+   "gola_debrum": [
+    0.8,
+    0.8,
+    0.76
+   ],
+   "punho_debrum": [
+    0.8,
+    0.8,
+    0.76
+   ],
+   "viras": [
+    0.035,
+    0.035,
+    0.04
+   ],
+   "pala": [
+    0.035,
+    0.035,
+    0.04
+   ],
+   "debrum": [
+    0.07,
+    0.15,
+    0.09
+   ],
+   "platina": [
+    0.07,
+    0.15,
+    0.09
+   ],
+   "platina_borda": [
+    0.8,
+    0.8,
+    0.76
+   ]
+  },
+  "unidade": "1st Light Battalion"
+ },
+ "KR2": {
+  "prefixo": "hcl_u_uk1812_rifles_v01",
+  "nome": "KGL, 2o batalhao ligeiro (jaqueta dos Rifles)",
+  "mod": "britainINF c3 r2 (jaqueta), c2 r3 (calca verde)",
+  "curto": "rifles verde",
+  "cores": {
+   "calca": [
+    0.07,
+    0.13,
+    0.08
+   ],
+   "polaina": [
+    0.045,
+    0.045,
+    0.045
+   ],
+   "sapato": [
+    0.03,
+    0.028,
+    0.025
+   ],
+   "sola": [
+    0.2,
+    0.13,
+    0.08
+   ],
+   "botoes": [
+    0.55,
+    0.55,
+    0.53
+   ],
+   "casaca": [
+    0.07,
+    0.15,
+    0.09
+   ],
+   "gola": [
+    0.035,
+    0.035,
+    0.04
+   ],
+   "punho": [
+    0.035,
+    0.035,
+    0.04
+   ],
+   "gola_debrum": [
+    0.8,
+    0.8,
+    0.76
+   ],
+   "punho_debrum": [
+    0.8,
+    0.8,
+    0.76
+   ],
+   "viras": [
+    0.035,
+    0.035,
+    0.04
+   ],
+   "pala": [
+    0.035,
+    0.035,
+    0.04
+   ],
+   "debrum": [
+    0.07,
+    0.15,
+    0.09
+   ],
+   "platina": [
+    0.07,
+    0.15,
+    0.09
+   ],
+   "platina_borda": [
+    0.8,
+    0.8,
+    0.76
+   ]
+  },
+  "unidade": "2nd Light Battalion"
+ }
+}

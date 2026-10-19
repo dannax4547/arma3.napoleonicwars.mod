@@ -1,0 +1,58 @@
+{
+ "H01": {
+  "prefixo": "hcl_u_han1813_v01",
+  "unidade": "Field Battalion Lauenburg",
+  "tipo": "field",
+  "nome": "Hanover 1815, Field Battalion Lauenburg",
+  "fonte": "docs/specs/kgl_brunswick_1815.md 3 [H1][H3]"
+ },
+ "H02": {
+  "prefixo": "hcl_u_han1813_v01",
+  "unidade": "Field Battalion Calenberg",
+  "tipo": "field",
+  "nome": "Hanover 1815, Field Battalion Calenberg",
+  "fonte": "docs/specs/kgl_brunswick_1815.md 3 [H1][H3]"
+ },
+ "H03": {
+  "prefixo": "hcl_u_han1813_v01",
+  "unidade": "Field Battalion York",
+  "tipo": "field",
+  "nome": "Hanover 1815, Field Battalion York",
+  "fonte": "docs/specs/kgl_brunswick_1815.md 3 [H1][H3]"
+ },
+ "H04": {
+  "prefixo": "hcl_u_han1813_v01",
+  "unidade": "Field Battalion Hoya",
+  "tipo": "field",
+  "nome": "Hanover 1815, Field Battalion Hoya",
+  "fonte": "docs/specs/kgl_brunswick_1815.md 3 [H1][H3]"
+ },
+ "H05": {
+  "prefixo": "hcl_u_han1813_v01",
+  "unidade": "Landwehr Battalion Osnabrueck",
+  "tipo": "landwehr",
+  "nome": "Hanover 1815, Landwehr Battalion Osnabrueck",
+  "fonte": "docs/specs/kgl_brunswick_1815.md 3 [H1][H3]"
+ },
+ "H06": {
+  "prefixo": "hcl_u_han1813_v01",
+  "unidade": "Landwehr Battalion Quakenbrueck",
+  "tipo": "landwehr",
+  "nome": "Hanover 1815, Landwehr Battalion Quakenbrueck",
+  "fonte": "docs/specs/kgl_brunswick_1815.md 3 [H1][H3]"
+ },
+ "H07": {
+  "prefixo": "hcl_u_han1813_v01",
+  "unidade": "Landwehr Battalion Lueneburg",
+  "tipo": "landwehr",
+  "nome": "Hanover 1815, Landwehr Battalion Lueneburg",
+  "fonte": "docs/specs/kgl_brunswick_1815.md 3 [H1][H3]"
+ },
+ "H08": {
+  "prefixo": "hcl_u_han1813_v02",
+  "unidade": "Landwehr Battalion Peine",
+  "tipo": "landwehr",
+  "nome": "Hanover 1815, Landwehr Battalion Peine",
+  "fonte": "docs/specs/kgl_brunswick_1815.md 3 [H1][H3]"
+ }
+}

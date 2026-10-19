@@ -106,7 +106,46 @@ def name_bru(cls):
     return None
 
 
+# KGL and Hanover (kgl_brunswick_1815.md 2-3)
+KGL_L = json.load(open(os.path.join(_JS, "variantes_kgl_ligeira.json"), encoding="utf-8"))
+HAN = json.load(open(os.path.join(_JS, "variantes_han.json"), encoding="utf-8"))
+KGL_CAP = {"Batalhao": "Battalion Company (white-over-red tuft)", "Granadeiro": "Grenadier Company (white tuft)",
+           "Ligeira": "Light Company (green tuft)"}
+
+
+def name_kgl(cls):
+    m = re.fullmatch(r"HCL_(KGL1812|HAN1815)_Soldado_(\w+)", cls)
+    if m:
+        nat, v = m[1], m[2]
+        if v.endswith("Base"):
+            return ("King's German Legion Infantryman 1812" if nat == "KGL1812" else "Hanoverian Infantryman 1815") + T
+        return f"{'KGL' if nat == 'KGL1812' else 'Hanoverian'} Infantryman - {unit_kgl(nat, v)}{T}"
+    m = re.fullmatch(r"HCL_U_(KGL1812|HAN1815)_(\w+)", cls)
+    if m:
+        return f"[HCL] {'KGL' if m[1] == 'KGL1812' else 'Hanoverian'} Jacket - {unit_kgl(m[1], m[2])}"
+    m = re.fullmatch(r"HCL_H_KGL1812_Belgic_(\w+)_(\d)", cls)
+    if m:
+        return f"[HCL] KGL Belgic Cap - {ordinal(int(m[2]))} Line Battalion, {KGL_CAP[m[1]]}"
+    if cls == "HCL_H_KGL1812_Stovepipe_Ligeira":
+        return "[HCL] KGL Light Battalions Cap (bugle, green cords)"
+    if cls == "HCL_H_HAN1815_Stovepipe":
+        return "[HCL] Hanoverian Infantry Cap 1815 (oval GR plate)"
+    return None
+
+
+def unit_kgl(nat, v):
+    if nat == "HAN1815":
+        return HAN[v]["unidade"]
+    if v == "KL1":
+        return "Line Battalions, Battalion Company (dark blue facings)"
+    if v == "KF1":
+        return "Line Battalions, Flank Company (wings)"
+    return KGL_L[v]["unidade"]
+
+
 def name(cls):
+    if "KGL1812" in cls or "HAN1815" in cls:
+        return name_kgl(cls)
     if cls == "HCL_B_BRU1815_Tornister":
         return "[HCL] Brunswick Knapsack 1815 (black, white-metal horse on the flap)" + T
     if "BRU1815" in cls:

@@ -18,6 +18,9 @@ OPT = dict(x.split("=", 1) for x in a[3:] if "=" in x)
 SOLD = [s.split(":") for s in OPT.get("soldados", "flanco:v01:belgic_ligeira,linha:v01:belgic_batalhao,"
                                                    "flanco:v01:belgic_granadeiro").split(",")]
 NOME = OPT.get("nome", "soldado_uk")
+# optional 4th field = battalion number shown on a numbered cap (KGL Belgic): kgl_linha:v01:kgl_belgic_batalhao:5
+NUM_OVERRIDE = {i: s[3] for i, s in enumerate(SOLD) if len(s) > 3}
+SOLD = [s[:3] for s in SOLD]
 os.makedirs(OUT, exist_ok=True)
 bpy.ops.wm.read_factory_settings(use_empty=True)
 sc = bpy.context.scene
@@ -33,7 +36,12 @@ for k in ("linha", "cacadores"):
                        f"HCL_U_POR1812_{k.capitalize()}_LOD0", TU, f"hcl_u_por1812_{k}_{{}}_co.png", f"hcl_u_por1812_{k}_nohq.png")
 UNI["bru_dolman"] = (J("source", "models", "coats", "hcl_uniforme_uk", "hcl_uniforme_uk_bru_dolman_LOD0.blend"),
                      "HCL_U_BRU1815_Dolman_LOD0", TU, "hcl_u_bru1815_dolman_{}_co.png", "hcl_u_bru1815_dolman_nohq.png")
-BLACK_BELTS = ("rifles", "por_cacadores", "bru_dolman")
+BLACK_BELTS = ("rifles", "por_cacadores", "bru_dolman", "kgl_rifles")
+# KGL / Hanover: the British / Portuguese meshes with their own textures (kind:variant with the texture prefix)
+UNI["kgl_linha"] = UNI["linha"][:3] + ("hcl_u_kgl1812_linha_{}_co.png", UNI["linha"][4])
+UNI["kgl_flanco"] = UNI["flanco"][:3] + ("hcl_u_kgl1812_flanco_{}_co.png", UNI["flanco"][4])
+UNI["kgl_rifles"] = UNI["rifles"]
+UNI["han"] = UNI["por_linha"][:3] + ("hcl_u_han1813_{}_co.png", UNI["por_linha"][4])
 BRU_LINE_NUM = {"v05": "b1", "v06": "b2", "v07": "b3"}          # Brunswick line battalions 1-3 (gen_variantes_bru.py)
 
 
@@ -101,7 +109,8 @@ hm.materials.append(skin)
 head = bpy.data.objects.new("REF_cabeca_jogo_bust_p3d", hm)
 # caps: the newest blend that has the tag wins; the Highland bonnet has its own blend and prefix
 TS = J("source", "textures", "hcl_shako_uk")
-SRCS = [(J("source", "models", "shakos", "hcl_shako_uk", "hcl_shako_uk_texturas_bru_leib.blend"), "HCL_Shako_UK_", "hcl_shako_uk_"),
+SRCS = [(J("source", "models", "shakos", "hcl_shako_uk", "hcl_shako_uk_texturas_kgl.blend"), "HCL_Shako_UK_", "hcl_shako_uk_"),
+        (J("source", "models", "shakos", "hcl_shako_uk", "hcl_shako_uk_texturas_bru_leib.blend"), "HCL_Shako_UK_", "hcl_shako_uk_"),
         (J("source", "models", "shakos", "hcl_shako_uk", "hcl_shako_uk_texturas_bru_linha.blend"), "HCL_Shako_UK_", "hcl_shako_uk_"),
         (J("source", "models", "shakos", "hcl_shako_uk", "hcl_shako_uk_texturas_bru.blend"), "HCL_Shako_UK_", "hcl_shako_uk_"),
         (J("source", "models", "shakos", "hcl_shako_uk", "hcl_shako_uk_texturas_por.blend"), "HCL_Shako_UK_", "hcl_shako_uk_"),
@@ -137,7 +146,7 @@ for i, (kind, var, tag) in enumerate(SOLD):
         cc.material_slots[0].material = EQMAT[("hcl_v_uk1812_correame_preto" if kind in BLACK_BELTS else "hcl_v_uk1812_correame")
                                               if vest else ("hcl_b_bru1815_mochila" if kind == "bru_dolman" else "hcl_b_uk1812_mochila")]
     s = shk[tag].copy(); s.location = (x, 0, 0); s.hide_render = False; sc.collection.objects.link(s)
-    if kind.startswith("por_") or tag == "bru_linha":  # number band: the regiment's / battalion's number texture
+    if kind.startswith("por_") or tag in ("bru_linha",) or tag.startswith("kgl_belgic"):  # number band texture
         s.data = s.data.copy()
         kinds = s.get("hcl_kinds", "").split(",")
         num_k = {j for j, kk in enumerate(kinds) if kk.startswith("latao_num")}
@@ -157,6 +166,8 @@ for i, (kind, var, tag) in enumerate(SOLD):
                 p.material_index = 1
             if tag == "bru_linha":
                 key, pfx = BRU_LINE_NUM.get(var, "b1"), "hcl_bru_numero"
+            elif tag.startswith("kgl_belgic"):                 # KGL: soldados=kgl_linha:v01:kgl_belgic_batalhao#5
+                key, pfx = f"l{int(NUM_OVERRIDE.get(i, 1)):02d}", "hcl_por_numero"
             else:
                 key, pfx = ("c" if kind == "por_cacadores" else "l") + var[-2:], "hcl_por_numero"
             s.data.materials.append(texmat(f"num_{key}", os.path.join(TS, "numeros", f"{pfx}_{key}_co.png"), None, 0.35))

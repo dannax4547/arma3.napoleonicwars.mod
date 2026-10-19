@@ -212,6 +212,14 @@ for tg in ("bru_leib", "bru_ligeiro", "bru_linha", "bru_avantgarde"):
     headgear(o, (DATA + rf"\hcl_shako_uk_{tg}_co.paa", DATA + rf"\hcl_shako_uk_{tg}.rvmat"), f"hcl_h_uk_{tg}.p3d", tg,
              lod2_decimate=0.4,
              numero=(DATA + r"\hcl_bru_numero_b1_co.paa", DATA + r"\hcl_por_numero.rvmat") if tg == "bru_linha" else None)
+# KGL Belgic caps (number band, "numero") and the Hanoverian stovepipe (blockout_shako_uk.py conjunto=kgl)
+KGL_BLEND = r"source\models\shakos\hcl_shako_uk\hcl_shako_uk_texturas_kgl.blend"
+for tg in ("kgl_belgic_batalhao", "kgl_belgic_granadeiro", "kgl_belgic_ligeira", "han_stovepipe"):
+    name = f"HCL_Shako_UK_{tg}_LOD0"
+    o = next(x for x in append(os.path.join(ROOT, KGL_BLEND), [name]) if x.name.startswith(name))
+    headgear(o, (DATA + rf"\hcl_shako_uk_{tg}_co.paa", DATA + rf"\hcl_shako_uk_{tg}.rvmat"), f"hcl_h_uk_{tg}.p3d", tg,
+             lod2_decimate=0.4,
+             numero=(DATA + r"\hcl_por_numero_l01_co.paa", DATA + r"\hcl_por_numero.rvmat") if tg.startswith("kgl_") else None)
 # Highland feather bonnet (bonnet_highland_uk.py + texturizar_shako_uk.py nome=HCL_UK_ textura=hcl_uk_): Res 1 full,
 # Res 2 without the feather fronds (the shell carries the feather texture), like the French bearskins
 BONNET_BLEND = r"source\models\bonnet\hcl_bonnet_uk\hcl_bonnet_uk_texturas.blend"

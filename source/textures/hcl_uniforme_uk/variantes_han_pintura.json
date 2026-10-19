@@ -1,0 +1,168 @@
+{
+ "HP1": {
+  "prefixo": "hcl_u_han1813_v01",
+  "nome": "Hanover: casaca vermelha lisa, vistas azul-escuras",
+  "fonte": "docs/specs/kgl_brunswick_1815.md 3 [H1][H3]",
+  "curto": "Hanover",
+  "cores": {
+   "polaina": [
+    0.045,
+    0.045,
+    0.045
+   ],
+   "sapato": [
+    0.03,
+    0.028,
+    0.025
+   ],
+   "sola": [
+    0.2,
+    0.13,
+    0.08
+   ],
+   "calca": [
+    0.42,
+    0.43,
+    0.45
+   ],
+   "botoes": [
+    0.6,
+    0.58,
+    0.5
+   ],
+   "casaca": [
+    0.55,
+    0.11,
+    0.07
+   ],
+   "gola": [
+    0.07,
+    0.1,
+    0.22
+   ],
+   "punho": [
+    0.07,
+    0.1,
+    0.22
+   ],
+   "pala": [
+    0.07,
+    0.1,
+    0.22
+   ],
+   "gola_debrum": [
+    0.07,
+    0.1,
+    0.22
+   ],
+   "punho_debrum": [
+    0.07,
+    0.1,
+    0.22
+   ],
+   "viras": [
+    0.86,
+    0.85,
+    0.8
+   ],
+   "debrum": [
+    0.55,
+    0.11,
+    0.07
+   ],
+   "platina": [
+    0.07,
+    0.1,
+    0.22
+   ],
+   "platina_borda": [
+    0.07,
+    0.1,
+    0.22
+   ]
+  }
+ },
+ "HP2": {
+  "prefixo": "hcl_u_han1813_v02",
+  "nome": "Hanover: vistas amarelo-claro (Landwehr Peine)",
+  "fonte": "docs/specs/kgl_brunswick_1815.md 3 [H1][H3]",
+  "curto": "Hanover",
+  "cores": {
+   "polaina": [
+    0.045,
+    0.045,
+    0.045
+   ],
+   "sapato": [
+    0.03,
+    0.028,
+    0.025
+   ],
+   "sola": [
+    0.2,
+    0.13,
+    0.08
+   ],
+   "calca": [
+    0.42,
+    0.43,
+    0.45
+   ],
+   "botoes": [
+    0.6,
+    0.58,
+    0.5
+   ],
+   "casaca": [
+    0.55,
+    0.11,
+    0.07
+   ],
+   "gola": [
+    0.85,
+    0.78,
+    0.45
+   ],
+   "punho": [
+    0.85,
+    0.78,
+    0.45
+   ],
+   "pala": [
+    0.85,
+    0.78,
+    0.45
+   ],
+   "gola_debrum": [
+    0.85,
+    0.78,
+    0.45
+   ],
+   "punho_debrum": [
+    0.85,
+    0.78,
+    0.45
+   ],
+   "viras": [
+    0.86,
+    0.85,
+    0.8
+   ],
+   "debrum": [
+    0.55,
+    0.11,
+    0.07
+   ],
+   "platina": [
+    0.85,
+    0.78,
+    0.45
+   ],
+   "platina_borda": [
+    0.85,
+    0.78,
+    0.45
+   ]
+  }
+ }
+}

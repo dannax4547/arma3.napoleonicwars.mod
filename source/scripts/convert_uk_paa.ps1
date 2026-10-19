@@ -50,6 +50,13 @@ foreach ($k in 1..8) {
 }
 foreach ($s in "nohq", "smdi") { $jobs += , @("$uni\hcl_u_bru1815_dolman_${s}.png", "$uni\paa\hcl_u_bru1815_dolman_${s}.paa") }
 foreach ($k in 1..3) { $jobs += , @("$shk\numeros\hcl_bru_numero_b${k}_co.png", "$shk\paa\hcl_bru_numero_b${k}_co.paa") }
+# KGL and Hanover (kgl_brunswick_1815.md 2-3): jacket colours on the British / Portuguese meshes, 4 caps
+foreach ($b in "hcl_u_kgl1812_linha_v01", "hcl_u_kgl1812_flanco_v01", "hcl_u_han1813_v01", "hcl_u_han1813_v02") {
+    $jobs += , @("$uni\${b}_co.png", "$uni\paa\${b}_co.paa")
+}
+foreach ($t in "kgl_belgic_batalhao", "kgl_belgic_granadeiro", "kgl_belgic_ligeira", "han_stovepipe") {
+    foreach ($s in "co", "nohq", "smdi") { $jobs += , @("$shk\hcl_shako_uk_${t}_${s}.png", "$shk\paa\hcl_shako_uk_${t}_${s}.paa") }
+}
 # Brunswick knapsack: the Trotter texture with the Welfenross stamped on the flap (carimbo_mochila_bru.py)
 $jobs += , @("$eq\hcl_b_bru1815_mochila_co.png", "$eq\paa\hcl_b_bru1815_mochila_co.paa")
 foreach ($t in "bru_leib", "bru_ligeiro", "bru_linha", "bru_avantgarde") {

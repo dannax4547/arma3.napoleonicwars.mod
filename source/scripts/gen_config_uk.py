@@ -23,7 +23,12 @@ for fn, p3d, base, nat in (("variantes_uk_linha.json", "hcl_u_uk1812_linha", "HC
                            ("variantes_por_cacadores.json", "hcl_u_por1812_cacadores", "HCL_POR1812_Soldado_Cacadores_Base",
                             "POR1812"),
                            # Brunswick 1815 (docs/specs/kgl_brunswick_1815.md section 4): black dolman B01..B08
-                           ("variantes_bru_dolman.json", "hcl_u_bru1815_dolman", "HCL_BRU1815_Soldado_Base", "BRU1815")):
+                           ("variantes_bru_dolman.json", "hcl_u_bru1815_dolman", "HCL_BRU1815_Soldado_Base", "BRU1815"),
+                           # KGL and Hanover (kgl_brunswick_1815.md 2-3): the British / Portuguese meshes, new textures
+                           ("variantes_kgl_linha.json", "hcl_u_uk1812_linha", "HCL_KGL1812_Soldado_Base", "KGL1812"),
+                           ("variantes_kgl_flanco.json", "hcl_u_uk1812_flanco", "HCL_KGL1812_Soldado_Flanco_Base", "KGL1812"),
+                           ("variantes_kgl_ligeira.json", "hcl_u_uk1812_rifles", "HCL_KGL1812_Soldado_Ligeira_Base", "KGL1812"),
+                           ("variantes_han.json", "hcl_u_por1812_linha", "HCL_HAN1815_Soldado_Base", "HAN1815")):
     GROUPS.append((json.load(open(os.path.join(JS, fn), encoding="utf-8")), p3d, base, nat))
 # caps: P3D tag -> class suffix (blockout_shako_uk.py VARIANTS)
 CAPS = [("belgic_batalhao", "Belgic_Batalhao"), ("belgic_granadeiro", "Belgic_Granadeiro"), ("belgic_ligeira", "Belgic_Ligeira"),
@@ -42,6 +47,13 @@ for tg, cls in (("bru_leib", "Leib"), ("bru_ligeiro", "Ligeiro"), ("bru_avantgar
     HEAD.append((f"hcl_h_uk_{tg}", f"hcl_shako_uk_{tg}", f"HCL_H_BRU1815_Kiwer_{cls}", None))
 for n in range(1, 4):
     HEAD.append(("hcl_h_uk_bru_linha", "hcl_shako_uk_bru_linha", f"HCL_H_BRU1815_Kiwer_Linha_{n}", f"hcl_bru_numero_b{n}"))
+# KGL line Belgic caps: one class per battalion 1-8 (brass number band, the Portuguese brass numbers l01..l08);
+# KGL light battalions: the 95th's stovepipe (bugle, green cords); Hanover: stovepipe with the oval GR plate
+for tg, cls in (("kgl_belgic_batalhao", "Batalhao"), ("kgl_belgic_granadeiro", "Granadeiro"), ("kgl_belgic_ligeira", "Ligeira")):
+    for n in range(1, 9):
+        HEAD.append((f"hcl_h_uk_{tg}", f"hcl_shako_uk_{tg}", f"HCL_H_KGL1812_Belgic_{cls}_{n}", f"hcl_por_numero_l{n:02d}"))
+HEAD.append(("hcl_h_uk_stovepipe_rifles", "hcl_shako_uk_stovepipe_rifles", "HCL_H_KGL1812_Stovepipe_Ligeira", None))
+HEAD.append(("hcl_h_uk_han_stovepipe", "hcl_shako_uk_han_stovepipe", "HCL_H_HAN1815_Stovepipe", None))
 for n in range(1, 13):
     HEAD.append(("hcl_h_uk_por_cacadores", "hcl_shako_uk_por_cacadores", f"HCL_H_POR1812_Stovepipe_Cacadores_{n:02d}",
                  f"hcl_por_numero_c{n:02d}"))
@@ -179,7 +191,7 @@ print("OK config.cpp", len(txt), "bytes;", len(weapons), "items +", nsold, "sold
 
 # ---------------------------------------------------------------- model.cfg: skeleton from hcl_pruss, our classes
 mc = open(os.path.join(ROOT, r"source\addon\hcl\hcl_pruss\model.cfg"), encoding="latin-1").read()
-models = [p3d for _, p3d, _, _ in GROUPS] + sorted({h[0] for h in HEAD}) + [V_P3D, B_P3D]
+models = list(dict.fromkeys(p3d for _, p3d, _, _ in GROUPS)) + sorted({h[0] for h in HEAD}) + [V_P3D, B_P3D]   # dedupe: KGL / Hanover reuse meshes
 mc = re.sub(r"(\tclass hcl_\w+: ArmaMan \{\};\r?\n)+", "".join(f"\tclass {m}: ArmaMan {{}};\n" for m in models), mc)
 mc = mc.replace("test addon hcl_pruss", "test addon hcl_uk")
 assert all(f"class {m}: ArmaMan" in mc for m in models) and "hcl_pruss" not in mc
@@ -220,7 +232,7 @@ def rvmat(base, spec, power):
     return t
 
 
-MATS = [(p3d, "0.4", 50) for _, p3d, _, _ in GROUPS] + \
+MATS = [(p3d, "0.4", 50) for p3d in dict.fromkeys(p3d for _, p3d, _, _ in GROUPS)] + \
     [(m, "0.6", 40) if "bonnet" in m else (m, "1.0", 80) for m in sorted({h[1] for h in HEAD})] + \
     [(V_P3D, "0.6", 60), (B_P3D, "0.6", 60)]
 for base, spec, power in MATS:

@@ -617,7 +617,7 @@ def jugular(tag, root, metal="latao", gap=0.006):
     return z_chin
 
 
-def shako(tag, x_off, kind, tuft_cols, plate="placa", cord=None, back_number=None):
+def shako(tag, x_off, kind, tuft_cols, plate="placa", cord=None, back_number=None, numero_placa=False):
     """kind: "belgic" | "stovepipe"; plate: "placa" (the model's plate) | "corneta" (bugle badge)."""
     global H, top_hw, top_hd
     if kind == "belgic":
@@ -659,6 +659,8 @@ def shako(tag, x_off, kind, tuft_cols, plate="placa", cord=None, back_number=Non
             pts = [P(math.radians(70), H - 0.030, o), P(math.radians(40), 0.050, o), P(0, 0.028, o + 0.003),
                    P(math.radians(-40), 0.050, o), P(math.radians(-70), H - 0.030, o)]
             cords(tag, root, pts, cord, P(math.radians(-74), H - 0.060, o + 0.002), o)
+    if numero_placa and kind == "belgic":                # KGL: battalion number on the plate (Celle example, K6, 🔶)
+        num_band(tag, root, 0.046, 0.060, math.radians(8), colour="latao", off=FF_OFF + FF_T + 0.0032)
     jugular(tag, root, "latao")                         # 🔶 no source read on the British strap
     if back_number:
         number_badge(tag, root, back_number)
@@ -921,9 +923,67 @@ BRU_VARIANTS = [  # tag, kind, pompom (bottom to top), plume
     ("bru_linha", "linha", [(0.0, "amarelo"), (0.5, "azul")], None),
     ("bru_avantgarde", "avantgarde", None, "verde"),
 ]
+# ---------------------------------------------------------------- KGL and Hanover (conjunto=kgl; kgl_brunswick_1815.md)
+# KGL line: the British Belgic caps with the battalion number on a band across the lower plate (hidden selection
+# "numero", brass numbers of gen_numeros_por.py 1-8). Hanover 1813-15: stovepipe with an OVAL brass plate with a
+# scalloped edge, the crown above and the GR cipher [K5][K6] (letters in relief, no garter: that came in June 1814),
+# black cockade and white tuft (🔶: no source read for them).
+def text_front(name, text, zc, size, root, off=0.0026, depth=0.0008):
+    cu = bpy.data.curves.new(name + "_txt", "FONT")
+    cu.body = text; cu.size = size; cu.extrude = depth / 2; cu.align_x = "CENTER"; cu.align_y = "CENTER"
+    cu.bevel_depth = 0.0002
+    tob = bpy.data.objects.new(name + "_txt", cu); scene.collection.objects.link(tob)
+    bpy.context.view_layer.update()
+    me0 = bpy.data.meshes.new_from_object(tob.evaluated_get(bpy.context.evaluated_depsgraph_get()))
+    bpy.data.objects.remove(tob); bpy.data.curves.remove(cu)
+    bm = bmesh.new(); bm.from_mesh(me0); bpy.data.meshes.remove(me0)
+    for v in bm.verts:                                   # text x -> around the front, y -> height, z -> out
+        x, y, z = v.co
+        v.co = P(x / ry(zc + y), zc + y, off + z + depth / 2)
+    bmesh.ops.recalc_face_normals(bm, faces=bm.faces[:])
+    return finish(bm, name, "latao", root, keep_normals=True)
+
+
+def shako_han(tag, x_off):
+    global H, top_hw, top_hd
+    H = STOVE_H * k; top_hw, top_hd = base_hw - STOVE_TAPER, base_hd - STOVE_TAPER * base_hd / base_hw
+    root = bpy.data.objects.new(f"UK_{tag}", None)
+    root.matrix_world = Matrix.Translation(Vector((x_off, 0, 0))) @ ROOT
+    scene.collection.objects.link(root)
+    body(tag, root, "couro")
+    visor(tag, root)
+    zc = 0.095
+    flat_on_front(f"{tag}_brasao_placa", ellipse(0, zc, 0.060, 0.074, 48), 0.0012, "latao", root, off=0.0008)
+    for i in range(28):                                  # scalloped edge: a ring of small bosses
+        a_ = 2 * math.pi * i / 28
+        s_, z_ = 0.031 * math.cos(a_), zc + 0.038 * math.sin(a_)
+        disc(f"{tag}_brasao_festao_{i}", P(s_ / ry(z_), z_, 0.0018), wall_n(s_ / ry(z_), z_), 0.0032, 0.0010, "latao",
+             root, segs=10)
+    text_front(f"{tag}_brasao_gr", "GR", zc - 0.004, 0.030, root)
+    ct = zc + 0.016
+    crown = [(x, ct + z) for x, z in ((-0.012, 0.0), (0.012, 0.0), (0.012, 0.004), (0.0115, 0.010), (0.0070, 0.0060),
+                                      (0.0, 0.0125), (-0.0070, 0.0060), (-0.0115, 0.010), (-0.012, 0.004))]
+    flat_on_front(f"{tag}_brasao_coroa", crown, 0.0010, "latao", root, off=0.0020)
+    zc_t = H - 0.004
+    cockade(tag, root, P(0, zc_t, 0.0034), wall_n(0, zc_t))
+    tuft(tag, root, P(0, H + 0.010, -0.004) + Vector((0, -0.010, 0)), Vector((0, -0.10, 1)), 0.152, 0.029,
+         [(0.0, "branco")])
+    jugular(tag, root, "latao")
+    return root
+
+
+KGL_VARIANTS = [  # tag, kind, tuft, cords
+    ("kgl_belgic_batalhao", BAT, "branco"),
+    ("kgl_belgic_granadeiro", [(0.0, "branco")], "branco"),
+    ("kgl_belgic_ligeira", [(0.0, "verde_esc")], "verde"),
+]
 CONJ = dict(x.split("=", 1) for x in args[3:] if "=" in x).get("conjunto", "uk")
 SPACING = 0.42
-if CONJ == "bru":
+if CONJ == "kgl":
+    VARIANTS = [(t, "belgic", c, None, None, None) for t, c, _ in KGL_VARIANTS] + [("han_stovepipe", "stovepipe", None, None, None, None)]
+    roots = [shako(t, i * SPACING, "belgic", c, "placa", cd, None, numero_placa=True) for i, (t, c, cd) in enumerate(KGL_VARIANTS)]
+    roots.append(shako_han("han_stovepipe", len(KGL_VARIANTS) * SPACING))
+elif CONJ == "bru":
     VARIANTS = [(t, "stovepipe", None, None, None, None) for t, *_ in BRU_VARIANTS]
     roots = [shako_bru(t, i * SPACING, kd, pc, pl) for i, (t, kd, pc, pl) in enumerate(BRU_VARIANTS)]
 elif CONJ == "por":
@@ -993,13 +1053,15 @@ def solo(i):
 
 
 SIDE_SHOTS = {"por": ((0, "por_batalhao_lado"), (3, "por_cacadores_lado")),
+              "kgl": ((0, "kgl_belgic_batalhao_lado"), (3, "han_stovepipe_lado")),
               "bru": ((0, "bru_leib_lado"), (2, "bru_linha_lado"))}.get(
     CONJ, ((0, "belgic_batalhao_lado"), (3, "stovepipe_batalhao_lado")))
 for i, nm_ in SIDE_SHOTS:
     solo(i)
     shot(nm_, (i * SPACING - 2.0, F["head_cy"], zc), (i * SPACING, F["head_cy"], zc), ortho=0.75, res=(900, 1000))
-if CONJ in ("por", "bru"):                                # close-up of the front: plate, badge, number band
+if CONJ in ("por", "bru", "kgl"):                         # close-up of the front: plate, badge, number band
     for i, nm_ in {"por": ((1, "por_granadeiro_frente"), (2, "por_ligeira_frente")),
+                   "kgl": ((0, "kgl_belgic_batalhao_frente"), (3, "han_stovepipe_frente")),
                    "bru": ((0, "bru_leib_frente"), (2, "bru_linha_frente"))}[CONJ]:
         solo(i)
         shot(nm_, (i * SPACING, -2.5, zc), (i * SPACING, 0, zc), ortho=0.40, res=(900, 1000))

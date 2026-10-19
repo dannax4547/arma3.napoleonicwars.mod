@@ -1,0 +1,92 @@
+{
+ "KL1": {
+  "prefixo": "hcl_u_kgl1812_linha_v01",
+  "galao_forma": "quadrado",
+  "nome": "KGL, batalhao de linha: casaca vermelha, vistas azul-escuras",
+  "mod": "britainINF c2 r0-r1 (vista e galao); calca cinza britainINF c1 r3. Cor da vista calibrada (o mod escurece)",
+  "curto": "KGL",
+  "cores": {
+   "calca": [
+    0.42,
+    0.43,
+    0.45
+   ],
+   "polaina": [
+    0.045,
+    0.045,
+    0.045
+   ],
+   "sapato": [
+    0.03,
+    0.028,
+    0.025
+   ],
+   "sola": [
+    0.2,
+    0.13,
+    0.08
+   ],
+   "botoes": [
+    0.6,
+    0.6,
+    0.58
+   ],
+   "casaca": [
+    0.55,
+    0.11,
+    0.07
+   ],
+   "gola": [
+    0.07,
+    0.1,
+    0.22
+   ],
+   "punho": [
+    0.07,
+    0.1,
+    0.22
+   ],
+   "gola_debrum": [
+    0.88,
+    0.87,
+    0.82
+   ],
+   "viras": [
+    0.84,
+    0.83,
+    0.78
+   ],
+   "pala": [
+    0.07,
+    0.1,
+    0.22
+   ],
+   "galoes": [
+    0.88,
+    0.87,
+    0.82
+   ],
+   "debrum": [
+    0.55,
+    0.11,
+    0.07
+   ],
+   "platina": [
+    0.07,
+    0.1,
+    0.22
+   ],
+   "platina_borda": [
+    0.88,
+    0.87,
+    0.82
+   ],
+   "galao_frente": [
+    0.88,
+    0.87,
+    0.82
+   ]
+  },
+  "fonte": "docs/specs/kgl_brunswick_1815.md 2 [K1][K2]; galao em pares do britanico (🔶)"
+ }
+}
