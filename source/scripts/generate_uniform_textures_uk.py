@@ -880,6 +880,12 @@ def paint_variant(v):
         fa = frog_a[..., None]
         col = col * (1 - fa) + fc * fa
     col[cinza] = wool(C["calca"], 1.3)[cinza]
+    if "calca_vivo" in C:                               # Brunswick 1815: piping ("Biese") down the outer seam, 4 mm
+        for s in "ED":                                  # (kgl_brunswick_1815.md section 4; width not in sources, 🔶)
+            phi_, r_ = LEGF[s][2], LEGF[s][3]
+            d_ = np.angle(np.exp(1j * (phi_ - math.pi / 2))) * r_
+            m_ = is_(f"calca_perna_{s}") & (np.abs(d_) < 0.002)
+            col[m_] = wool(C["calca_vivo"], 0.5)[m_]
     if v.get("tartan"):                                 # UK Highland dress (build_kilt_uk.py), see highland() below
         col = highland(v, col, C)
     col[gait] = wool(C["polaina"], 1.6)[gait]

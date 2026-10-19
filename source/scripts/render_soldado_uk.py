@@ -31,7 +31,10 @@ UNI = {k: (J("source", "models", "coats", "hcl_uniforme_uk", f"hcl_uniforme_uk_{
 for k in ("linha", "cacadores"):
     UNI[f"por_{k}"] = (J("source", "models", "coats", "hcl_uniforme_uk", f"hcl_uniforme_uk_por_{k}_LOD0.blend"),
                        f"HCL_U_POR1812_{k.capitalize()}_LOD0", TU, f"hcl_u_por1812_{k}_{{}}_co.png", f"hcl_u_por1812_{k}_nohq.png")
-BLACK_BELTS = ("rifles", "por_cacadores")
+UNI["bru_dolman"] = (J("source", "models", "coats", "hcl_uniforme_uk", "hcl_uniforme_uk_bru_dolman_LOD0.blend"),
+                     "HCL_U_BRU1815_Dolman_LOD0", TU, "hcl_u_bru1815_dolman_{}_co.png", "hcl_u_bru1815_dolman_nohq.png")
+BLACK_BELTS = ("rifles", "por_cacadores", "bru_dolman")
+BRU_LINE_NUM = {"v05": "b1", "v06": "b2", "v07": "b3"}          # Brunswick line battalions 1-3 (gen_variantes_bru.py)
 
 
 def load(blend, names):
@@ -98,7 +101,9 @@ hm.materials.append(skin)
 head = bpy.data.objects.new("REF_cabeca_jogo_bust_p3d", hm)
 # caps: the newest blend that has the tag wins; the Highland bonnet has its own blend and prefix
 TS = J("source", "textures", "hcl_shako_uk")
-SRCS = [(J("source", "models", "shakos", "hcl_shako_uk", "hcl_shako_uk_texturas_por.blend"), "HCL_Shako_UK_", "hcl_shako_uk_"),
+SRCS = [(J("source", "models", "shakos", "hcl_shako_uk", "hcl_shako_uk_texturas_bru_leib.blend"), "HCL_Shako_UK_", "hcl_shako_uk_"),
+        (J("source", "models", "shakos", "hcl_shako_uk", "hcl_shako_uk_texturas_bru.blend"), "HCL_Shako_UK_", "hcl_shako_uk_"),
+        (J("source", "models", "shakos", "hcl_shako_uk", "hcl_shako_uk_texturas_por.blend"), "HCL_Shako_UK_", "hcl_shako_uk_"),
         (J("source", "models", "shakos", "hcl_shako_uk", "hcl_shako_uk_texturas_stovepipe.blend"), "HCL_Shako_UK_", "hcl_shako_uk_"),
         (J("source", "models", "shakos", "hcl_shako_uk", "hcl_shako_uk_texturas.blend"), "HCL_Shako_UK_", "hcl_shako_uk_"),
         (J("source", "models", "bonnet", "hcl_bonnet_uk", "hcl_bonnet_uk_texturas.blend"), "HCL_UK_", "hcl_uk_")]
@@ -131,7 +136,7 @@ for i, (kind, var, tag) in enumerate(SOLD):
         cc.material_slots[0].material = EQMAT[("hcl_v_uk1812_correame_preto" if kind in BLACK_BELTS else "hcl_v_uk1812_correame")
                                               if vest else "hcl_b_uk1812_mochila"]
     s = shk[tag].copy(); s.location = (x, 0, 0); s.hide_render = False; sc.collection.objects.link(s)
-    if kind.startswith("por_"):                       # number band: the regiment's / battalion's number texture
+    if kind.startswith("por_") or tag == "bru_linha":  # number band: the regiment's / battalion's number texture
         s.data = s.data.copy()
         kinds = s.get("hcl_kinds", "").split(",")
         num_k = {j for j, kk in enumerate(kinds) if kk.startswith("latao_num")}
@@ -149,8 +154,11 @@ for i, (kind, var, tag) in enumerate(SOLD):
                     co = np.array(s.data.vertices[s.data.loops[li].vertex_index].co[:]) - c0
                     uvd[li].uv = (0.5 + co[0] / (8 * hb), (co @ up - h0) / hb)
                 p.material_index = 1
-            key = ("c" if kind == "por_cacadores" else "l") + var[-2:]
-            s.data.materials.append(texmat(f"num_{key}", os.path.join(TS, "numeros", f"hcl_por_numero_{key}_co.png"), None, 0.35))
+            if tag == "bru_linha":
+                key, pfx = BRU_LINE_NUM.get(var, "b1"), "hcl_bru_numero"
+            else:
+                key, pfx = ("c" if kind == "por_cacadores" else "l") + var[-2:], "hcl_por_numero"
+            s.data.materials.append(texmat(f"num_{key}", os.path.join(TS, "numeros", f"{pfx}_{key}_co.png"), None, 0.35))
 
 for n_, en, rot in (("s", 3.2, (50, 0, 25)), ("p", 1.4, (65, 0, 200)), ("c", 1.2, (60, 0, 120))):
     lo = bpy.data.objects.new(n_, bpy.data.lights.new(n_, "SUN")); lo.data.energy = en

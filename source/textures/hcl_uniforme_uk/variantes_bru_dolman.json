@@ -1,0 +1,674 @@
+{
+ "B01": {
+  "prefixo": "hcl_u_bru1815_dolman_v01",
+  "unidade": "Leib-Bataillon",
+  "nome": "Brunswick 1815, Leib-Bataillon: dolma preto, gola e platinas azul_aco, vivo da calca azul_aco",
+  "fonte": "docs/specs/kgl_brunswick_1815.md 4 [B1 B5 B7; mod art britainINFb c0 r0]",
+  "curto": "Leib-Bataillon",
+  "cores": {
+   "polaina": [
+    0.045,
+    0.045,
+    0.045
+   ],
+   "sapato": [
+    0.03,
+    0.028,
+    0.025
+   ],
+   "sola": [
+    0.2,
+    0.13,
+    0.08
+   ],
+   "calca": [
+    0.045,
+    0.045,
+    0.05
+   ],
+   "calca_vivo": [
+    0.28,
+    0.4,
+    0.55
+   ],
+   "botoes": [
+    0.03,
+    0.03,
+    0.035
+   ],
+   "casaca": [
+    0.045,
+    0.045,
+    0.05
+   ],
+   "gola": [
+    0.28,
+    0.4,
+    0.55
+   ],
+   "punho": [
+    0.045,
+    0.045,
+    0.05
+   ],
+   "pala": [
+    0.045,
+    0.045,
+    0.05
+   ],
+   "viras": [
+    0.045,
+    0.045,
+    0.05
+   ],
+   "debrum": [
+    0.045,
+    0.045,
+    0.05
+   ],
+   "platina": [
+    0.28,
+    0.4,
+    0.55
+   ],
+   "platina_borda": [
+    0.28,
+    0.4,
+    0.55
+   ],
+   "alamar": [
+    0.025,
+    0.025,
+    0.028
+   ]
+  }
+ },
+ "B02": {
+  "prefixo": "hcl_u_bru1815_dolman_v02",
+  "unidade": "1st Light Battalion",
+  "nome": "Brunswick 1815, 1st Light Battalion: dolma preto, gola e platinas camurca, vivo da calca camurca",
+  "fonte": "docs/specs/kgl_brunswick_1815.md 4 [B2 B5 B6 (chamois at Waterloo; rose red from late June 1815)]",
+  "curto": "1st Light Battalion",
+  "cores": {
+   "polaina": [
+    0.045,
+    0.045,
+    0.045
+   ],
+   "sapato": [
+    0.03,
+    0.028,
+    0.025
+   ],
+   "sola": [
+    0.2,
+    0.13,
+    0.08
+   ],
+   "calca": [
+    0.045,
+    0.045,
+    0.05
+   ],
+   "calca_vivo": [
+    0.78,
+    0.64,
+    0.44
+   ],
+   "botoes": [
+    0.03,
+    0.03,
+    0.035
+   ],
+   "casaca": [
+    0.045,
+    0.045,
+    0.05
+   ],
+   "gola": [
+    0.78,
+    0.64,
+    0.44
+   ],
+   "punho": [
+    0.045,
+    0.045,
+    0.05
+   ],
+   "pala": [
+    0.045,
+    0.045,
+    0.05
+   ],
+   "viras": [
+    0.045,
+    0.045,
+    0.05
+   ],
+   "debrum": [
+    0.045,
+    0.045,
+    0.05
+   ],
+   "platina": [
+    0.78,
+    0.64,
+    0.44
+   ],
+   "platina_borda": [
+    0.78,
+    0.64,
+    0.44
+   ],
+   "alamar": [
+    0.025,
+    0.025,
+    0.028
+   ]
+  }
+ },
+ "B03": {
+  "prefixo": "hcl_u_bru1815_dolman_v03",
+  "unidade": "2nd Light Battalion",
+  "nome": "Brunswick 1815, 2nd Light Battalion: dolma preto, gola e platinas amarelo, vivo da calca amarelo",
+  "fonte": "docs/specs/kgl_brunswick_1815.md 4 [B2 B6 (B5 gives green: sources differ)]",
+  "curto": "2nd Light Battalion",
+  "cores": {
+   "polaina": [
+    0.045,
+    0.045,
+    0.045
+   ],
+   "sapato": [
+    0.03,
+    0.028,
+    0.025
+   ],
+   "sola": [
+    0.2,
+    0.13,
+    0.08
+   ],
+   "calca": [
+    0.045,
+    0.045,
+    0.05
+   ],
+   "calca_vivo": [
+    0.8,
+    0.62,
+    0.14
+   ],
+   "botoes": [
+    0.03,
+    0.03,
+    0.035
+   ],
+   "casaca": [
+    0.045,
+    0.045,
+    0.05
+   ],
+   "gola": [
+    0.8,
+    0.62,
+    0.14
+   ],
+   "punho": [
+    0.045,
+    0.045,
+    0.05
+   ],
+   "pala": [
+    0.045,
+    0.045,
+    0.05
+   ],
+   "viras": [
+    0.045,
+    0.045,
+    0.05
+   ],
+   "debrum": [
+    0.045,
+    0.045,
+    0.05
+   ],
+   "platina": [
+    0.8,
+    0.62,
+    0.14
+   ],
+   "platina_borda": [
+    0.8,
+    0.62,
+    0.14
+   ],
+   "alamar": [
+    0.025,
+    0.025,
+    0.028
+   ]
+  }
+ },
+ "B04": {
+  "prefixo": "hcl_u_bru1815_dolman_v04",
+  "unidade": "3rd Light Battalion",
+  "nome": "Brunswick 1815, 3rd Light Battalion: dolma preto, gola e platinas laranja, vivo da calca laranja",
+  "fonte": "docs/specs/kgl_brunswick_1815.md 4 [B2 B5 B6]",
+  "curto": "3rd Light Battalion",
+  "cores": {
+   "polaina": [
+    0.045,
+    0.045,
+    0.045
+   ],
+   "sapato": [
+    0.03,
+    0.028,
+    0.025
+   ],
+   "sola": [
+    0.2,
+    0.13,
+    0.08
+   ],
+   "calca": [
+    0.045,
+    0.045,
+    0.05
+   ],
+   "calca_vivo": [
+    0.85,
+    0.4,
+    0.08
+   ],
+   "botoes": [
+    0.03,
+    0.03,
+    0.035
+   ],
+   "casaca": [
+    0.045,
+    0.045,
+    0.05
+   ],
+   "gola": [
+    0.85,
+    0.4,
+    0.08
+   ],
+   "punho": [
+    0.045,
+    0.045,
+    0.05
+   ],
+   "pala": [
+    0.045,
+    0.045,
+    0.05
+   ],
+   "viras": [
+    0.045,
+    0.045,
+    0.05
+   ],
+   "debrum": [
+    0.045,
+    0.045,
+    0.05
+   ],
+   "platina": [
+    0.85,
+    0.4,
+    0.08
+   ],
+   "platina_borda": [
+    0.85,
+    0.4,
+    0.08
+   ],
+   "alamar": [
+    0.025,
+    0.025,
+    0.028
+   ]
+  }
+ },
+ "B05": {
+  "prefixo": "hcl_u_bru1815_dolman_v05",
+  "unidade": "1st Line Battalion",
+  "nome": "Brunswick 1815, 1st Line Battalion: dolma preto, gola e platinas vermelho, vivo da calca vermelho",
+  "fonte": "docs/specs/kgl_brunswick_1815.md 4 [B5 B6]",
+  "curto": "1st Line Battalion",
+  "cores": {
+   "polaina": [
+    0.045,
+    0.045,
+    0.045
+   ],
+   "sapato": [
+    0.03,
+    0.028,
+    0.025
+   ],
+   "sola": [
+    0.2,
+    0.13,
+    0.08
+   ],
+   "calca": [
+    0.045,
+    0.045,
+    0.05
+   ],
+   "calca_vivo": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "botoes": [
+    0.03,
+    0.03,
+    0.035
+   ],
+   "casaca": [
+    0.045,
+    0.045,
+    0.05
+   ],
+   "gola": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "punho": [
+    0.045,
+    0.045,
+    0.05
+   ],
+   "pala": [
+    0.045,
+    0.045,
+    0.05
+   ],
+   "viras": [
+    0.045,
+    0.045,
+    0.05
+   ],
+   "debrum": [
+    0.045,
+    0.045,
+    0.05
+   ],
+   "platina": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "platina_borda": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "alamar": [
+    0.025,
+    0.025,
+    0.028
+   ]
+  }
+ },
+ "B06": {
+  "prefixo": "hcl_u_bru1815_dolman_v06",
+  "unidade": "2nd Line Battalion",
+  "nome": "Brunswick 1815, 2nd Line Battalion: dolma preto, gola e platinas verde, vivo da calca verde",
+  "fonte": "docs/specs/kgl_brunswick_1815.md 4 [B5 B6]",
+  "curto": "2nd Line Battalion",
+  "cores": {
+   "polaina": [
+    0.045,
+    0.045,
+    0.045
+   ],
+   "sapato": [
+    0.03,
+    0.028,
+    0.025
+   ],
+   "sola": [
+    0.2,
+    0.13,
+    0.08
+   ],
+   "calca": [
+    0.045,
+    0.045,
+    0.05
+   ],
+   "calca_vivo": [
+    0.08,
+    0.3,
+    0.12
+   ],
+   "botoes": [
+    0.03,
+    0.03,
+    0.035
+   ],
+   "casaca": [
+    0.045,
+    0.045,
+    0.05
+   ],
+   "gola": [
+    0.08,
+    0.3,
+    0.12
+   ],
+   "punho": [
+    0.045,
+    0.045,
+    0.05
+   ],
+   "pala": [
+    0.045,
+    0.045,
+    0.05
+   ],
+   "viras": [
+    0.045,
+    0.045,
+    0.05
+   ],
+   "debrum": [
+    0.045,
+    0.045,
+    0.05
+   ],
+   "platina": [
+    0.08,
+    0.3,
+    0.12
+   ],
+   "platina_borda": [
+    0.08,
+    0.3,
+    0.12
+   ],
+   "alamar": [
+    0.025,
+    0.025,
+    0.028
+   ]
+  }
+ },
+ "B07": {
+  "prefixo": "hcl_u_bru1815_dolman_v07",
+  "unidade": "3rd Line Battalion",
+  "nome": "Brunswick 1815, 3rd Line Battalion: dolma preto, gola e platinas branco, vivo da calca branco",
+  "fonte": "docs/specs/kgl_brunswick_1815.md 4 [B5 B6]",
+  "curto": "3rd Line Battalion",
+  "cores": {
+   "polaina": [
+    0.045,
+    0.045,
+    0.045
+   ],
+   "sapato": [
+    0.03,
+    0.028,
+    0.025
+   ],
+   "sola": [
+    0.2,
+    0.13,
+    0.08
+   ],
+   "calca": [
+    0.045,
+    0.045,
+    0.05
+   ],
+   "calca_vivo": [
+    0.86,
+    0.85,
+    0.8
+   ],
+   "botoes": [
+    0.03,
+    0.03,
+    0.035
+   ],
+   "casaca": [
+    0.045,
+    0.045,
+    0.05
+   ],
+   "gola": [
+    0.86,
+    0.85,
+    0.8
+   ],
+   "punho": [
+    0.045,
+    0.045,
+    0.05
+   ],
+   "pala": [
+    0.045,
+    0.045,
+    0.05
+   ],
+   "viras": [
+    0.045,
+    0.045,
+    0.05
+   ],
+   "debrum": [
+    0.045,
+    0.045,
+    0.05
+   ],
+   "platina": [
+    0.86,
+    0.85,
+    0.8
+   ],
+   "platina_borda": [
+    0.86,
+    0.85,
+    0.8
+   ],
+   "alamar": [
+    0.025,
+    0.025,
+    0.028
+   ]
+  }
+ },
+ "B08": {
+  "prefixo": "hcl_u_bru1815_dolman_v08",
+  "unidade": "Avantgarde, light company",
+  "nome": "Brunswick 1815, Avantgarde, light company: dolma preto, gola e platinas verde, vivo da calca verde",
+  "fonte": "docs/specs/kgl_brunswick_1815.md 4 [B5 (green also on the cuffs)]",
+  "curto": "Avantgarde, light company",
+  "cores": {
+   "polaina": [
+    0.045,
+    0.045,
+    0.045
+   ],
+   "sapato": [
+    0.03,
+    0.028,
+    0.025
+   ],
+   "sola": [
+    0.2,
+    0.13,
+    0.08
+   ],
+   "calca": [
+    0.045,
+    0.045,
+    0.05
+   ],
+   "calca_vivo": [
+    0.08,
+    0.3,
+    0.12
+   ],
+   "botoes": [
+    0.03,
+    0.03,
+    0.035
+   ],
+   "casaca": [
+    0.045,
+    0.045,
+    0.05
+   ],
+   "gola": [
+    0.08,
+    0.3,
+    0.12
+   ],
+   "punho": [
+    0.08,
+    0.3,
+    0.12
+   ],
+   "pala": [
+    0.08,
+    0.3,
+    0.12
+   ],
+   "viras": [
+    0.045,
+    0.045,
+    0.05
+   ],
+   "debrum": [
+    0.045,
+    0.045,
+    0.05
+   ],
+   "platina": [
+    0.08,
+    0.3,
+    0.12
+   ],
+   "platina_borda": [
+    0.08,
+    0.3,
+    0.12
+   ],
+   "alamar": [
+    0.025,
+    0.025,
+    0.028
+   ]
+  }
+ }
+}

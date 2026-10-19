@@ -8,6 +8,8 @@
 import bpy, sys, os, math
 
 out_dir = os.path.abspath(sys.argv[sys.argv.index("--") + 1])
+CONJ = dict(x.split("=", 1) for x in sys.argv[sys.argv.index("--") + 2:] if "=" in x).get("conjunto", "por")
+# conjunto=bru: Brunswick line battalions 1-3, number in white metal (kgl_brunswick_1815.md 4): hcl_bru_numero_b1..b3
 os.makedirs(out_dir, exist_ok=True)
 bpy.ops.wm.read_factory_settings(use_empty=True)
 sc = bpy.context.scene
@@ -18,6 +20,8 @@ sc.render.film_transparent = False
 w = bpy.data.worlds.new("w"); w.use_nodes = True
 w.node_tree.nodes["Background"].inputs[0].default_value = (0, 0, 0, 1); sc.world = w
 BRASS, DARK, EDGE = (0.62, 0.44, 0.15), (0.13, 0.08, 0.03), (0.45, 0.31, 0.10)
+if CONJ == "bru":                                    # white metal (tin-plated), dark grey numbers
+    BRASS, DARK, EDGE = (0.62, 0.62, 0.60), (0.10, 0.10, 0.11), (0.42, 0.42, 0.41)
 
 
 def emit(name, rgb, noise=0.0):
@@ -57,8 +61,11 @@ cu = bpy.data.curves.new("txt", "FONT"); cu.size = 0.72; cu.align_x = "CENTER"; 
 txt = bpy.data.objects.new("txt", cu); sc.collection.objects.link(txt); txt.location.z = 0.002
 cu.materials.append(dark)
 jobs = [(f"l{n:02d}", str(n)) for n in range(1, 25)] + [(f"c{n:02d}", str(n)) for n in range(1, 13)]
+PFX = "hcl_por_numero"
+if CONJ == "bru":
+    jobs, PFX = [(f"b{n}", str(n)) for n in range(1, 4)], "hcl_bru_numero"
 for key, text in jobs:
     cu.body = text
-    sc.render.filepath = os.path.join(out_dir, f"hcl_por_numero_{key}_co.png")
+    sc.render.filepath = os.path.join(out_dir, f"{PFX}_{key}_co.png")
     bpy.ops.render.render(write_still=True)
 print(f"OK {len(jobs)} texturas de numero em {out_dir}")

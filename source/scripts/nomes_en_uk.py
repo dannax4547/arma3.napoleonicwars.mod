@@ -81,7 +81,34 @@ def name_por(cls):
     return None
 
 
+# Brunswick 1815 (docs/specs/kgl_brunswick_1815.md section 4; Feldcorps glossary and others): every battalion named
+BRU_D = json.load(open(os.path.join(_JS, "variantes_bru_dolman.json"), encoding="utf-8"))
+BRU_CAP = {"Leib": "Leib-Bataillon (black horsehair, skull and crossbones)",
+           "Ligeiro": "Light Battalions (white-metal bugle, blue and yellow pompom)",
+           "Avantgarde": "Avantgarde, light companies (bugle, green plume; the round hat is not made yet)"}
+
+
+def name_bru(cls):
+    m = re.fullmatch(r"HCL_BRU1815_Soldado_(\w+)", cls)
+    if m:
+        if m[1] == "Base":
+            return "Brunswick Infantryman 1815" + T
+        return f"Brunswick Infantryman 1815 - {BRU_D[m[1]]['unidade']}{T}"
+    m = re.fullmatch(r"HCL_U_BRU1815_(\w+)", cls)
+    if m:
+        return f"[HCL] Brunswick Black Dolman 1815 - {BRU_D[m[1]]['unidade']}"
+    m = re.fullmatch(r"HCL_H_BRU1815_Kiwer_Linha_(\d)", cls)
+    if m:
+        return f"[HCL] Brunswick Shako 1815 - {ordinal(int(m[1]))} Line Battalion (white-metal Welfenross shield)"
+    m = re.fullmatch(r"HCL_H_BRU1815_Kiwer_(\w+)", cls)
+    if m:
+        return f"[HCL] Brunswick Shako 1815 - {BRU_CAP[m[1]]}"
+    return None
+
+
 def name(cls):
+    if "BRU1815" in cls:
+        return name_bru(cls)
     if "POR1812" in cls:
         return name_por(cls)
     m = re.fullmatch(r"HCL_UK1812_Soldado_(\w+)", cls)

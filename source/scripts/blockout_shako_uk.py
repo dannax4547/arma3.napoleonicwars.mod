@@ -658,7 +658,7 @@ def oval_plate(tag, root, zc, w=0.056, h=0.070):
     flat_on_front(f"{tag}_brasao_coroa", crown, 0.0010, "latao", root, off=o + 0.0016)
 
 
-def num_band(tag, root, z0, z1, half_th, t=0.0010, segs=18):
+def num_band(tag, root, z0, z1, half_th, t=0.0010, segs=18, colour="latao"):
     """Brass band on the front wall carrying the number (its texture comes from the hidden selection "numero")."""
     bm = bmesh.new()
     ths = [half_th * (2 * i / segs - 1) for i in range(segs + 1)]
@@ -670,7 +670,7 @@ def num_band(tag, root, z0, z1, half_th, t=0.0010, segs=18):
         bm.faces.new((out_[1][i], in_[1][i], in_[1][i + 1], out_[1][i + 1]))
     for i in (0, segs):
         bm.faces.new((in_[0][i], in_[1][i], out_[1][i], out_[0][i]))
-    return finish(bm, f"{tag}_numfaixa", "latao", root)
+    return finish(bm, f"{tag}_numfaixa", colour, root)
 
 
 def granada(tag, root, zc):
@@ -721,9 +721,113 @@ POR_VARIANTS = [  # tag, plume, badge, cacadores
     ("por_ligeira", [(0.0, "verde_esc")], "corneta", False),
     ("por_cacadores", [(0.0, "verde_esc")], None, True),
 ]
+# ---------------------------------------------------------------- Brunswick 1815 (conjunto=bru; kgl_brunswick_1815.md 4)
+# "Kiwer" shako: black felt trimmed with leather, WIDER at the top (flaring, 🔶 shape), no cockade in the sources read.
+#   Leib-Bataillon: black horsehair plume falling over the top, white skull and crossbones TRACED from the mod art
+#                   (britainINFb c5 r4, mascara_latao_uk.py modo=branco + trace_badge.py -> caveira.json; kind arte_cor)
+#   light battalions: white-metal bugle (the traced bugle in "prata"), pompom blue below / yellow above
+#   line battalions: white-metal shield with the leaping Welfenross (hand-drawn simplified outline, cavalo_bru.json, 🔶;
+#                    the motto scroll is left out), the battalion number on its own band (hidden selection "numero"),
+#                    pompom blue above / yellow below
+COL.update(amarelo=(0.80, 0.62, 0.14), prata=(0.62, 0.62, 0.60))
+PLATES.update(caveira=os.path.abspath(os.path.join(SHK_DIR, "caveira.json")),
+              cavalo=os.path.abspath(os.path.join(SHK_DIR, "cavalo_bru.json")))
+KIWER_FLARE = 0.012                                       # radius gain from the band to the top (🔶)
+
+
+def crina(tag, root, n=230, seed=21):
+    """Black horsehair plume ("Rossschweif") rising from a socket at the top front and falling over the front and the
+    sides; every lock is a ribbon with its own UV square (u across, v root to tip) like the feather fronds, so the
+    texturizer paints it with the plume tiles (part "pelo" -> kind pena)."""
+    rnd = random.Random(seed)
+    bm = bmesh.new()
+    uvl = bm.loops.layers.uv.new("UVMap")
+    tint = bm.faces.layers.float.new("tint")
+    sock = P(0, H + 0.004, -0.010)
+    for i in range(n):
+        ph = rnd.uniform(-1.35, 1.35) * (rnd.random() ** 0.6) * (1 if rnd.random() < 0.5 else -1)
+        d = Vector((math.sin(ph), -math.cos(ph), 0))
+        r_top = math.hypot(rx(H) * math.sin(ph), ry(H) * math.cos(ph))
+        rise = rnd.uniform(0.024, 0.046)
+        drop = rnd.uniform(0.045, 0.095) * (0.6 + 0.4 * abs(ph) / 1.35)
+        out_ = rnd.uniform(0.010, 0.022)
+        s0 = sock + Vector((rnd.uniform(-0.006, 0.006), rnd.uniform(-0.004, 0.004), 0))
+        pts = [s0, s0 + Vector((0, 0, rise)) + d * 0.015,
+               Vector((0, 0, sock.z + rise * 0.6)) + Vector((d.x * (r_top + out_ * 0.5), d.y * (r_top + out_ * 0.5) + sock.y * 0, 0)),
+               Vector((d.x * (r_top + out_), d.y * (r_top + out_), H - drop))]
+        pts[2] = Vector((pts[2].x, pts[2].y + 0.0, pts[2].z)); pts[3] = Vector((pts[3].x, pts[3].y, pts[3].z))
+        path = catmull(pts, 4)
+        w = rnd.uniform(0.006, 0.011)
+        sh = rnd.random()
+        rows = []
+        L_ = len(path)
+        for k_, p in enumerate(path):
+            t = k_ / (L_ - 1)
+            tg = (path[min(k_ + 1, L_ - 1)] - path[max(k_ - 1, 0)]).normalized()
+            radial = Vector((p.x, p.y, 0)).normalized() if Vector((p.x, p.y, 0)).length > 1e-4 else d
+            side = tg.cross(radial).normalized()
+            hw = w * (1.0 - 0.6 * t) / 2
+            rows.append((bm.verts.new(p - side * hw), bm.verts.new(p + side * hw), t))
+        for k_ in range(L_ - 1):
+            (a0, b0, t0), (a1, b1, t1) = rows[k_], rows[k_ + 1]
+            f = bm.faces.new((a0, b0, b1, a1))
+            for l, uv in zip(f.loops, ((0, t0), (1, t0), (1, t1), (0, t1))):
+                l[uvl].uv = uv
+            f[tint] = sh; f.smooth = True
+            f.normal_update()
+            mid = (a0.co + b1.co) / 2
+            if f.normal.dot(Vector((mid.x, mid.y, 0.6)).normalized()) < 0:
+                f.normal_flip()
+    lathe_obj(f"{tag}_encaixe_couro", [(-0.006, 0.007), (0.0, 0.008), (0.010, 0.006)], sock, "couro", root,
+              axis=Vector((0, -0.2, 1)), segs=16)
+    return finish(bm, f"{tag}_pelo_crina", "preto", root, keep_normals=True)
+
+
+def shako_bru(tag, x_off, kind, pompom_cols=None, plume_col=None):
+    global H, top_hw, top_hd
+    H = STOVE_H * k; top_hw, top_hd = base_hw + KIWER_FLARE, base_hd + KIWER_FLARE * base_hd / base_hw
+    root = bpy.data.objects.new(f"UK_{tag}", None)
+    root.matrix_world = Matrix.Translation(Vector((x_off, 0, 0))) @ ROOT
+    scene.collection.objects.link(root)
+    body(tag, root, "couro")
+    visor(tag, root)
+    if kind == "leib":
+        traced_plate(f"{tag}_caveira", PLATES["caveira"], 0.050, 0.100, 0.055, 0.0022, "branco", root)
+        crina(tag, root)
+    elif kind in ("ligeiro", "avantgarde"):
+        traced_plate(f"{tag}_corneta", PLATES["corneta"], 0.055, 0.115, 0.075, 0.0022, "prata", root)
+    elif kind == "linha":
+        # the shield is wide (72 mm): a flat fan would sink 6 mm into the curved wall at its middle, so it is built
+        # like a traced plate (subdivided and wrapped on the wall) from a temporary outline file
+        import tempfile
+        w_, h_ = 0.072, 0.090
+        pts = shield(0, 0, w_, h_, 12)
+        tmp = os.path.join(tempfile.gettempdir(), f"hcl_escudo_{tag}.json")
+        json.dump({"box": [0, 0, 1000, 1000], "loops": [[[(s + w_ / 2) * 1000, (h_ / 2 - z) * 1000] for s, z in pts]]},
+                  open(tmp, "w"))
+        traced_plate(f"{tag}_brasao_escudo", tmp, 0.093 - h_ / 2, 0.093 + h_ / 2, w_, 0.0012, "prata", root, off=0.0008)
+        traced_plate(f"{tag}_brasao_cavalo", PLATES["cavalo"], 0.086, 0.128, 0.052, 0.0012, "prata", root, off=0.0020)
+        num_band(tag, root, 0.064, 0.079, math.radians(10), colour="prata")
+    if pompom_cols:
+        tuft(tag, root, P(0, H + 0.008, -0.004) + Vector((0, -0.006, 0)), Vector((0, -0.10, 1)), 0.040, 0.020, pompom_cols)
+    if plume_col:
+        tuft(tag, root, P(0, H + 0.010, -0.004) + Vector((0, -0.010, 0)), Vector((0, -0.10, 1)), 0.150, 0.022,
+             [(0.0, plume_col)])
+    return root
+
+
+BRU_VARIANTS = [  # tag, kind, pompom (bottom to top), plume
+    ("bru_leib", "leib", None, None),
+    ("bru_ligeiro", "ligeiro", [(0.0, "azul"), (0.5, "amarelo")], None),
+    ("bru_linha", "linha", [(0.0, "amarelo"), (0.5, "azul")], None),
+    ("bru_avantgarde", "avantgarde", None, "verde"),
+]
 CONJ = dict(x.split("=", 1) for x in args[3:] if "=" in x).get("conjunto", "uk")
 SPACING = 0.42
-if CONJ == "por":
+if CONJ == "bru":
+    VARIANTS = [(t, "stovepipe", None, None, None, None) for t, *_ in BRU_VARIANTS]
+    roots = [shako_bru(t, i * SPACING, kd, pc, pl) for i, (t, kd, pc, pl) in enumerate(BRU_VARIANTS)]
+elif CONJ == "por":
     VARIANTS = [(t, "stovepipe", c, None, None, None) for t, c, *_ in POR_VARIANTS]
     roots = [shako_por(t, i * SPACING, c, b, cz) for i, (t, c, b, cz) in enumerate(POR_VARIANTS)]
 else:
@@ -789,12 +893,15 @@ def solo(i):
             o.hide_render = j != i
 
 
-SIDE_SHOTS = ((0, "por_batalhao_lado"), (3, "por_cacadores_lado")) if CONJ == "por" else     ((0, "belgic_batalhao_lado"), (3, "stovepipe_batalhao_lado"))
+SIDE_SHOTS = {"por": ((0, "por_batalhao_lado"), (3, "por_cacadores_lado")),
+              "bru": ((0, "bru_leib_lado"), (2, "bru_linha_lado"))}.get(
+    CONJ, ((0, "belgic_batalhao_lado"), (3, "stovepipe_batalhao_lado")))
 for i, nm_ in SIDE_SHOTS:
     solo(i)
     shot(nm_, (i * SPACING - 2.0, F["head_cy"], zc), (i * SPACING, F["head_cy"], zc), ortho=0.75, res=(900, 1000))
-if CONJ == "por":                                         # close-up of the front: plate, badge, number band
-    for i, nm_ in ((1, "por_granadeiro_frente"), (2, "por_ligeira_frente")):
+if CONJ in ("por", "bru"):                                # close-up of the front: plate, badge, number band
+    for i, nm_ in {"por": ((1, "por_granadeiro_frente"), (2, "por_ligeira_frente")),
+                   "bru": ((0, "bru_leib_frente"), (2, "bru_linha_frente"))}[CONJ]:
         solo(i)
         shot(nm_, (i * SPACING, -2.5, zc), (i * SPACING, 0, zc), ortho=0.40, res=(900, 1000))
 else:

@@ -44,6 +44,15 @@ foreach ($k in 1..12) {
 foreach ($m in "linha", "cacadores") {
     foreach ($s in "nohq", "smdi") { $jobs += , @("$uni\hcl_u_por1812_${m}_${s}.png", "$uni\paa\hcl_u_por1812_${m}_${s}.paa") }
 }
+# Brunswick 1815 (docs/specs/kgl_brunswick_1815.md 4): 8 dolmans, 4 "Kiwer" shakos, 3 white-metal number bands
+foreach ($k in 1..8) {
+    $jobs += , @(("$uni\hcl_u_bru1815_dolman_v{0:D2}_co.png" -f $k), ("$uni\paa\hcl_u_bru1815_dolman_v{0:D2}_co.paa" -f $k))
+}
+foreach ($s in "nohq", "smdi") { $jobs += , @("$uni\hcl_u_bru1815_dolman_${s}.png", "$uni\paa\hcl_u_bru1815_dolman_${s}.paa") }
+foreach ($k in 1..3) { $jobs += , @("$shk\numeros\hcl_bru_numero_b${k}_co.png", "$shk\paa\hcl_bru_numero_b${k}_co.paa") }
+foreach ($t in "bru_leib", "bru_ligeiro", "bru_linha", "bru_avantgarde") {
+    foreach ($s in "co", "nohq", "smdi") { $jobs += , @("$shk\hcl_shako_uk_${t}_${s}.png", "$shk\paa\hcl_shako_uk_${t}_${s}.paa") }
+}
 foreach ($t in "por_batalhao", "por_granadeiro", "por_ligeira", "por_cacadores") {
     foreach ($s in "co", "nohq", "smdi") { $jobs += , @("$shk\hcl_shako_uk_${t}_${s}.png", "$shk\paa\hcl_shako_uk_${t}_${s}.paa") }
 }

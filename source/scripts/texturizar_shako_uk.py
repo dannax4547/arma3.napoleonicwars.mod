@@ -78,7 +78,7 @@ def kind_of(part, colour):
         return "latao"
     if part.startswith("corneta"):
         return "arte"
-    if part.startswith("xadrez"):                       # Highland diced band: the art's own colours
+    if part.startswith(("xadrez", "caveira")):          # Highland diced band, Brunswick skull: the art's own colours
         return "arte_cor"
     if part == "frente":
         return "feltro"

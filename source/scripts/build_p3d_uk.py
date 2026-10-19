@@ -75,7 +75,9 @@ UNIS = [("linha", "HCL_U_UK1812_Linha_LOD0", "hcl_u_uk1812_linha"),
         ("kilt", "HCL_U_UK1812_Kilt_LOD0", "hcl_u_uk1812_kilt"),            # Highland dress (build_kilt_uk.py)
         # Portugal (docs/specs/portugal_1812.md): line (frente=simples) and Cacadores (frente=alamares)
         ("por_linha", "HCL_U_POR1812_Linha_LOD0", "hcl_u_por1812_linha"),
-        ("por_cacadores", "HCL_U_POR1812_Cacadores_LOD0", "hcl_u_por1812_cacadores")]
+        ("por_cacadores", "HCL_U_POR1812_Cacadores_LOD0", "hcl_u_por1812_cacadores"),
+        # Brunswick 1815 (docs/specs/kgl_brunswick_1815.md 4): black dolman, 10 rows of braid, short skirt
+        ("bru_dolman", "HCL_U_BRU1815_Dolman_LOD0", "hcl_u_bru1815_dolman")]
 objs = {}
 for k_, oname, base in UNIS:
     PES = os.path.join(ROOT, rf"source\models\pesos\hcl_uk_{k_}_pesos.blend")
@@ -199,6 +201,16 @@ for tg, num0 in (("por_batalhao", "l01"), ("por_granadeiro", "l01"), ("por_ligei
     o = next(x for x in append(os.path.join(ROOT, POR_BLEND), [name]) if x.name.startswith(name))
     headgear(o, (DATA + rf"\hcl_shako_uk_{tg}_co.paa", DATA + rf"\hcl_shako_uk_{tg}.rvmat"), f"hcl_h_uk_{tg}.p3d", tg,
              lod2_decimate=0.4, numero=(DATA + rf"\hcl_por_numero_{num0}_co.paa", DATA + r"\hcl_por_numero.rvmat"))
+# Brunswick "Kiwer" shakos (blockout_shako_uk.py conjunto=bru): the Leib-Bataillon cap was baked on britainINFb
+# (traced skull), the others on the levels copy of britainINF (traced bugle); the line cap carries the number band
+BRU_BLENDS = {"bru_leib": r"source\models\shakos\hcl_shako_uk\hcl_shako_uk_texturas_bru_leib.blend"}
+for tg in ("bru_leib", "bru_ligeiro", "bru_linha", "bru_avantgarde"):
+    name = f"HCL_Shako_UK_{tg}_LOD0"
+    path = BRU_BLENDS.get(tg, r"source\models\shakos\hcl_shako_uk\hcl_shako_uk_texturas_bru.blend")
+    o = next(x for x in append(os.path.join(ROOT, path), [name]) if x.name.startswith(name))
+    headgear(o, (DATA + rf"\hcl_shako_uk_{tg}_co.paa", DATA + rf"\hcl_shako_uk_{tg}.rvmat"), f"hcl_h_uk_{tg}.p3d", tg,
+             lod2_decimate=0.4,
+             numero=(DATA + r"\hcl_bru_numero_b1_co.paa", DATA + r"\hcl_por_numero.rvmat") if tg == "bru_linha" else None)
 # Highland feather bonnet (bonnet_highland_uk.py + texturizar_shako_uk.py nome=HCL_UK_ textura=hcl_uk_): Res 1 full,
 # Res 2 without the feather fronds (the shell carries the feather texture), like the French bearskins
 BONNET_BLEND = r"source\models\bonnet\hcl_bonnet_uk\hcl_bonnet_uk_texturas.blend"

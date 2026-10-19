@@ -203,7 +203,8 @@ elif FRENTE == "simples":
 elif FRENTE == "alamares":
     # Portuguese Cacadores (portugal_1812.md section 2; 6th Cacadores 1811, Napoleon Series): 8 rows of black lace
     # frogging with a button at each end and in the centre; the frogging is PAINTED by the painter (key "alamar")
-    for h in np.linspace(H_TOP, H_BOT + 0.020, 8):
+    # fileiras=10: Brunswick dolman 1815 (docs/specs/kgl_brunswick_1815.md section 4: 10 rows of black braid)
+    for h in np.linspace(H_TOP, H_BOT + 0.020, int(OPT.get("fileiras", 8))):
         t = (h - H_BOT) / (H_TOP - H_BOT)
         for side in (0, 1, -1):
             pos.append((side * (0.055 + 0.040 * t), h, side))

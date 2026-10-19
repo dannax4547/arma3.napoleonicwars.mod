@@ -5,16 +5,22 @@
 import bpy, sys
 import numpy as np
 
+#   [modo=branco]: white (light, unsaturated) instead of brass - Brunswick skull and crossbones, britainINFb c5 r4
 a = sys.argv[sys.argv.index("--") + 1:]
+MODO = dict(x.split("=", 1) for x in a[2:] if "=" in x).get("modo", "latao")
 im = bpy.data.images.load(a[0]); W, H = im.size
 px = np.array(im.pixels[:], np.float32).reshape(H, W, 4)[::-1].copy()      # top row first
-for box in a[2:]:
+for box in [x for x in a[2:] if "=" not in x]:
     x0, y0, x1, y1 = map(int, box.split(","))
     c = px[y0:y1, x0:x1]
     r, g, b = c[..., 0], c[..., 1], c[..., 2]
-    brass = np.clip((r - 0.16) / 0.06, 0, 1) * np.clip(((r - b) - 0.08) / 0.05, 0, 1)
+    if MODO == "branco":
+        lum = (r + g + b) / 3
+        brass = np.clip((lum - 0.12) / 0.06, 0, 1) * np.clip((0.12 - (np.max(c[..., :3], 2) - np.min(c[..., :3], 2))) / 0.06, 0, 1)
+    else:
+        brass = np.clip((r - 0.16) / 0.06, 0, 1) * np.clip(((r - b) - 0.08) / 0.05, 0, 1)
     c[..., 3] = brass
-    print(f"caixa {box}: latao {float((brass > 0.5).mean()) * 100:.1f}%")
+    print(f"caixa {box}: {MODO} {float((brass > 0.5).mean()) * 100:.1f}%")
 out = bpy.data.images.new("mascara", W, H, alpha=True)
 out.pixels.foreach_set(px[::-1].ravel())
 out.filepath_raw = a[1]; out.file_format = "PNG"; out.save()

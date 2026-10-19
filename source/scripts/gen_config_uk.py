@@ -21,7 +21,9 @@ for fn, p3d, base, nat in (("variantes_uk_linha.json", "hcl_u_uk1812_linha", "HC
                            # Portugal (docs/specs/portugal_1812.md): 24 line regiments, 12 Cacadores battalions
                            ("variantes_por_linha.json", "hcl_u_por1812_linha", "HCL_POR1812_Soldado_Base", "POR1812"),
                            ("variantes_por_cacadores.json", "hcl_u_por1812_cacadores", "HCL_POR1812_Soldado_Cacadores_Base",
-                            "POR1812")):
+                            "POR1812"),
+                           # Brunswick 1815 (docs/specs/kgl_brunswick_1815.md section 4): black dolman B01..B08
+                           ("variantes_bru_dolman.json", "hcl_u_bru1815_dolman", "HCL_BRU1815_Soldado_Base", "BRU1815")):
     GROUPS.append((json.load(open(os.path.join(JS, fn), encoding="utf-8")), p3d, base, nat))
 # caps: P3D tag -> class suffix (blockout_shako_uk.py VARIANTS)
 CAPS = [("belgic_batalhao", "Belgic_Batalhao"), ("belgic_granadeiro", "Belgic_Granadeiro"), ("belgic_ligeira", "Belgic_Ligeira"),
@@ -35,6 +37,11 @@ HEAD.append(("hcl_h_uk_bonnet_highland", "hcl_uk_bonnet_highland", "HCL_H_UK1812
 for tg, cls in (("por_batalhao", "Batalhao"), ("por_granadeiro", "Granadeiro"), ("por_ligeira", "Ligeira")):
     for n in range(1, 25):
         HEAD.append((f"hcl_h_uk_{tg}", f"hcl_shako_uk_{tg}", f"HCL_H_POR1812_Stovepipe_{cls}_{n:02d}", f"hcl_por_numero_l{n:02d}"))
+# Brunswick "Kiwer" shakos; the line cap has one class per battalion (number band, hcl_bru_numero_b1..b3)
+for tg, cls in (("bru_leib", "Leib"), ("bru_ligeiro", "Ligeiro"), ("bru_avantgarde", "Avantgarde")):
+    HEAD.append((f"hcl_h_uk_{tg}", f"hcl_shako_uk_{tg}", f"HCL_H_BRU1815_Kiwer_{cls}", None))
+for n in range(1, 4):
+    HEAD.append(("hcl_h_uk_bru_linha", "hcl_shako_uk_bru_linha", f"HCL_H_BRU1815_Kiwer_Linha_{n}", f"hcl_bru_numero_b{n}"))
 for n in range(1, 13):
     HEAD.append(("hcl_h_uk_por_cacadores", "hcl_shako_uk_por_cacadores", f"HCL_H_POR1812_Stovepipe_Cacadores_{n:02d}",
                  f"hcl_por_numero_c{n:02d}"))
