@@ -9,7 +9,7 @@ class CfgPatches
 	{
 		author = "Historical Clothing";
 		units[] = {};
-		weapons[] = {"HCL_U_Varsovia1810_L1810", "HCL_U_Varsovia1810_R07", "HCL_U_Varsovia1810_R09", "HCL_U_Varsovia1810_Granadeiro_L1810", "HCL_U_Varsovia1810_Voltigeur_L1810", "HCL_H_Varsovia1810_Czapka_Fuzileiro", "HCL_H_Varsovia1810_Czapka_Voltigeur", "HCL_H_Varsovia1810_Bonnet_Granadeiro_Gala", "HCL_H_Varsovia1810_Bonnet_Granadeiro_Campanha"};
+		weapons[] = {"HCL_U_Varsovia1810_L1810", "HCL_U_Varsovia1810_R07", "HCL_U_Varsovia1810_R09", "HCL_U_Varsovia1810_R13", "HCL_U_Varsovia1810_R15", "HCL_U_Varsovia1810_Fuzileiro_R01", "HCL_U_Varsovia1810_Granadeiro_L1810", "HCL_U_Varsovia1810_Granadeiro_R13", "HCL_U_Varsovia1810_Granadeiro_R15", "HCL_U_Varsovia1810_Voltigeur_L1810", "HCL_U_Varsovia1810_Voltigeur_R13", "HCL_U_Varsovia1810_Voltigeur_R15", "HCL_H_Varsovia1810_Czapka_Fuzileiro", "HCL_H_Varsovia1810_Czapka_Voltigeur", "HCL_H_Varsovia1810_Bonnet_Granadeiro_Gala", "HCL_H_Varsovia1810_Bonnet_Granadeiro_Campanha", "HCL_H_Varsovia1810_Czapka_Fuzileiro_R02", "HCL_H_Varsovia1810_Czapka_Fuzileiro_R03", "HCL_H_Varsovia1810_Czapka_Fuzileiro_R05", "HCL_H_Varsovia1810_Czapka_Fuzileiro_R06", "HCL_H_Varsovia1810_Czapka_Fuzileiro_R07", "HCL_H_Varsovia1810_Czapka_Fuzileiro_R08", "HCL_H_Varsovia1810_Czapka_Fuzileiro_R09", "HCL_H_Varsovia1810_Czapka_Fuzileiro_R11", "HCL_H_Varsovia1810_Czapka_Fuzileiro_R12", "HCL_H_Varsovia1810_Czapka_Fuzileiro_R14", "HCL_H_Varsovia1810_Czapka_Fuzileiro_R15", "HCL_H_Varsovia1810_Czapka_Fuzileiro_R16", "HCL_H_Varsovia1810_Czapka_Fuzileiro_R17", "HCL_H_Varsovia1810_Czapka_Fuzileiro_R01", "HCL_H_Varsovia1810_Bonnet_Granadeiro_R05", "HCL_H_Varsovia1810_Bonnet_Granadeiro_R06", "HCL_H_Varsovia1810_Bonnet_Granadeiro_Lisa"};
 		requiredVersion = 0.1;
 		requiredAddons[] = {"A3_Characters_F"};
 	};
@@ -56,12 +56,30 @@ class CfgVehicles
 		uniformClass = "HCL_U_Varsovia1810_R09";
 		hiddenSelectionsTextures[] = {"\hcl\hcl_varsovia\data\hcl_u_varsovia1810_r09_co.paa"};
 	};
+	class HCL_Varsovia1810_Soldado_R13: HCL_Varsovia1810_Soldado_Base
+	{
+		displayName = "Duchy of Warsaw Infantryman - 13th Infantry Regiment (white coat), Fusiliers (HCL test)";
+		uniformClass = "HCL_U_Varsovia1810_R13";
+		hiddenSelectionsTextures[] = {"\hcl\hcl_varsovia\data\hcl_u_varsovia1810_r13_co.paa"};
+	};
+	class HCL_Varsovia1810_Soldado_R15: HCL_Varsovia1810_Soldado_Base
+	{
+		displayName = "Duchy of Warsaw Infantryman - 15th Infantry Regiment, Fusiliers (HCL test)";
+		uniformClass = "HCL_U_Varsovia1810_R15";
+		hiddenSelectionsTextures[] = {"\hcl\hcl_varsovia\data\hcl_u_varsovia1810_r15_co.paa"};
+	};
 	class HCL_Varsovia1810_Soldado_Elite_Base: HCL_Varsovia1810_Soldado_Base
 	{
 		displayName = "Duchy of Warsaw Infantryman 1810, elite company (HCL test)";
 		model = "\hcl\hcl_varsovia\hcl_u_varsovia1810_elite.p3d";
-		uniformClass = "HCL_U_Varsovia1810_Granadeiro_L1810";
-		hiddenSelectionsTextures[] = {"\hcl\hcl_varsovia\data\hcl_u_varsovia1810_elite_gr_co.paa"};
+		uniformClass = "HCL_U_Varsovia1810_Fuzileiro_R01";
+		hiddenSelectionsTextures[] = {"\hcl\hcl_varsovia\data\hcl_u_varsovia1810_elite_fu01_co.paa"};
+	};
+	class HCL_Varsovia1810_Soldado_Fuzileiro_R01: HCL_Varsovia1810_Soldado_Elite_Base
+	{
+		displayName = "Duchy of Warsaw Infantryman - 1st Infantry Regiment, Fusiliers (white fringed epaulettes) (HCL test)";
+		uniformClass = "HCL_U_Varsovia1810_Fuzileiro_R01";
+		hiddenSelectionsTextures[] = {"\hcl\hcl_varsovia\data\hcl_u_varsovia1810_elite_fu01_co.paa"};
 	};
 	class HCL_Varsovia1810_Soldado_Granadeiro_L1810: HCL_Varsovia1810_Soldado_Elite_Base
 	{
@@ -69,11 +87,35 @@ class CfgVehicles
 		uniformClass = "HCL_U_Varsovia1810_Granadeiro_L1810";
 		hiddenSelectionsTextures[] = {"\hcl\hcl_varsovia\data\hcl_u_varsovia1810_elite_gr_co.paa"};
 	};
+	class HCL_Varsovia1810_Soldado_Granadeiro_R13: HCL_Varsovia1810_Soldado_Elite_Base
+	{
+		displayName = "Duchy of Warsaw Infantryman - 13th Infantry Regiment (white coat), Grenadier Company (HCL test)";
+		uniformClass = "HCL_U_Varsovia1810_Granadeiro_R13";
+		hiddenSelectionsTextures[] = {"\hcl\hcl_varsovia\data\hcl_u_varsovia1810_elite_gr13_co.paa"};
+	};
+	class HCL_Varsovia1810_Soldado_Granadeiro_R15: HCL_Varsovia1810_Soldado_Elite_Base
+	{
+		displayName = "Duchy of Warsaw Infantryman - 15th Infantry Regiment, Grenadier Company (HCL test)";
+		uniformClass = "HCL_U_Varsovia1810_Granadeiro_R15";
+		hiddenSelectionsTextures[] = {"\hcl\hcl_varsovia\data\hcl_u_varsovia1810_elite_gr15_co.paa"};
+	};
 	class HCL_Varsovia1810_Soldado_Voltigeur_L1810: HCL_Varsovia1810_Soldado_Elite_Base
 	{
 		displayName = "Duchy of Warsaw Infantryman - Line Infantry, 1810 regulation, Voltigeur Company (HCL test)";
 		uniformClass = "HCL_U_Varsovia1810_Voltigeur_L1810";
 		hiddenSelectionsTextures[] = {"\hcl\hcl_varsovia\data\hcl_u_varsovia1810_elite_vo_co.paa"};
+	};
+	class HCL_Varsovia1810_Soldado_Voltigeur_R13: HCL_Varsovia1810_Soldado_Elite_Base
+	{
+		displayName = "Duchy of Warsaw Infantryman - 13th Infantry Regiment (white coat), Voltigeur Company (HCL test)";
+		uniformClass = "HCL_U_Varsovia1810_Voltigeur_R13";
+		hiddenSelectionsTextures[] = {"\hcl\hcl_varsovia\data\hcl_u_varsovia1810_elite_vo13_co.paa"};
+	};
+	class HCL_Varsovia1810_Soldado_Voltigeur_R15: HCL_Varsovia1810_Soldado_Elite_Base
+	{
+		displayName = "Duchy of Warsaw Infantryman - 15th Infantry Regiment, Voltigeur Company (HCL test)";
+		uniformClass = "HCL_U_Varsovia1810_Voltigeur_R15";
+		hiddenSelectionsTextures[] = {"\hcl\hcl_varsovia\data\hcl_u_varsovia1810_elite_vo15_co.paa"};
 	};
 };
 
@@ -138,6 +180,57 @@ class CfgWeapons
 			mass = 40;
 		};
 	};
+	class HCL_U_Varsovia1810_R13: Uniform_Base
+	{
+		author = "Historical Clothing";
+		scope = 2;
+		displayName = "[HCL] Duchy of Warsaw Kurtka 1810 - 13th Infantry Regiment (white coat), Fusiliers";
+		picture = "\A3\characters_f\data\ui\icon_U_BasicBody_ca.paa";
+		model = "\A3\Characters_F\Common\Suitpacks\suitpack_universal_F.p3d";
+		hiddenSelections[] = {"camo"};
+		hiddenSelectionsTextures[] = {"\A3\Characters_F\Common\Suitpacks\data\suitpack_soldier_blufor_co.paa"};
+		class ItemInfo: UniformItem
+		{
+			uniformModel = "-";
+			uniformClass = "HCL_Varsovia1810_Soldado_R13";
+			containerClass = "Supply40";
+			mass = 40;
+		};
+	};
+	class HCL_U_Varsovia1810_R15: Uniform_Base
+	{
+		author = "Historical Clothing";
+		scope = 2;
+		displayName = "[HCL] Duchy of Warsaw Kurtka 1810 - 15th Infantry Regiment, Fusiliers";
+		picture = "\A3\characters_f\data\ui\icon_U_BasicBody_ca.paa";
+		model = "\A3\Characters_F\Common\Suitpacks\suitpack_universal_F.p3d";
+		hiddenSelections[] = {"camo"};
+		hiddenSelectionsTextures[] = {"\A3\Characters_F\Common\Suitpacks\data\suitpack_soldier_blufor_co.paa"};
+		class ItemInfo: UniformItem
+		{
+			uniformModel = "-";
+			uniformClass = "HCL_Varsovia1810_Soldado_R15";
+			containerClass = "Supply40";
+			mass = 40;
+		};
+	};
+	class HCL_U_Varsovia1810_Fuzileiro_R01: Uniform_Base
+	{
+		author = "Historical Clothing";
+		scope = 2;
+		displayName = "[HCL] Duchy of Warsaw Kurtka 1810 - 1st Infantry Regiment, Fusiliers (white fringed epaulettes)";
+		picture = "\A3\characters_f\data\ui\icon_U_BasicBody_ca.paa";
+		model = "\A3\Characters_F\Common\Suitpacks\suitpack_universal_F.p3d";
+		hiddenSelections[] = {"camo"};
+		hiddenSelectionsTextures[] = {"\A3\Characters_F\Common\Suitpacks\data\suitpack_soldier_blufor_co.paa"};
+		class ItemInfo: UniformItem
+		{
+			uniformModel = "-";
+			uniformClass = "HCL_Varsovia1810_Soldado_Fuzileiro_R01";
+			containerClass = "Supply40";
+			mass = 40;
+		};
+	};
 	class HCL_U_Varsovia1810_Granadeiro_L1810: Uniform_Base
 	{
 		author = "Historical Clothing";
@@ -155,6 +248,40 @@ class CfgWeapons
 			mass = 40;
 		};
 	};
+	class HCL_U_Varsovia1810_Granadeiro_R13: Uniform_Base
+	{
+		author = "Historical Clothing";
+		scope = 2;
+		displayName = "[HCL] Duchy of Warsaw Kurtka 1810 - 13th Infantry Regiment (white coat), Grenadier Company";
+		picture = "\A3\characters_f\data\ui\icon_U_BasicBody_ca.paa";
+		model = "\A3\Characters_F\Common\Suitpacks\suitpack_universal_F.p3d";
+		hiddenSelections[] = {"camo"};
+		hiddenSelectionsTextures[] = {"\A3\Characters_F\Common\Suitpacks\data\suitpack_soldier_blufor_co.paa"};
+		class ItemInfo: UniformItem
+		{
+			uniformModel = "-";
+			uniformClass = "HCL_Varsovia1810_Soldado_Granadeiro_R13";
+			containerClass = "Supply40";
+			mass = 40;
+		};
+	};
+	class HCL_U_Varsovia1810_Granadeiro_R15: Uniform_Base
+	{
+		author = "Historical Clothing";
+		scope = 2;
+		displayName = "[HCL] Duchy of Warsaw Kurtka 1810 - 15th Infantry Regiment, Grenadier Company";
+		picture = "\A3\characters_f\data\ui\icon_U_BasicBody_ca.paa";
+		model = "\A3\Characters_F\Common\Suitpacks\suitpack_universal_F.p3d";
+		hiddenSelections[] = {"camo"};
+		hiddenSelectionsTextures[] = {"\A3\Characters_F\Common\Suitpacks\data\suitpack_soldier_blufor_co.paa"};
+		class ItemInfo: UniformItem
+		{
+			uniformModel = "-";
+			uniformClass = "HCL_Varsovia1810_Soldado_Granadeiro_R15";
+			containerClass = "Supply40";
+			mass = 40;
+		};
+	};
 	class HCL_U_Varsovia1810_Voltigeur_L1810: Uniform_Base
 	{
 		author = "Historical Clothing";
@@ -168,6 +295,40 @@ class CfgWeapons
 		{
 			uniformModel = "-";
 			uniformClass = "HCL_Varsovia1810_Soldado_Voltigeur_L1810";
+			containerClass = "Supply40";
+			mass = 40;
+		};
+	};
+	class HCL_U_Varsovia1810_Voltigeur_R13: Uniform_Base
+	{
+		author = "Historical Clothing";
+		scope = 2;
+		displayName = "[HCL] Duchy of Warsaw Kurtka 1810 - 13th Infantry Regiment (white coat), Voltigeur Company";
+		picture = "\A3\characters_f\data\ui\icon_U_BasicBody_ca.paa";
+		model = "\A3\Characters_F\Common\Suitpacks\suitpack_universal_F.p3d";
+		hiddenSelections[] = {"camo"};
+		hiddenSelectionsTextures[] = {"\A3\Characters_F\Common\Suitpacks\data\suitpack_soldier_blufor_co.paa"};
+		class ItemInfo: UniformItem
+		{
+			uniformModel = "-";
+			uniformClass = "HCL_Varsovia1810_Soldado_Voltigeur_R13";
+			containerClass = "Supply40";
+			mass = 40;
+		};
+	};
+	class HCL_U_Varsovia1810_Voltigeur_R15: Uniform_Base
+	{
+		author = "Historical Clothing";
+		scope = 2;
+		displayName = "[HCL] Duchy of Warsaw Kurtka 1810 - 15th Infantry Regiment, Voltigeur Company";
+		picture = "\A3\characters_f\data\ui\icon_U_BasicBody_ca.paa";
+		model = "\A3\Characters_F\Common\Suitpacks\suitpack_universal_F.p3d";
+		hiddenSelections[] = {"camo"};
+		hiddenSelectionsTextures[] = {"\A3\Characters_F\Common\Suitpacks\data\suitpack_soldier_blufor_co.paa"};
+		class ItemInfo: UniformItem
+		{
+			uniformModel = "-";
+			uniformClass = "HCL_Varsovia1810_Soldado_Voltigeur_R15";
 			containerClass = "Supply40";
 			mass = 40;
 		};
@@ -267,6 +428,465 @@ class CfgWeapons
 		{
 			mass = 15;
 			uniformModel = "\hcl\hcl_varsovia\hcl_h_varsovia_bonnet_granadeiro_campanha.p3d";
+			modelSides[] = {0, 1, 2, 3};
+			hiddenSelections[] = {"camo"};
+			class HitpointsProtectionInfo
+			{
+				class Head
+				{
+					hitpointName = "HitHead";
+					armor = 0;
+					passThrough = 1;
+				};
+			};
+		};
+	};
+	class HCL_H_Varsovia1810_Czapka_Fuzileiro_R02: H_HelmetB
+	{
+		author = "Historical Clothing";
+		scope = 2;
+		displayName = "[HCL] Duchy of Warsaw Czapka 1810 - Fusilier, black pompom, plate of the 2nd Regiment";
+		descriptionShort = "HCL test - no protection";
+		picture = "\A3\characters_f\Data\UI\icon_H_helmet_plain_ca.paa";
+		model = "\hcl\hcl_varsovia\hcl_h_varsovia_czapka_fuzileiro.p3d";
+		hiddenSelections[] = {"camo"};
+		hiddenSelectionsTextures[] = {"\hcl\hcl_varsovia\data\hcl_czapka_varsovia_fuzileiro_rgt02_co.paa"};
+		class ItemInfo: ItemInfo
+		{
+			mass = 15;
+			uniformModel = "\hcl\hcl_varsovia\hcl_h_varsovia_czapka_fuzileiro.p3d";
+			modelSides[] = {0, 1, 2, 3};
+			hiddenSelections[] = {"camo"};
+			class HitpointsProtectionInfo
+			{
+				class Head
+				{
+					hitpointName = "HitHead";
+					armor = 0;
+					passThrough = 1;
+				};
+			};
+		};
+	};
+	class HCL_H_Varsovia1810_Czapka_Fuzileiro_R03: H_HelmetB
+	{
+		author = "Historical Clothing";
+		scope = 2;
+		displayName = "[HCL] Duchy of Warsaw Czapka 1810 - Fusilier, black pompom, plate of the 3rd Regiment";
+		descriptionShort = "HCL test - no protection";
+		picture = "\A3\characters_f\Data\UI\icon_H_helmet_plain_ca.paa";
+		model = "\hcl\hcl_varsovia\hcl_h_varsovia_czapka_fuzileiro.p3d";
+		hiddenSelections[] = {"camo"};
+		hiddenSelectionsTextures[] = {"\hcl\hcl_varsovia\data\hcl_czapka_varsovia_fuzileiro_rgt03_co.paa"};
+		class ItemInfo: ItemInfo
+		{
+			mass = 15;
+			uniformModel = "\hcl\hcl_varsovia\hcl_h_varsovia_czapka_fuzileiro.p3d";
+			modelSides[] = {0, 1, 2, 3};
+			hiddenSelections[] = {"camo"};
+			class HitpointsProtectionInfo
+			{
+				class Head
+				{
+					hitpointName = "HitHead";
+					armor = 0;
+					passThrough = 1;
+				};
+			};
+		};
+	};
+	class HCL_H_Varsovia1810_Czapka_Fuzileiro_R05: H_HelmetB
+	{
+		author = "Historical Clothing";
+		scope = 2;
+		displayName = "[HCL] Duchy of Warsaw Czapka 1810 - Fusilier, black pompom, plate of the 5th Regiment";
+		descriptionShort = "HCL test - no protection";
+		picture = "\A3\characters_f\Data\UI\icon_H_helmet_plain_ca.paa";
+		model = "\hcl\hcl_varsovia\hcl_h_varsovia_czapka_fuzileiro.p3d";
+		hiddenSelections[] = {"camo"};
+		hiddenSelectionsTextures[] = {"\hcl\hcl_varsovia\data\hcl_czapka_varsovia_fuzileiro_rgt05_co.paa"};
+		class ItemInfo: ItemInfo
+		{
+			mass = 15;
+			uniformModel = "\hcl\hcl_varsovia\hcl_h_varsovia_czapka_fuzileiro.p3d";
+			modelSides[] = {0, 1, 2, 3};
+			hiddenSelections[] = {"camo"};
+			class HitpointsProtectionInfo
+			{
+				class Head
+				{
+					hitpointName = "HitHead";
+					armor = 0;
+					passThrough = 1;
+				};
+			};
+		};
+	};
+	class HCL_H_Varsovia1810_Czapka_Fuzileiro_R06: H_HelmetB
+	{
+		author = "Historical Clothing";
+		scope = 2;
+		displayName = "[HCL] Duchy of Warsaw Czapka 1810 - Fusilier, black pompom, plate of the 6th Regiment";
+		descriptionShort = "HCL test - no protection";
+		picture = "\A3\characters_f\Data\UI\icon_H_helmet_plain_ca.paa";
+		model = "\hcl\hcl_varsovia\hcl_h_varsovia_czapka_fuzileiro.p3d";
+		hiddenSelections[] = {"camo"};
+		hiddenSelectionsTextures[] = {"\hcl\hcl_varsovia\data\hcl_czapka_varsovia_fuzileiro_rgt06_co.paa"};
+		class ItemInfo: ItemInfo
+		{
+			mass = 15;
+			uniformModel = "\hcl\hcl_varsovia\hcl_h_varsovia_czapka_fuzileiro.p3d";
+			modelSides[] = {0, 1, 2, 3};
+			hiddenSelections[] = {"camo"};
+			class HitpointsProtectionInfo
+			{
+				class Head
+				{
+					hitpointName = "HitHead";
+					armor = 0;
+					passThrough = 1;
+				};
+			};
+		};
+	};
+	class HCL_H_Varsovia1810_Czapka_Fuzileiro_R07: H_HelmetB
+	{
+		author = "Historical Clothing";
+		scope = 2;
+		displayName = "[HCL] Duchy of Warsaw Czapka 1810 - Fusilier, black pompom, plate of the 7th Regiment";
+		descriptionShort = "HCL test - no protection";
+		picture = "\A3\characters_f\Data\UI\icon_H_helmet_plain_ca.paa";
+		model = "\hcl\hcl_varsovia\hcl_h_varsovia_czapka_fuzileiro.p3d";
+		hiddenSelections[] = {"camo"};
+		hiddenSelectionsTextures[] = {"\hcl\hcl_varsovia\data\hcl_czapka_varsovia_fuzileiro_rgt07_co.paa"};
+		class ItemInfo: ItemInfo
+		{
+			mass = 15;
+			uniformModel = "\hcl\hcl_varsovia\hcl_h_varsovia_czapka_fuzileiro.p3d";
+			modelSides[] = {0, 1, 2, 3};
+			hiddenSelections[] = {"camo"};
+			class HitpointsProtectionInfo
+			{
+				class Head
+				{
+					hitpointName = "HitHead";
+					armor = 0;
+					passThrough = 1;
+				};
+			};
+		};
+	};
+	class HCL_H_Varsovia1810_Czapka_Fuzileiro_R08: H_HelmetB
+	{
+		author = "Historical Clothing";
+		scope = 2;
+		displayName = "[HCL] Duchy of Warsaw Czapka 1810 - Fusilier, black pompom, plate of the 8th Regiment";
+		descriptionShort = "HCL test - no protection";
+		picture = "\A3\characters_f\Data\UI\icon_H_helmet_plain_ca.paa";
+		model = "\hcl\hcl_varsovia\hcl_h_varsovia_czapka_fuzileiro.p3d";
+		hiddenSelections[] = {"camo"};
+		hiddenSelectionsTextures[] = {"\hcl\hcl_varsovia\data\hcl_czapka_varsovia_fuzileiro_rgt08_co.paa"};
+		class ItemInfo: ItemInfo
+		{
+			mass = 15;
+			uniformModel = "\hcl\hcl_varsovia\hcl_h_varsovia_czapka_fuzileiro.p3d";
+			modelSides[] = {0, 1, 2, 3};
+			hiddenSelections[] = {"camo"};
+			class HitpointsProtectionInfo
+			{
+				class Head
+				{
+					hitpointName = "HitHead";
+					armor = 0;
+					passThrough = 1;
+				};
+			};
+		};
+	};
+	class HCL_H_Varsovia1810_Czapka_Fuzileiro_R09: H_HelmetB
+	{
+		author = "Historical Clothing";
+		scope = 2;
+		displayName = "[HCL] Duchy of Warsaw Czapka 1810 - Fusilier, black pompom, plate of the 9th Regiment";
+		descriptionShort = "HCL test - no protection";
+		picture = "\A3\characters_f\Data\UI\icon_H_helmet_plain_ca.paa";
+		model = "\hcl\hcl_varsovia\hcl_h_varsovia_czapka_fuzileiro.p3d";
+		hiddenSelections[] = {"camo"};
+		hiddenSelectionsTextures[] = {"\hcl\hcl_varsovia\data\hcl_czapka_varsovia_fuzileiro_rgt09_co.paa"};
+		class ItemInfo: ItemInfo
+		{
+			mass = 15;
+			uniformModel = "\hcl\hcl_varsovia\hcl_h_varsovia_czapka_fuzileiro.p3d";
+			modelSides[] = {0, 1, 2, 3};
+			hiddenSelections[] = {"camo"};
+			class HitpointsProtectionInfo
+			{
+				class Head
+				{
+					hitpointName = "HitHead";
+					armor = 0;
+					passThrough = 1;
+				};
+			};
+		};
+	};
+	class HCL_H_Varsovia1810_Czapka_Fuzileiro_R11: H_HelmetB
+	{
+		author = "Historical Clothing";
+		scope = 2;
+		displayName = "[HCL] Duchy of Warsaw Czapka 1810 - Fusilier, black pompom, plate of the 11th Regiment";
+		descriptionShort = "HCL test - no protection";
+		picture = "\A3\characters_f\Data\UI\icon_H_helmet_plain_ca.paa";
+		model = "\hcl\hcl_varsovia\hcl_h_varsovia_czapka_fuzileiro.p3d";
+		hiddenSelections[] = {"camo"};
+		hiddenSelectionsTextures[] = {"\hcl\hcl_varsovia\data\hcl_czapka_varsovia_fuzileiro_rgt11_co.paa"};
+		class ItemInfo: ItemInfo
+		{
+			mass = 15;
+			uniformModel = "\hcl\hcl_varsovia\hcl_h_varsovia_czapka_fuzileiro.p3d";
+			modelSides[] = {0, 1, 2, 3};
+			hiddenSelections[] = {"camo"};
+			class HitpointsProtectionInfo
+			{
+				class Head
+				{
+					hitpointName = "HitHead";
+					armor = 0;
+					passThrough = 1;
+				};
+			};
+		};
+	};
+	class HCL_H_Varsovia1810_Czapka_Fuzileiro_R12: H_HelmetB
+	{
+		author = "Historical Clothing";
+		scope = 2;
+		displayName = "[HCL] Duchy of Warsaw Czapka 1810 - Fusilier, black pompom, plate of the 12th Regiment";
+		descriptionShort = "HCL test - no protection";
+		picture = "\A3\characters_f\Data\UI\icon_H_helmet_plain_ca.paa";
+		model = "\hcl\hcl_varsovia\hcl_h_varsovia_czapka_fuzileiro.p3d";
+		hiddenSelections[] = {"camo"};
+		hiddenSelectionsTextures[] = {"\hcl\hcl_varsovia\data\hcl_czapka_varsovia_fuzileiro_rgt12_co.paa"};
+		class ItemInfo: ItemInfo
+		{
+			mass = 15;
+			uniformModel = "\hcl\hcl_varsovia\hcl_h_varsovia_czapka_fuzileiro.p3d";
+			modelSides[] = {0, 1, 2, 3};
+			hiddenSelections[] = {"camo"};
+			class HitpointsProtectionInfo
+			{
+				class Head
+				{
+					hitpointName = "HitHead";
+					armor = 0;
+					passThrough = 1;
+				};
+			};
+		};
+	};
+	class HCL_H_Varsovia1810_Czapka_Fuzileiro_R14: H_HelmetB
+	{
+		author = "Historical Clothing";
+		scope = 2;
+		displayName = "[HCL] Duchy of Warsaw Czapka 1810 - Fusilier, black pompom, plate of the 14th Regiment";
+		descriptionShort = "HCL test - no protection";
+		picture = "\A3\characters_f\Data\UI\icon_H_helmet_plain_ca.paa";
+		model = "\hcl\hcl_varsovia\hcl_h_varsovia_czapka_fuzileiro.p3d";
+		hiddenSelections[] = {"camo"};
+		hiddenSelectionsTextures[] = {"\hcl\hcl_varsovia\data\hcl_czapka_varsovia_fuzileiro_rgt14_co.paa"};
+		class ItemInfo: ItemInfo
+		{
+			mass = 15;
+			uniformModel = "\hcl\hcl_varsovia\hcl_h_varsovia_czapka_fuzileiro.p3d";
+			modelSides[] = {0, 1, 2, 3};
+			hiddenSelections[] = {"camo"};
+			class HitpointsProtectionInfo
+			{
+				class Head
+				{
+					hitpointName = "HitHead";
+					armor = 0;
+					passThrough = 1;
+				};
+			};
+		};
+	};
+	class HCL_H_Varsovia1810_Czapka_Fuzileiro_R15: H_HelmetB
+	{
+		author = "Historical Clothing";
+		scope = 2;
+		displayName = "[HCL] Duchy of Warsaw Czapka 1810 - Fusilier, black pompom, plate of the 15th Regiment";
+		descriptionShort = "HCL test - no protection";
+		picture = "\A3\characters_f\Data\UI\icon_H_helmet_plain_ca.paa";
+		model = "\hcl\hcl_varsovia\hcl_h_varsovia_czapka_fuzileiro.p3d";
+		hiddenSelections[] = {"camo"};
+		hiddenSelectionsTextures[] = {"\hcl\hcl_varsovia\data\hcl_czapka_varsovia_fuzileiro_rgt15_co.paa"};
+		class ItemInfo: ItemInfo
+		{
+			mass = 15;
+			uniformModel = "\hcl\hcl_varsovia\hcl_h_varsovia_czapka_fuzileiro.p3d";
+			modelSides[] = {0, 1, 2, 3};
+			hiddenSelections[] = {"camo"};
+			class HitpointsProtectionInfo
+			{
+				class Head
+				{
+					hitpointName = "HitHead";
+					armor = 0;
+					passThrough = 1;
+				};
+			};
+		};
+	};
+	class HCL_H_Varsovia1810_Czapka_Fuzileiro_R16: H_HelmetB
+	{
+		author = "Historical Clothing";
+		scope = 2;
+		displayName = "[HCL] Duchy of Warsaw Czapka 1810 - Fusilier, black pompom, plate of the 16th Regiment";
+		descriptionShort = "HCL test - no protection";
+		picture = "\A3\characters_f\Data\UI\icon_H_helmet_plain_ca.paa";
+		model = "\hcl\hcl_varsovia\hcl_h_varsovia_czapka_fuzileiro.p3d";
+		hiddenSelections[] = {"camo"};
+		hiddenSelectionsTextures[] = {"\hcl\hcl_varsovia\data\hcl_czapka_varsovia_fuzileiro_rgt16_co.paa"};
+		class ItemInfo: ItemInfo
+		{
+			mass = 15;
+			uniformModel = "\hcl\hcl_varsovia\hcl_h_varsovia_czapka_fuzileiro.p3d";
+			modelSides[] = {0, 1, 2, 3};
+			hiddenSelections[] = {"camo"};
+			class HitpointsProtectionInfo
+			{
+				class Head
+				{
+					hitpointName = "HitHead";
+					armor = 0;
+					passThrough = 1;
+				};
+			};
+		};
+	};
+	class HCL_H_Varsovia1810_Czapka_Fuzileiro_R17: H_HelmetB
+	{
+		author = "Historical Clothing";
+		scope = 2;
+		displayName = "[HCL] Duchy of Warsaw Czapka 1810 - Fusilier, black pompom, plate of the 17th Regiment";
+		descriptionShort = "HCL test - no protection";
+		picture = "\A3\characters_f\Data\UI\icon_H_helmet_plain_ca.paa";
+		model = "\hcl\hcl_varsovia\hcl_h_varsovia_czapka_fuzileiro.p3d";
+		hiddenSelections[] = {"camo"};
+		hiddenSelectionsTextures[] = {"\hcl\hcl_varsovia\data\hcl_czapka_varsovia_fuzileiro_rgt17_co.paa"};
+		class ItemInfo: ItemInfo
+		{
+			mass = 15;
+			uniformModel = "\hcl\hcl_varsovia\hcl_h_varsovia_czapka_fuzileiro.p3d";
+			modelSides[] = {0, 1, 2, 3};
+			hiddenSelections[] = {"camo"};
+			class HitpointsProtectionInfo
+			{
+				class Head
+				{
+					hitpointName = "HitHead";
+					armor = 0;
+					passThrough = 1;
+				};
+			};
+		};
+	};
+	class HCL_H_Varsovia1810_Czapka_Fuzileiro_R01: H_HelmetB
+	{
+		author = "Historical Clothing";
+		scope = 2;
+		displayName = "[HCL] Duchy of Warsaw Czapka 1810 - Fusilier, black tuft, plate of the 1st Regiment";
+		descriptionShort = "HCL test - no protection";
+		picture = "\A3\characters_f\Data\UI\icon_H_helmet_plain_ca.paa";
+		model = "\hcl\hcl_varsovia\hcl_h_varsovia_czapka_fuzileiro_kita.p3d";
+		hiddenSelections[] = {"camo"};
+		hiddenSelectionsTextures[] = {"\hcl\hcl_varsovia\data\hcl_czapka_varsovia_fuzileiro_kita_rgt01_co.paa"};
+		class ItemInfo: ItemInfo
+		{
+			mass = 15;
+			uniformModel = "\hcl\hcl_varsovia\hcl_h_varsovia_czapka_fuzileiro_kita.p3d";
+			modelSides[] = {0, 1, 2, 3};
+			hiddenSelections[] = {"camo"};
+			class HitpointsProtectionInfo
+			{
+				class Head
+				{
+					hitpointName = "HitHead";
+					armor = 0;
+					passThrough = 1;
+				};
+			};
+		};
+	};
+	class HCL_H_Varsovia1810_Bonnet_Granadeiro_R05: H_HelmetB
+	{
+		author = "Historical Clothing";
+		scope = 2;
+		displayName = "[HCL] Duchy of Warsaw Grenadier Bearskin - 5th Regiment (no plate, brass grenade, crimson cords)";
+		descriptionShort = "HCL test - no protection";
+		picture = "\A3\characters_f\Data\UI\icon_H_helmet_plain_ca.paa";
+		model = "\hcl\hcl_varsovia\hcl_h_varsovia_bonnet_granadeiro_r05.p3d";
+		hiddenSelections[] = {"camo"};
+		hiddenSelectionsTextures[] = {"\hcl\hcl_varsovia\data\hcl_bonnet_varsovia_granadeiro_r05_co.paa"};
+		class ItemInfo: ItemInfo
+		{
+			mass = 15;
+			uniformModel = "\hcl\hcl_varsovia\hcl_h_varsovia_bonnet_granadeiro_r05.p3d";
+			modelSides[] = {0, 1, 2, 3};
+			hiddenSelections[] = {"camo"};
+			class HitpointsProtectionInfo
+			{
+				class Head
+				{
+					hitpointName = "HitHead";
+					armor = 0;
+					passThrough = 1;
+				};
+			};
+		};
+	};
+	class HCL_H_Varsovia1810_Bonnet_Granadeiro_R06: H_HelmetB
+	{
+		author = "Historical Clothing";
+		scope = 2;
+		displayName = "[HCL] Duchy of Warsaw Grenadier Bearskin - 6th Regiment (no plate or grenade, crimson cords)";
+		descriptionShort = "HCL test - no protection";
+		picture = "\A3\characters_f\Data\UI\icon_H_helmet_plain_ca.paa";
+		model = "\hcl\hcl_varsovia\hcl_h_varsovia_bonnet_granadeiro_r06.p3d";
+		hiddenSelections[] = {"camo"};
+		hiddenSelectionsTextures[] = {"\hcl\hcl_varsovia\data\hcl_bonnet_varsovia_granadeiro_r06_co.paa"};
+		class ItemInfo: ItemInfo
+		{
+			mass = 15;
+			uniformModel = "\hcl\hcl_varsovia\hcl_h_varsovia_bonnet_granadeiro_r06.p3d";
+			modelSides[] = {0, 1, 2, 3};
+			hiddenSelections[] = {"camo"};
+			class HitpointsProtectionInfo
+			{
+				class Head
+				{
+					hitpointName = "HitHead";
+					armor = 0;
+					passThrough = 1;
+				};
+			};
+		};
+	};
+	class HCL_H_Varsovia1810_Bonnet_Granadeiro_Lisa: H_HelmetB
+	{
+		author = "Historical Clothing";
+		scope = 2;
+		displayName = "[HCL] Duchy of Warsaw Grenadier Bearskin - plain, white cords (8th, 11th, 12th Regiments)";
+		descriptionShort = "HCL test - no protection";
+		picture = "\A3\characters_f\Data\UI\icon_H_helmet_plain_ca.paa";
+		model = "\hcl\hcl_varsovia\hcl_h_varsovia_bonnet_granadeiro_lisa.p3d";
+		hiddenSelections[] = {"camo"};
+		hiddenSelectionsTextures[] = {"\hcl\hcl_varsovia\data\hcl_bonnet_varsovia_granadeiro_lisa_co.paa"};
+		class ItemInfo: ItemInfo
+		{
+			mass = 15;
+			uniformModel = "\hcl\hcl_varsovia\hcl_h_varsovia_bonnet_granadeiro_lisa.p3d";
 			modelSides[] = {0, 1, 2, 3};
 			hiddenSelections[] = {"camo"};
 			class HitpointsProtectionInfo

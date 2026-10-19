@@ -170,3 +170,6 @@ player forceAddUniform "HCL_U_Varsovia1810_L1810"; removeHeadgear player; player
 | V2 | Czapka | `HCL_H_Varsovia1810_Czapka_Fuzileiro`, `..._Czapka_Voltigeur` | Topo quadrado sem atravessar nada ao olhar para cima/baixo; águia e "4" legíveis a 1–2 m; troca para a Res 2 |
 | V3 | Chapéu de pele | `HCL_H_Varsovia1810_Bonnet_Granadeiro_Gala`, `..._Campanha` | Águia branca sobre a placa de latão; cocar branco; desempenho (47 mil triângulos na gala) |
 | V4 | Nomes no Arsenal | todos | Inglês; "7th/9th Infantry Regiment", "1810 regulation" |
+| V5 | Mais regimentos: casacas | `HCL_U_Varsovia1810_R13`, `_R15`, `_Fuzileiro_R01`, `_Granadeiro_R13`, `_Voltigeur_R13`, `_Granadeiro_R15`, `_Voltigeur_R15` | Casaca branca com azul do 13º; lapelas carmesim e platinas amarelas do 15º; dragonas brancas com franja do 1º |
+| V6 | Czapkas numeradas | `HCL_H_Varsovia1810_Czapka_Fuzileiro_R01` … `_R17` | O número da placa **lê na direção certa** (na textura está espelhado de propósito); sem mancha onde estava o "4"; kita preta no 1º |
+| V7 | Chapéus de pele do 5º, 6º e liso | `..._Bonnet_Granadeiro_R05`, `_R06`, `_Lisa` | Sem placa; granada de latão só no 5º; cordões carmesim (5º, 6º) e brancos (liso) |

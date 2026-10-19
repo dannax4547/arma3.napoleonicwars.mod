@@ -17,6 +17,17 @@ HEAD = [(f"hcl_h_varsovia_czapka_{t}", f"hcl_czapka_varsovia_{t}", c, f"hcl_czap
         for t, c in (("fuzileiro", "Czapka_Fuzileiro"), ("voltigeur", "Czapka_Voltigeur"))]
 HEAD += [(f"hcl_h_varsovia_bonnet_{t}", f"hcl_bonnet_varsovia_{t}", c, f"hcl_bonnet_varsovia_{t}")
          for t, c in (("granadeiro_gala", "Bonnet_Granadeiro_Gala"), ("granadeiro_campanha", "Bonnet_Granadeiro_Campanha"))]
+# more regiments (user 2026-10-18): czapka plates numbered by numerar_placa_varsovia.py (the 10th and 13th wore
+# shakos, the 1st a black tuft: own model fuzileiro_kita), grenadier bearskins of the 5th, 6th and the plain ones of
+# the 8th, 11th and 12th (pl.wikipedia regiment articles, after Gembarzewski)
+RGT_PLACA = (2, 3, 5, 6, 7, 8, 9, 11, 12, 14, 15, 16, 17)
+HEAD += [("hcl_h_varsovia_czapka_fuzileiro", "hcl_czapka_varsovia_fuzileiro", f"Czapka_Fuzileiro_R{n:02d}",
+          f"hcl_czapka_varsovia_fuzileiro_rgt{n:02d}") for n in RGT_PLACA]
+HEAD += [("hcl_h_varsovia_czapka_fuzileiro_kita", "hcl_czapka_varsovia_fuzileiro_kita", "Czapka_Fuzileiro_R01",
+          "hcl_czapka_varsovia_fuzileiro_kita_rgt01")]
+HEAD += [(f"hcl_h_varsovia_bonnet_{t}", f"hcl_bonnet_varsovia_{t}", c, f"hcl_bonnet_varsovia_{t}")
+         for t, c in (("granadeiro_r05", "Bonnet_Granadeiro_R05"), ("granadeiro_r06", "Bonnet_Granadeiro_R06"),
+                      ("granadeiro_lisa", "Bonnet_Granadeiro_Lisa"))]
 
 
 def cls_u(v):            # S1 -> HCL_U_Varsovia1810_S1 ; Granadeiro_S1 -> HCL_U_Varsovia1810_Granadeiro_S1

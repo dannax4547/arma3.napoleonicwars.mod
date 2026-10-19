@@ -2,7 +2,7 @@
 
 Data: 2026-10-18. Pedidos do usuário: *"continuar os projetos"* e *"utilize fontes históricas de museus e documentos"*. Ficha: `docs/specs/aliados_fr_1812.md` §1.1, §8 (A5).
 
-**Estado:** `hcl_varsovia.pbo` montado e verificado **fora do jogo** (§5). Nada foi visto no Arma 3.
+**Estado:** `hcl_varsovia.pbo` montado e verificado **fora do jogo** (§5; mais regimentos em §6). Nada foi visto no Arma 3.
 
 ## 1. Fontes usadas
 
@@ -57,4 +57,36 @@ Imagens (pasta principal, `docs/reports/img/varsovia/`): `varsovia_linha_*` (reg
 
 Na mesma rodada o `hcl_suica.pbo` foi remontado só para os nomes do 2º e do 4º Suíço (fonte Fieffé achada): 7 de 7 com esqueleto, 48 referências, nenhuma faltando.
 
-Próximo grupo (A1): **Reino da Itália e Nápoles**.
+## 6. Mais regimentos (2026-10-18, pedido: "só adiciona mais regimentos para a Polônia")
+
+**Fonte:** os artigos da Wikipédia polonesa sobre cada regimento, que repetem a frase de Gembarzewski: o regulamento de 1810 *"nie doprowadził jednak do całkowitego ujednolicenia munduru piechoty"* (não uniformizou de todo a infantaria) e, em seguida, as diferenças de cada um.
+
+| Peça | Classes | Fonte e o que foi feito |
+|---|---|---|
+| **Placa numerada** da czapka, **2º, 3º, 5º–9º, 11º, 12º, 14º–17º** | `HCL_H_Varsovia1810_Czapka_Fuzileiro_R02` … `_R17` | 📜 regulamento ("placa amarela com o número do regimento"). Só textura (`numerar_placa_varsovia.py`): o "4" da arte é coberto por difusão do latão em volta da caixa, e o número novo é gravado em traço fino, no estilo do "4" (sulco escuro com borda clara embaixo), em coordenadas do atlas. O 10º e o 13º usavam barretina (*czako*), por isso ficam fora |
+| **1º Regimento**: czapka com **kita preta** e placa "1" | `..._Czapka_Fuzileiro_R01` (modelo `fuzileiro_kita`) | *"kity czarne na czapkach fizylierów"* (1 pp) |
+| **1º Regimento**: fuzileiro com **dragonas de lã branca com franja** | `HCL_U_Varsovia1810_Fuzileiro_R01` (casaca de elite) | *"szlify białe włóczkowe z frędzlami"* (1 pp) |
+| **13º Regimento**: casaca **branca** de estoque austríaco, vivos e lapelas **azuis**, botões dourados; granadeiro com dragonas vermelhas, voltigeur com verdes | `HCL_U_Varsovia1810_R13`, `_Granadeiro_R13`, `_Voltigeur_R13` | 13 pp (Zamość): *"białe mundury z niebieskimi wypustkami … złote guziki, … niebieskie wyłogi"*; *"Epolety czerwone"*; voltigeurs *"zielone … epolety"*. Tom de azul 🔶. A barretina do 13º ainda não foi feita (hoje a casaca vai com a czapka no Arsenal) |
+| **15º Regimento**: fuzileiro com lapelas e gola **carmesim** e platinas **amarelas**; granadeiro com lapelas, gola e dragonas carmesim; voltigeur com gola **amarela**, lapelas **amaranto** e dragonas verdes | `HCL_U_Varsovia1810_R15`, `_Granadeiro_R15`, `_Voltigeur_R15` | 15 pp. Punhos e vivos 🔶 |
+| Chapéu de pele do **5º**: sem placa, **granada de latão** na frente, cordões **carmesim** | `HCL_H_Varsovia1810_Bonnet_Granadeiro_R05` | *"bez daszka i blachy; pośrodku z przodu granat mosiężny; kordony pąsowe"* (5 pp) |
+| Chapéu de pele do **6º**: sem placa nem granada, cordões carmesim | `..._Bonnet_Granadeiro_R06` | *"bez daszka, blachy i granatu; kordony pąsowe"* (6 pp) |
+| Chapéu de pele **liso** com cordões brancos (8º, 11º e 12º) | `..._Bonnet_Granadeiro_Lisa` | *"bermyce gładkie z białymi kordonami"* (8, 11 e 12 pp) |
+
+**Problemas achados e corrigidos neste lote:**
+1. Primeiro teste da numeração: o remendo sobre o "4" ficou um retângulo claro e chapado (cor média de uma barra lisa mais clara), e os algarismos de fonte 5×7 ficaram grossos. Agora o remendo é preenchido por difusão (Laplace) a partir do latão em volta, só sobre texels da placa, e os algarismos são traços com antisserrilhado (meia largura de 1,1 px do atlas).
+2. Os números aparecem **espelhados na textura**, igual ao "4" da arte. Isso está certo: são gravados nas coordenadas do atlas e, no modelo, leem na direção certa.
+3. `convert_varsovia_paa.ps1`: as linhas das czapkas numeradas tinham perdido as barras invertidas (heredoc do Git Bash) e dariam MISSING. Corrigido antes da conversão.
+
+**Montagem e verificação (fora do jogo):**
+- Casacas: 7 novas (13º e 15º de linha; 1º fuzileiro, 13º e 15º granadeiro e voltigeur).
+- PAA: 54 de 54 com cabeçalho certo.
+- Binarize código 0, **10 de 10 modelos com `OFP2_ManSkeleton`**; avisos só dos materiais do jogo, como antes. `CfgConvert` 0 (config e 10 rvmat).
+- Config: 12 soldados, 33 itens (12 casacas e 21 coberturas de cabeça).
+- PBO: `release/@Historical_Clothing/Addons/hcl_varsovia.pbo`, **93,1 MB** (eram 38,3; as 14 czapkas numeradas têm `_co` próprio), 18/10 às 20:59.
+- `pbo_verify.py`: prefixo `hcl\hcl_varsovia`, **74 referências, nenhuma faltando**.
+
+Imagens: `varsovia_regimentos_linha_*` (1º com kita, 13º, 15º), `varsovia_regimentos_elite_*`, `varsovia_bonnets_regimentos_*` (5º, 6º e liso) e `varsovia_placas_numeradas.png` (close-up no modelo das placas 2, 12, 17 e 1: os números leem na direção certa).
+
+**Pendente:** a barretina do 10º (placa amarela quadrada, cordões brancos) e a do 13º (grenade/corneta sobre o número).
+
+Próximo grupo (A1): **Reino da Itália e Nápoles** (fontes reunidas na ficha, §3).

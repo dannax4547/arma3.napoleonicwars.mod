@@ -4,10 +4,11 @@
 # 4th Regiment. Copy of the method of numerar_placa_fr.py, only the _co map changes:
 #   - the plate texels are found by rasterising the faces of kind "arte" in the game UV, each with its point in the mod
 #     art (UV layer "arte");
-#   - the engraved "4" of the art (atlas pixels x 183..197, y 2899..2930, read on a 6x zoom) is covered with the plain
-#     brass of the same plate (mean of its plain bar, x 205..245, y 2918..2934);
-#   - the new number is engraved in the same style (dark stroke with a bright lower edge), centred on the raised middle
-#     of the plate (atlas ~(190, 2914)), 26 px high (two digits narrower, they must fit the 20 px wide raised part).
+#   - the engraved "4" of the art (atlas pixels x 183..197, y 2899..2930, read on a 6x zoom) is covered by diffusing the
+#     brass of the plate around it into the box (keeps the shading of the raised plate, no flat patch);
+#   - the new number is engraved as a thin line like the art's "4" (dark groove with a lit lower edge), centred on the
+#     raised middle of the plate (atlas ~(190, 2914)), 24 px high (two digits narrower, they must fit the 20 px wide
+#     raised part). Digits are placed in ATLAS space, so they read the same way round as the art's "4" in the game.
 #   blender -b <texturas .blend> --python numerar_placa_varsovia.py -- <tex dir> <tag> <dst prefix> <n> [<n>...]
 #   e.g. ... -- source/textures/hcl_czapka_varsovia fuzileiro hcl_czapka_varsovia_fuzileiro_rgt 1 2 3 5 6 ...
 import bpy, sys, os, math
@@ -20,36 +21,53 @@ ATLAS_PX = 4096
 ERASE = (180.0, 2896.0, 201.0, 2933.0)        # box of the art's "4" (atlas px, x0 y0 x1 y1)
 PLAIN = (205.0, 2918.0, 245.0, 2934.0)        # plain bar of the same plate
 CENTRE = (190.5, 2914.0)
-FONT = {  # 5 x 7, top row first (as numerar_placa_fr.py)
-    "0": ["01110", "10001", "10011", "10101", "11001", "10001", "01110"],
-    "1": ["00100", "01100", "00100", "00100", "00100", "00100", "01110"],
-    "2": ["01110", "10001", "00001", "00010", "00100", "01000", "11111"],
-    "3": ["11110", "00001", "00001", "01110", "00001", "00001", "11110"],
-    "4": ["00010", "00110", "01010", "10010", "11111", "00010", "00010"],
-    "5": ["11111", "10000", "11110", "00001", "00001", "10001", "01110"],
-    "6": ["00110", "01000", "10000", "11110", "10001", "10001", "01110"],
-    "7": ["11111", "00001", "00010", "00100", "01000", "01000", "01000"],
-    "8": ["01110", "10001", "10001", "01110", "10001", "10001", "01110"],
-    "9": ["01110", "10001", "10001", "01111", "00001", "00010", "01100"],
+HALF_W = 1.1                                  # half width of the engraved stroke (atlas px; the art's "4" ~2 px)
+
+
+def _ell(cx, cy, rx, ry, a0=0.0, a1=360.0, n=24):
+    """Points of an elliptic arc; angle 0 = top, clockwise (x right, y down)."""
+    return [(cx + rx * math.sin(math.radians(a0 + (a1 - a0) * k / n)),
+             cy - ry * math.cos(math.radians(a0 + (a1 - a0) * k / n))) for k in range(n + 1)]
+
+
+# stroke font: polylines in a unit box (x right, y DOWN)
+FONT = {
+    "0": [_ell(0.5, 0.5, 0.5, 0.5)],
+    "1": [[(0.2, 0.22), (0.55, 0.0), (0.55, 1.0)], [(0.2, 1.0), (0.9, 1.0)]],
+    "2": [_ell(0.5, 0.27, 0.48, 0.27, -90, 110, 12) + [(0.0, 1.0), (1.0, 1.0)]],
+    "3": [_ell(0.48, 0.25, 0.45, 0.25, -70, 180, 14), _ell(0.48, 0.73, 0.52, 0.27, 0, 250, 14)],
+    "4": [[(0.72, 1.0), (0.72, 0.0), (0.0, 0.7), (1.0, 0.7)]],
+    "5": [[(0.95, 0.0), (0.12, 0.0), (0.05, 0.45)] + _ell(0.45, 0.68, 0.5, 0.3, -60, 230, 14)],
+    "6": [[(0.85, 0.03), (0.5, 0.0), (0.2, 0.15), (0.03, 0.45)] + _ell(0.5, 0.7, 0.5, 0.3, -90, 270, 18)],
+    "7": [[(0.0, 0.0), (1.0, 0.0), (0.35, 1.0)]],
+    "8": [_ell(0.5, 0.25, 0.4, 0.25), _ell(0.5, 0.73, 0.48, 0.27)],
 }
+FONT["9"] = [[(1 - x, 1 - y) for x, y in pl] for pl in FONT["6"]]
 
 
-def mask_digits(ax, ay, text):
+def _seg_dist(ax, ay, p, q):
+    (px_, py_), (qx, qy) = p, q
+    dx, dy = qx - px_, qy - py_
+    t = np.clip(((ax - px_) * dx + (ay - py_) * dy) / max(dx * dx + dy * dy, 1e-9), 0, 1)
+    return np.hypot(ax - (px_ + t * dx), ay - (py_ + t * dy))
+
+
+def mask_digits(ax, ay, text, dy=0.0):
+    """Antialiased coverage (0..1) of the engraved number at atlas coords (ax, ay)."""
     n = len(text)
-    dig_h = 26.0
-    dig_w, gap = (11.0, 0.0) if n == 1 else (8.5, 2.0)
+    dig_h = 24.0
+    dig_w, gap = (12.0, 0.0) if n == 1 else (7.5, 3.0)
     total = n * dig_w + (n - 1) * gap
     x0 = CENTRE[0] - total / 2
-    y0 = CENTRE[1] - dig_h / 2
-    m = np.zeros(ax.shape, np.float32)
+    y0 = CENTRE[1] - dig_h / 2 + dy
+    d = np.full(ax.shape, 1e9, np.float32)
     for k, ch in enumerate(text):
-        gx = (ax - (x0 + k * (dig_w + gap))) / dig_w * 5
-        gy = (ay - y0) / dig_h * 7
-        ok = (gx >= 0) & (gx < 5) & (gy >= 0) & (gy < 7)
-        cx = np.clip(gx.astype(int), 0, 4); cy = np.clip(gy.astype(int), 0, 6)
-        bits = np.array([[int(c) for c in row] for row in FONT[ch]], np.float32)
-        m = np.maximum(m, np.where(ok, bits[cy, cx], 0.0))
-    return m
+        ox = x0 + k * (dig_w + gap)
+        for pl in FONT[ch]:
+            pts = [(ox + u * dig_w, y0 + v * dig_h) for u, v in pl]
+            for p, q in zip(pts, pts[1:]):
+                d = np.minimum(d, _seg_dist(ax, ay, p, q))
+    return np.clip((HALF_W - d) / 0.7 + 0.5, 0, 1)
 
 
 ob = bpy.data.objects[f"HCL_Czapka_Varsovia_{TAG}_LOD0"]
@@ -94,25 +112,37 @@ pl = plate & (AX >= PLAIN[0]) & (AX <= PLAIN[2]) & (AY >= PLAIN[1]) & (AY <= PLA
 clean = np.median(px[pl][:, :3], axis=0) if pl.any() else np.array((0.6, 0.45, 0.2), np.float32)
 print(f"PLACA {TAG}: {int(plate.sum())} texels da placa, {int(er.sum())} no numero do mod, latao liso {np.round(clean, 3)}")
 base = px.copy()
-# keep a little of the original light/dark variation so the cover is not a flat patch
-lum = base[..., :3].mean(axis=2, keepdims=True)
-lum_ref = float(np.median(base[pl][:, :3].mean(axis=1))) if pl.any() else 0.5
-var = np.clip(1.0 + 0.35 * (lum - lum_ref) / max(lum_ref, 1e-3), 0.8, 1.2)
-base[..., :3] = np.where(er[..., None], clean[None, None, :] * var, base[..., :3])
+# cover the art's number: Laplace diffusion of the plate texels around the box into it (plate texels only, so the black
+# of the UV gaps never bleeds in)
+ys, xs = np.nonzero(er)
+if len(ys):
+    y0_, y1_ = max(ys.min() - 4, 0), min(ys.max() + 5, H)
+    x0_, x1_ = max(xs.min() - 4, 0), min(xs.max() + 5, W)
+    win = base[y0_:y1_, x0_:x1_, :3].copy()
+    e = er[y0_:y1_, x0_:x1_]
+    ok = plate[y0_:y1_, x0_:x1_].astype(np.float32)
+    ring = plate[y0_:y1_, x0_:x1_] & ~e
+    win[e] = np.median(win[ring], axis=0) if ring.any() else clean
+    for _ in range(1500):
+        acc = np.zeros_like(win); cnt = np.zeros(win.shape[:2], np.float32)
+        for sy, sx in ((1, 0), (-1, 0), (0, 1), (0, -1)):
+            acc += np.roll(win * ok[..., None], (sy, sx), (0, 1))
+            cnt += np.roll(ok, (sy, sx), (0, 1))
+        win[e] = acc[e] / np.maximum(cnt[e], 1)[:, None]
+    base[y0_:y1_, x0_:x1_, :3] = win
+near = plate & (np.abs(AX - CENTRE[0]) < 16) & (np.abs(AY - CENTRE[1]) < 18)   # only these texels can be engraved
 for n in NUMS:
     txt = str(n)
-    m = mask_digits(AX, AY, txt) * plate
-    soft = m.copy()
-    soft[1:-1, 1:-1] = np.maximum(m[1:-1, 1:-1], 0.5 * (m[:-2, 1:-1] + m[2:, 1:-1] + m[1:-1, :-2] + m[1:-1, 2:]) / 2)
+    m = np.zeros((H, W), np.float32); lo = np.zeros((H, W), np.float32)
+    m[near] = mask_digits(AX[near], AY[near], txt)
+    lo[near] = mask_digits(AX[near], AY[near], txt, dy=-1.3)                   # stroke shifted up: lit lower edge
     out = base.copy()
-    out[..., :3] = out[..., :3] * (1 - 0.55 * soft[..., None])                 # engraved groove: darker brass
-    bev = np.zeros_like(m)
-    bev[:-1, :-1] = np.clip(m[1:, 1:] - m[:-1, :-1], 0, 1) * plate[:-1, :-1]
-    out[..., :3] = np.clip(out[..., :3] + 0.15 * bev[..., None], 0, 1)         # bright lower edge of the groove
+    out[..., :3] = out[..., :3] * (1 - 0.45 * m[..., None])                    # engraved groove: darker brass
+    out[..., :3] = np.clip(out[..., :3] + 0.12 * np.clip(lo - m, 0, 1)[..., None], 0, 1)
     dst = os.path.join(TEX, f"{DST}{n:02d}_co.png")
     o = bpy.data.images.new(os.path.basename(dst), W, H, alpha=False)
     o.colorspace_settings.name = "sRGB"
     out[..., 3] = 1.0
     o.pixels.foreach_set(out.ravel())
     o.filepath_raw = dst; o.file_format = "PNG"; o.save()
-    print(f"  -> {os.path.basename(dst)}: {int(m.sum())} texels gravados ({txt})")
+    print(f"  -> {os.path.basename(dst)}: {int((m > 0.5).sum())} texels gravados ({txt})")
