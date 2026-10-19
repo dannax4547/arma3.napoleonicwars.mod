@@ -47,6 +47,8 @@ Três categorias, como pede o briefing:
 | 2026-10-12 | **França: mais regimentos, capote de inverno, barretinas da época** (`frances_1812_prototipo.md` §8) | Casacas F02–F04 e capote W01–W04; capote: 0 pontos da calça fora da saia em repouso, 27 pontos do correame encostados até 2,1 mm; teste de movimentos do capote, pior caso 38,9 mm ajoelhado (casaco longo); barretinas com placa traçada, escamas e plumet v3; PAA 36/36; binarize 0, 10/10 modelos com esqueleto; `CfgConvert` 0; `hcl_fr.pbo` 61,2 MB, 57 arquivos, 56 referências, nenhuma faltando. **G1–G12 não executados** | `docs/reports/img/soldado_fr/`, `work/teste_movimentos_fr_capote_c.log` |
 | 2026-10-12 | **França: casacas de granadeiro e voltigeur com dragonas** (`frances_1812_prototipo.md` §9) | Casaca de elite 16.414 tris, 0 vértices da franja/meia-lua dentro do pano; pesos: corpo rígido, nenhuma aresta fora do limite nas 8 animações (franja toca a manga até 6 mm em poses extremas); PAA 40/40; binarize 0, 11/11 modelos com esqueleto; `CfgConvert` 0; `hcl_fr.pbo` 68,7 MB, 62 referências, nenhuma faltando. **G1–G12 não executados** | `docs/reports/img/soldado_fr/elite_fr_*`, `work/teste_movimentos_fr_elite.log` |
 | 2026-10-13 | **Suíços a serviço da França, addon `hcl_suica.pbo`** (`docs/reports/suica_1812.md`): 4 regimentos × fuzileiro, granadeiro e voltigeur; chapéu de pele do granadeiro com placa de granada; barretinas francesas de fuzileiro (4 companhias) e voltigeur | 12 texturas de casaca pintadas; PAA 34/34 com cabeçalho certo; binarize 0, 7/7 modelos com `OFP2_ManSkeleton` (avisos só dos 3 materiais do jogo); `CfgConvert` 0 (config e 7 rvmat); PBO de 59,2 MB em `release/@Historical_Clothing/Addons/` às 18:56; `pbo_verify`: prefixo `hcl\hcl_suica`, 48 referências, nenhuma faltando. Sem dependência do `hcl_fr`. **G1–G12 não executados** | `docs/reports/img/suica/`, `work/build_suica.log`, `work/build/binarize_suica_log.txt` |
+| 2026-10-18 | **Ducado de Varsóvia, addon `hcl_varsovia.pbo`** (`docs/reports/varsovia_1810.md`): regulamento de 1810, 7º e 9º; mais regimentos (1º, 13º, 15º, czapkas com placa numerada, chapéus de pele do 5º, 6º e lisos) | PAA 54/54; binarize 0, 10/10 modelos com `OFP2_ManSkeleton`; `CfgConvert` 0 (config e 10 rvmat); PBO de 93,1 MB às 20:59; `pbo_verify`: prefixo `hcl\hcl_varsovia`, 74 referências, nenhuma faltando; close-up das placas 2, 12, 17 e 1 no modelo: números na direção certa. **Não testado no jogo** | `docs/reports/img/varsovia/`, `work/build_varsovia.log`, `work/cadeia_varsovia6.log` |
+| 2026-10-18 | **Reino da Itália e Reino de Nápoles, addon `hcl_italia.pbo`** (`docs/reports/italia_1812.md`): 7 regimentos italianos e 4 napolitanos de linha, granadeiros e voltigeurs do 3º e 5º italianos e do 7º napolitano; barretinas com placa losango e escudo, chapéus de pele | Casacas 17; PAA 63/63; binarize 0, 16/16 modelos com `OFP2_ManSkeleton`; `CfgConvert` 0 (config e 16 rvmat); PBO de 119,5 MB às 22:51; `pbo_verify`: prefixo `hcl\hcl_italia`, 95 referências, nenhuma faltando. **Não testado no jogo** | `docs/reports/img/italia/`, `work/build_italia.log`, `work/cadeia_italia1.log` |
 
 ## 2. Verificações previstas por fase
 
@@ -173,3 +175,22 @@ player forceAddUniform "HCL_U_Varsovia1810_L1810"; removeHeadgear player; player
 | V5 | Mais regimentos: casacas | `HCL_U_Varsovia1810_R13`, `_R15`, `_Fuzileiro_R01`, `_Granadeiro_R13`, `_Voltigeur_R13`, `_Granadeiro_R15`, `_Voltigeur_R15` | Casaca branca com azul do 13º; lapelas carmesim e platinas amarelas do 15º; dragonas brancas com franja do 1º |
 | V6 | Czapkas numeradas | `HCL_H_Varsovia1810_Czapka_Fuzileiro_R01` … `_R17` | O número da placa **lê na direção certa** (na textura está espelhado de propósito); sem mancha onde estava o "4"; kita preta no 1º |
 | V7 | Chapéus de pele do 5º, 6º e liso | `..._Bonnet_Granadeiro_R05`, `_R06`, `_Lisa` | Sem placa; granada de latão só no 5º; cordões carmesim (5º, 6º) e brancos (liso) |
+
+## 8. Reino da Itália e Reino de Nápoles, `hcl_italia.pbo` (2026-10-18, não testado no jogo)
+
+**Antes de testar:** Arma 3 **sem BattlEye** e sem o Blender trabalhando (ver §5). O `hcl_italia` não precisa do `hcl_fr`. Relatório: `docs/reports/italia_1812.md`.
+
+Texto para o console de depuração (fuzileiro do 5º italiano e do 7º napolitano):
+
+```sqf
+player forceAddUniform "HCL_U_Italia1812_IT05"; removeHeadgear player; player addHeadgear "HCL_H_Italia1812_Shako_Italia_Fuzileiro_1aComp";
+player forceAddUniform "HCL_U_Italia1812_NA07"; removeHeadgear player; player addHeadgear "HCL_H_Italia1812_Shako_Napoles_Fuzileiro_R07";
+```
+
+| ID | Item | Classes | Observar |
+|---|---|---|---|
+| I1 | Casacas italianas | `HCL_U_Italia1812_IT01` … `_IT07`, `_Granadeiro_IT03/IT05`, `_Voltigeur_IT03/IT05` | Branco não estourado ao sol; gola, lapelas e canhões de cada regimento; dragonas verdes com crescente amarelo do voltigeur |
+| I2 | Casacas napolitanas | `HCL_U_Italia1812_NA01/02/05/07`, `_Granadeiro_NA07`, `_Voltigeur_NA07` | Vivos brancos nos canhões e viras; dragonas amarelas do voltigeur |
+| I3 | Barretinas | `HCL_H_Italia1812_Shako_Italia_*`, `..._Shako_Napoles_*` | Águia no losango e "N" no escudo legíveis a 1–2 m; cocar italiano (vermelho, branco, verde) e napolitano (branco, amaranto); troca para a Res 2 |
+| I4 | Chapéus de pele | `..._Bonnet_Italia_Granadeiro_Gala/Campanha`, `..._Bonnet_Napoles_Granadeiro_Gala/Campanha` | Placa de granada só na Itália; cordões brancos (Itália) e vermelhos (Nápoles); desempenho (46 mil triângulos na gala) |
+| I5 | Nomes no Arsenal | todos | Inglês; "Kingdom of Italy / Naples, Nth Line Infantry Regiment" |
