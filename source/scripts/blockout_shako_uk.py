@@ -557,6 +557,66 @@ def false_front(tag, root):
     return HF
 
 
+# ---------------------------------------------------------------- chin strap (2026-10-19, user: "todas as barretinas
+# estao sem as alcas"). Brunswick: black leather chinstraps in the sources (kgl_brunswick_1815.md 4, [B1][B2]); British
+# and Portuguese caps: no source read on the strap, made the same way (🔶). A black leather strap from a metal rosette
+# on each side of the cap, down the cheeks and under the chin, fitted on the GAME head (Arma 3 Samples
+# TemplateRTM\bust.p3d, the head of the report renders): cheek width and chin bottom are measured on its points and
+# the strap keeps ~6 mm off the skin. Rigid on Head like the cap (Arma's jaw does not move).
+_BUST = None
+
+
+def bust_points():
+    global _BUST
+    if _BUST is None:
+        from p3d_mlod import read_mlod, to_blender
+        lod = read_mlod(os.path.join(os.path.dirname(SAMPLES), "TemplateRTM", "bust.p3d"))[0]
+        _BUST = np.array([to_blender(p) for p in lod["points"]], np.float64)
+    return _BUST
+
+
+def jugular(tag, root, metal="latao", gap=0.006):
+    B_ = bust_points()
+    W_ = ROOT                                    # the cap frame WITHOUT the row offset: the game head is at the origin
+    inv = W_.inverted()
+    side_w = [W_ @ P(s * math.pi / 2, 0.012, 0.0015) for s in (1, -1)]       # rosettes, world
+    y0 = (side_w[0].y + side_w[1].y) / 2 - 0.004                            # just in front of the ear
+    # the bust has neck, shoulders and chest: the chin is the lowest point of the FACE (near the centre line, close
+    # behind the nose tip in depth, and within the head's height)
+    head = B_[B_[:, 2] > side_w[0].z - 0.24]
+    y_nose = float(head[np.abs(head[:, 0]) < 0.015][:, 1].min())
+    face = head[(np.abs(head[:, 0]) < 0.015) & (head[:, 1] < y_nose + 0.040)]
+    z_chin = float(face[:, 2].min())
+    y_chin = float(face[face[:, 2] < z_chin + 0.010][:, 1].mean())
+    print(f"JUGULAR {tag}: queixo z {z_chin:.3f} y {y_chin:.3f} (nariz y {y_nose:.3f}); roseta z {side_w[0].z:.3f}")
+    band = B_[np.abs(B_[:, 1] - y0) < 0.014]
+
+    def x_ext(z):
+        m = band[np.abs(band[:, 2] - z) < 0.008]
+        return float(np.abs(m[:, 0]).max()) if len(m) else 0.05
+    z_top = side_w[0].z - 0.006
+    z_jaw = z_chin + 0.040
+    half = []
+    for z in np.linspace(z_top, z_jaw, 7):
+        half.append(Vector((x_ext(z) + gap, y0, z)))
+    xj = half[-1].x
+    half += [Vector((xj * 0.80, y0 - 0.010, z_chin + 0.016)), Vector((xj * 0.45, (y0 + y_chin) / 2 - 0.004, z_chin - 0.002)),
+             Vector((0.0, y_chin + 0.006, z_chin - gap))]
+    left = [side_w[0]] + half
+    right = [Vector((-p.x, p.y, p.z)) for p in left[::-1]][1:]               # mirror, skip the shared bottom point
+    right[-1] = side_w[1]
+    path_w = catmull(left + right, 3)
+    cz = (z_top + z_chin) / 2
+    nrm_w = [Vector((p.x, p.y - y0 + 0.01, (p.z - cz) * 0.6)).normalized() for p in path_w]
+    path = [inv @ p for p in path_w]
+    nrm = [(inv.to_3x3() @ n).normalized() for n in nrm_w]
+    sweep(f"{tag}_faixa_jugular", path, 0.0075, 0.0008, "couro", root, normals=nrm)
+    for s, sw in zip(("E", "D"), side_w):
+        th = (1 if s == "E" else -1) * math.pi / 2
+        disc(f"{tag}_botao_jugular_{s}", P(th, 0.012, 0.0016), wall_n(th, 0.012), 0.010, 0.0018, metal, root, segs=20)
+    return z_chin
+
+
 def shako(tag, x_off, kind, tuft_cols, plate="placa", cord=None, back_number=None):
     """kind: "belgic" | "stovepipe"; plate: "placa" (the model's plate) | "corneta" (bugle badge)."""
     global H, top_hw, top_hd
@@ -599,6 +659,7 @@ def shako(tag, x_off, kind, tuft_cols, plate="placa", cord=None, back_number=Non
             pts = [P(math.radians(70), H - 0.030, o), P(math.radians(40), 0.050, o), P(0, 0.028, o + 0.003),
                    P(math.radians(-40), 0.050, o), P(math.radians(-70), H - 0.030, o)]
             cords(tag, root, pts, cord, P(math.radians(-74), H - 0.060, o + 0.002), o)
+    jugular(tag, root, "latao")                         # 🔶 no source read on the British strap
     if back_number:
         number_badge(tag, root, back_number)
     return root
@@ -712,6 +773,7 @@ def shako_por(tag, x_off, tuft_cols, badge=None, cacadores=False):
         oval_plate(tag, root, 0.112)
     cockade_por(tag, root, P(0, zc, 0.0034), wall_n(0, zc))
     tuft(tag, root, P(0, H + 0.010, -0.004) + Vector((0, -0.010, 0)), Vector((0, -0.10, 1)), 0.170, 0.024, tuft_cols)
+    jugular(tag, root, "latao")                         # 🔶 no source read on the Portuguese strap
     return root
 
 
@@ -735,51 +797,87 @@ PLATES.update(caveira=os.path.abspath(os.path.join(SHK_DIR, "caveira.json")),
 KIWER_FLARE = 0.020                                       # radius gain band -> top (🔶; Brigade-Uniformtafel 176: clearly bell-shaped)
 
 
-def crina(tag, root, n=230, seed=21):
-    """Black horsehair plume ("Rossschweif") rising from a socket at the top front and falling over the front and the
-    sides; every lock is a ribbon with its own UV square (u across, v root to tip) like the feather fronds, so the
-    texturizer paints it with the plume tiles (part "pelo" -> kind pena)."""
+def crina(tag, root, n=680, seed=21, CH=0.190):
+    """Black horsehair plume ("Rossschweif") of the Leib-Bataillon, v2 (2026-10-19, user: "aumente mais a pumlet ...
+    como na imagem dos batalhoes de brunswick"; Brigade-Uniformtafel 176, the 1814 figures): a TALL column standing on
+    the top front, about as high as the cap (CH), its hair falling from the column's upper part in a cascade all round,
+    down over the upper third of the cap to about the skull. Built as (1) locks wrapped round the column, root to top,
+    and (2) cascade locks from the column's upper part arching out and falling down outside the wall. Every lock is a
+    ribbon with its own UV square (u across, v root to tip) like the feather fronds (part "pelo" -> kind pena)."""
     rnd = random.Random(seed)
     bm = bmesh.new()
     uvl = bm.loops.layers.uv.new("UVMap")
     tint = bm.faces.layers.float.new("tint")
-    sock = P(0, H + 0.004, -0.010)
-    for i in range(n):
-        ph = rnd.uniform(-1.35, 1.35) * (rnd.random() ** 0.6) * (1 if rnd.random() < 0.5 else -1)
-        d = Vector((math.sin(ph), -math.cos(ph), 0))
-        r_top = math.hypot(rx(H) * math.sin(ph), ry(H) * math.cos(ph))
-        rise = rnd.uniform(0.024, 0.046)
-        drop = rnd.uniform(0.045, 0.095) * (0.6 + 0.4 * abs(ph) / 1.35)
-        out_ = rnd.uniform(0.010, 0.022)
-        s0 = sock + Vector((rnd.uniform(-0.006, 0.006), rnd.uniform(-0.004, 0.004), 0))
-        pts = [s0, s0 + Vector((0, 0, rise)) + d * 0.015,
-               Vector((0, 0, sock.z + rise * 0.6)) + Vector((d.x * (r_top + out_ * 0.5), d.y * (r_top + out_ * 0.5) + sock.y * 0, 0)),
-               Vector((d.x * (r_top + out_), d.y * (r_top + out_), H - drop))]
-        pts[2] = Vector((pts[2].x, pts[2].y + 0.0, pts[2].z)); pts[3] = Vector((pts[3].x, pts[3].y, pts[3].z))
-        path = catmull(pts, 4)
-        w = rnd.uniform(0.006, 0.011)
+    sock = P(0, H + 0.004, -0.014)
+    top = sock + Vector((0, -0.004, CH))
+
+    def ribbon(path, w, outward):
         sh = rnd.random()
         rows = []
         L_ = len(path)
         for k_, p in enumerate(path):
             t = k_ / (L_ - 1)
             tg = (path[min(k_ + 1, L_ - 1)] - path[max(k_ - 1, 0)]).normalized()
-            radial = Vector((p.x, p.y, 0)).normalized() if Vector((p.x, p.y, 0)).length > 1e-4 else d
-            side = tg.cross(radial).normalized()
-            hw = w * (1.0 - 0.6 * t) / 2
-            rows.append((bm.verts.new(p - side * hw), bm.verts.new(p + side * hw), t))
+            o_ = outward(p)
+            side = tg.cross(o_).normalized()
+            if side.length < 0.5:
+                side = Vector((1, 0, 0))
+            hw = w * (1.0 - 0.65 * t) / 2
+            rows.append((bm.verts.new(p - side * hw), bm.verts.new(p + side * hw), t, o_))
         for k_ in range(L_ - 1):
-            (a0, b0, t0), (a1, b1, t1) = rows[k_], rows[k_ + 1]
+            (a0, b0, t0, o0), (a1, b1, t1, _) = rows[k_], rows[k_ + 1]
             f = bm.faces.new((a0, b0, b1, a1))
             for l, uv in zip(f.loops, ((0, t0), (1, t0), (1, t1), (0, t1))):
                 l[uvl].uv = uv
             f[tint] = sh; f.smooth = True
             f.normal_update()
-            mid = (a0.co + b1.co) / 2
-            if f.normal.dot(Vector((mid.x, mid.y, 0.6)).normalized()) < 0:
+            if f.normal.dot(o0) < 0:
                 f.normal_flip()
-    lathe_obj(f"{tag}_encaixe_couro", [(-0.006, 0.007), (0.0, 0.008), (0.010, 0.006)], sock, "couro", root,
-              axis=Vector((0, -0.2, 1)), segs=16)
+
+    # (1) the column: locks running up round a core of ~11 mm radius, a little twisted
+    n_col = n // 5
+    for i in range(n_col):
+        a0 = 2 * math.pi * i / n_col + rnd.uniform(-0.1, 0.1)
+        r0 = rnd.uniform(0.008, 0.013)
+        tw = rnd.uniform(-0.5, 0.5)
+        pts = []
+        for k_ in range(7):
+            t = k_ / 6
+            a_ = a0 + tw * t
+            r_ = r0 * (1.0 + 0.35 * math.sin(math.pi * t))
+            c_ = sock.lerp(top, t)
+            pts.append(c_ + Vector((math.sin(a_) * r_, -math.cos(a_) * r_, 0)))
+        ribbon(pts, rnd.uniform(0.008, 0.012), lambda p: Vector((p.x - sock.x, p.y - sock.y, 0)).normalized())
+    # (2) the cascade: from the upper part of the column, out and down all round (fuller at the front and sides)
+    for i in range(n - n_col):
+        # v3 (user: "mais alto e um pouco volumoso nas laterais"): taller column (190 mm) and more, wider locks on
+        # the sides: ~45 % of the cascade goes to the sides (60-120 deg each way), the rest front / back
+        u_ = rnd.random()
+        if u_ < 0.15:
+            ph = rnd.choice((-1, 1)) * rnd.uniform(1.0, 2.1)
+        elif u_ < 0.92:  # v5 (user, twice: "menos volume nas laterais"): 15 % on the sides, no extra spread, locks hug the wall
+            ph = rnd.uniform(-1.1, 1.1)
+        else:
+            ph = rnd.choice((-1, 1)) * rnd.uniform(2.1, math.pi)
+        d = Vector((math.sin(ph), -math.cos(ph), 0))
+        z0 = rnd.uniform(0.25, 1.0) ** 0.7                     # all along the column, more near its top
+        s0 = sock.lerp(top, z0) + d * rnd.uniform(0.004, 0.010)
+        r_top = math.hypot(rx(H) * math.sin(ph), ry(H) * math.cos(ph))
+        side_k = abs(math.sin(ph))                            # 0 front/back .. 1 on the sides
+        reach = (rnd.uniform(0.006, 0.016) + 0.010 * z0) * (1.0 - 0.30 * side_k)  # narrower on the sides
+        out_ = rnd.uniform(0.002, 0.007) * (1.0 - 0.5 * side_k)
+        drop = rnd.uniform(0.015, 0.055)                     # over the top of the cap, above the skull
+        base = Vector((0, 0, 0))
+        mid_out = s0 + d * reach + Vector((0, 0, rnd.uniform(0.004, 0.016)))
+        edge = Vector((d.x * (r_top + out_), d.y * (r_top + out_), H + rnd.uniform(0.004, 0.020)))
+        r_low = math.hypot(rx(H - drop) * math.sin(ph), ry(H - drop) * math.cos(ph))
+        low = Vector((d.x * (r_low + out_ * 0.8), d.y * (r_low + out_ * 0.8), H - drop))
+        # locks that start low on the column fall straight; high ones arch out first
+        pts = [s0, mid_out, edge.lerp(mid_out, 0.15) if z0 > 0.75 else edge, low]
+        ribbon(catmull(pts, 4), rnd.uniform(0.006, 0.011),
+               lambda p, d=d: (d + Vector((0, 0, 0.35))).normalized())
+    lathe_obj(f"{tag}_encaixe_couro", [(-0.006, 0.008), (0.0, 0.010), (0.014, 0.008)], sock, "couro", root,
+              axis=Vector((0, -0.05, 1)), segs=16)
     return finish(bm, f"{tag}_pelo_crina", "preto", root, keep_normals=True)
 
 
@@ -810,6 +908,7 @@ def shako_bru(tag, x_off, kind, pompom_cols=None, plume_col=None):
         num_band(tag, root, 0.064, 0.079, math.radians(10), colour="prata", off=0.0020)   # on the shield (front at 2.0 mm)
     if pompom_cols:
         tuft(tag, root, P(0, H + 0.008, -0.004) + Vector((0, -0.006, 0)), Vector((0, -0.10, 1)), 0.040, 0.020, pompom_cols)
+    jugular(tag, root, "prata")                         # Brunswick: black leather chinstraps [B1][B2]
     if plume_col:
         tuft(tag, root, P(0, H + 0.010, -0.004) + Vector((0, -0.010, 0)), Vector((0, -0.10, 1)), 0.150, 0.022,
              [(0.0, plume_col)])
