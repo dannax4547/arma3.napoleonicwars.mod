@@ -107,6 +107,8 @@ def name_bru(cls):
 
 
 def name(cls):
+    if cls == "HCL_B_BRU1815_Tornister":
+        return "[HCL] Brunswick Knapsack 1815 (black, white-metal horse on the flap)" + T
     if "BRU1815" in cls:
         return name_bru(cls)
     if "POR1812" in cls:
@@ -127,6 +129,8 @@ def name(cls):
         return "[HCL] British Infantry Crossbelts (pipeclayed)" + T
     if cls == "HCL_V_UK1812_Correame_Preto":
         return "[HCL] British Rifles Crossbelts (black leather)" + T
+    if cls == "HCL_B_BRU1815_Tornister":
+        return "[HCL] Brunswick Knapsack 1815 (black, white-metal horse on the flap)" + T
     if cls == "HCL_B_UK1812_Mochila":
         return "[HCL] British Trotter Knapsack (black)" + T
     return None

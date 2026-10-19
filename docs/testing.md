@@ -192,3 +192,28 @@ player forceAddUniform "HCL_U_POR1812_L17"; removeHeadgear player; player addHea
 | P2 | Jaquetas de Caçadores | `HCL_U_POR1812_C01` … `C12` | Alamares pretos; correame preto (`HCL_V_UK1812_Correame_Preto`) |
 | P3 | **Número na barretina** | `HCL_H_POR1812_Stovepipe_*_NN` | O número muda com a classe (seleção escondida `numero`); legível a 1–2 m; troca para a Res 2 sem perder o número |
 | P4 | Barretinas | batalhão, granadeiros, ligeira, Caçadores | Placa oval, granada ou corneta, cocar, pluma; encaixe na cabeça |
+
+## 8. Brunswick no `hcl_uk.pbo` (2026-10-19; não testado no jogo)
+
+Detalhes em `docs/reports/brunswick_prototipo.md` §3.
+
+**Executado fora do jogo:**
+- PAA: 167 conversões, 0 falhas;
+- binarize 0, com 26/26 modelos com esqueleto;
+- `pbo_verify`: 221 arquivos, 220 referências, nenhuma faltando.
+
+**Antes de testar:** abra o Arma 3 **sem BattlEye** e **nunca** com o Blender trabalhando.
+
+Comando para o console (2º batalhão de linha):
+
+```sqf
+player forceAddUniform "HCL_U_BRU1815_B06"; removeHeadgear player; player addHeadgear "HCL_H_BRU1815_Kiwer_Linha_2"; player addVest "HCL_V_UK1812_Correame_Preto"; player addBackpack "HCL_B_BRU1815_Tornister";
+```
+
+| ID | Item | Classes | Observar |
+|---|---|---|---|
+| B1 | Dólmãs | `HCL_U_BRU1815_B01` … `B08` | Gola, platinas e vivo da calça na cor do batalhão; saia curta ao sentar e ajoelhar |
+| B2 | Kiwer do Leib-Bataillon | `HCL_H_BRU1815_Kiwer_Leib` | Crina sem atravessar a cabeça; caveira legível; desempenho (14 mil triângulos) |
+| B3 | Kiwer da linha | `HCL_H_BRU1815_Kiwer_Linha_1` / `_2` / `_3` | Número certo no escudo, também na Res 2 |
+| B4 | Kiwer ligeiro e Avantgarde | `HCL_H_BRU1815_Kiwer_Ligeiro`, `_Avantgarde` | Corneta de metal branco, pompom, pluma |
+| B5 | Mochila | `HCL_B_BRU1815_Tornister` | Cavalo na aba; correias pretas |

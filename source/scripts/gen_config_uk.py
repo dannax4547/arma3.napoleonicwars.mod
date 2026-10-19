@@ -57,7 +57,7 @@ w("// uniform needs a soldier model); the items are scope 2 (Arsenal).")
 w("")
 w("class CfgPatches\n{\n\tclass HCL_UK_Teste\n\t{")
 w('\t\tauthor = "Historical Clothing";')
-units = ["HCL_B_UK1812_Mochila"]
+units = ["HCL_B_UK1812_Mochila", "HCL_B_BRU1815_Tornister"]
 w("\t\tunits[] = {" + ", ".join(f'"{x}"' for x in units) + "};")
 weapons = [f"HCL_U_{nat}_{v}" for g, _, _, nat in GROUPS for v in sorted(g)] + [h[2] for h in HEAD] + \
     ["HCL_V_UK1812_Correame", "HCL_V_UK1812_Correame_Preto"]
@@ -107,6 +107,12 @@ w(f'\t\tmodel = "{P}\\{B_P3D}.p3d";')
 w('\t\thiddenSelections[] = {"camo"};')
 w(f'\t\thiddenSelectionsTextures[] = {{"{P}\\data\\{B_P3D}_co.paa"}};')
 w("\t\tmaximumLoad = 160;\n\t\tmass = 20;")
+w("\t};")
+# Brunswick 1815: the same knapsack, black, with the white-metal Welfenross on the flap (carimbo_mochila_bru.py;
+# Brigade-Uniformtafel Nr. 176)
+w("\tclass HCL_B_BRU1815_Tornister: HCL_B_UK1812_Mochila\n\t{")
+w('\t\tdisplayName = "x";')
+w(f'\t\thiddenSelectionsTextures[] = {{"{P}\\data\\hcl_b_bru1815_mochila_co.paa"}};')
 w("\t};")
 w("};\n")
 

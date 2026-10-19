@@ -658,12 +658,12 @@ def oval_plate(tag, root, zc, w=0.056, h=0.070):
     flat_on_front(f"{tag}_brasao_coroa", crown, 0.0010, "latao", root, off=o + 0.0016)
 
 
-def num_band(tag, root, z0, z1, half_th, t=0.0010, segs=18, colour="latao"):
+def num_band(tag, root, z0, z1, half_th, t=0.0010, segs=18, colour="latao", off=0.0008):
     """Brass band on the front wall carrying the number (its texture comes from the hidden selection "numero")."""
     bm = bmesh.new()
     ths = [half_th * (2 * i / segs - 1) for i in range(segs + 1)]
-    out_ = [[bm.verts.new(P(th, z, 0.0008 + t)) for th in ths] for z in (z0, z1)]
-    in_ = [[bm.verts.new(P(th, z, 0.0008)) for th in ths] for z in (z0, z1)]
+    out_ = [[bm.verts.new(P(th, z, off + t)) for th in ths] for z in (z0, z1)]
+    in_ = [[bm.verts.new(P(th, z, off)) for th in ths] for z in (z0, z1)]
     grid(bm, out_, closed_u=False)
     for i in range(segs):
         bm.faces.new((in_[0][i], out_[0][i], out_[0][i + 1], in_[0][i + 1]))
@@ -732,7 +732,7 @@ POR_VARIANTS = [  # tag, plume, badge, cacadores
 COL.update(amarelo=(0.80, 0.62, 0.14), prata=(0.62, 0.62, 0.60))
 PLATES.update(caveira=os.path.abspath(os.path.join(SHK_DIR, "caveira.json")),
               cavalo=os.path.abspath(os.path.join(SHK_DIR, "cavalo_bru.json")))
-KIWER_FLARE = 0.012                                       # radius gain from the band to the top (🔶)
+KIWER_FLARE = 0.020                                       # radius gain band -> top (🔶; Brigade-Uniformtafel 176: clearly bell-shaped)
 
 
 def crina(tag, root, n=230, seed=21):
@@ -807,7 +807,7 @@ def shako_bru(tag, x_off, kind, pompom_cols=None, plume_col=None):
                   open(tmp, "w"))
         traced_plate(f"{tag}_brasao_escudo", tmp, 0.093 - h_ / 2, 0.093 + h_ / 2, w_, 0.0012, "prata", root, off=0.0008)
         traced_plate(f"{tag}_brasao_cavalo", PLATES["cavalo"], 0.086, 0.128, 0.052, 0.0012, "prata", root, off=0.0020)
-        num_band(tag, root, 0.064, 0.079, math.radians(10), colour="prata")
+        num_band(tag, root, 0.064, 0.079, math.radians(10), colour="prata", off=0.0020)   # on the shield (front at 2.0 mm)
     if pompom_cols:
         tuft(tag, root, P(0, H + 0.008, -0.004) + Vector((0, -0.006, 0)), Vector((0, -0.10, 1)), 0.040, 0.020, pompom_cols)
     if plume_col:

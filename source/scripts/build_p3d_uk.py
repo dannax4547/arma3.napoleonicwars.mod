@@ -203,7 +203,8 @@ for tg, num0 in (("por_batalhao", "l01"), ("por_granadeiro", "l01"), ("por_ligei
              lod2_decimate=0.4, numero=(DATA + rf"\hcl_por_numero_{num0}_co.paa", DATA + r"\hcl_por_numero.rvmat"))
 # Brunswick "Kiwer" shakos (blockout_shako_uk.py conjunto=bru): the Leib-Bataillon cap was baked on britainINFb
 # (traced skull), the others on the levels copy of britainINF (traced bugle); the line cap carries the number band
-BRU_BLENDS = {"bru_leib": r"source\models\shakos\hcl_shako_uk\hcl_shako_uk_texturas_bru_leib.blend"}
+BRU_BLENDS = {"bru_leib": r"source\models\shakos\hcl_shako_uk\hcl_shako_uk_texturas_bru_leib.blend",
+              "bru_linha": r"source\models\shakos\hcl_shako_uk\hcl_shako_uk_texturas_bru_linha.blend"}   # re-baked alone (number band)
 for tg in ("bru_leib", "bru_ligeiro", "bru_linha", "bru_avantgarde"):
     name = f"HCL_Shako_UK_{tg}_LOD0"
     path = BRU_BLENDS.get(tg, r"source\models\shakos\hcl_shako_uk\hcl_shako_uk_texturas_bru.blend")

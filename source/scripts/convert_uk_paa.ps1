@@ -50,6 +50,8 @@ foreach ($k in 1..8) {
 }
 foreach ($s in "nohq", "smdi") { $jobs += , @("$uni\hcl_u_bru1815_dolman_${s}.png", "$uni\paa\hcl_u_bru1815_dolman_${s}.paa") }
 foreach ($k in 1..3) { $jobs += , @("$shk\numeros\hcl_bru_numero_b${k}_co.png", "$shk\paa\hcl_bru_numero_b${k}_co.paa") }
+# Brunswick knapsack: the Trotter texture with the Welfenross stamped on the flap (carimbo_mochila_bru.py)
+$jobs += , @("$eq\hcl_b_bru1815_mochila_co.png", "$eq\paa\hcl_b_bru1815_mochila_co.paa")
 foreach ($t in "bru_leib", "bru_ligeiro", "bru_linha", "bru_avantgarde") {
     foreach ($s in "co", "nohq", "smdi") { $jobs += , @("$shk\hcl_shako_uk_${t}_${s}.png", "$shk\paa\hcl_shako_uk_${t}_${s}.paa") }
 }

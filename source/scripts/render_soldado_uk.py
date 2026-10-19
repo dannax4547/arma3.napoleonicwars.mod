@@ -87,8 +87,8 @@ for o in eq:
     o.data.materials.append(flat("tmp_eq", (0.5, 0.5, 0.5)))
     for p in o.data.polygons:
         p.material_index = 0
-for base in ("hcl_v_uk1812_correame", "hcl_v_uk1812_correame_preto", "hcl_b_uk1812_mochila"):
-    nh = os.path.join(TE, base.replace("_preto", "") + "_nohq.png")
+for base in ("hcl_v_uk1812_correame", "hcl_v_uk1812_correame_preto", "hcl_b_uk1812_mochila", "hcl_b_bru1815_mochila"):
+    nh = os.path.join(TE, base.replace("_preto", "").replace("bru1815", "uk1812") + "_nohq.png")
     EQMAT[base] = texmat(base, os.path.join(TE, base + "_co.png"), nh, 0.7)
 bust = read_mlod(os.path.join(SAMPLES, "Addons", "TemplateRTM", "bust.p3d"))[0]
 BF = [list(dict.fromkeys(f)) for f in bust["faces"] if len(set(f)) >= 3]
@@ -102,6 +102,7 @@ head = bpy.data.objects.new("REF_cabeca_jogo_bust_p3d", hm)
 # caps: the newest blend that has the tag wins; the Highland bonnet has its own blend and prefix
 TS = J("source", "textures", "hcl_shako_uk")
 SRCS = [(J("source", "models", "shakos", "hcl_shako_uk", "hcl_shako_uk_texturas_bru_leib.blend"), "HCL_Shako_UK_", "hcl_shako_uk_"),
+        (J("source", "models", "shakos", "hcl_shako_uk", "hcl_shako_uk_texturas_bru_linha.blend"), "HCL_Shako_UK_", "hcl_shako_uk_"),
         (J("source", "models", "shakos", "hcl_shako_uk", "hcl_shako_uk_texturas_bru.blend"), "HCL_Shako_UK_", "hcl_shako_uk_"),
         (J("source", "models", "shakos", "hcl_shako_uk", "hcl_shako_uk_texturas_por.blend"), "HCL_Shako_UK_", "hcl_shako_uk_"),
         (J("source", "models", "shakos", "hcl_shako_uk", "hcl_shako_uk_texturas_stovepipe.blend"), "HCL_Shako_UK_", "hcl_shako_uk_"),
@@ -134,7 +135,7 @@ for i, (kind, var, tag) in enumerate(SOLD):
         cc.material_slots[0].link = "OBJECT"
         vest = src.name.startswith("HCL_V")
         cc.material_slots[0].material = EQMAT[("hcl_v_uk1812_correame_preto" if kind in BLACK_BELTS else "hcl_v_uk1812_correame")
-                                              if vest else "hcl_b_uk1812_mochila"]
+                                              if vest else ("hcl_b_bru1815_mochila" if kind == "bru_dolman" else "hcl_b_uk1812_mochila")]
     s = shk[tag].copy(); s.location = (x, 0, 0); s.hide_render = False; sc.collection.objects.link(s)
     if kind.startswith("por_") or tag == "bru_linha":  # number band: the regiment's / battalion's number texture
         s.data = s.data.copy()
