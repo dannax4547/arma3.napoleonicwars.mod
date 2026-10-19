@@ -166,3 +166,29 @@ player forceAddUniform "HCL_U_UK1812_K01"; removeHeadgear player; player addHead
 | U7 | Equipamento | `HCL_V_UK1812_Correame`, `HCL_B_UK1812_Mochila` | Correias acompanhando a casaca |
 
 **Resultado no jogo (relato do usuário, 2026-10-18):** *"já testei, ficou bom"*. O teste foi feito pelo usuário, sem capturas nem log anexados, e não houve detalhe por item. U1–U7 ficam aprovados de forma geral pelo relato.
+
+## 7. Portugal no `hcl_uk.pbo` (2026-10-19; não testado no jogo)
+
+Detalhes em `docs/reports/portugal_prototipo.md` §2.
+
+**Executado fora do jogo:**
+- PAA: 141 conversões, 0 falhas;
+- binarize 0, com 21/21 modelos com esqueleto;
+- `CfgConvert` 0;
+- `pbo_verify`: 185 arquivos, 184 referências, nenhuma faltando;
+- o número do regimento aparece na faixa da barretina no render.
+
+**Antes de testar:** abra o Arma 3 **sem BattlEye** e **nunca** com o Blender trabalhando.
+
+Comando para o console (granadeiro do 17º, 2º de Elvas):
+
+```sqf
+player forceAddUniform "HCL_U_POR1812_L17"; removeHeadgear player; player addHeadgear "HCL_H_POR1812_Stovepipe_Granadeiro_17"; player addVest "HCL_V_UK1812_Correame"; player addBackpack "HCL_B_UK1812_Mochila";
+```
+
+| ID | Item | Classes | Observar |
+|---|---|---|---|
+| P1 | Jaquetas de linha | `HCL_U_POR1812_L01` … `L24` | Gola, punhos e viras nas cores de cada regimento |
+| P2 | Jaquetas de Caçadores | `HCL_U_POR1812_C01` … `C12` | Alamares pretos; correame preto (`HCL_V_UK1812_Correame_Preto`) |
+| P3 | **Número na barretina** | `HCL_H_POR1812_Stovepipe_*_NN` | O número muda com a classe (seleção escondida `numero`); legível a 1–2 m; troca para a Res 2 sem perder o número |
+| P4 | Barretinas | batalhão, granadeiros, ligeira, Caçadores | Placa oval, granada ou corneta, cocar, pluma; encaixe na cabeça |
