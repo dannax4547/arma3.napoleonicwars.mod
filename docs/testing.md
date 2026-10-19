@@ -202,3 +202,16 @@ player forceAddUniform "HCL_U_Italia1812_NA07"; removeHeadgear player; player ad
 | I6 | Infantaria ligeira | `HCL_U_Italia1812_LE01/LE03/LE04`, `_Carabiniere_LE01/LE03/LEX`, `_Voltigeur_LE01/LE04/LEX`, `HCL_H_Italia1812_Bonnet_Italia_Carabineiro_Gala` | Verde-escuro sem virar preto à sombra; golas vermelha, branca, violeta e amarela; calça verde |
 | I7 | Outros corpos | `_DAL`, `_Granadeiro_DAL`, `_RES`, `_MIL`, `_VOL`, `_BRE`, `_DRA`, `_ART` | Azul-claro da Guarda de Milão; lapelas rosa dos dragões; calça cinza de Brescia |
 | I8 | Linha (correções e oficiais) | `_Voltigeur_IT03/IT05` (agora verdes), `_Granadeiro_IT06`, `_Oficial_IT01/IT04`, `_Oficial_Granadeiro_IT05` | Dragonas de prata dos oficiais |
+
+## 9. França, variantes pedidas pelo usuário (2026-10-19, `hcl_fr.pbo` remontado, não testado no jogo)
+
+O `hcl_fr` foi remontado com os scripts deste worktree (`build_mod_fr.ps1 <raiz> <pasta de scripts>`, parâmetro novo e opcional). 147,5 MB; Binarize 0, 19 modelos com esqueleto; `pbo_verify`: 122 referências, nenhuma faltando. As duas peças só mudam a textura `_co` (mesmo modelo); não têm fonte histórica (variante do usuário).
+
+| ID | Item | Classe | Observar |
+|---|---|---|---|
+| F-A1 | Barretina de carabineiro de ligeira, azul-escura | `HCL_H_Fr1812_Ligeira_Carabineiro_Gala_Azul` | Plumet, galões, divisas e cordões azul-escuros; o cocar continua tricolor (`variantes_cor_shako_fr.py`) |
+| F-A2 | Granadeiro de casaca verde | `HCL_U_Fr1812_Granadeiro_F01_Verde` | Casaca verde, canhões vermelhos, dragonas azuis |
+
+```sqf
+player forceAddUniform "HCL_U_Fr1812_Granadeiro_F01_Verde"; removeHeadgear player; player addHeadgear "HCL_H_Fr1812_Ligeira_Carabineiro_Gala_Azul";
+```

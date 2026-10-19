@@ -598,5 +598,125 @@
     0.18
    ]
   }
+ },
+ "Granadeiro_F01_Verde": {
+  "prefixo": "hcl_u_fr1812_elite_gr01v",
+  "viras_externas": true,
+  "ornamento": "granada",
+  "nome": "Variante do usuario (2026-10-19): granadeiro F01 com casaca verde, canhoes vermelhos e dragonas azuis",
+  "mod": "Granadeiro_F01 recolorido a pedido do usuario (sem fonte historica)",
+  "curto": "granadeiro, casaca verde, dragonas azuis",
+  "cores": {
+   "casaca": [
+    0.07,
+    0.26,
+    0.11
+   ],
+   "gola": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "punho": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "gola_debrum": [
+    0.86,
+    0.85,
+    0.8
+   ],
+   "punho_debrum": [
+    0.86,
+    0.85,
+    0.8
+   ],
+   "lapela": [
+    0.86,
+    0.85,
+    0.8
+   ],
+   "lapela_debrum": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "viras": [
+    0.86,
+    0.85,
+    0.8
+   ],
+   "viras_debrum": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "pala": [
+    0.86,
+    0.85,
+    0.8
+   ],
+   "debrum": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "platina": [
+    0.17,
+    0.24,
+    0.52
+   ],
+   "platina_borda": [
+    0.82,
+    0.64,
+    0.18
+   ],
+   "botoes": [
+    0.8,
+    0.62,
+    0.28
+   ],
+   "calca": [
+    0.84,
+    0.83,
+    0.78
+   ],
+   "polaina": [
+    0.045,
+    0.045,
+    0.045
+   ],
+   "sapato": [
+    0.03,
+    0.028,
+    0.025
+   ],
+   "sola": [
+    0.2,
+    0.13,
+    0.08
+   ],
+   "dragona": [
+    0.17,
+    0.24,
+    0.52
+   ],
+   "dragona_meialua": [
+    0.17,
+    0.24,
+    0.52
+   ],
+   "dragona_passante": [
+    0.82,
+    0.64,
+    0.18
+   ],
+   "ornamento_cor": [
+    0.62,
+    0.07,
+    0.07
+   ]
+  }
  }
 }

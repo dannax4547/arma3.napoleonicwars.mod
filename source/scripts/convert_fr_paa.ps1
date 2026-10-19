@@ -20,7 +20,7 @@ foreach ($s in "nohq", "smdi") { $jobs += , @("$cap\hcl_u_fr1812_capote_${s}.png
 # elite companies: coat with epaulettes (build_casaca_elite_fr.py), _co per variant, shared _nohq / _smdi
 $eli = Join-Path $root "source\textures\hcl_uniforme_fr_elite"
 # lc01 / lk01 / lv01: light infantry chasseur / carabinier / voltigeur (2026-10-13)
-foreach ($v in "gr01", "vo01", "lc01", "lk01", "lv01") { $jobs += , @("$eli\hcl_u_fr1812_elite_${v}_co.png", "$eli\paa\hcl_u_fr1812_elite_${v}_co.paa") }
+foreach ($v in "gr01", "vo01", "lc01", "lk01", "lv01", "gr01v") { $jobs += , @("$eli\hcl_u_fr1812_elite_${v}_co.png", "$eli\paa\hcl_u_fr1812_elite_${v}_co.paa") }
 foreach ($s in "nohq", "smdi") { $jobs += , @("$eli\hcl_u_fr1812_elite_${s}.png", "$eli\paa\hcl_u_fr1812_elite_${s}.paa") }
 foreach ($t in "fuzileiro_1a_comp", "granadeiro_gala", "granadeiro_campanha", "voltigeur_gala", "voltigeur_campanha", "oficial_coronel",
                "fuzileiro_losango", "fuzileiro_losango_branco", "ligeira_carabineiro_gala", "ligeira_voltigeur_gala") {
@@ -30,7 +30,8 @@ foreach ($t in "fuzileiro_1a_comp", "granadeiro_gala", "granadeiro_campanha", "v
 foreach ($t in "fuzileiro_2a_comp", "fuzileiro_3a_comp", "fuzileiro_4a_comp",
                "fuzileiro_losango_2a_comp", "fuzileiro_losango_3a_comp", "fuzileiro_losango_4a_comp",
                "fuzileiro_losango_branco_2a_comp", "fuzileiro_losango_branco_3a_comp", "fuzileiro_losango_branco_4a_comp",
-               "linha_018", "linha_046", "linha_057", "linha_084") {      # numbered line regiments (numerar_placa_fr.py)
+               "linha_018", "linha_046", "linha_057", "linha_084",       # numbered line regiments (numerar_placa_fr.py)
+               "ligeira_carabineiro_gala_azul") {                        # dark blue carabinier (variantes_cor_shako_fr.py)
     $jobs += , @("$shk\hcl_shako_fr_${t}_co.png", "$shk\paa\hcl_shako_fr_${t}_co.paa")
 }
 # Old Guard: bearskins (one texture set each) and the long-tailed habit (_co per variant, shared _nohq/_smdi)

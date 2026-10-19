@@ -9,7 +9,7 @@ class CfgPatches
 	{
 		author = "Historical Clothing";
 		units[] = {"HCL_B_Fr1812_Havresac"};
-		weapons[] = {"HCL_U_Fr1812_F01", "HCL_U_Fr1812_F02", "HCL_U_Fr1812_F03", "HCL_U_Fr1812_F04", "HCL_U_Fr1812_Capote_W01", "HCL_U_Fr1812_Capote_W02", "HCL_U_Fr1812_Capote_W03", "HCL_U_Fr1812_Capote_W04", "HCL_U_Fr1812_Capote_W05", "HCL_U_Fr1812_Granadeiro_F01", "HCL_U_Fr1812_Ligeira_Cacador", "HCL_U_Fr1812_Ligeira_Carabineiro", "HCL_U_Fr1812_Ligeira_Voltigeur", "HCL_U_Fr1812_Voltigeur_F01", "HCL_U_Fr1812_Guarda_Cacador", "HCL_U_Fr1812_Guarda_Granadeiro", "HCL_H_Fr1812_Fuzileiro_1aComp", "HCL_H_Fr1812_Granadeiro_Gala", "HCL_H_Fr1812_Granadeiro_Campanha", "HCL_H_Fr1812_Voltigeur_Gala", "HCL_H_Fr1812_Voltigeur_Campanha", "HCL_H_Fr1812_Oficial_Coronel", "HCL_H_Fr1812_Fuzileiro_Losango_1aComp", "HCL_H_Fr1812_Fuzileiro_LosangoBranco_1aComp", "HCL_H_Fr1812_Ligeira_Carabineiro_Gala", "HCL_H_Fr1812_Ligeira_Voltigeur_Gala", "HCL_H_Fr1812_Fuzileiro_2aComp", "HCL_H_Fr1812_Fuzileiro_3aComp", "HCL_H_Fr1812_Fuzileiro_4aComp", "HCL_H_Fr1812_Fuzileiro_Losango_2aComp", "HCL_H_Fr1812_Fuzileiro_Losango_3aComp", "HCL_H_Fr1812_Fuzileiro_Losango_4aComp", "HCL_H_Fr1812_Fuzileiro_LosangoBranco_2aComp", "HCL_H_Fr1812_Fuzileiro_LosangoBranco_3aComp", "HCL_H_Fr1812_Fuzileiro_LosangoBranco_4aComp", "HCL_H_Fr1812_Linha_018", "HCL_H_Fr1812_Linha_046", "HCL_H_Fr1812_Linha_057", "HCL_H_Fr1812_Linha_084", "HCL_H_Fr1812_Guarda_Bonnet_Granadeiro_Gala", "HCL_H_Fr1812_Guarda_Bonnet_Granadeiro_Campanha", "HCL_H_Fr1812_Guarda_Bonnet_Cacador_Gala", "HCL_V_Fr1812_Correame"};
+		weapons[] = {"HCL_U_Fr1812_F01", "HCL_U_Fr1812_F02", "HCL_U_Fr1812_F03", "HCL_U_Fr1812_F04", "HCL_U_Fr1812_Capote_W01", "HCL_U_Fr1812_Capote_W02", "HCL_U_Fr1812_Capote_W03", "HCL_U_Fr1812_Capote_W04", "HCL_U_Fr1812_Capote_W05", "HCL_U_Fr1812_Granadeiro_F01", "HCL_U_Fr1812_Granadeiro_F01_Verde", "HCL_U_Fr1812_Ligeira_Cacador", "HCL_U_Fr1812_Ligeira_Carabineiro", "HCL_U_Fr1812_Ligeira_Voltigeur", "HCL_U_Fr1812_Voltigeur_F01", "HCL_U_Fr1812_Guarda_Cacador", "HCL_U_Fr1812_Guarda_Granadeiro", "HCL_H_Fr1812_Fuzileiro_1aComp", "HCL_H_Fr1812_Granadeiro_Gala", "HCL_H_Fr1812_Granadeiro_Campanha", "HCL_H_Fr1812_Voltigeur_Gala", "HCL_H_Fr1812_Voltigeur_Campanha", "HCL_H_Fr1812_Oficial_Coronel", "HCL_H_Fr1812_Fuzileiro_Losango_1aComp", "HCL_H_Fr1812_Fuzileiro_LosangoBranco_1aComp", "HCL_H_Fr1812_Ligeira_Carabineiro_Gala", "HCL_H_Fr1812_Ligeira_Voltigeur_Gala", "HCL_H_Fr1812_Ligeira_Carabineiro_Gala_Azul", "HCL_H_Fr1812_Fuzileiro_2aComp", "HCL_H_Fr1812_Fuzileiro_3aComp", "HCL_H_Fr1812_Fuzileiro_4aComp", "HCL_H_Fr1812_Fuzileiro_Losango_2aComp", "HCL_H_Fr1812_Fuzileiro_Losango_3aComp", "HCL_H_Fr1812_Fuzileiro_Losango_4aComp", "HCL_H_Fr1812_Fuzileiro_LosangoBranco_2aComp", "HCL_H_Fr1812_Fuzileiro_LosangoBranco_3aComp", "HCL_H_Fr1812_Fuzileiro_LosangoBranco_4aComp", "HCL_H_Fr1812_Linha_018", "HCL_H_Fr1812_Linha_046", "HCL_H_Fr1812_Linha_057", "HCL_H_Fr1812_Linha_084", "HCL_H_Fr1812_Guarda_Bonnet_Granadeiro_Gala", "HCL_H_Fr1812_Guarda_Bonnet_Granadeiro_Campanha", "HCL_H_Fr1812_Guarda_Bonnet_Cacador_Gala", "HCL_V_Fr1812_Correame"};
 		requiredVersion = 0.1;
 		requiredAddons[] = {"A3_Characters_F", "A3_Weapons_F_Ammoboxes"};
 	};
@@ -112,6 +112,12 @@ class CfgVehicles
 		displayName = "French Infantryman - Line Infantry, Grenadier Company (HCL test)";
 		uniformClass = "HCL_U_Fr1812_Granadeiro_F01";
 		hiddenSelectionsTextures[] = {"\hcl\hcl_fr\data\hcl_u_fr1812_elite_gr01_co.paa"};
+	};
+	class HCL_Fr1812_Soldado_Granadeiro_F01_Verde: HCL_Fr1812_Soldado_Elite_Base
+	{
+		displayName = "French Infantryman - Line Infantry, Grenadier Company, green coat, blue epaulettes (custom variant) (HCL test)";
+		uniformClass = "HCL_U_Fr1812_Granadeiro_F01_Verde";
+		hiddenSelectionsTextures[] = {"\hcl\hcl_fr\data\hcl_u_fr1812_elite_gr01v_co.paa"};
 	};
 	class HCL_Fr1812_Soldado_Ligeira_Cacador: HCL_Fr1812_Soldado_Elite_Base
 	{
@@ -350,6 +356,23 @@ class CfgWeapons
 		{
 			uniformModel = "-";
 			uniformClass = "HCL_Fr1812_Soldado_Granadeiro_F01";
+			containerClass = "Supply40";
+			mass = 40;
+		};
+	};
+	class HCL_U_Fr1812_Granadeiro_F01_Verde: Uniform_Base
+	{
+		author = "Historical Clothing";
+		scope = 2;
+		displayName = "[HCL] French Coat 1812 - Line Infantry, Grenadier Company, green coat, blue epaulettes (custom variant)";
+		picture = "\A3\characters_f\data\ui\icon_U_BasicBody_ca.paa";
+		model = "\A3\Characters_F\Common\Suitpacks\suitpack_universal_F.p3d";
+		hiddenSelections[] = {"camo"};
+		hiddenSelectionsTextures[] = {"\A3\Characters_F\Common\Suitpacks\data\suitpack_soldier_blufor_co.paa"};
+		class ItemInfo: UniformItem
+		{
+			uniformModel = "-";
+			uniformClass = "HCL_Fr1812_Soldado_Granadeiro_F01_Verde";
 			containerClass = "Supply40";
 			mass = 40;
 		};
@@ -713,6 +736,33 @@ class CfgWeapons
 		{
 			mass = 15;
 			uniformModel = "\hcl\hcl_fr\hcl_h_fr_ligeira_voltigeur_gala.p3d";
+			modelSides[] = {0, 1, 2, 3};
+			hiddenSelections[] = {"camo"};
+			class HitpointsProtectionInfo
+			{
+				class Head
+				{
+					hitpointName = "HitHead";
+					armor = 0;
+					passThrough = 1;
+				};
+			};
+		};
+	};
+	class HCL_H_Fr1812_Ligeira_Carabineiro_Gala_Azul: H_HelmetB
+	{
+		author = "Historical Clothing";
+		scope = 2;
+		displayName = "[HCL] French Light Infantry Shako - Carabinier, full dress, dark blue plume, lace and cords (white metal)";
+		descriptionShort = "Teste HCL - sem protecao";
+		picture = "\A3\characters_f\Data\UI\icon_H_helmet_plain_ca.paa";
+		model = "\hcl\hcl_fr\hcl_h_fr_ligeira_carabineiro_gala.p3d";
+		hiddenSelections[] = {"camo"};
+		hiddenSelectionsTextures[] = {"\hcl\hcl_fr\data\hcl_shako_fr_ligeira_carabineiro_gala_azul_co.paa"};
+		class ItemInfo: ItemInfo
+		{
+			mass = 15;
+			uniformModel = "\hcl\hcl_fr\hcl_h_fr_ligeira_carabineiro_gala.p3d";
 			modelSides[] = {0, 1, 2, 3};
 			hiddenSelections[] = {"camo"};
 			class HitpointsProtectionInfo

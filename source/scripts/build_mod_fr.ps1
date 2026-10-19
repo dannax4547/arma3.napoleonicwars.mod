@@ -4,8 +4,10 @@
 #   work/build/hcl/hcl_fr     binarized models, config.bin, rapified materials, textures
 #   release/@Historical_Clothing/Addons/hcl_fr.pbo   the packed addon (FileBank, prefix hcl\hcl_fr)
 # Does not touch the Arma 3 or Arma 3 Tools folders.
-#   powershell -ExecutionPolicy Bypass -File build_mod_fr.ps1 <project root>
-param([string]$root)
+#   powershell -ExecutionPolicy Bypass -File build_mod_fr.ps1 <project root> [<scripts dir>]
+#   <scripts dir>: default <project root>\source\scripts (2026-10-19: a git worktree can build with its own scripts)
+param([string]$root, [string]$scripts = "")
+if (-not $scripts) { $scripts = "$root\source\scripts" }
 $tools = "C:\Program Files (x86)\Steam\steamapps\common\Arma 3 Tools"
 $samples = "C:\Program Files (x86)\Steam\steamapps\common\Arma 3 Samples"
 $blender = "C:\Program Files\Blender Foundation\Blender 5.2\blender.exe"
@@ -15,11 +17,11 @@ $bld = "$root\work\build\hcl\hcl_fr"
 $rel = "$root\release\@Historical_Clothing\Addons"
 
 "== 1. P3D (MLOD) on the official templates"
-& $blender -b --factory-startup --python "$root\source\scripts\build_p3d_fr.py" -- $root $samples $src 2>&1 |
+& $blender -b --factory-startup --python "$scripts\build_p3d_fr.py" -- $root $samples $src 2>&1 |
     Select-String "CHECK|UNIFORME|PESOS|BARRETINA|EQUIPAMENTO|P3D|rror|Traceback" | ForEach-Object { "   $_" }
 
 "== 2. config.cpp"
-& $py -I "$root\source\scripts\gen_config_fr.py" $root
+& $py -I "$scripts\gen_config_fr.py" $root (Join-Path $scripts "..\textures\hcl_uniforme_fr")
 
 "== 3. textures (PAA, converted earlier with convert_fr_paa.ps1)"
 New-Item -ItemType Directory -Force "$src\data" | Out-Null

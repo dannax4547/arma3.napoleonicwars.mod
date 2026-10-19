@@ -7,7 +7,9 @@ import sys, os, json, re
 ROOT = sys.argv[1]
 SRC = os.path.join(ROOT, r"source\addon\hcl\hcl_fr")
 os.makedirs(os.path.join(SRC, "data"), exist_ok=True)
-VAR = json.load(open(os.path.join(ROOT, r"source\textures\hcl_uniforme_fr\variantes_fr.json"), encoding="utf-8"))
+# variants dir: optional 2nd argument (2026-10-19: a git worktree builds with its own JSONs), default as before
+VDIR = sys.argv[2] if len(sys.argv) > 2 else os.path.join(ROOT, r"source\textures\hcl_uniforme_fr")
+VAR = json.load(open(os.path.join(VDIR, r"variantes_fr.json"), encoding="utf-8"))
 P = r"\hcl\hcl_fr"
 ASCII = str.maketrans("áâãàéêíóôõúçÁÂÃÀÉÊÍÓÔÕÚÇ", "aaaaeeiooouc" + "AAAAEEIOOOUC")
 # shako P3D tag -> class suffix, display name (technical: company / dress, as in docs/reports/barretina_fr_blockout.md)
@@ -26,6 +28,9 @@ SHAKOS = [("fuzileiro_1a_comp", "Fuzileiro_1aComp", "fuzileiro, 1a companhia"),
 # headgear entries: (p3d file, material base, class, display name, _co base); texture-only variants reuse a model
 HEAD = [(f"hcl_h_fr_{tg}", f"hcl_shako_fr_{tg}", f"HCL_H_Fr1812_{cls}", f"Barretina francesa 1812 - {nome}", f"hcl_shako_fr_{tg}")
         for tg, cls, nome in SHAKOS]
+# light infantry carabinier in dark blue instead of red (user 2026-10-19; variantes_cor_shako_fr.py): same model
+HEAD.append(("hcl_h_fr_ligeira_carabineiro_gala", "hcl_shako_fr_ligeira_carabineiro_gala", "HCL_H_Fr1812_Ligeira_Carabineiro_Gala_Azul",
+             "Barretina francesa 1812 - infantaria ligeira, carabineiro, gala, azul-escuro", "hcl_shako_fr_ligeira_carabineiro_gala_azul"))
 # fusilier companies 2-4 (pompom sky blue, aurore, violet; variantes_pompom_fr.py): same model as the 1st company
 for tg, cls, nome in (("fuzileiro_1a_comp", "Fuzileiro", "fuzileiro"), ("fuzileiro_losango", "Fuzileiro_Losango", "fuzileiro, placa em losango"),
                       ("fuzileiro_losango_branco", "Fuzileiro_LosangoBranco", "fuzileiro, placa em losango de metal branco")):
@@ -49,11 +54,11 @@ CIDS = sorted(CAP)
 U_P3D, V_P3D, B_P3D = "hcl_u_fr1812", "hcl_v_fr1812_correame", "hcl_b_fr1812_havresac"
 C_P3D = "hcl_u_fr1812_capote"
 # elite companies: the coat with epaulettes (build_casaca_elite_fr.py), its own model and texture set
-ELI = json.load(open(os.path.join(ROOT, r"source\textures\hcl_uniforme_fr\variantes_fr_elite.json"), encoding="utf-8"))
+ELI = json.load(open(os.path.join(VDIR, r"variantes_fr_elite.json"), encoding="utf-8"))
 EIDS = sorted(ELI)
 E_P3D = "hcl_u_fr1812_elite"
 # Old Guard: long-tailed habit (build_uniforme_fr.py hem=0.64 + build_casaca_elite_fr.py), its own model and textures
-GUA = json.load(open(os.path.join(ROOT, r"source\textures\hcl_uniforme_fr\variantes_fr_guarda.json"), encoding="utf-8"))
+GUA = json.load(open(os.path.join(VDIR, r"variantes_fr_guarda.json"), encoding="utf-8"))
 GIDS = sorted(GUA)
 G_P3D = "hcl_u_fr1812_guarda"
 

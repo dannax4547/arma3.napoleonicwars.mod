@@ -48,6 +48,7 @@ FR_UNI = {
     "W05": "Imperial Guard, Foot Grenadiers (Old Guard), blue campaign greatcoat",
     "Granadeiro_F01": "Line Infantry, Grenadier Company",
     "Voltigeur_F01": "Line Infantry, Voltigeur Company",
+    "Granadeiro_F01_Verde": "Line Infantry, Grenadier Company, green coat, blue epaulettes (custom variant)",
     # light infantry (mod FranceINF c0 r2, 2026-10-13); regiment numbers unknown
     "Ligeira_Cacador": "Light Infantry, Chasseur Company",
     "Ligeira_Carabineiro": "Light Infantry, Carabinier Company",
@@ -68,6 +69,7 @@ FR_SHAKO = {"Granadeiro_Gala": "Grenadier, full dress (plume and cords)", "Grana
             "Voltigeur_Gala": "Voltigeur, full dress (plume and cords)", "Voltigeur_Campanha": "Voltigeur, campaign (pompom)",
             "Oficial_Coronel": "Officer, Colonel",
             "Ligeira_Carabineiro_Gala": "Light Infantry, Carabinier, full dress (plume and cords, white metal)",
+            "Ligeira_Carabineiro_Gala_Azul": "Light Infantry, Carabinier, full dress, dark blue plume, lace and cords (white metal)",
             "Ligeira_Voltigeur_Gala": "Light Infantry, Voltigeur, full dress (plume and cords, white metal)"}
 # numbered line regiments (plate number, numerar_placa_fr.py); sobriquets are well known (🔶 to be checked)
 LINHA = {18: "18th Line Infantry Regiment (le Brave)", 46: "46th Line Infantry Regiment",
