@@ -1,0 +1,1080 @@
+{
+ "IT01": {
+  "prefixo": "hcl_u_italia1812_it01",
+  "curto": "Italia 1o",
+  "nome": "Reino da Italia, 1o de Linha: casaca branca, gola verde, lapelas e canhoes vermelhos, latao",
+  "fonte": "tabela de Schultheis 1996 🔶 + gravura de 1812 (Vinkhuijzen, NYPL)",
+  "cores": {
+   "casaca": [
+    0.86,
+    0.85,
+    0.8
+   ],
+   "gola": [
+    0.07,
+    0.26,
+    0.11
+   ],
+   "gola_debrum": [
+    0.07,
+    0.26,
+    0.11
+   ],
+   "lapela": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "lapela_debrum": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "punho": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "punho_debrum": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "pala": [
+    0.86,
+    0.85,
+    0.8
+   ],
+   "debrum": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "viras": [
+    0.86,
+    0.85,
+    0.8
+   ],
+   "viras_debrum": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "platina": [
+    0.86,
+    0.85,
+    0.8
+   ],
+   "platina_borda": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "botoes": [
+    0.8,
+    0.62,
+    0.28
+   ],
+   "calca": [
+    0.84,
+    0.83,
+    0.78
+   ],
+   "polaina": [
+    0.06,
+    0.06,
+    0.07
+   ],
+   "sapato": [
+    0.03,
+    0.028,
+    0.025
+   ],
+   "sola": [
+    0.2,
+    0.13,
+    0.08
+   ]
+  }
+ },
+ "IT02": {
+  "prefixo": "hcl_u_italia1812_it02",
+  "curto": "Italia 2o",
+  "nome": "Reino da Italia, 2o de Linha: casaca branca, gola branca debruada de vermelho, lapelas vermelhas, latao",
+  "fonte": "tabela de Schultheis 1996 🔶",
+  "cores": {
+   "casaca": [
+    0.86,
+    0.85,
+    0.8
+   ],
+   "gola": [
+    0.86,
+    0.85,
+    0.8
+   ],
+   "gola_debrum": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "lapela": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "lapela_debrum": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "punho": [
+    0.86,
+    0.85,
+    0.8
+   ],
+   "punho_debrum": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "pala": [
+    0.86,
+    0.85,
+    0.8
+   ],
+   "debrum": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "viras": [
+    0.86,
+    0.85,
+    0.8
+   ],
+   "viras_debrum": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "platina": [
+    0.86,
+    0.85,
+    0.8
+   ],
+   "platina_borda": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "botoes": [
+    0.8,
+    0.62,
+    0.28
+   ],
+   "calca": [
+    0.84,
+    0.83,
+    0.78
+   ],
+   "polaina": [
+    0.06,
+    0.06,
+    0.07
+   ],
+   "sapato": [
+    0.03,
+    0.028,
+    0.025
+   ],
+   "sola": [
+    0.2,
+    0.13,
+    0.08
+   ]
+  }
+ },
+ "IT03": {
+  "prefixo": "hcl_u_italia1812_it03",
+  "curto": "Italia 3o",
+  "nome": "Reino da Italia, 3o de Linha: casaca branca, gola, lapelas e canhoes vermelhos, latao",
+  "fonte": "tabela de Schultheis 1996 🔶 + gravura de 1812 (Vinkhuijzen, NYPL)",
+  "cores": {
+   "casaca": [
+    0.86,
+    0.85,
+    0.8
+   ],
+   "gola": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "gola_debrum": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "lapela": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "lapela_debrum": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "punho": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "punho_debrum": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "pala": [
+    0.86,
+    0.85,
+    0.8
+   ],
+   "debrum": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "viras": [
+    0.86,
+    0.85,
+    0.8
+   ],
+   "viras_debrum": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "platina": [
+    0.86,
+    0.85,
+    0.8
+   ],
+   "platina_borda": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "botoes": [
+    0.8,
+    0.62,
+    0.28
+   ],
+   "calca": [
+    0.84,
+    0.83,
+    0.78
+   ],
+   "polaina": [
+    0.06,
+    0.06,
+    0.07
+   ],
+   "sapato": [
+    0.03,
+    0.028,
+    0.025
+   ],
+   "sola": [
+    0.2,
+    0.13,
+    0.08
+   ]
+  }
+ },
+ "IT04": {
+  "prefixo": "hcl_u_italia1812_it04",
+  "curto": "Italia 4o",
+  "nome": "Reino da Italia, 4o de Linha: casaca branca, gola vermelha, lapelas e canhoes brancos debruados de verde, estanho",
+  "fonte": "tabela de Schultheis 1996 🔶 + gravura de 1812 (Vinkhuijzen, NYPL)",
+  "cores": {
+   "casaca": [
+    0.86,
+    0.85,
+    0.8
+   ],
+   "gola": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "gola_debrum": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "lapela": [
+    0.86,
+    0.85,
+    0.8
+   ],
+   "lapela_debrum": [
+    0.07,
+    0.26,
+    0.11
+   ],
+   "punho": [
+    0.86,
+    0.85,
+    0.8
+   ],
+   "punho_debrum": [
+    0.07,
+    0.26,
+    0.11
+   ],
+   "pala": [
+    0.86,
+    0.85,
+    0.8
+   ],
+   "debrum": [
+    0.07,
+    0.26,
+    0.11
+   ],
+   "viras": [
+    0.86,
+    0.85,
+    0.8
+   ],
+   "viras_debrum": [
+    0.07,
+    0.26,
+    0.11
+   ],
+   "platina": [
+    0.86,
+    0.85,
+    0.8
+   ],
+   "platina_borda": [
+    0.07,
+    0.26,
+    0.11
+   ],
+   "botoes": [
+    0.74,
+    0.75,
+    0.76
+   ],
+   "calca": [
+    0.84,
+    0.83,
+    0.78
+   ],
+   "polaina": [
+    0.06,
+    0.06,
+    0.07
+   ],
+   "sapato": [
+    0.03,
+    0.028,
+    0.025
+   ],
+   "sola": [
+    0.2,
+    0.13,
+    0.08
+   ]
+  }
+ },
+ "IT05": {
+  "prefixo": "hcl_u_italia1812_it05",
+  "curto": "Italia 5o",
+  "nome": "Reino da Italia, 5o de Linha: casaca branca, gola vermelha, lapelas e canhoes verdes, estanho",
+  "fonte": "tabela de Schultheis 1996 🔶 + gravura de 1812 (Vinkhuijzen, NYPL)",
+  "cores": {
+   "casaca": [
+    0.86,
+    0.85,
+    0.8
+   ],
+   "gola": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "gola_debrum": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "lapela": [
+    0.07,
+    0.26,
+    0.11
+   ],
+   "lapela_debrum": [
+    0.07,
+    0.26,
+    0.11
+   ],
+   "punho": [
+    0.07,
+    0.26,
+    0.11
+   ],
+   "punho_debrum": [
+    0.07,
+    0.26,
+    0.11
+   ],
+   "pala": [
+    0.86,
+    0.85,
+    0.8
+   ],
+   "debrum": [
+    0.07,
+    0.26,
+    0.11
+   ],
+   "viras": [
+    0.86,
+    0.85,
+    0.8
+   ],
+   "viras_debrum": [
+    0.07,
+    0.26,
+    0.11
+   ],
+   "platina": [
+    0.86,
+    0.85,
+    0.8
+   ],
+   "platina_borda": [
+    0.07,
+    0.26,
+    0.11
+   ],
+   "botoes": [
+    0.74,
+    0.75,
+    0.76
+   ],
+   "calca": [
+    0.84,
+    0.83,
+    0.78
+   ],
+   "polaina": [
+    0.06,
+    0.06,
+    0.07
+   ],
+   "sapato": [
+    0.03,
+    0.028,
+    0.025
+   ],
+   "sola": [
+    0.2,
+    0.13,
+    0.08
+   ]
+  }
+ },
+ "IT06": {
+  "prefixo": "hcl_u_italia1812_it06",
+  "curto": "Italia 6o",
+  "nome": "Reino da Italia, 6o de Linha: casaca branca, gola branca, lapelas verdes, canhoes brancos, latao",
+  "fonte": "tabela de Schultheis 1996 🔶",
+  "cores": {
+   "casaca": [
+    0.86,
+    0.85,
+    0.8
+   ],
+   "gola": [
+    0.86,
+    0.85,
+    0.8
+   ],
+   "gola_debrum": [
+    0.07,
+    0.26,
+    0.11
+   ],
+   "lapela": [
+    0.07,
+    0.26,
+    0.11
+   ],
+   "lapela_debrum": [
+    0.07,
+    0.26,
+    0.11
+   ],
+   "punho": [
+    0.86,
+    0.85,
+    0.8
+   ],
+   "punho_debrum": [
+    0.07,
+    0.26,
+    0.11
+   ],
+   "pala": [
+    0.86,
+    0.85,
+    0.8
+   ],
+   "debrum": [
+    0.07,
+    0.26,
+    0.11
+   ],
+   "viras": [
+    0.86,
+    0.85,
+    0.8
+   ],
+   "viras_debrum": [
+    0.07,
+    0.26,
+    0.11
+   ],
+   "platina": [
+    0.86,
+    0.85,
+    0.8
+   ],
+   "platina_borda": [
+    0.07,
+    0.26,
+    0.11
+   ],
+   "botoes": [
+    0.8,
+    0.62,
+    0.28
+   ],
+   "calca": [
+    0.84,
+    0.83,
+    0.78
+   ],
+   "polaina": [
+    0.06,
+    0.06,
+    0.07
+   ],
+   "sapato": [
+    0.03,
+    0.028,
+    0.025
+   ],
+   "sola": [
+    0.2,
+    0.13,
+    0.08
+   ]
+  }
+ },
+ "IT07": {
+  "prefixo": "hcl_u_italia1812_it07",
+  "curto": "Italia 7o",
+  "nome": "Reino da Italia, 7o de Linha: casaca branca, gola verde, lapelas brancas, canhoes vermelhos, estanho",
+  "fonte": "tabela de Schultheis 1996 🔶 + gravura de 1812 (Vinkhuijzen, NYPL)",
+  "cores": {
+   "casaca": [
+    0.86,
+    0.85,
+    0.8
+   ],
+   "gola": [
+    0.07,
+    0.26,
+    0.11
+   ],
+   "gola_debrum": [
+    0.07,
+    0.26,
+    0.11
+   ],
+   "lapela": [
+    0.86,
+    0.85,
+    0.8
+   ],
+   "lapela_debrum": [
+    0.07,
+    0.26,
+    0.11
+   ],
+   "punho": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "punho_debrum": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "pala": [
+    0.86,
+    0.85,
+    0.8
+   ],
+   "debrum": [
+    0.07,
+    0.26,
+    0.11
+   ],
+   "viras": [
+    0.86,
+    0.85,
+    0.8
+   ],
+   "viras_debrum": [
+    0.07,
+    0.26,
+    0.11
+   ],
+   "platina": [
+    0.86,
+    0.85,
+    0.8
+   ],
+   "platina_borda": [
+    0.07,
+    0.26,
+    0.11
+   ],
+   "botoes": [
+    0.74,
+    0.75,
+    0.76
+   ],
+   "calca": [
+    0.84,
+    0.83,
+    0.78
+   ],
+   "polaina": [
+    0.06,
+    0.06,
+    0.07
+   ],
+   "sapato": [
+    0.03,
+    0.028,
+    0.025
+   ],
+   "sola": [
+    0.2,
+    0.13,
+    0.08
+   ]
+  }
+ },
+ "NA01": {
+  "prefixo": "hcl_u_italia1812_na01",
+  "curto": "Napoles 1o",
+  "nome": "Reino de Napoles, 1o de Linha: casaca branca, distintivo escarlate",
+  "fonte": "Knoetel V/46 🔶; Decreto 821 (habit-veste)",
+  "cores": {
+   "casaca": [
+    0.86,
+    0.85,
+    0.8
+   ],
+   "gola": [
+    0.7,
+    0.08,
+    0.06
+   ],
+   "gola_debrum": [
+    0.7,
+    0.08,
+    0.06
+   ],
+   "lapela": [
+    0.7,
+    0.08,
+    0.06
+   ],
+   "lapela_debrum": [
+    0.7,
+    0.08,
+    0.06
+   ],
+   "punho": [
+    0.7,
+    0.08,
+    0.06
+   ],
+   "punho_debrum": [
+    0.86,
+    0.85,
+    0.8
+   ],
+   "pala": [
+    0.7,
+    0.08,
+    0.06
+   ],
+   "debrum": [
+    0.7,
+    0.08,
+    0.06
+   ],
+   "viras": [
+    0.7,
+    0.08,
+    0.06
+   ],
+   "viras_debrum": [
+    0.86,
+    0.85,
+    0.8
+   ],
+   "platina": [
+    0.86,
+    0.85,
+    0.8
+   ],
+   "platina_borda": [
+    0.7,
+    0.08,
+    0.06
+   ],
+   "botoes": [
+    0.8,
+    0.62,
+    0.28
+   ],
+   "calca": [
+    0.84,
+    0.83,
+    0.78
+   ],
+   "polaina": [
+    0.06,
+    0.06,
+    0.07
+   ],
+   "sapato": [
+    0.03,
+    0.028,
+    0.025
+   ],
+   "sola": [
+    0.2,
+    0.13,
+    0.08
+   ]
+  }
+ },
+ "NA02": {
+  "prefixo": "hcl_u_italia1812_na02",
+  "curto": "Napoles 2o",
+  "nome": "Reino de Napoles, 2o de Linha: casaca branca, distintivo verde",
+  "fonte": "Knoetel V/46 🔶; Decreto 821 (habit-veste)",
+  "cores": {
+   "casaca": [
+    0.86,
+    0.85,
+    0.8
+   ],
+   "gola": [
+    0.1,
+    0.32,
+    0.14
+   ],
+   "gola_debrum": [
+    0.1,
+    0.32,
+    0.14
+   ],
+   "lapela": [
+    0.1,
+    0.32,
+    0.14
+   ],
+   "lapela_debrum": [
+    0.1,
+    0.32,
+    0.14
+   ],
+   "punho": [
+    0.1,
+    0.32,
+    0.14
+   ],
+   "punho_debrum": [
+    0.86,
+    0.85,
+    0.8
+   ],
+   "pala": [
+    0.1,
+    0.32,
+    0.14
+   ],
+   "debrum": [
+    0.1,
+    0.32,
+    0.14
+   ],
+   "viras": [
+    0.1,
+    0.32,
+    0.14
+   ],
+   "viras_debrum": [
+    0.86,
+    0.85,
+    0.8
+   ],
+   "platina": [
+    0.86,
+    0.85,
+    0.8
+   ],
+   "platina_borda": [
+    0.1,
+    0.32,
+    0.14
+   ],
+   "botoes": [
+    0.8,
+    0.62,
+    0.28
+   ],
+   "calca": [
+    0.84,
+    0.83,
+    0.78
+   ],
+   "polaina": [
+    0.06,
+    0.06,
+    0.07
+   ],
+   "sapato": [
+    0.03,
+    0.028,
+    0.025
+   ],
+   "sola": [
+    0.2,
+    0.13,
+    0.08
+   ]
+  }
+ },
+ "NA05": {
+  "prefixo": "hcl_u_italia1812_na05",
+  "curto": "Napoles 5o",
+  "nome": "Reino de Napoles, 5o de Linha: casaca branca, distintivo azul-claro",
+  "fonte": "Knoetel V/46 e VI/23 🔶; Decreto 821 (habit-veste)",
+  "cores": {
+   "casaca": [
+    0.86,
+    0.85,
+    0.8
+   ],
+   "gola": [
+    0.42,
+    0.6,
+    0.84
+   ],
+   "gola_debrum": [
+    0.42,
+    0.6,
+    0.84
+   ],
+   "lapela": [
+    0.42,
+    0.6,
+    0.84
+   ],
+   "lapela_debrum": [
+    0.42,
+    0.6,
+    0.84
+   ],
+   "punho": [
+    0.42,
+    0.6,
+    0.84
+   ],
+   "punho_debrum": [
+    0.86,
+    0.85,
+    0.8
+   ],
+   "pala": [
+    0.42,
+    0.6,
+    0.84
+   ],
+   "debrum": [
+    0.42,
+    0.6,
+    0.84
+   ],
+   "viras": [
+    0.42,
+    0.6,
+    0.84
+   ],
+   "viras_debrum": [
+    0.86,
+    0.85,
+    0.8
+   ],
+   "platina": [
+    0.86,
+    0.85,
+    0.8
+   ],
+   "platina_borda": [
+    0.42,
+    0.6,
+    0.84
+   ],
+   "botoes": [
+    0.8,
+    0.62,
+    0.28
+   ],
+   "calca": [
+    0.84,
+    0.83,
+    0.78
+   ],
+   "polaina": [
+    0.06,
+    0.06,
+    0.07
+   ],
+   "sapato": [
+    0.03,
+    0.028,
+    0.025
+   ],
+   "sola": [
+    0.2,
+    0.13,
+    0.08
+   ]
+  }
+ },
+ "NA07": {
+  "prefixo": "hcl_u_italia1812_na07",
+  "curto": "Napoles 7o",
+  "nome": "Reino de Napoles, 7o de Linha: casaca branca, distintivo amarelo",
+  "fonte": "Freiberger Bilderhandschrift 1813 e outras, via Gaertner (Depesche 1); Decreto 821 (habit-veste)",
+  "cores": {
+   "casaca": [
+    0.86,
+    0.85,
+    0.8
+   ],
+   "gola": [
+    0.8,
+    0.6,
+    0.12
+   ],
+   "gola_debrum": [
+    0.8,
+    0.6,
+    0.12
+   ],
+   "lapela": [
+    0.8,
+    0.6,
+    0.12
+   ],
+   "lapela_debrum": [
+    0.8,
+    0.6,
+    0.12
+   ],
+   "punho": [
+    0.8,
+    0.6,
+    0.12
+   ],
+   "punho_debrum": [
+    0.86,
+    0.85,
+    0.8
+   ],
+   "pala": [
+    0.8,
+    0.6,
+    0.12
+   ],
+   "debrum": [
+    0.8,
+    0.6,
+    0.12
+   ],
+   "viras": [
+    0.8,
+    0.6,
+    0.12
+   ],
+   "viras_debrum": [
+    0.86,
+    0.85,
+    0.8
+   ],
+   "platina": [
+    0.86,
+    0.85,
+    0.8
+   ],
+   "platina_borda": [
+    0.8,
+    0.6,
+    0.12
+   ],
+   "botoes": [
+    0.8,
+    0.62,
+    0.28
+   ],
+   "calca": [
+    0.84,
+    0.83,
+    0.78
+   ],
+   "polaina": [
+    0.06,
+    0.06,
+    0.07
+   ],
+   "sapato": [
+    0.03,
+    0.028,
+    0.025
+   ],
+   "sola": [
+    0.2,
+    0.13,
+    0.08
+   ]
+  }
+ }
+}

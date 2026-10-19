@@ -47,7 +47,10 @@ COL = dict(feltro=(0.018, 0.018, 0.020), couro=(0.024, 0.021, 0.019), latao=(0.6
            # Prussian cloth cap (blockout_bone_landwehr.py; linear values of the sRGB uniform palette)
            azul_pano=(0.010, 0.016, 0.040), verde_pano=(0.010, 0.022, 0.010),
            couro_marrom=(0.050, 0.028, 0.014), forro=(0.33, 0.29, 0.22),
-           pelo=(0.011, 0.009, 0.008))               # bearskin fur (black, brownish in the light)
+           pelo=(0.011, 0.009, 0.008),               # bearskin fur (black, brownish in the light)
+           # Italy and Naples (2026-10-18): company pompoms, Neapolitan facings and the amaranth of the cockade
+           azul_celeste=(0.30, 0.55, 0.85), laranja=(0.85, 0.40, 0.08), violeta=(0.35, 0.10, 0.45),
+           amaranto=(0.45, 0.04, 0.18), escarlate=(0.70, 0.06, 0.04), azul_claro=(0.36, 0.56, 0.84))
 # mod art (Reto pack, authorised) for the traced plate and the star rosettes, sampled through their UV layer "arte"
 ATLAS = os.path.abspath(os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "..", "work", "ntw", "france",
                                      "FranceINF_diffuse.png"))

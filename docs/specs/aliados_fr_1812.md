@@ -6,7 +6,7 @@ Versão 0.1, 2026-10-13. Pedido do usuário: *"agora adiciona os aliados frances
 3. Reino da Itália e Reino de Nápoles;
 4. Suíços a serviço da França (os 4 regimentos de casaca vermelha).
 
-**Estado (2026-10-18):** decisões A1–A6 fechadas (§8). **Suíços feitos** (`hcl_suica.pbo`, verificado fora do jogo, `docs/reports/suica_1812.md`). **Varsóvia feita** (`hcl_varsovia.pbo`, verificado fora do jogo, `docs/reports/varsovia_1810.md`). Próximo: Itália e Nápoles.
+**Estado (2026-10-18):** decisões A1–A6 fechadas (§8). **Suíços feitos** (`hcl_suica.pbo`, verificado fora do jogo, `docs/reports/suica_1812.md`). **Varsóvia feita** (`hcl_varsovia.pbo`, verificado fora do jogo, `docs/reports/varsovia_1810.md`; mais regimentos em 2026-10-18). **Itália e Nápoles: fontes reunidas (§3), lote proposto em §3.3.**
 
 Legenda: ✅ fonte lida (página aberta nesta fase) · 🔶 provável (fonte secundária, de hobby ou de loja; ou só citada, sem leitura) · ❓ incerto ou com fontes em conflito · 🎮 só visto na arte do mod (atlas Reto)
 
@@ -159,31 +159,52 @@ Sem atlas Reto (ver §0). Fora do primeiro lote, salvo decisão A3.
 
 ## 3. Reino da Itália e Reino de Nápoles
 
+Pesquisa de 2026-10-18 (pedido: "utilize fontes históricas de museus e documentos"). As fontes de época encontradas são **imagens e um historiador quase contemporâneo**. Os decretos italianos de uniforme **não foram lidos**: o *Bollettino delle leggi* não foi achado em texto. Os de Nápoles só aparecem citados.
+
 ### 3.1 Itália — infantaria de linha
 
-| Item | Valor | Confiança |
+| Item | Valor | Fonte |
 |---|---|---|
-| Casaca | **Branca** de corte francês com lapelas pontudas desde **1806** (antes, verde) | 🔶 [MD-I] |
-| Barretina | Francesa desde 1807; placa de latão; cordões brancos até 1810; **cocar verde, vermelho e branco**; pompons por companhia: 1ª verde, 2ª azul-celeste, 3ª laranja, 4ª violeta | 🔶 [MD-I] |
-| Casaca de 1812 | O *habit-veste* francês de 1812 só chegou em **1813**, e pouco; na Rússia usaram o modelo antigo | 🔶 [MD-I] |
-| Granadeiros | Barretina de pelo com placa de latão, plumet vermelho, dragonas vermelhas | 🔶 [MD-I] |
-| Voltigeurs | Barretina com plumet verde de ponta amarela, cordões verdes, dragonas verdes com crescente amarelo | 🔶 [MD-I] |
-| Cores por regimento | 1º gola verde, lapelas e canhões vermelhos, botão latão · 2º gola branca com vivo vermelho, lapelas vermelhas, canhões brancos, latão · 3º tudo vermelho, latão · 4º gola vermelha, lapelas e canhões brancos com vivo verde, estanho · 5º gola vermelha, lapelas e canhões verdes, estanho · 6º gola branca, lapelas verdes, canhões brancos, latão · 7º gola verde, lapelas brancas, canhões vermelhos, estanho | 🔶 [MD-I] (Schultheis 1996, **sem bibliografia**; a própria página diz que as cores têm "evidências conflitantes") |
+| Casaca | **Branca**, corte e distinções de companhia **franceses**, desde **1806** (antes, verde); colete, calça e correame brancos, polainas pretas | ✅ [WP-IT-ES] (cita Pivka & Chappell, Osprey MAA 43, p. 23); 🖼 [KN-III-25] (Knötel, *Uniformenkunde* III/25, 1812: "weisse Uniformen mit regimentweis verschiedenfarbigen Abzeichen … roth, grün und weiss") |
+| Cocar | **Branco, verde e vermelho** (cocar nacional) | 📜 [ZANOLI] (Zanoli, *Sulla milizia cisalpino-italiana*, Milão 1845, p. 32 do volume digitalizado no Internet Archive, `bub_gb_SyVEAAAAYAAJ`; o autor serviu no exército italiano) |
+| Barretina (fuzileiros) | Francesa, placa losango e escamas de latão, **cocar verde-vermelho(-branco)**, pompom pela companhia: **1ª verde, 2ª azul-celeste, 3ª laranja, 4ª violeta**; cordões brancos de gala | ✅ [WP-IT-ES] 🔶 (Osprey) |
+| Granadeiros | **Barretina de pelo**, placa de latão com granada, plumet vermelho, cordões brancos, **dragonas vermelhas** | ✅ [WP-IT-ES] 🔶 |
+| Voltigeurs | Plumet **verde com ponta amarela**, cordões verdes, **dragonas verdes com crescente amarelo** | ✅ [WP-IT-ES] 🔶 |
+| Cores por regimento | 1º gola verde, lapelas e canhões vermelhos · 2º gola branca com vivo vermelho, lapelas vermelhas, canhões brancos · 3º tudo vermelho · 4º gola vermelha, lapelas e canhões brancos com vivo verde · 5º gola vermelha, lapelas e canhões verdes · 6º gola branca, lapelas verdes, canhões brancos · 7º gola verde, lapelas brancas, canhões vermelhos | 🔶 [MD-I] (Schultheis 1996, sem bibliografia) |
+| **Confirmação por imagem de época** | Série de gravuras coloridas de **1812** (filas de soldados, estilo das folhas impressas alemãs da época) na **coleção Vinkhuijzen, New York Public Library**, legendadas à mão por regimento: **3º** lapelas e gola vermelhas (= "tudo vermelho"); **4º** lapelas brancas, gola vermelha; **5º** **lapelas verdes**, gola vermelha; **7º** lapelas brancas, gola escura (verde); **1º** lapelas vermelhas | 🖼🏛 [VK-IT] (NYPL b14896507-1528382…87). A legenda é do colecionador (fim do séc. XIX), não da gravura → 🔶. A resolução da digitalização (≈1000 px) não deixa ler canhões nem vivos |
+| Casaca de 1812 | O *habit-veste* francês chegou só em **1813**; na Rússia usaram o modelo anterior (abas longas) | 🔶 [MD-I] |
+| Iconografia ainda não vista | Água-tinta aquarelada **"L'Infanteria del Regno d'Italia"**, de **Albrecht Adam** (Artaria, Viena, dedicada ao ministro Fontanelli; Zanoli a cita), na **Bibliothèque Marmottan** | 🏛🖼 [NAP-ADAM] (ficha sem descrição das cores) |
 
-Arte do mod (`ItalyINF`) 🎮: casaca **branca com lapelas vermelhas** (c1 r1), **branca com verde** (c5 r0, c6 r2), casaca **verde com lapelas vermelhas** (c0 r1, c4 r2, c0 r3: ligeira? ❓), verde com lapelas amarelas (c0 r2 ❓), **azul-clara** com vermelho (c5 r2 ❓), azul (c2 r1 ❓). Barretina: losango e águia em latão e prata, pompons, divisas (c3–c7 r4–r5); o cocar dos blocos é **tricolor francês**, mas a fonte diz verde-vermelho-branco 🔶 → pintar o cocar italiano.
+Arte do mod (`ItalyINF`) 🎮: casaca **branca com lapelas vermelhas** (c1 r1), **branca com verde** (c5 r0, c6 r2), **verde com lapelas vermelhas** (c0 r1, c4 r2, c0 r3: ligeira? ❓), verde com amarelo (c0 r2 ❓), azul-clara com vermelho (c5 r2 ❓), azul (c2 r1 ❓). Barretina: losango e águia em latão e prata, pompons, divisas (c3–c7 r4–r5). O cocar dos blocos é o **tricolor francês**, mas a fonte diz verde-vermelho-branco 📜 → pintar o cocar italiano.
+
+**Cruzamento:** branca com vermelho (c1 r1) bate com o **3º** (tudo vermelho) ou o **1º/2º**; branca com verde (c5 r0, c6 r2) bate com o **5º/6º**. O atlas dá o tom e o corte; a regra de nomes usa a tabela + a gravura.
 
 ### 3.2 Nápoles — infantaria de linha (Murat)
 
-| Item | Valor | Confiança |
+| Item | Valor | Fonte |
 |---|---|---|
-| Geral | Regulamentos sucessivos de Murat deixam as cores "impenetráveis" | ✅ [WP-NAP] (resumo) 🔶 |
-| 1812 | 5º, 6º e 7º: casaca **branca** com cor distintiva **verde, laranja e amarela**; o 6º teve rosa em 1811 | 🔶 [F-PF] (fórum) |
-| Amaranto | Cor preferida de Murat, usada por muitas unidades | 🔶 [F-PF] |
-| Referências | Digby Smith, *Murat's Army* (99 pranchas de Boisselier); artigo sobre o 7º napolitano 1812–13 (Freiberger Bilderhandschrift) | 🔶 (não lidos) |
+| Geral | Regulamentos sucessivos de Murat; as cores são difíceis de fixar ("Die Schwierigkeit Sicheres über die Uniformen dieser Armee zu erfahren, ist sehr gross", Knötel) | 🖼 [KN-V-46]; ✅ [WP-NAP] |
+| Casaca | **Branca**, corte do *habit-veste* (lapelas fechadas, abas curtas) pelo **Decreto 821** (1810/1811) | 📜 citado por [GA-7NAP] (não lido) |
+| **7º de Linha, 1812–13** | **Gola, lapelas, viras e canhões amarelos**, **botões de latão**; portinholas em ponta de 3 (as fontes divergem: amarela com vivo branco ou branca com vivo amarelo); calça branca (em Danzig, azul-escura) | 🖼 [FREIBERG] (*Freiberger Bilderhandschrift*, aquarelas feitas em 1813 na Saxônia) + Boisselier, Brauer, Forthoffer, Knötel, acervo de **San Martino (Nápoles)** e do **museu de Rastatt**, reunidos por [GA-7NAP] |
+| Barretina | Feltro preto, **placa em coração** com "JN" ou o número; **sem cordões**; cocar **branco com centro amaranto**; pompom achatado na cor distintiva com centro branco (fuzileiros), amarelo (voltigeurs) | 🖼📜 [GA-7NAP] |
+| Granadeiros | Barretina de pelo com **cordões e plumet vermelhos**, dragonas vermelhas, granadas vermelhas nas viras | 🖼 [GA-7NAP] |
+| Voltigeurs | Dragonas, plumet e cordão do sabre **amarelos**; cornetas amarelas nas viras; placa com granada sobre corneta | 🖼 [GA-7NAP] |
+| Cores de 1812, 1º a 6º | "scheinen folgende gewesen zu sein": **1 escarlate, 2 verde, 3 amarelo, 4 laranja, 5 azul, 6 carmesim** | 🔶 [KN-V-46] (Knötel, *Uniformenkunde* V/46, 1812; o próprio autor diz "parecem ter sido"). [KN-VI-23] mostra o **4º com amarelo** e o **5º com azul-claro** (músico) → 4º ❓ |
+| Imagem de época (provável) | Gravura colorida **"Naples, Infanterie", 1813**: casaca branca, dragonas vermelhas, **calça azul** | 🖼🏛 [VK-NAP] (NYPL b14896507-1608397), autor e data de impressão ❓ |
 
 Arte do mod (`NaplesINF`) 🎮: casaca **branca** com peças **azul-claras** (c5 r0, c1 r3), **verdes** (c1 r1, c3 r2), **vermelhas** (c5 r2, c4 r3), vivo azul (c2 r1); casaca **azul-escura com lapelas vermelhas e galões dourados** (c0 r1, c1 r2, c7 r2, c0 r3: guarda? ❓; âncora em c0 r2 → marinha? ❓); casaca vermelha com preto (c6 r2 ❓); casaca azul-clara com vermelho (c2 r3 ❓). Barretina: placa em escudo e losango (c3–c7 r4), plumets coloridos (c1 r4).
 
-**Cruzamento:** nenhuma das cores de 1812 da fonte (verde, laranja, amarela) bate de forma direta com um bloco, exceto o verde (c1 r1, c3 r2) ❓. Nomes ficam técnicos até um recorte confirmar.
+**Cruzamento:** verde (c1 r1, c3 r2) → **2º** 🔶; vermelho (c5 r2, c4 r3) → **1º** 🔶; azul-claro (c5 r0, c1 r3) → **5º** 🔶 (Knötel VI/23). O **7º amarelo** não tem bloco no atlas: casaca pintada só pela fonte.
+
+### 3.3 Proposta do primeiro lote (`hcl_italia.pbo`, Itália + Nápoles juntos, decisão A2)
+
+| Peça | Itália | Nápoles |
+|---|---|---|
+| Casaca (malha 1812 da França, como em Varsóvia) | Branca, **7 regimentos** pela tabela, com nome só para os confirmados pela gravura (3º, 4º, 5º, 7º) e os demais 🔶 no texto | Branca, **7º** (fonte de época) + **1º, 2º, 5º** (Knötel + atlas 🔶) |
+| Elite | Granadeiro (dragonas vermelhas), voltigeur (verdes, crescente amarelo) | Granadeiro (vermelhas), voltigeur (amarelas) |
+| Barretina | Cópia da barretina francesa v4, **placa losango**, **cocar verde-branco-vermelho**, pompons das 4 companhias + voltigeur | Cópia da v4 com **placa em coração** traçada do atlas (c3–c7 r4) 🎮, **sem cordões**, cocar **branco e amaranto** |
+| Barretina de pelo | Cópia do chapéu de pele francês, placa de latão com granada, cordões brancos, plumet vermelho | Idem, cordões e plumet vermelhos |
+| Fica para depois | Ligeira (verde) e casaca de 1813 | 3º, 4º, 6º (cores ❓) |
 
 ---
 
@@ -290,3 +311,13 @@ Consequência da A2: cada addon é **autônomo** (cópias próprias dos modelos,
 - [WP-MUN] Wikipedia (pl), "Mundur Armii Księstwa Warszawskiego", citando Żygulski (jun.) e Wielecki, *Polski mundur wojskowy*, KAW, Kraków 1988, pp. 57–62 — https://pl.wikipedia.org/wiki/Mundur_Armii_Ksi%C4%99stwa_Warszawskiego
 - [NOP-1810] napoleon.org.pl, "Piechota XW wg przepisu 3 września 1810" (pranchas sobre a aquarela de J. Kosiński, 1810; cita o regulamento, Gembarzewski e a barretina do 2º Regimento no Museu Nacional de Cracóvia) — https://napoleon.org.pl/index.php/biblioteka-barwy-i-broni/piechota-xw-wg-przepisu-3-wrzesnia-1810
 - [MNK-1959] Muzeum Narodowe w Krakowie, *Militaria Księstwa Warszawskiego. Katalog wystawy w 150 rocznicę oswobodzenia Krakowa przez wojska polskie 1809–1959* (catálogo; só o registro bibliográfico foi visto).
+- [WP-IT-ES] Wikipedia (it), "Esercito del Regno d'Italia (1805-1814)", seção da infantaria, citando Pivka & Chappell, *Napoleon's Italian and Neapolitan Troops* (Osprey MAA 43), pp. 23–24 — https://it.wikipedia.org/wiki/Esercito_del_Regno_d%27Italia_(1805-1814)
+- [ZANOLI] A. Zanoli, *Sulla milizia cisalpino-italiana: cenni storico-statistici dal 1796 al 1814*, Milão, Borroni e Scotti, 1845 (texto OCR do Internet Archive, `bub_gb_SyVEAAAAYAAJ`, lido 2026-10-18) — https://archive.org/details/bub_gb_SyVEAAAAYAAJ
+- [VK-IT] New York Public Library, *Vinkhuijzen collection of military uniforms*, Italy 1812 / 1811–1812 (série de gravuras coloridas por regimento, NYPL b14896507-1528382 a -1528387; pranchas de Knötel) — via Wikimedia Commons, "Category:Vinkhuijzen: Military uniforms of Italy, Kingdom of Italy (1805-1814)"
+- [VK-NAP] Idem, Kingdom of the Two Sicilies 1810–1812 e 1813–1814 — Commons, "Category:Vinkhuijzen: Military uniforms of Italy, napoleonic Kingdom of Naples"
+- [KN-III-25] R. Knötel, *Uniformenkunde* III, nº 25, "Das Italienische Heer unter Vice-König Eugen, 1812" (Rathenow, c. 1890–1900; exemplar da coleção Vinkhuijzen, NYPL b14896507-1528391)
+- [KN-V-46] R. Knötel, *Uniformenkunde* V, nº 46, "Königl. Neapolitanische Truppen (unter Joachim Murat), 1812" (NYPL b14896507-1608374)
+- [KN-VI-23] R. Knötel, *Uniformenkunde* VI, nº 23, "Linien-Infanterie, Königl. Neapolitanische Truppen, 1812" (NYPL b14896507-1608373)
+- [GA-7NAP] M. Gärtner, "The 7th Neapolitan Line Infantry Regiment 1812–1813", *Depesche* 1 (trad. J. Howard), The Napoleon Series, 2010 — https://www.napoleon-series.org/military-info/Despeche/Issue1/c_7thNeapolitanInfantry.html (cita a *Freiberger Bilderhandschrift*, Boisselier, Brauer, Forthoffer, Knötel, San Martino e Rastatt)
+- [FREIBERG] *Freiberger Bilderhandschrift* (aquarelas de 1813, atribuídas a K. A. Winkler), via [GA-7NAP]; edição: A. Umhey, *Napoleon's Last Grande Armée* (não lida)
+- [NAP-ADAM] Fondation Napoléon, "L'Infanteria del Regno d'Italia", A. Adam, água-tinta aquarelada, Bibliothèque Marmottan — https://www.napoleon.org/en/history-of-the-two-empires/images/linfanteria-del-regno-ditalia-the-infantry-of-the-kindgom-of-italy
