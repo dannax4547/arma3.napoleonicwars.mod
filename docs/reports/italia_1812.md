@@ -53,3 +53,32 @@ Fica para depois: infantaria ligeira italiana (verde), casaca de 1813, regimento
 - `pbo_verify.py`: prefixo `hcl\hcl_italia`, **95 referências, nenhuma faltando**.
 
 Imagens (pasta principal, `docs/reports/img/italia/`): `italia_linha_*` (1º, 3º, 4º, 5º e 7º com os pompons das 4 companhias), `italia_elite_*` (granadeiro do 3º, fuzileiro e voltigeur do 5º), `napoles_linha_*` (1º, 2º, 5º, 7º), `napoles_elite_*` (granadeiro, fuzileiro e voltigeur do 7º); `blockout_shako_italia_*`, `blockout_shako_napoles_*`, `blockout_bonnet_italia_*`.
+
+## 6. Lote 2: os regimentos das pranchas 175–204 (pedido: "FAZ ESTES REGIMENTOS")
+
+**Fonte:** aquarelas de 1812 da coleção Vinkhuijzen (NYPL `b14896507-1528310` a `-1528339`), cada uma com a legenda escrita pelo colecionador. Os nomes seguem a legenda e os tons foram lidos na digitalização 🔶. A infantaria ligeira e os voltigeurs de linha também estão em Knötel III/25.
+
+| Prancha (legenda) | O que entrou | Classes |
+|---|---|---|
+| 192 *Leggiero Infanterie 1° Reg.* | Casaca e calça verde-escuras, **gola e canhões vermelhos**, vivos brancos; carabineiro (dragonas vermelhas) e voltigeur (verdes com crescente amarelo) | `HCL_U_Italia1812_LE01`, `_Carabiniere_LE01`, `_Voltigeur_LE01` |
+| 188 *Carabiniere 3° Reg. Leggiero* | **Gola branca** | `_LE03`, `_Carabiniere_LE03` |
+| 189 *4° Regiment Leggiero* | **Gola violeta** | `_LE04`, `_Voltigeur_LE04` |
+| 186, 187 *Carabiniere / Volteggiatore della fanteria leggiera* (sem número) | **Gola amarela** | `_Carabiniere_LEX`, `_Voltigeur_LEX` |
+| 190, 191 *Reggimento Dalmato* | Casaca verde-escura, gola, canhões e viras vermelhos; granadeiro com dragonas vermelhas | `_DAL`, `_Granadeiro_DAL` |
+| 185 *Compagnie di riserva della Fanteria di linea* | Casaca verde-escura, gola e canhões vermelhos | `_RES` |
+| 184 *Guardia di Milano* | Casaca azul-clara, gola e canhões vermelhos | `_MIL` |
+| 182 *Volontario* | Casaca verde-escura, gola e lapelas amarelas | `_VOL` |
+| 183 *Bersagliere di Brescia* | Casaca verde-escura, gola e vivos verde-claros, calça cinza | `_BRE` |
+| 180 *Reg. Dragoni Regina* | Só a casaca: verde-escura, lapelas e viras **rosa**, botões brancos (sem capacete de dragão) | `_DRA` |
+| 181 *Battaglione d'Artiglieria* (legenda lida com dúvida ❓) | Casaca verde-escura, vivos e dragonas vermelhos | `_ART` |
+| 193 *Volteggiatore della fanteria di linea* | **Correção:** o voltigeur de linha usava casaca **verde** com gola vermelha (também Knötel: *"Die Voltigeure … waren grün uniformiert"*). Os voltigeurs do 3º e do 5º, que no lote 1 eram brancos, agora são verdes | `_Voltigeur_IT03`, `_Voltigeur_IT05` |
+| 195, 203 *6 Reg. Granatiere* / *Zappatore* | Granadeiro do 6º (casaca branca, lapelas verdes, dragonas vermelhas) | `_Granadeiro_IT06` |
+| 202, 198, 199 *Lieutenant Linie Infanterie 1° / 4° Regiment*, *Grenadier 5° Regiment* | Casaca do regimento com **dragonas de prata** | `_Oficial_IT01`, `_Oficial_IT04`, `_Oficial_Granadeiro_IT05` |
+| 186, 188 | Chapéu de pele do carabineiro de ligeira: **sem placa**, cordões e plumet vermelhos, cocar italiano | `HCL_H_Italia1812_Bonnet_Italia_Carabineiro_Gala` |
+
+**Não feitos, e por quê:**
+- 175 *3° Reggimento Cacciatori a Cavallo* e 204 *Treno di bagaglio della Guardia*: a casaca tem alamares no peito, e o pintor de casacas não sabe fazer alamares.
+- 200 tambor-mor, 201 coronel a cavalo, 194 capitão com sobrecasaca de campanha: precisam de bicórnio e casaca longa ou sobrecasaca, peças que não existem no projeto.
+- Coberturas próprias do Bersaglieri de Brescia (chapéu redondo), da Guarda de Milão, do voluntário, da artilharia e o capacete dos dragões: não foram modeladas. Essas casacas usam as barretinas italianas no Arsenal.
+
+**Montagem e verificação do lote 2 (fora do jogo):** 23 casacas novas ou corrigidas (9 de linha, 14 de elite) e os 5 chapéus de pele refeitos com o do carabineiro. PAA 87/87; Binarize 0, **17 de 17 modelos com `OFP2_ManSkeleton`**; `CfgConvert` 0 (config e 17 rvmat); 38 soldados e 53 itens. PBO `hcl_italia.pbo` de **151,2 MB** (18/10 às 23:51); `pbo_verify`: **121 referências, nenhuma faltando**. Imagens: `italia_ligeira_*`, `italia_corpos_*`, `italia_linha_lote2_*`.

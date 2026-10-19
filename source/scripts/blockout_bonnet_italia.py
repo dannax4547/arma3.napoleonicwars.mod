@@ -628,7 +628,10 @@ def bonnet(tag, x_off, with_plate, plume_cols, with_cords, cord="branco"):
 VARIANTS = [("italia_granadeiro_gala", True, [(0.0, "vermelho")], True, "branco"),
             ("italia_granadeiro_campanha", True, None, False),
             ("napoles_granadeiro_gala", False, [(0.0, "vermelho")], True, "vermelho"),
-            ("napoles_granadeiro_campanha", False, None, False)]
+            ("napoles_granadeiro_campanha", False, None, False),
+            # lote 2: light infantry carabiniers, bearskin without plate, red cords and plume (Vinkhuijzen 1812 watercolours
+            # "Carabiniere della fanteria leggiera" / "Carabiniere 3 Reg. Leggiero"; Knoetel III/25)
+            ("italia_carabineiro_gala", False, [(0.0, "vermelho")], True, "vermelho")]
 SPACING = 0.55
 roots = [bonnet(t, i * SPACING, *rest) for i, (t, *rest) in enumerate(VARIANTS)]
 

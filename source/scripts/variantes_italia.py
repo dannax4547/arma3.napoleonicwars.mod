@@ -100,6 +100,95 @@ for k in ("IT03", "IT05", "NA07"):
                                "nome": f"{line[k]['nome']}; voltigeur, dragonas " + ("verdes com crescente amarelo" if k.startswith("IT") else "amarelas"),
                                "fonte": line[k]["fonte"], "cores": ep(base, *vo)}
 
+# ---- lote 2 (user 2026-10-18, "FAZ ESTES REGIMENTOS", Vinkhuijzen plates NYPL b14896507, Italy 1812, nos. 175-204 of
+# the Commons category; every plate is a watercolour with the collector's caption, so names follow the caption and
+# shades are read on the scan 🔶). Light infantry after Knoetel III/25 too ("wie in Frankreich ... die Carabiniers ... die
+# Pelzmuetze und die Grenadierepauletten, die Voltigeure den Czako und die gruenen Voltigeurepaulettes").
+#   LE01  "Leggiero Infanterie 1 Reg." (b..-1528327): dark green coat and trousers, RED collar and cuffs, white piping
+#   LE03  "Carabiniere 3 Reg. Leggiero" (-1528323): WHITE collar, white piping, red epaulettes
+#   LE04  "4 Regiment Leggiero" (-1528324): VIOLET collar, white piping, green epaulettes
+#   LEX   "Carabiniere / Volteggiatore della fanteria leggiera" (-1528321/22, no number): YELLOW collar
+#   DAL   "Reggimento Dalmato" (-1528325/26): dark green coat, red collar, cuffs and turnbacks, red epaulettes
+#   RES   "Compagnie di riserva della Fanteria di linea" (-1528320): dark green coat, red collar and cuffs (Knoetel: "fast
+#         dieselbe Uniform" as the green voltigeurs, without their epaulettes)
+#   MIL   "Guardia di Milano" (-1528319): light blue coat, red collar and cuffs
+#   VOL   "Volontario" (-1528317): dark green coat, yellow collar and lapels
+#   BRE   "Bersagliere di Brescia" (-1528318; Knoetel III/25 "Scharfschuetz von Brescia"): dark green coat, light green
+#         collar and piping, grey trousers
+#   DRA   "Reg. Dragoni Regina" (-1528315): dark green coat, ROSE lapels and turnbacks, white buttons (coat only)
+#   ART   "Battaglione d'Artiglieria" (-1528316, caption read with doubt ❓): dark green coat, red piping and epaulettes
+#   line  voltigeurs: GREEN coat, red collar, green epaulettes ("Volteggiatore della fanteria di linea", -1528328; Knoetel
+#         III/25 "Die Voltigeure (Volteggiatori) waren gruen uniformiert") -> Voltigeur_IT03/IT05 were white, now green.
+#         6th grenadier ("6 Reg. Granatiere", -1528330): the 6th's white coat with red epaulettes.
+#         officers ("Lieutenant Linie Infanterie 1 / 4 Regiment", "... Grenadier 5 Regiment", -1528337/33/34): the
+#         regiment's coat with silver epaulettes (as painted).
+DKG, VIOLET, ROSE = [0.05, 0.16, 0.09], [0.42, 0.30, 0.62], [0.72, 0.25, 0.42]
+LBLUE_M, LGREEN, GREY = [0.55, 0.62, 0.85], [0.35, 0.62, 0.30], [0.52, 0.52, 0.5]
+SILVER = [0.8, 0.8, 0.82]
+
+
+def coat(casaca, gola, lapela, punho, vivo, viras, botoes=BRASS, calca=None, **kw):
+    c = {"casaca": casaca, "gola": gola, "gola_debrum": vivo, "lapela": lapela, "lapela_debrum": vivo,
+         "punho": punho, "punho_debrum": vivo, "pala": casaca, "debrum": vivo, "viras": viras, "viras_debrum": vivo,
+         "platina": casaca, "platina_borda": vivo, "botoes": botoes}
+    c.update(LOWER)
+    if calca:
+        c["calca"] = calca
+    c.update(kw)
+    return c
+
+
+VK = "aquarela da colecao Vinkhuijzen (NYPL), 1812, legenda do colecionador 🔶"
+LIGHT = {"LE01": (RED, "1o Ligeiro", "gola e canhoes vermelhos"), "LE03": (WHI, "3o Ligeiro", "gola branca"),
+         "LE04": (VIOLET, "4o Ligeiro", "gola violeta"), "LEX": (YEL, "Ligeira, gola amarela", "gola amarela (regimento sem numero)")}
+for k, (col, curto, txt) in LIGHT.items():
+    c = coat(DKG, col, DKG, col if k == "LE01" else DKG, WHI, DKG, TIN, calca=DKG)
+    if k in ("LE01", "LE03", "LE04"):
+        line[k] = {"prefixo": f"hcl_u_italia1812_{k.lower()}", "curto": curto,
+                   "nome": f"Reino da Italia, {curto}: casaca e calca verde-escuras, {txt}, vivos brancos", "fonte": VK, "cores": c}
+    if k in ("LE01", "LE03", "LEX"):
+        elite[f"Carabiniere_{k}"] = {"prefixo": f"hcl_u_italia1812_elite_{k.lower()}_ca", "viras_externas": True, "curto": f"{curto}, carabineiro",
+                                     "nome": f"Reino da Italia, {curto}, carabineiro: {txt}, dragonas vermelhas", "fonte": VK + "; Knoetel III/25",
+                                     "cores": ep(c, RED)}
+    if k in ("LE01", "LE04", "LEX"):
+        elite[f"Voltigeur_{k}"] = {"prefixo": f"hcl_u_italia1812_elite_{k.lower()}_vo", "viras_externas": True, "curto": f"{curto}, voltigeur",
+                                   "nome": f"Reino da Italia, {curto}, voltigeur: {txt}, dragonas verdes", "fonte": VK + "; Knoetel III/25",
+                                   "cores": ep(c, GREEN, YEL)}
+dal = coat(DKG, RED, DKG, RED, RED, RED)
+line["DAL"] = {"prefixo": "hcl_u_italia1812_dal", "curto": "Regimento Dalmata", "fonte": VK,
+               "nome": "Reino da Italia, Regimento Dalmata: casaca verde-escura, gola, canhoes e viras vermelhos", "cores": dal}
+elite["Granadeiro_DAL"] = {"prefixo": "hcl_u_italia1812_elite_dal_gr", "viras_externas": True, "curto": "Dalmata, granadeiro", "fonte": VK,
+                           "nome": "Reino da Italia, Regimento Dalmata, granadeiro: dragonas vermelhas", "cores": ep(dal, RED)}
+line["RES"] = {"prefixo": "hcl_u_italia1812_res", "curto": "Companhias de reserva", "fonte": VK + "; Knoetel III/25",
+               "nome": "Reino da Italia, companhias de reserva da linha: casaca verde-escura, gola e canhoes vermelhos",
+               "cores": coat(DKG, RED, DKG, RED, RED, WHI)}
+line["MIL"] = {"prefixo": "hcl_u_italia1812_mil", "curto": "Guarda de Milao", "fonte": VK,
+               "nome": "Reino da Italia, Guarda de Milao: casaca azul-clara, gola e canhoes vermelhos",
+               "cores": coat(LBLUE_M, RED, LBLUE_M, RED, RED, WHI)}
+line["VOL"] = {"prefixo": "hcl_u_italia1812_vol", "curto": "Voluntario", "fonte": VK,
+               "nome": "Reino da Italia, voluntario: casaca verde-escura, gola e lapelas amarelas",
+               "cores": coat(DKG, YEL, YEL, DKG, YEL, DKG, calca=DKG)}
+line["BRE"] = {"prefixo": "hcl_u_italia1812_bre", "curto": "Bersaglieri de Brescia", "fonte": VK + "; Knoetel III/25",
+               "nome": "Reino da Italia, Bersaglieri de Brescia: casaca verde-escura, gola e vivos verde-claros, calca cinza",
+               "cores": coat(DKG, LGREEN, DKG, DKG, LGREEN, DKG, TIN, calca=GREY)}
+line["DRA"] = {"prefixo": "hcl_u_italia1812_dra", "curto": "Dragoes da Rainha", "fonte": VK,
+               "nome": "Reino da Italia, Dragoes da Rainha: casaca verde-escura, lapelas e viras rosa, botoes brancos",
+               "cores": coat(DKG, DKG, ROSE, ROSE, ROSE, ROSE, TIN, calca=WHI)}
+elite["ART"] = {"prefixo": "hcl_u_italia1812_elite_art", "viras_externas": True, "curto": "Artilharia", "fonte": VK + " (legenda lida com duvida)",
+                "nome": "Reino da Italia, batalhao de artilharia: casaca verde-escura, vivos e dragonas vermelhos",
+                "cores": ep(coat(DKG, DKG, DKG, RED, RED, RED, calca=DKG), RED)}
+# line voltigeurs in GREEN (replaces the white Voltigeur_IT03 / IT05 of the first lot)
+for k in ("IT03", "IT05"):
+    elite[f"Voltigeur_{k}"].update({"nome": f"Reino da Italia, {int(k[2:])}o de Linha, voltigeur: casaca VERDE, gola vermelha, dragonas verdes",
+                                    "fonte": VK + "; Knoetel III/25",
+                                    "cores": ep(coat(DKG, RED, DKG, DKG, RED, DKG), GREEN, YEL)})
+elite["Granadeiro_IT06"] = {"prefixo": "hcl_u_italia1812_elite_it06_gr", "viras_externas": True, "curto": "Italia 6o, granadeiro",
+                            "nome": line["IT06"]["nome"] + "; granadeiro, dragonas vermelhas", "fonte": VK, "cores": ep(line["IT06"]["cores"], RED)}
+for k, kk, src in (("Oficial_IT01", "IT01", "-1528337"), ("Oficial_IT04", "IT04", "-1528333"), ("Oficial_Granadeiro_IT05", "IT05", "-1528334")):
+    elite[k] = {"prefixo": f"hcl_u_italia1812_elite_{kk.lower()}_of" + ("gr" if "Granadeiro" in k else ""), "viras_externas": True,
+                "curto": f"Italia {int(kk[2:])}o, oficial", "nome": line[kk]["nome"] + "; oficial, dragonas de prata",
+                "fonte": VK + f" ({src})", "cores": ep(line[kk]["cores"], SILVER)}
+
 out = sys.argv[1]
 os.makedirs(out, exist_ok=True)
 for name, d in (("variantes_italia.json", line), ("variantes_italia_elite.json", elite)):

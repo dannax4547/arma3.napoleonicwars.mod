@@ -24,7 +24,8 @@ LOG = []
 SHAKO_TAGS = {"italia": ["fuzileiro_1a_comp", "fuzileiro_2a_comp", "fuzileiro_3a_comp", "fuzileiro_4a_comp", "voltigeur_gala"],
               "napoles": ["fuzileiro_r01", "fuzileiro_r02", "fuzileiro_r05", "fuzileiro_r07", "voltigeur_gala"]}
 SHAKO_BLEND = r"source\models\shakos\hcl_shako_italia\hcl_shako_{}_texturas.blend"
-BONNET_TAGS = ["italia_granadeiro_gala", "italia_granadeiro_campanha", "napoles_granadeiro_gala", "napoles_granadeiro_campanha"]
+BONNET_TAGS = ["italia_granadeiro_gala", "italia_granadeiro_campanha", "napoles_granadeiro_gala", "napoles_granadeiro_campanha",
+               "italia_carabineiro_gala"]
 BONNET_BLEND = r"source\models\bonnet\hcl_bonnet_italia\hcl_bonnet_italia_texturas.blend"
 
 

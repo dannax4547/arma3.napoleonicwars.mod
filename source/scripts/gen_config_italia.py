@@ -22,6 +22,8 @@ HEAD = [(f"hcl_h_italia_shako_{n}_{t}", f"hcl_shako_{n}_{t}", f"Shako_{n.capital
         for n, lst in SHAKOS.items() for t, c in lst]
 HEAD += [(f"hcl_h_italia_bonnet_{n}_{t}", f"hcl_bonnet_italia_{n}_{t}", f"Bonnet_{n.capitalize()}_{c}", f"hcl_bonnet_italia_{n}_{t}")
          for n in ("italia", "napoles") for t, c in (("granadeiro_gala", "Granadeiro_Gala"), ("granadeiro_campanha", "Granadeiro_Campanha"))]
+HEAD += [("hcl_h_italia_bonnet_italia_carabineiro_gala", "hcl_bonnet_italia_italia_carabineiro_gala", "Bonnet_Italia_Carabineiro_Gala",
+          "hcl_bonnet_italia_italia_carabineiro_gala")]          # lote 2: light infantry carabiniers
 
 
 def cls_u(v):            # S1 -> HCL_U_Italia1812_S1 ; Granadeiro_S1 -> HCL_U_Italia1812_Granadeiro_S1

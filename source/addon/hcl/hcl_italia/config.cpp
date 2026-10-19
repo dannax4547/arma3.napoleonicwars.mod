@@ -9,7 +9,7 @@ class CfgPatches
 	{
 		author = "Historical Clothing";
 		units[] = {};
-		weapons[] = {"HCL_U_Italia1812_IT01", "HCL_U_Italia1812_IT02", "HCL_U_Italia1812_IT03", "HCL_U_Italia1812_IT04", "HCL_U_Italia1812_IT05", "HCL_U_Italia1812_IT06", "HCL_U_Italia1812_IT07", "HCL_U_Italia1812_NA01", "HCL_U_Italia1812_NA02", "HCL_U_Italia1812_NA05", "HCL_U_Italia1812_NA07", "HCL_U_Italia1812_Granadeiro_IT03", "HCL_U_Italia1812_Granadeiro_IT05", "HCL_U_Italia1812_Granadeiro_NA07", "HCL_U_Italia1812_Voltigeur_IT03", "HCL_U_Italia1812_Voltigeur_IT05", "HCL_U_Italia1812_Voltigeur_NA07", "HCL_H_Italia1812_Shako_Italia_Fuzileiro_1aComp", "HCL_H_Italia1812_Shako_Italia_Fuzileiro_2aComp", "HCL_H_Italia1812_Shako_Italia_Fuzileiro_3aComp", "HCL_H_Italia1812_Shako_Italia_Fuzileiro_4aComp", "HCL_H_Italia1812_Shako_Italia_Voltigeur_Gala", "HCL_H_Italia1812_Shako_Napoles_Fuzileiro_R01", "HCL_H_Italia1812_Shako_Napoles_Fuzileiro_R02", "HCL_H_Italia1812_Shako_Napoles_Fuzileiro_R05", "HCL_H_Italia1812_Shako_Napoles_Fuzileiro_R07", "HCL_H_Italia1812_Shako_Napoles_Voltigeur_Gala", "HCL_H_Italia1812_Bonnet_Italia_Granadeiro_Gala", "HCL_H_Italia1812_Bonnet_Italia_Granadeiro_Campanha", "HCL_H_Italia1812_Bonnet_Napoles_Granadeiro_Gala", "HCL_H_Italia1812_Bonnet_Napoles_Granadeiro_Campanha"};
+		weapons[] = {"HCL_U_Italia1812_BRE", "HCL_U_Italia1812_DAL", "HCL_U_Italia1812_DRA", "HCL_U_Italia1812_IT01", "HCL_U_Italia1812_IT02", "HCL_U_Italia1812_IT03", "HCL_U_Italia1812_IT04", "HCL_U_Italia1812_IT05", "HCL_U_Italia1812_IT06", "HCL_U_Italia1812_IT07", "HCL_U_Italia1812_LE01", "HCL_U_Italia1812_LE03", "HCL_U_Italia1812_LE04", "HCL_U_Italia1812_MIL", "HCL_U_Italia1812_NA01", "HCL_U_Italia1812_NA02", "HCL_U_Italia1812_NA05", "HCL_U_Italia1812_NA07", "HCL_U_Italia1812_RES", "HCL_U_Italia1812_VOL", "HCL_U_Italia1812_ART", "HCL_U_Italia1812_Carabiniere_LE01", "HCL_U_Italia1812_Carabiniere_LE03", "HCL_U_Italia1812_Carabiniere_LEX", "HCL_U_Italia1812_Granadeiro_DAL", "HCL_U_Italia1812_Granadeiro_IT03", "HCL_U_Italia1812_Granadeiro_IT05", "HCL_U_Italia1812_Granadeiro_IT06", "HCL_U_Italia1812_Granadeiro_NA07", "HCL_U_Italia1812_Oficial_Granadeiro_IT05", "HCL_U_Italia1812_Oficial_IT01", "HCL_U_Italia1812_Oficial_IT04", "HCL_U_Italia1812_Voltigeur_IT03", "HCL_U_Italia1812_Voltigeur_IT05", "HCL_U_Italia1812_Voltigeur_LE01", "HCL_U_Italia1812_Voltigeur_LE04", "HCL_U_Italia1812_Voltigeur_LEX", "HCL_U_Italia1812_Voltigeur_NA07", "HCL_H_Italia1812_Shako_Italia_Fuzileiro_1aComp", "HCL_H_Italia1812_Shako_Italia_Fuzileiro_2aComp", "HCL_H_Italia1812_Shako_Italia_Fuzileiro_3aComp", "HCL_H_Italia1812_Shako_Italia_Fuzileiro_4aComp", "HCL_H_Italia1812_Shako_Italia_Voltigeur_Gala", "HCL_H_Italia1812_Shako_Napoles_Fuzileiro_R01", "HCL_H_Italia1812_Shako_Napoles_Fuzileiro_R02", "HCL_H_Italia1812_Shako_Napoles_Fuzileiro_R05", "HCL_H_Italia1812_Shako_Napoles_Fuzileiro_R07", "HCL_H_Italia1812_Shako_Napoles_Voltigeur_Gala", "HCL_H_Italia1812_Bonnet_Italia_Granadeiro_Gala", "HCL_H_Italia1812_Bonnet_Italia_Granadeiro_Campanha", "HCL_H_Italia1812_Bonnet_Napoles_Granadeiro_Gala", "HCL_H_Italia1812_Bonnet_Napoles_Granadeiro_Campanha", "HCL_H_Italia1812_Bonnet_Italia_Carabineiro_Gala"};
 		requiredVersion = 0.1;
 		requiredAddons[] = {"A3_Characters_F"};
 	};
@@ -23,12 +23,12 @@ class CfgVehicles
 	{
 		author = "Historical Clothing";
 		scope = 1;
-		displayName = "Infantryman, Kingdom of Italy / Naples 1812 (HCL test)";
+		displayName = "Soldier, Kingdom of Italy / Naples 1812 (HCL test)";
 		model = "\hcl\hcl_italia\hcl_u_italia1812.p3d";
 		modelSides[] = {0, 1, 2, 3};
-		uniformClass = "HCL_U_Italia1812_IT01";
+		uniformClass = "HCL_U_Italia1812_BRE";
 		hiddenSelections[] = {"Camo"};
-		hiddenSelectionsTextures[] = {"\hcl\hcl_italia\data\hcl_u_italia1812_it01_co.paa"};
+		hiddenSelectionsTextures[] = {"\hcl\hcl_italia\data\hcl_u_italia1812_bre_co.paa"};
 		weapons[] = {"Throw", "Put"};
 		respawnWeapons[] = {"Throw", "Put"};
 		magazines[] = {};
@@ -38,112 +38,238 @@ class CfgVehicles
 		linkedItems[] = {"ItemMap", "ItemCompass", "ItemWatch"};
 		respawnLinkedItems[] = {"ItemMap", "ItemCompass", "ItemWatch"};
 	};
+	class HCL_Italia1812_Soldado_BRE: HCL_Italia1812_Soldado_Base
+	{
+		displayName = "Soldier, Kingdom of Italy, Brescia Bersaglieri (HCL test)";
+		uniformClass = "HCL_U_Italia1812_BRE";
+		hiddenSelectionsTextures[] = {"\hcl\hcl_italia\data\hcl_u_italia1812_bre_co.paa"};
+	};
+	class HCL_Italia1812_Soldado_DAL: HCL_Italia1812_Soldado_Base
+	{
+		displayName = "Soldier, Kingdom of Italy, Dalmatian Regiment (HCL test)";
+		uniformClass = "HCL_U_Italia1812_DAL";
+		hiddenSelectionsTextures[] = {"\hcl\hcl_italia\data\hcl_u_italia1812_dal_co.paa"};
+	};
+	class HCL_Italia1812_Soldado_DRA: HCL_Italia1812_Soldado_Base
+	{
+		displayName = "Soldier, Kingdom of Italy, Queen's Dragoons (dismounted) (HCL test)";
+		uniformClass = "HCL_U_Italia1812_DRA";
+		hiddenSelectionsTextures[] = {"\hcl\hcl_italia\data\hcl_u_italia1812_dra_co.paa"};
+	};
 	class HCL_Italia1812_Soldado_IT01: HCL_Italia1812_Soldado_Base
 	{
-		displayName = "Infantryman, Kingdom of Italy, 1st Line Infantry Regiment, Fusiliers (HCL test)";
+		displayName = "Soldier, Kingdom of Italy, 1st Line Infantry Regiment, Fusiliers (HCL test)";
 		uniformClass = "HCL_U_Italia1812_IT01";
 		hiddenSelectionsTextures[] = {"\hcl\hcl_italia\data\hcl_u_italia1812_it01_co.paa"};
 	};
 	class HCL_Italia1812_Soldado_IT02: HCL_Italia1812_Soldado_Base
 	{
-		displayName = "Infantryman, Kingdom of Italy, 2nd Line Infantry Regiment, Fusiliers (HCL test)";
+		displayName = "Soldier, Kingdom of Italy, 2nd Line Infantry Regiment, Fusiliers (HCL test)";
 		uniformClass = "HCL_U_Italia1812_IT02";
 		hiddenSelectionsTextures[] = {"\hcl\hcl_italia\data\hcl_u_italia1812_it02_co.paa"};
 	};
 	class HCL_Italia1812_Soldado_IT03: HCL_Italia1812_Soldado_Base
 	{
-		displayName = "Infantryman, Kingdom of Italy, 3rd Line Infantry Regiment, Fusiliers (HCL test)";
+		displayName = "Soldier, Kingdom of Italy, 3rd Line Infantry Regiment, Fusiliers (HCL test)";
 		uniformClass = "HCL_U_Italia1812_IT03";
 		hiddenSelectionsTextures[] = {"\hcl\hcl_italia\data\hcl_u_italia1812_it03_co.paa"};
 	};
 	class HCL_Italia1812_Soldado_IT04: HCL_Italia1812_Soldado_Base
 	{
-		displayName = "Infantryman, Kingdom of Italy, 4th Line Infantry Regiment, Fusiliers (HCL test)";
+		displayName = "Soldier, Kingdom of Italy, 4th Line Infantry Regiment, Fusiliers (HCL test)";
 		uniformClass = "HCL_U_Italia1812_IT04";
 		hiddenSelectionsTextures[] = {"\hcl\hcl_italia\data\hcl_u_italia1812_it04_co.paa"};
 	};
 	class HCL_Italia1812_Soldado_IT05: HCL_Italia1812_Soldado_Base
 	{
-		displayName = "Infantryman, Kingdom of Italy, 5th Line Infantry Regiment, Fusiliers (HCL test)";
+		displayName = "Soldier, Kingdom of Italy, 5th Line Infantry Regiment, Fusiliers (HCL test)";
 		uniformClass = "HCL_U_Italia1812_IT05";
 		hiddenSelectionsTextures[] = {"\hcl\hcl_italia\data\hcl_u_italia1812_it05_co.paa"};
 	};
 	class HCL_Italia1812_Soldado_IT06: HCL_Italia1812_Soldado_Base
 	{
-		displayName = "Infantryman, Kingdom of Italy, 6th Line Infantry Regiment, Fusiliers (HCL test)";
+		displayName = "Soldier, Kingdom of Italy, 6th Line Infantry Regiment, Fusiliers (HCL test)";
 		uniformClass = "HCL_U_Italia1812_IT06";
 		hiddenSelectionsTextures[] = {"\hcl\hcl_italia\data\hcl_u_italia1812_it06_co.paa"};
 	};
 	class HCL_Italia1812_Soldado_IT07: HCL_Italia1812_Soldado_Base
 	{
-		displayName = "Infantryman, Kingdom of Italy, 7th Line Infantry Regiment, Fusiliers (HCL test)";
+		displayName = "Soldier, Kingdom of Italy, 7th Line Infantry Regiment, Fusiliers (HCL test)";
 		uniformClass = "HCL_U_Italia1812_IT07";
 		hiddenSelectionsTextures[] = {"\hcl\hcl_italia\data\hcl_u_italia1812_it07_co.paa"};
 	};
+	class HCL_Italia1812_Soldado_LE01: HCL_Italia1812_Soldado_Base
+	{
+		displayName = "Soldier, Kingdom of Italy, 1st Light Infantry Regiment, Chasseurs (HCL test)";
+		uniformClass = "HCL_U_Italia1812_LE01";
+		hiddenSelectionsTextures[] = {"\hcl\hcl_italia\data\hcl_u_italia1812_le01_co.paa"};
+	};
+	class HCL_Italia1812_Soldado_LE03: HCL_Italia1812_Soldado_Base
+	{
+		displayName = "Soldier, Kingdom of Italy, 3rd Light Infantry Regiment, Chasseurs (HCL test)";
+		uniformClass = "HCL_U_Italia1812_LE03";
+		hiddenSelectionsTextures[] = {"\hcl\hcl_italia\data\hcl_u_italia1812_le03_co.paa"};
+	};
+	class HCL_Italia1812_Soldado_LE04: HCL_Italia1812_Soldado_Base
+	{
+		displayName = "Soldier, Kingdom of Italy, 4th Light Infantry Regiment, Chasseurs (HCL test)";
+		uniformClass = "HCL_U_Italia1812_LE04";
+		hiddenSelectionsTextures[] = {"\hcl\hcl_italia\data\hcl_u_italia1812_le04_co.paa"};
+	};
+	class HCL_Italia1812_Soldado_MIL: HCL_Italia1812_Soldado_Base
+	{
+		displayName = "Soldier, Kingdom of Italy, Milan Guard (HCL test)";
+		uniformClass = "HCL_U_Italia1812_MIL";
+		hiddenSelectionsTextures[] = {"\hcl\hcl_italia\data\hcl_u_italia1812_mil_co.paa"};
+	};
 	class HCL_Italia1812_Soldado_NA01: HCL_Italia1812_Soldado_Base
 	{
-		displayName = "Infantryman, Kingdom of Naples, 1st Line Infantry Regiment, Fusiliers (HCL test)";
+		displayName = "Soldier, Kingdom of Naples, 1st Line Infantry Regiment, Fusiliers (HCL test)";
 		uniformClass = "HCL_U_Italia1812_NA01";
 		hiddenSelectionsTextures[] = {"\hcl\hcl_italia\data\hcl_u_italia1812_na01_co.paa"};
 	};
 	class HCL_Italia1812_Soldado_NA02: HCL_Italia1812_Soldado_Base
 	{
-		displayName = "Infantryman, Kingdom of Naples, 2nd Line Infantry Regiment, Fusiliers (HCL test)";
+		displayName = "Soldier, Kingdom of Naples, 2nd Line Infantry Regiment, Fusiliers (HCL test)";
 		uniformClass = "HCL_U_Italia1812_NA02";
 		hiddenSelectionsTextures[] = {"\hcl\hcl_italia\data\hcl_u_italia1812_na02_co.paa"};
 	};
 	class HCL_Italia1812_Soldado_NA05: HCL_Italia1812_Soldado_Base
 	{
-		displayName = "Infantryman, Kingdom of Naples, 5th Line Infantry Regiment, Fusiliers (HCL test)";
+		displayName = "Soldier, Kingdom of Naples, 5th Line Infantry Regiment, Fusiliers (HCL test)";
 		uniformClass = "HCL_U_Italia1812_NA05";
 		hiddenSelectionsTextures[] = {"\hcl\hcl_italia\data\hcl_u_italia1812_na05_co.paa"};
 	};
 	class HCL_Italia1812_Soldado_NA07: HCL_Italia1812_Soldado_Base
 	{
-		displayName = "Infantryman, Kingdom of Naples, 7th Line Infantry Regiment, Fusiliers (HCL test)";
+		displayName = "Soldier, Kingdom of Naples, 7th Line Infantry Regiment, Fusiliers (HCL test)";
 		uniformClass = "HCL_U_Italia1812_NA07";
 		hiddenSelectionsTextures[] = {"\hcl\hcl_italia\data\hcl_u_italia1812_na07_co.paa"};
 	};
+	class HCL_Italia1812_Soldado_RES: HCL_Italia1812_Soldado_Base
+	{
+		displayName = "Soldier, Kingdom of Italy, Line Infantry Reserve Companies (HCL test)";
+		uniformClass = "HCL_U_Italia1812_RES";
+		hiddenSelectionsTextures[] = {"\hcl\hcl_italia\data\hcl_u_italia1812_res_co.paa"};
+	};
+	class HCL_Italia1812_Soldado_VOL: HCL_Italia1812_Soldado_Base
+	{
+		displayName = "Soldier, Kingdom of Italy, Volunteer (HCL test)";
+		uniformClass = "HCL_U_Italia1812_VOL";
+		hiddenSelectionsTextures[] = {"\hcl\hcl_italia\data\hcl_u_italia1812_vol_co.paa"};
+	};
 	class HCL_Italia1812_Soldado_Elite_Base: HCL_Italia1812_Soldado_Base
 	{
-		displayName = "Infantryman, Kingdom of Italy / Naples 1812, elite company (HCL test)";
+		displayName = "Soldier, Kingdom of Italy / Naples 1812, elite company (HCL test)";
 		model = "\hcl\hcl_italia\hcl_u_italia1812_elite.p3d";
-		uniformClass = "HCL_U_Italia1812_Granadeiro_IT03";
-		hiddenSelectionsTextures[] = {"\hcl\hcl_italia\data\hcl_u_italia1812_elite_it03_gr_co.paa"};
+		uniformClass = "HCL_U_Italia1812_ART";
+		hiddenSelectionsTextures[] = {"\hcl\hcl_italia\data\hcl_u_italia1812_elite_art_co.paa"};
+	};
+	class HCL_Italia1812_Soldado_ART: HCL_Italia1812_Soldado_Elite_Base
+	{
+		displayName = "Soldier, Kingdom of Italy, Artillery Battalion (caption uncertain) (HCL test)";
+		uniformClass = "HCL_U_Italia1812_ART";
+		hiddenSelectionsTextures[] = {"\hcl\hcl_italia\data\hcl_u_italia1812_elite_art_co.paa"};
+	};
+	class HCL_Italia1812_Soldado_Carabiniere_LE01: HCL_Italia1812_Soldado_Elite_Base
+	{
+		displayName = "Soldier, Kingdom of Italy, 1st Light Infantry Regiment, Carabinier Company (HCL test)";
+		uniformClass = "HCL_U_Italia1812_Carabiniere_LE01";
+		hiddenSelectionsTextures[] = {"\hcl\hcl_italia\data\hcl_u_italia1812_elite_le01_ca_co.paa"};
+	};
+	class HCL_Italia1812_Soldado_Carabiniere_LE03: HCL_Italia1812_Soldado_Elite_Base
+	{
+		displayName = "Soldier, Kingdom of Italy, 3rd Light Infantry Regiment, Carabinier Company (HCL test)";
+		uniformClass = "HCL_U_Italia1812_Carabiniere_LE03";
+		hiddenSelectionsTextures[] = {"\hcl\hcl_italia\data\hcl_u_italia1812_elite_le03_ca_co.paa"};
+	};
+	class HCL_Italia1812_Soldado_Carabiniere_LEX: HCL_Italia1812_Soldado_Elite_Base
+	{
+		displayName = "Soldier, Kingdom of Italy, Light Infantry (yellow collar, regiment unidentified), Carabinier Company (HCL test)";
+		uniformClass = "HCL_U_Italia1812_Carabiniere_LEX";
+		hiddenSelectionsTextures[] = {"\hcl\hcl_italia\data\hcl_u_italia1812_elite_lex_ca_co.paa"};
+	};
+	class HCL_Italia1812_Soldado_Granadeiro_DAL: HCL_Italia1812_Soldado_Elite_Base
+	{
+		displayName = "Soldier, Kingdom of Italy, Dalmatian Regiment, Grenadier Company (HCL test)";
+		uniformClass = "HCL_U_Italia1812_Granadeiro_DAL";
+		hiddenSelectionsTextures[] = {"\hcl\hcl_italia\data\hcl_u_italia1812_elite_dal_gr_co.paa"};
 	};
 	class HCL_Italia1812_Soldado_Granadeiro_IT03: HCL_Italia1812_Soldado_Elite_Base
 	{
-		displayName = "Infantryman, Kingdom of Italy, 3rd Line Infantry Regiment, Grenadier Company (HCL test)";
+		displayName = "Soldier, Kingdom of Italy, 3rd Line Infantry Regiment, Grenadier Company (HCL test)";
 		uniformClass = "HCL_U_Italia1812_Granadeiro_IT03";
 		hiddenSelectionsTextures[] = {"\hcl\hcl_italia\data\hcl_u_italia1812_elite_it03_gr_co.paa"};
 	};
 	class HCL_Italia1812_Soldado_Granadeiro_IT05: HCL_Italia1812_Soldado_Elite_Base
 	{
-		displayName = "Infantryman, Kingdom of Italy, 5th Line Infantry Regiment, Grenadier Company (HCL test)";
+		displayName = "Soldier, Kingdom of Italy, 5th Line Infantry Regiment, Grenadier Company (HCL test)";
 		uniformClass = "HCL_U_Italia1812_Granadeiro_IT05";
 		hiddenSelectionsTextures[] = {"\hcl\hcl_italia\data\hcl_u_italia1812_elite_it05_gr_co.paa"};
 	};
+	class HCL_Italia1812_Soldado_Granadeiro_IT06: HCL_Italia1812_Soldado_Elite_Base
+	{
+		displayName = "Soldier, Kingdom of Italy, 6th Line Infantry Regiment, Grenadier Company (HCL test)";
+		uniformClass = "HCL_U_Italia1812_Granadeiro_IT06";
+		hiddenSelectionsTextures[] = {"\hcl\hcl_italia\data\hcl_u_italia1812_elite_it06_gr_co.paa"};
+	};
 	class HCL_Italia1812_Soldado_Granadeiro_NA07: HCL_Italia1812_Soldado_Elite_Base
 	{
-		displayName = "Infantryman, Kingdom of Naples, 7th Line Infantry Regiment, Grenadier Company (HCL test)";
+		displayName = "Soldier, Kingdom of Naples, 7th Line Infantry Regiment, Grenadier Company (HCL test)";
 		uniformClass = "HCL_U_Italia1812_Granadeiro_NA07";
 		hiddenSelectionsTextures[] = {"\hcl\hcl_italia\data\hcl_u_italia1812_elite_na07_gr_co.paa"};
 	};
+	class HCL_Italia1812_Soldado_Oficial_Granadeiro_IT05: HCL_Italia1812_Soldado_Elite_Base
+	{
+		displayName = "Soldier, Kingdom of Italy, 5th Line Infantry Regiment, Grenadier Company Officer (HCL test)";
+		uniformClass = "HCL_U_Italia1812_Oficial_Granadeiro_IT05";
+		hiddenSelectionsTextures[] = {"\hcl\hcl_italia\data\hcl_u_italia1812_elite_it05_ofgr_co.paa"};
+	};
+	class HCL_Italia1812_Soldado_Oficial_IT01: HCL_Italia1812_Soldado_Elite_Base
+	{
+		displayName = "Soldier, Kingdom of Italy, 1st Line Infantry Regiment, Officer (HCL test)";
+		uniformClass = "HCL_U_Italia1812_Oficial_IT01";
+		hiddenSelectionsTextures[] = {"\hcl\hcl_italia\data\hcl_u_italia1812_elite_it01_of_co.paa"};
+	};
+	class HCL_Italia1812_Soldado_Oficial_IT04: HCL_Italia1812_Soldado_Elite_Base
+	{
+		displayName = "Soldier, Kingdom of Italy, 4th Line Infantry Regiment, Officer (HCL test)";
+		uniformClass = "HCL_U_Italia1812_Oficial_IT04";
+		hiddenSelectionsTextures[] = {"\hcl\hcl_italia\data\hcl_u_italia1812_elite_it04_of_co.paa"};
+	};
 	class HCL_Italia1812_Soldado_Voltigeur_IT03: HCL_Italia1812_Soldado_Elite_Base
 	{
-		displayName = "Infantryman, Kingdom of Italy, 3rd Line Infantry Regiment, Voltigeur Company (HCL test)";
+		displayName = "Soldier, Kingdom of Italy, 3rd Line Infantry Regiment, Voltigeur Company (HCL test)";
 		uniformClass = "HCL_U_Italia1812_Voltigeur_IT03";
 		hiddenSelectionsTextures[] = {"\hcl\hcl_italia\data\hcl_u_italia1812_elite_it03_vo_co.paa"};
 	};
 	class HCL_Italia1812_Soldado_Voltigeur_IT05: HCL_Italia1812_Soldado_Elite_Base
 	{
-		displayName = "Infantryman, Kingdom of Italy, 5th Line Infantry Regiment, Voltigeur Company (HCL test)";
+		displayName = "Soldier, Kingdom of Italy, 5th Line Infantry Regiment, Voltigeur Company (HCL test)";
 		uniformClass = "HCL_U_Italia1812_Voltigeur_IT05";
 		hiddenSelectionsTextures[] = {"\hcl\hcl_italia\data\hcl_u_italia1812_elite_it05_vo_co.paa"};
 	};
+	class HCL_Italia1812_Soldado_Voltigeur_LE01: HCL_Italia1812_Soldado_Elite_Base
+	{
+		displayName = "Soldier, Kingdom of Italy, 1st Light Infantry Regiment, Voltigeur Company (HCL test)";
+		uniformClass = "HCL_U_Italia1812_Voltigeur_LE01";
+		hiddenSelectionsTextures[] = {"\hcl\hcl_italia\data\hcl_u_italia1812_elite_le01_vo_co.paa"};
+	};
+	class HCL_Italia1812_Soldado_Voltigeur_LE04: HCL_Italia1812_Soldado_Elite_Base
+	{
+		displayName = "Soldier, Kingdom of Italy, 4th Light Infantry Regiment, Voltigeur Company (HCL test)";
+		uniformClass = "HCL_U_Italia1812_Voltigeur_LE04";
+		hiddenSelectionsTextures[] = {"\hcl\hcl_italia\data\hcl_u_italia1812_elite_le04_vo_co.paa"};
+	};
+	class HCL_Italia1812_Soldado_Voltigeur_LEX: HCL_Italia1812_Soldado_Elite_Base
+	{
+		displayName = "Soldier, Kingdom of Italy, Light Infantry (yellow collar, regiment unidentified), Voltigeur Company (HCL test)";
+		uniformClass = "HCL_U_Italia1812_Voltigeur_LEX";
+		hiddenSelectionsTextures[] = {"\hcl\hcl_italia\data\hcl_u_italia1812_elite_lex_vo_co.paa"};
+	};
 	class HCL_Italia1812_Soldado_Voltigeur_NA07: HCL_Italia1812_Soldado_Elite_Base
 	{
-		displayName = "Infantryman, Kingdom of Naples, 7th Line Infantry Regiment, Voltigeur Company (HCL test)";
+		displayName = "Soldier, Kingdom of Naples, 7th Line Infantry Regiment, Voltigeur Company (HCL test)";
 		uniformClass = "HCL_U_Italia1812_Voltigeur_NA07";
 		hiddenSelectionsTextures[] = {"\hcl\hcl_italia\data\hcl_u_italia1812_elite_na07_vo_co.paa"};
 	};
@@ -159,6 +285,57 @@ class CfgWeapons
 		class ItemInfo;
 	};
 
+	class HCL_U_Italia1812_BRE: Uniform_Base
+	{
+		author = "Historical Clothing";
+		scope = 2;
+		displayName = "[HCL] Coat 1812 - Kingdom of Italy, Brescia Bersaglieri";
+		picture = "\A3\characters_f\data\ui\icon_U_BasicBody_ca.paa";
+		model = "\A3\Characters_F\Common\Suitpacks\suitpack_universal_F.p3d";
+		hiddenSelections[] = {"camo"};
+		hiddenSelectionsTextures[] = {"\A3\Characters_F\Common\Suitpacks\data\suitpack_soldier_blufor_co.paa"};
+		class ItemInfo: UniformItem
+		{
+			uniformModel = "-";
+			uniformClass = "HCL_Italia1812_Soldado_BRE";
+			containerClass = "Supply40";
+			mass = 40;
+		};
+	};
+	class HCL_U_Italia1812_DAL: Uniform_Base
+	{
+		author = "Historical Clothing";
+		scope = 2;
+		displayName = "[HCL] Coat 1812 - Kingdom of Italy, Dalmatian Regiment";
+		picture = "\A3\characters_f\data\ui\icon_U_BasicBody_ca.paa";
+		model = "\A3\Characters_F\Common\Suitpacks\suitpack_universal_F.p3d";
+		hiddenSelections[] = {"camo"};
+		hiddenSelectionsTextures[] = {"\A3\Characters_F\Common\Suitpacks\data\suitpack_soldier_blufor_co.paa"};
+		class ItemInfo: UniformItem
+		{
+			uniformModel = "-";
+			uniformClass = "HCL_Italia1812_Soldado_DAL";
+			containerClass = "Supply40";
+			mass = 40;
+		};
+	};
+	class HCL_U_Italia1812_DRA: Uniform_Base
+	{
+		author = "Historical Clothing";
+		scope = 2;
+		displayName = "[HCL] Coat 1812 - Kingdom of Italy, Queen's Dragoons (dismounted)";
+		picture = "\A3\characters_f\data\ui\icon_U_BasicBody_ca.paa";
+		model = "\A3\Characters_F\Common\Suitpacks\suitpack_universal_F.p3d";
+		hiddenSelections[] = {"camo"};
+		hiddenSelectionsTextures[] = {"\A3\Characters_F\Common\Suitpacks\data\suitpack_soldier_blufor_co.paa"};
+		class ItemInfo: UniformItem
+		{
+			uniformModel = "-";
+			uniformClass = "HCL_Italia1812_Soldado_DRA";
+			containerClass = "Supply40";
+			mass = 40;
+		};
+	};
 	class HCL_U_Italia1812_IT01: Uniform_Base
 	{
 		author = "Historical Clothing";
@@ -278,6 +455,74 @@ class CfgWeapons
 			mass = 40;
 		};
 	};
+	class HCL_U_Italia1812_LE01: Uniform_Base
+	{
+		author = "Historical Clothing";
+		scope = 2;
+		displayName = "[HCL] Coat 1812 - Kingdom of Italy, 1st Light Infantry Regiment, Chasseurs";
+		picture = "\A3\characters_f\data\ui\icon_U_BasicBody_ca.paa";
+		model = "\A3\Characters_F\Common\Suitpacks\suitpack_universal_F.p3d";
+		hiddenSelections[] = {"camo"};
+		hiddenSelectionsTextures[] = {"\A3\Characters_F\Common\Suitpacks\data\suitpack_soldier_blufor_co.paa"};
+		class ItemInfo: UniformItem
+		{
+			uniformModel = "-";
+			uniformClass = "HCL_Italia1812_Soldado_LE01";
+			containerClass = "Supply40";
+			mass = 40;
+		};
+	};
+	class HCL_U_Italia1812_LE03: Uniform_Base
+	{
+		author = "Historical Clothing";
+		scope = 2;
+		displayName = "[HCL] Coat 1812 - Kingdom of Italy, 3rd Light Infantry Regiment, Chasseurs";
+		picture = "\A3\characters_f\data\ui\icon_U_BasicBody_ca.paa";
+		model = "\A3\Characters_F\Common\Suitpacks\suitpack_universal_F.p3d";
+		hiddenSelections[] = {"camo"};
+		hiddenSelectionsTextures[] = {"\A3\Characters_F\Common\Suitpacks\data\suitpack_soldier_blufor_co.paa"};
+		class ItemInfo: UniformItem
+		{
+			uniformModel = "-";
+			uniformClass = "HCL_Italia1812_Soldado_LE03";
+			containerClass = "Supply40";
+			mass = 40;
+		};
+	};
+	class HCL_U_Italia1812_LE04: Uniform_Base
+	{
+		author = "Historical Clothing";
+		scope = 2;
+		displayName = "[HCL] Coat 1812 - Kingdom of Italy, 4th Light Infantry Regiment, Chasseurs";
+		picture = "\A3\characters_f\data\ui\icon_U_BasicBody_ca.paa";
+		model = "\A3\Characters_F\Common\Suitpacks\suitpack_universal_F.p3d";
+		hiddenSelections[] = {"camo"};
+		hiddenSelectionsTextures[] = {"\A3\Characters_F\Common\Suitpacks\data\suitpack_soldier_blufor_co.paa"};
+		class ItemInfo: UniformItem
+		{
+			uniformModel = "-";
+			uniformClass = "HCL_Italia1812_Soldado_LE04";
+			containerClass = "Supply40";
+			mass = 40;
+		};
+	};
+	class HCL_U_Italia1812_MIL: Uniform_Base
+	{
+		author = "Historical Clothing";
+		scope = 2;
+		displayName = "[HCL] Coat 1812 - Kingdom of Italy, Milan Guard";
+		picture = "\A3\characters_f\data\ui\icon_U_BasicBody_ca.paa";
+		model = "\A3\Characters_F\Common\Suitpacks\suitpack_universal_F.p3d";
+		hiddenSelections[] = {"camo"};
+		hiddenSelectionsTextures[] = {"\A3\Characters_F\Common\Suitpacks\data\suitpack_soldier_blufor_co.paa"};
+		class ItemInfo: UniformItem
+		{
+			uniformModel = "-";
+			uniformClass = "HCL_Italia1812_Soldado_MIL";
+			containerClass = "Supply40";
+			mass = 40;
+		};
+	};
 	class HCL_U_Italia1812_NA01: Uniform_Base
 	{
 		author = "Historical Clothing";
@@ -346,6 +591,125 @@ class CfgWeapons
 			mass = 40;
 		};
 	};
+	class HCL_U_Italia1812_RES: Uniform_Base
+	{
+		author = "Historical Clothing";
+		scope = 2;
+		displayName = "[HCL] Coat 1812 - Kingdom of Italy, Line Infantry Reserve Companies";
+		picture = "\A3\characters_f\data\ui\icon_U_BasicBody_ca.paa";
+		model = "\A3\Characters_F\Common\Suitpacks\suitpack_universal_F.p3d";
+		hiddenSelections[] = {"camo"};
+		hiddenSelectionsTextures[] = {"\A3\Characters_F\Common\Suitpacks\data\suitpack_soldier_blufor_co.paa"};
+		class ItemInfo: UniformItem
+		{
+			uniformModel = "-";
+			uniformClass = "HCL_Italia1812_Soldado_RES";
+			containerClass = "Supply40";
+			mass = 40;
+		};
+	};
+	class HCL_U_Italia1812_VOL: Uniform_Base
+	{
+		author = "Historical Clothing";
+		scope = 2;
+		displayName = "[HCL] Coat 1812 - Kingdom of Italy, Volunteer";
+		picture = "\A3\characters_f\data\ui\icon_U_BasicBody_ca.paa";
+		model = "\A3\Characters_F\Common\Suitpacks\suitpack_universal_F.p3d";
+		hiddenSelections[] = {"camo"};
+		hiddenSelectionsTextures[] = {"\A3\Characters_F\Common\Suitpacks\data\suitpack_soldier_blufor_co.paa"};
+		class ItemInfo: UniformItem
+		{
+			uniformModel = "-";
+			uniformClass = "HCL_Italia1812_Soldado_VOL";
+			containerClass = "Supply40";
+			mass = 40;
+		};
+	};
+	class HCL_U_Italia1812_ART: Uniform_Base
+	{
+		author = "Historical Clothing";
+		scope = 2;
+		displayName = "[HCL] Coat 1812 - Kingdom of Italy, Artillery Battalion (caption uncertain)";
+		picture = "\A3\characters_f\data\ui\icon_U_BasicBody_ca.paa";
+		model = "\A3\Characters_F\Common\Suitpacks\suitpack_universal_F.p3d";
+		hiddenSelections[] = {"camo"};
+		hiddenSelectionsTextures[] = {"\A3\Characters_F\Common\Suitpacks\data\suitpack_soldier_blufor_co.paa"};
+		class ItemInfo: UniformItem
+		{
+			uniformModel = "-";
+			uniformClass = "HCL_Italia1812_Soldado_ART";
+			containerClass = "Supply40";
+			mass = 40;
+		};
+	};
+	class HCL_U_Italia1812_Carabiniere_LE01: Uniform_Base
+	{
+		author = "Historical Clothing";
+		scope = 2;
+		displayName = "[HCL] Coat 1812 - Kingdom of Italy, 1st Light Infantry Regiment, Carabinier Company";
+		picture = "\A3\characters_f\data\ui\icon_U_BasicBody_ca.paa";
+		model = "\A3\Characters_F\Common\Suitpacks\suitpack_universal_F.p3d";
+		hiddenSelections[] = {"camo"};
+		hiddenSelectionsTextures[] = {"\A3\Characters_F\Common\Suitpacks\data\suitpack_soldier_blufor_co.paa"};
+		class ItemInfo: UniformItem
+		{
+			uniformModel = "-";
+			uniformClass = "HCL_Italia1812_Soldado_Carabiniere_LE01";
+			containerClass = "Supply40";
+			mass = 40;
+		};
+	};
+	class HCL_U_Italia1812_Carabiniere_LE03: Uniform_Base
+	{
+		author = "Historical Clothing";
+		scope = 2;
+		displayName = "[HCL] Coat 1812 - Kingdom of Italy, 3rd Light Infantry Regiment, Carabinier Company";
+		picture = "\A3\characters_f\data\ui\icon_U_BasicBody_ca.paa";
+		model = "\A3\Characters_F\Common\Suitpacks\suitpack_universal_F.p3d";
+		hiddenSelections[] = {"camo"};
+		hiddenSelectionsTextures[] = {"\A3\Characters_F\Common\Suitpacks\data\suitpack_soldier_blufor_co.paa"};
+		class ItemInfo: UniformItem
+		{
+			uniformModel = "-";
+			uniformClass = "HCL_Italia1812_Soldado_Carabiniere_LE03";
+			containerClass = "Supply40";
+			mass = 40;
+		};
+	};
+	class HCL_U_Italia1812_Carabiniere_LEX: Uniform_Base
+	{
+		author = "Historical Clothing";
+		scope = 2;
+		displayName = "[HCL] Coat 1812 - Kingdom of Italy, Light Infantry (yellow collar, regiment unidentified), Carabinier Company";
+		picture = "\A3\characters_f\data\ui\icon_U_BasicBody_ca.paa";
+		model = "\A3\Characters_F\Common\Suitpacks\suitpack_universal_F.p3d";
+		hiddenSelections[] = {"camo"};
+		hiddenSelectionsTextures[] = {"\A3\Characters_F\Common\Suitpacks\data\suitpack_soldier_blufor_co.paa"};
+		class ItemInfo: UniformItem
+		{
+			uniformModel = "-";
+			uniformClass = "HCL_Italia1812_Soldado_Carabiniere_LEX";
+			containerClass = "Supply40";
+			mass = 40;
+		};
+	};
+	class HCL_U_Italia1812_Granadeiro_DAL: Uniform_Base
+	{
+		author = "Historical Clothing";
+		scope = 2;
+		displayName = "[HCL] Coat 1812 - Kingdom of Italy, Dalmatian Regiment, Grenadier Company";
+		picture = "\A3\characters_f\data\ui\icon_U_BasicBody_ca.paa";
+		model = "\A3\Characters_F\Common\Suitpacks\suitpack_universal_F.p3d";
+		hiddenSelections[] = {"camo"};
+		hiddenSelectionsTextures[] = {"\A3\Characters_F\Common\Suitpacks\data\suitpack_soldier_blufor_co.paa"};
+		class ItemInfo: UniformItem
+		{
+			uniformModel = "-";
+			uniformClass = "HCL_Italia1812_Soldado_Granadeiro_DAL";
+			containerClass = "Supply40";
+			mass = 40;
+		};
+	};
 	class HCL_U_Italia1812_Granadeiro_IT03: Uniform_Base
 	{
 		author = "Historical Clothing";
@@ -380,6 +744,23 @@ class CfgWeapons
 			mass = 40;
 		};
 	};
+	class HCL_U_Italia1812_Granadeiro_IT06: Uniform_Base
+	{
+		author = "Historical Clothing";
+		scope = 2;
+		displayName = "[HCL] Coat 1812 - Kingdom of Italy, 6th Line Infantry Regiment, Grenadier Company";
+		picture = "\A3\characters_f\data\ui\icon_U_BasicBody_ca.paa";
+		model = "\A3\Characters_F\Common\Suitpacks\suitpack_universal_F.p3d";
+		hiddenSelections[] = {"camo"};
+		hiddenSelectionsTextures[] = {"\A3\Characters_F\Common\Suitpacks\data\suitpack_soldier_blufor_co.paa"};
+		class ItemInfo: UniformItem
+		{
+			uniformModel = "-";
+			uniformClass = "HCL_Italia1812_Soldado_Granadeiro_IT06";
+			containerClass = "Supply40";
+			mass = 40;
+		};
+	};
 	class HCL_U_Italia1812_Granadeiro_NA07: Uniform_Base
 	{
 		author = "Historical Clothing";
@@ -393,6 +774,57 @@ class CfgWeapons
 		{
 			uniformModel = "-";
 			uniformClass = "HCL_Italia1812_Soldado_Granadeiro_NA07";
+			containerClass = "Supply40";
+			mass = 40;
+		};
+	};
+	class HCL_U_Italia1812_Oficial_Granadeiro_IT05: Uniform_Base
+	{
+		author = "Historical Clothing";
+		scope = 2;
+		displayName = "[HCL] Coat 1812 - Kingdom of Italy, 5th Line Infantry Regiment, Grenadier Company Officer";
+		picture = "\A3\characters_f\data\ui\icon_U_BasicBody_ca.paa";
+		model = "\A3\Characters_F\Common\Suitpacks\suitpack_universal_F.p3d";
+		hiddenSelections[] = {"camo"};
+		hiddenSelectionsTextures[] = {"\A3\Characters_F\Common\Suitpacks\data\suitpack_soldier_blufor_co.paa"};
+		class ItemInfo: UniformItem
+		{
+			uniformModel = "-";
+			uniformClass = "HCL_Italia1812_Soldado_Oficial_Granadeiro_IT05";
+			containerClass = "Supply40";
+			mass = 40;
+		};
+	};
+	class HCL_U_Italia1812_Oficial_IT01: Uniform_Base
+	{
+		author = "Historical Clothing";
+		scope = 2;
+		displayName = "[HCL] Coat 1812 - Kingdom of Italy, 1st Line Infantry Regiment, Officer";
+		picture = "\A3\characters_f\data\ui\icon_U_BasicBody_ca.paa";
+		model = "\A3\Characters_F\Common\Suitpacks\suitpack_universal_F.p3d";
+		hiddenSelections[] = {"camo"};
+		hiddenSelectionsTextures[] = {"\A3\Characters_F\Common\Suitpacks\data\suitpack_soldier_blufor_co.paa"};
+		class ItemInfo: UniformItem
+		{
+			uniformModel = "-";
+			uniformClass = "HCL_Italia1812_Soldado_Oficial_IT01";
+			containerClass = "Supply40";
+			mass = 40;
+		};
+	};
+	class HCL_U_Italia1812_Oficial_IT04: Uniform_Base
+	{
+		author = "Historical Clothing";
+		scope = 2;
+		displayName = "[HCL] Coat 1812 - Kingdom of Italy, 4th Line Infantry Regiment, Officer";
+		picture = "\A3\characters_f\data\ui\icon_U_BasicBody_ca.paa";
+		model = "\A3\Characters_F\Common\Suitpacks\suitpack_universal_F.p3d";
+		hiddenSelections[] = {"camo"};
+		hiddenSelectionsTextures[] = {"\A3\Characters_F\Common\Suitpacks\data\suitpack_soldier_blufor_co.paa"};
+		class ItemInfo: UniformItem
+		{
+			uniformModel = "-";
+			uniformClass = "HCL_Italia1812_Soldado_Oficial_IT04";
 			containerClass = "Supply40";
 			mass = 40;
 		};
@@ -427,6 +859,57 @@ class CfgWeapons
 		{
 			uniformModel = "-";
 			uniformClass = "HCL_Italia1812_Soldado_Voltigeur_IT05";
+			containerClass = "Supply40";
+			mass = 40;
+		};
+	};
+	class HCL_U_Italia1812_Voltigeur_LE01: Uniform_Base
+	{
+		author = "Historical Clothing";
+		scope = 2;
+		displayName = "[HCL] Coat 1812 - Kingdom of Italy, 1st Light Infantry Regiment, Voltigeur Company";
+		picture = "\A3\characters_f\data\ui\icon_U_BasicBody_ca.paa";
+		model = "\A3\Characters_F\Common\Suitpacks\suitpack_universal_F.p3d";
+		hiddenSelections[] = {"camo"};
+		hiddenSelectionsTextures[] = {"\A3\Characters_F\Common\Suitpacks\data\suitpack_soldier_blufor_co.paa"};
+		class ItemInfo: UniformItem
+		{
+			uniformModel = "-";
+			uniformClass = "HCL_Italia1812_Soldado_Voltigeur_LE01";
+			containerClass = "Supply40";
+			mass = 40;
+		};
+	};
+	class HCL_U_Italia1812_Voltigeur_LE04: Uniform_Base
+	{
+		author = "Historical Clothing";
+		scope = 2;
+		displayName = "[HCL] Coat 1812 - Kingdom of Italy, 4th Light Infantry Regiment, Voltigeur Company";
+		picture = "\A3\characters_f\data\ui\icon_U_BasicBody_ca.paa";
+		model = "\A3\Characters_F\Common\Suitpacks\suitpack_universal_F.p3d";
+		hiddenSelections[] = {"camo"};
+		hiddenSelectionsTextures[] = {"\A3\Characters_F\Common\Suitpacks\data\suitpack_soldier_blufor_co.paa"};
+		class ItemInfo: UniformItem
+		{
+			uniformModel = "-";
+			uniformClass = "HCL_Italia1812_Soldado_Voltigeur_LE04";
+			containerClass = "Supply40";
+			mass = 40;
+		};
+	};
+	class HCL_U_Italia1812_Voltigeur_LEX: Uniform_Base
+	{
+		author = "Historical Clothing";
+		scope = 2;
+		displayName = "[HCL] Coat 1812 - Kingdom of Italy, Light Infantry (yellow collar, regiment unidentified), Voltigeur Company";
+		picture = "\A3\characters_f\data\ui\icon_U_BasicBody_ca.paa";
+		model = "\A3\Characters_F\Common\Suitpacks\suitpack_universal_F.p3d";
+		hiddenSelections[] = {"camo"};
+		hiddenSelectionsTextures[] = {"\A3\Characters_F\Common\Suitpacks\data\suitpack_soldier_blufor_co.paa"};
+		class ItemInfo: UniformItem
+		{
+			uniformModel = "-";
+			uniformClass = "HCL_Italia1812_Soldado_Voltigeur_LEX";
 			containerClass = "Supply40";
 			mass = 40;
 		};
@@ -813,6 +1296,33 @@ class CfgWeapons
 		{
 			mass = 15;
 			uniformModel = "\hcl\hcl_italia\hcl_h_italia_bonnet_napoles_granadeiro_campanha.p3d";
+			modelSides[] = {0, 1, 2, 3};
+			hiddenSelections[] = {"camo"};
+			class HitpointsProtectionInfo
+			{
+				class Head
+				{
+					hitpointName = "HitHead";
+					armor = 0;
+					passThrough = 1;
+				};
+			};
+		};
+	};
+	class HCL_H_Italia1812_Bonnet_Italia_Carabineiro_Gala: H_HelmetB
+	{
+		author = "Historical Clothing";
+		scope = 2;
+		displayName = "[HCL] Kingdom of Italy Light Infantry Carabinier Bearskin (red cords and plume, no plate)";
+		descriptionShort = "HCL test - no protection";
+		picture = "\A3\characters_f\Data\UI\icon_H_helmet_plain_ca.paa";
+		model = "\hcl\hcl_italia\hcl_h_italia_bonnet_italia_carabineiro_gala.p3d";
+		hiddenSelections[] = {"camo"};
+		hiddenSelectionsTextures[] = {"\hcl\hcl_italia\data\hcl_bonnet_italia_italia_carabineiro_gala_co.paa"};
+		class ItemInfo: ItemInfo
+		{
+			mass = 15;
+			uniformModel = "\hcl\hcl_italia\hcl_h_italia_bonnet_italia_carabineiro_gala.p3d";
 			modelSides[] = {0, 1, 2, 3};
 			hiddenSelections[] = {"camo"};
 			class HitpointsProtectionInfo

@@ -194,3 +194,11 @@ player forceAddUniform "HCL_U_Italia1812_NA07"; removeHeadgear player; player ad
 | I3 | Barretinas | `HCL_H_Italia1812_Shako_Italia_*`, `..._Shako_Napoles_*` | Águia no losango e "N" no escudo legíveis a 1–2 m; cocar italiano (vermelho, branco, verde) e napolitano (branco, amaranto); troca para a Res 2 |
 | I4 | Chapéus de pele | `..._Bonnet_Italia_Granadeiro_Gala/Campanha`, `..._Bonnet_Napoles_Granadeiro_Gala/Campanha` | Placa de granada só na Itália; cordões brancos (Itália) e vermelhos (Nápoles); desempenho (46 mil triângulos na gala) |
 | I5 | Nomes no Arsenal | todos | Inglês; "Kingdom of Italy / Naples, Nth Line Infantry Regiment" |
+
+**Lote 2 (2026-10-18 23:51, `hcl_italia.pbo` 151,2 MB, 17/17 com esqueleto, 121 referências, nenhuma faltando; não testado no jogo):**
+
+| ID | Item | Classes | Observar |
+|---|---|---|---|
+| I6 | Infantaria ligeira | `HCL_U_Italia1812_LE01/LE03/LE04`, `_Carabiniere_LE01/LE03/LEX`, `_Voltigeur_LE01/LE04/LEX`, `HCL_H_Italia1812_Bonnet_Italia_Carabineiro_Gala` | Verde-escuro sem virar preto à sombra; golas vermelha, branca, violeta e amarela; calça verde |
+| I7 | Outros corpos | `_DAL`, `_Granadeiro_DAL`, `_RES`, `_MIL`, `_VOL`, `_BRE`, `_DRA`, `_ART` | Azul-claro da Guarda de Milão; lapelas rosa dos dragões; calça cinza de Brescia |
+| I8 | Linha (correções e oficiais) | `_Voltigeur_IT03/IT05` (agora verdes), `_Granadeiro_IT06`, `_Oficial_IT01/IT04`, `_Oficial_Granadeiro_IT05` | Dragonas de prata dos oficiais |

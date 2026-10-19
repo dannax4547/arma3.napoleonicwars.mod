@@ -8,11 +8,13 @@ $tool = "C:\Program Files (x86)\Steam\steamapps\common\Arma 3 Tools\ImageToPAA\I
 $t = Join-Path $root "source\textures"
 $dst = "$t\hcl_italia_paa"
 $jobs = @()
-foreach ($n in "it01", "it02", "it03", "it04", "it05", "it06", "it07", "na01", "na02", "na05", "na07") {
+foreach ($n in "it01", "it02", "it03", "it04", "it05", "it06", "it07", "na01", "na02", "na05", "na07",
+            "le01", "le03", "le04", "dal", "res", "mil", "vol", "bre", "dra") {
     $jobs += , @("$t\hcl_uniforme_italia\hcl_u_italia1812_${n}_co.png", "$dst\hcl_u_italia1812_${n}_co.paa")
 }
 foreach ($s in "nohq", "smdi") { $jobs += , @("$t\hcl_uniforme_fr\hcl_u_fr1812_${s}.png", "$dst\hcl_u_italia1812_${s}.paa") }
-foreach ($k in "it03_gr", "it03_vo", "it05_gr", "it05_vo", "na07_gr", "na07_vo") {
+foreach ($k in "it03_gr", "it03_vo", "it05_gr", "it05_vo", "na07_gr", "na07_vo", "le01_ca", "le03_ca", "lex_ca", "le01_vo", "le04_vo",
+            "lex_vo", "dal_gr", "it06_gr", "it01_of", "it04_of", "it05_ofgr", "art") {
     $jobs += , @("$t\hcl_uniforme_italia_elite\hcl_u_italia1812_elite_${k}_co.png", "$dst\hcl_u_italia1812_elite_${k}_co.paa")
 }
 foreach ($s in "nohq", "smdi") { $jobs += , @("$t\hcl_uniforme_fr_elite\hcl_u_fr1812_elite_${s}.png", "$dst\hcl_u_italia1812_elite_${s}.paa") }
@@ -23,7 +25,7 @@ foreach ($n in "italia", "napoles") {
         foreach ($s in "co", "nohq", "smdi") { $jobs += , @("$t\hcl_shako_$n\hcl_shako_${n}_${g}_${s}.png", "$dst\hcl_shako_${n}_${g}_${s}.paa") }
     }
 }
-foreach ($g in "italia_granadeiro_gala", "italia_granadeiro_campanha", "napoles_granadeiro_gala", "napoles_granadeiro_campanha") {
+foreach ($g in "italia_granadeiro_gala", "italia_granadeiro_campanha", "napoles_granadeiro_gala", "napoles_granadeiro_campanha", "italia_carabineiro_gala") {
     foreach ($s in "co", "nohq", "smdi") { $jobs += , @("$t\hcl_bonnet_italia\hcl_bonnet_italia_${g}_${s}.png", "$dst\hcl_bonnet_italia_${g}_${s}.paa") }
 }
 

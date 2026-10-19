@@ -70,20 +70,43 @@ ITA_HEAD = {"Shako_Italia_Fuzileiro_1aComp": "Kingdom of Italy Shako 1812 - Fusi
             "Bonnet_Italia_Granadeiro_Gala": "Kingdom of Italy Grenadier Bearskin - full dress (grenade plate, white cords, plume)",
             "Bonnet_Italia_Granadeiro_Campanha": "Kingdom of Italy Grenadier Bearskin - campaign (grenade plate)",
             "Bonnet_Napoles_Granadeiro_Gala": "Kingdom of Naples Grenadier Bearskin - full dress (red cords and plume)",
-            "Bonnet_Napoles_Granadeiro_Campanha": "Kingdom of Naples Grenadier Bearskin - campaign"}
+            "Bonnet_Napoles_Granadeiro_Campanha": "Kingdom of Naples Grenadier Bearskin - campaign",
+            "Bonnet_Italia_Carabineiro_Gala": "Kingdom of Italy Light Infantry Carabinier Bearskin (red cords and plume, no plate)"}
+# lote 2 (2026-10-18): Vinkhuijzen watercolours of 1812 with the collector's captions (names follow the captions)
+ITA_UNI.update({"LE01": "Kingdom of Italy, 1st Light Infantry Regiment", "LE03": "Kingdom of Italy, 3rd Light Infantry Regiment",
+                "LE04": "Kingdom of Italy, 4th Light Infantry Regiment",
+                "LEX": "Kingdom of Italy, Light Infantry (yellow collar, regiment unidentified)",
+                "DAL": "Kingdom of Italy, Dalmatian Regiment", "RES": "Kingdom of Italy, Line Infantry Reserve Companies",
+                "MIL": "Kingdom of Italy, Milan Guard", "VOL": "Kingdom of Italy, Volunteer",
+                "BRE": "Kingdom of Italy, Brescia Bersaglieri", "DRA": "Kingdom of Italy, Queen's Dragoons (dismounted)",
+                "ART": "Kingdom of Italy, Artillery Battalion (caption uncertain)"})
+ITA_COMP = {"Granadeiro": "Grenadier Company", "Voltigeur": "Voltigeur Company", "Carabiniere": "Carabinier Company",
+            "Oficial": "Officer", "Oficial_Granadeiro": "Grenadier Company Officer"}
+ITA_KEY = r"((?:IT|NA|LE)\d\d|LEX|DAL|RES|MIL|VOL|BRE|DRA|ART)"
+ITA_PRE = r"(?:(Oficial_Granadeiro|Granadeiro|Voltigeur|Carabiniere|Oficial)_)?"
+
+
+def _ita(comp, key):
+    if comp:
+        return f"{ITA_UNI[key]}, {ITA_COMP[comp]}"
+    if key[:2] in ("IT", "NA"):
+        return f"{ITA_UNI[key]}, Fusiliers"
+    if key[:2] == "LE":
+        return f"{ITA_UNI[key]}, Chasseurs"
+    return ITA_UNI[key]
 
 
 def name(cls):
-    m = re.fullmatch(r"HCL_Italia1812_Soldado_(?:(Granadeiro|Voltigeur)_)?((?:IT|NA)\d\d)", cls)
+    m = re.fullmatch(r"HCL_Italia1812_Soldado_" + ITA_PRE + ITA_KEY, cls)
     if m:
-        return f"{ITA_UNI[m[2]].replace('Kingdom of', 'Infantryman, Kingdom of')}, {VARS_COMP[m[1] or '']}{T}"
+        return f"Soldier, {_ita(m[1], m[2])}{T}"
     if cls == "HCL_Italia1812_Soldado_Base":
-        return "Infantryman, Kingdom of Italy / Naples 1812" + T
+        return "Soldier, Kingdom of Italy / Naples 1812" + T
     if cls == "HCL_Italia1812_Soldado_Elite_Base":
-        return "Infantryman, Kingdom of Italy / Naples 1812, elite company" + T
-    m = re.fullmatch(r"HCL_U_Italia1812_(?:(Granadeiro|Voltigeur)_)?((?:IT|NA)\d\d)", cls)
+        return "Soldier, Kingdom of Italy / Naples 1812, elite company" + T
+    m = re.fullmatch(r"HCL_U_Italia1812_" + ITA_PRE + ITA_KEY, cls)
     if m:
-        return f"[HCL] Coat 1812 - {ITA_UNI[m[2]]}, {VARS_COMP[m[1] or '']}"
+        return f"[HCL] Coat 1812 - {_ita(m[1], m[2])}"
     m = re.fullmatch(r"HCL_H_Italia1812_(\w+)", cls)
     if m and m[1] in ITA_HEAD:
         return f"[HCL] {ITA_HEAD[m[1]]}"

@@ -117,13 +117,13 @@
   "prefixo": "hcl_u_italia1812_elite_it03_vo",
   "viras_externas": true,
   "curto": "Italia 3o, voltigeur",
-  "nome": "Reino da Italia, 3o de Linha: casaca branca, gola, lapelas e canhoes vermelhos, latao; voltigeur, dragonas verdes com crescente amarelo",
-  "fonte": "tabela de Schultheis 1996 🔶 + gravura de 1812 (Vinkhuijzen, NYPL)",
+  "nome": "Reino da Italia, 3o de Linha, voltigeur: casaca VERDE, gola vermelha, dragonas verdes",
+  "fonte": "aquarela da colecao Vinkhuijzen (NYPL), 1812, legenda do colecionador 🔶; Knoetel III/25",
   "cores": {
    "casaca": [
-    0.86,
-    0.85,
-    0.8
+    0.05,
+    0.16,
+    0.09
    ],
    "gola": [
     0.62,
@@ -136,9 +136,9 @@
     0.07
    ],
    "lapela": [
-    0.62,
-    0.07,
-    0.07
+    0.05,
+    0.16,
+    0.09
    ],
    "lapela_debrum": [
     0.62,
@@ -146,9 +146,9 @@
     0.07
    ],
    "punho": [
-    0.62,
-    0.07,
-    0.07
+    0.05,
+    0.16,
+    0.09
    ],
    "punho_debrum": [
     0.62,
@@ -156,9 +156,9 @@
     0.07
    ],
    "pala": [
-    0.86,
-    0.85,
-    0.8
+    0.05,
+    0.16,
+    0.09
    ],
    "debrum": [
     0.62,
@@ -166,9 +166,9 @@
     0.07
    ],
    "viras": [
-    0.86,
-    0.85,
-    0.8
+    0.05,
+    0.16,
+    0.09
    ],
    "viras_debrum": [
     0.62,
@@ -345,13 +345,13 @@
   "prefixo": "hcl_u_italia1812_elite_it05_vo",
   "viras_externas": true,
   "curto": "Italia 5o, voltigeur",
-  "nome": "Reino da Italia, 5o de Linha: casaca branca, gola vermelha, lapelas e canhoes verdes, estanho; voltigeur, dragonas verdes com crescente amarelo",
-  "fonte": "tabela de Schultheis 1996 🔶 + gravura de 1812 (Vinkhuijzen, NYPL)",
+  "nome": "Reino da Italia, 5o de Linha, voltigeur: casaca VERDE, gola vermelha, dragonas verdes",
+  "fonte": "aquarela da colecao Vinkhuijzen (NYPL), 1812, legenda do colecionador 🔶; Knoetel III/25",
   "cores": {
    "casaca": [
-    0.86,
-    0.85,
-    0.8
+    0.05,
+    0.16,
+    0.09
    ],
    "gola": [
     0.62,
@@ -364,44 +364,44 @@
     0.07
    ],
    "lapela": [
-    0.07,
-    0.26,
-    0.11
+    0.05,
+    0.16,
+    0.09
    ],
    "lapela_debrum": [
+    0.62,
     0.07,
-    0.26,
-    0.11
+    0.07
    ],
    "punho": [
-    0.07,
-    0.26,
-    0.11
+    0.05,
+    0.16,
+    0.09
    ],
    "punho_debrum": [
+    0.62,
     0.07,
-    0.26,
-    0.11
+    0.07
    ],
    "pala": [
-    0.86,
-    0.85,
-    0.8
+    0.05,
+    0.16,
+    0.09
    ],
    "debrum": [
+    0.62,
     0.07,
-    0.26,
-    0.11
+    0.07
    ],
    "viras": [
-    0.86,
-    0.85,
-    0.8
+    0.05,
+    0.16,
+    0.09
    ],
    "viras_debrum": [
+    0.62,
     0.07,
-    0.26,
-    0.11
+    0.07
    ],
    "platina": [
     0.07,
@@ -414,9 +414,9 @@
     0.11
    ],
    "botoes": [
-    0.74,
-    0.75,
-    0.76
+    0.8,
+    0.62,
+    0.28
    ],
    "calca": [
     0.84,
@@ -680,6 +680,1374 @@
     0.8,
     0.6,
     0.12
+   ]
+  }
+ },
+ "Carabiniere_LE01": {
+  "prefixo": "hcl_u_italia1812_elite_le01_ca",
+  "viras_externas": true,
+  "curto": "1o Ligeiro, carabineiro",
+  "nome": "Reino da Italia, 1o Ligeiro, carabineiro: gola e canhoes vermelhos, dragonas vermelhas",
+  "fonte": "aquarela da colecao Vinkhuijzen (NYPL), 1812, legenda do colecionador 🔶; Knoetel III/25",
+  "cores": {
+   "casaca": [
+    0.05,
+    0.16,
+    0.09
+   ],
+   "gola": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "gola_debrum": [
+    0.86,
+    0.85,
+    0.8
+   ],
+   "lapela": [
+    0.05,
+    0.16,
+    0.09
+   ],
+   "lapela_debrum": [
+    0.86,
+    0.85,
+    0.8
+   ],
+   "punho": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "punho_debrum": [
+    0.86,
+    0.85,
+    0.8
+   ],
+   "pala": [
+    0.05,
+    0.16,
+    0.09
+   ],
+   "debrum": [
+    0.86,
+    0.85,
+    0.8
+   ],
+   "viras": [
+    0.05,
+    0.16,
+    0.09
+   ],
+   "viras_debrum": [
+    0.86,
+    0.85,
+    0.8
+   ],
+   "platina": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "platina_borda": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "botoes": [
+    0.74,
+    0.75,
+    0.76
+   ],
+   "calca": [
+    0.05,
+    0.16,
+    0.09
+   ],
+   "polaina": [
+    0.06,
+    0.06,
+    0.07
+   ],
+   "sapato": [
+    0.03,
+    0.028,
+    0.025
+   ],
+   "sola": [
+    0.2,
+    0.13,
+    0.08
+   ],
+   "dragona": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "dragona_meialua": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "dragona_passante": [
+    0.62,
+    0.07,
+    0.07
+   ]
+  }
+ },
+ "Voltigeur_LE01": {
+  "prefixo": "hcl_u_italia1812_elite_le01_vo",
+  "viras_externas": true,
+  "curto": "1o Ligeiro, voltigeur",
+  "nome": "Reino da Italia, 1o Ligeiro, voltigeur: gola e canhoes vermelhos, dragonas verdes",
+  "fonte": "aquarela da colecao Vinkhuijzen (NYPL), 1812, legenda do colecionador 🔶; Knoetel III/25",
+  "cores": {
+   "casaca": [
+    0.05,
+    0.16,
+    0.09
+   ],
+   "gola": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "gola_debrum": [
+    0.86,
+    0.85,
+    0.8
+   ],
+   "lapela": [
+    0.05,
+    0.16,
+    0.09
+   ],
+   "lapela_debrum": [
+    0.86,
+    0.85,
+    0.8
+   ],
+   "punho": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "punho_debrum": [
+    0.86,
+    0.85,
+    0.8
+   ],
+   "pala": [
+    0.05,
+    0.16,
+    0.09
+   ],
+   "debrum": [
+    0.86,
+    0.85,
+    0.8
+   ],
+   "viras": [
+    0.05,
+    0.16,
+    0.09
+   ],
+   "viras_debrum": [
+    0.86,
+    0.85,
+    0.8
+   ],
+   "platina": [
+    0.07,
+    0.26,
+    0.11
+   ],
+   "platina_borda": [
+    0.07,
+    0.26,
+    0.11
+   ],
+   "botoes": [
+    0.74,
+    0.75,
+    0.76
+   ],
+   "calca": [
+    0.05,
+    0.16,
+    0.09
+   ],
+   "polaina": [
+    0.06,
+    0.06,
+    0.07
+   ],
+   "sapato": [
+    0.03,
+    0.028,
+    0.025
+   ],
+   "sola": [
+    0.2,
+    0.13,
+    0.08
+   ],
+   "dragona": [
+    0.07,
+    0.26,
+    0.11
+   ],
+   "dragona_meialua": [
+    0.8,
+    0.6,
+    0.12
+   ],
+   "dragona_passante": [
+    0.07,
+    0.26,
+    0.11
+   ]
+  }
+ },
+ "Carabiniere_LE03": {
+  "prefixo": "hcl_u_italia1812_elite_le03_ca",
+  "viras_externas": true,
+  "curto": "3o Ligeiro, carabineiro",
+  "nome": "Reino da Italia, 3o Ligeiro, carabineiro: gola branca, dragonas vermelhas",
+  "fonte": "aquarela da colecao Vinkhuijzen (NYPL), 1812, legenda do colecionador 🔶; Knoetel III/25",
+  "cores": {
+   "casaca": [
+    0.05,
+    0.16,
+    0.09
+   ],
+   "gola": [
+    0.86,
+    0.85,
+    0.8
+   ],
+   "gola_debrum": [
+    0.86,
+    0.85,
+    0.8
+   ],
+   "lapela": [
+    0.05,
+    0.16,
+    0.09
+   ],
+   "lapela_debrum": [
+    0.86,
+    0.85,
+    0.8
+   ],
+   "punho": [
+    0.05,
+    0.16,
+    0.09
+   ],
+   "punho_debrum": [
+    0.86,
+    0.85,
+    0.8
+   ],
+   "pala": [
+    0.05,
+    0.16,
+    0.09
+   ],
+   "debrum": [
+    0.86,
+    0.85,
+    0.8
+   ],
+   "viras": [
+    0.05,
+    0.16,
+    0.09
+   ],
+   "viras_debrum": [
+    0.86,
+    0.85,
+    0.8
+   ],
+   "platina": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "platina_borda": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "botoes": [
+    0.74,
+    0.75,
+    0.76
+   ],
+   "calca": [
+    0.05,
+    0.16,
+    0.09
+   ],
+   "polaina": [
+    0.06,
+    0.06,
+    0.07
+   ],
+   "sapato": [
+    0.03,
+    0.028,
+    0.025
+   ],
+   "sola": [
+    0.2,
+    0.13,
+    0.08
+   ],
+   "dragona": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "dragona_meialua": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "dragona_passante": [
+    0.62,
+    0.07,
+    0.07
+   ]
+  }
+ },
+ "Voltigeur_LE04": {
+  "prefixo": "hcl_u_italia1812_elite_le04_vo",
+  "viras_externas": true,
+  "curto": "4o Ligeiro, voltigeur",
+  "nome": "Reino da Italia, 4o Ligeiro, voltigeur: gola violeta, dragonas verdes",
+  "fonte": "aquarela da colecao Vinkhuijzen (NYPL), 1812, legenda do colecionador 🔶; Knoetel III/25",
+  "cores": {
+   "casaca": [
+    0.05,
+    0.16,
+    0.09
+   ],
+   "gola": [
+    0.42,
+    0.3,
+    0.62
+   ],
+   "gola_debrum": [
+    0.86,
+    0.85,
+    0.8
+   ],
+   "lapela": [
+    0.05,
+    0.16,
+    0.09
+   ],
+   "lapela_debrum": [
+    0.86,
+    0.85,
+    0.8
+   ],
+   "punho": [
+    0.05,
+    0.16,
+    0.09
+   ],
+   "punho_debrum": [
+    0.86,
+    0.85,
+    0.8
+   ],
+   "pala": [
+    0.05,
+    0.16,
+    0.09
+   ],
+   "debrum": [
+    0.86,
+    0.85,
+    0.8
+   ],
+   "viras": [
+    0.05,
+    0.16,
+    0.09
+   ],
+   "viras_debrum": [
+    0.86,
+    0.85,
+    0.8
+   ],
+   "platina": [
+    0.07,
+    0.26,
+    0.11
+   ],
+   "platina_borda": [
+    0.07,
+    0.26,
+    0.11
+   ],
+   "botoes": [
+    0.74,
+    0.75,
+    0.76
+   ],
+   "calca": [
+    0.05,
+    0.16,
+    0.09
+   ],
+   "polaina": [
+    0.06,
+    0.06,
+    0.07
+   ],
+   "sapato": [
+    0.03,
+    0.028,
+    0.025
+   ],
+   "sola": [
+    0.2,
+    0.13,
+    0.08
+   ],
+   "dragona": [
+    0.07,
+    0.26,
+    0.11
+   ],
+   "dragona_meialua": [
+    0.8,
+    0.6,
+    0.12
+   ],
+   "dragona_passante": [
+    0.07,
+    0.26,
+    0.11
+   ]
+  }
+ },
+ "Carabiniere_LEX": {
+  "prefixo": "hcl_u_italia1812_elite_lex_ca",
+  "viras_externas": true,
+  "curto": "Ligeira, gola amarela, carabineiro",
+  "nome": "Reino da Italia, Ligeira, gola amarela, carabineiro: gola amarela (regimento sem numero), dragonas vermelhas",
+  "fonte": "aquarela da colecao Vinkhuijzen (NYPL), 1812, legenda do colecionador 🔶; Knoetel III/25",
+  "cores": {
+   "casaca": [
+    0.05,
+    0.16,
+    0.09
+   ],
+   "gola": [
+    0.8,
+    0.6,
+    0.12
+   ],
+   "gola_debrum": [
+    0.86,
+    0.85,
+    0.8
+   ],
+   "lapela": [
+    0.05,
+    0.16,
+    0.09
+   ],
+   "lapela_debrum": [
+    0.86,
+    0.85,
+    0.8
+   ],
+   "punho": [
+    0.05,
+    0.16,
+    0.09
+   ],
+   "punho_debrum": [
+    0.86,
+    0.85,
+    0.8
+   ],
+   "pala": [
+    0.05,
+    0.16,
+    0.09
+   ],
+   "debrum": [
+    0.86,
+    0.85,
+    0.8
+   ],
+   "viras": [
+    0.05,
+    0.16,
+    0.09
+   ],
+   "viras_debrum": [
+    0.86,
+    0.85,
+    0.8
+   ],
+   "platina": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "platina_borda": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "botoes": [
+    0.74,
+    0.75,
+    0.76
+   ],
+   "calca": [
+    0.05,
+    0.16,
+    0.09
+   ],
+   "polaina": [
+    0.06,
+    0.06,
+    0.07
+   ],
+   "sapato": [
+    0.03,
+    0.028,
+    0.025
+   ],
+   "sola": [
+    0.2,
+    0.13,
+    0.08
+   ],
+   "dragona": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "dragona_meialua": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "dragona_passante": [
+    0.62,
+    0.07,
+    0.07
+   ]
+  }
+ },
+ "Voltigeur_LEX": {
+  "prefixo": "hcl_u_italia1812_elite_lex_vo",
+  "viras_externas": true,
+  "curto": "Ligeira, gola amarela, voltigeur",
+  "nome": "Reino da Italia, Ligeira, gola amarela, voltigeur: gola amarela (regimento sem numero), dragonas verdes",
+  "fonte": "aquarela da colecao Vinkhuijzen (NYPL), 1812, legenda do colecionador 🔶; Knoetel III/25",
+  "cores": {
+   "casaca": [
+    0.05,
+    0.16,
+    0.09
+   ],
+   "gola": [
+    0.8,
+    0.6,
+    0.12
+   ],
+   "gola_debrum": [
+    0.86,
+    0.85,
+    0.8
+   ],
+   "lapela": [
+    0.05,
+    0.16,
+    0.09
+   ],
+   "lapela_debrum": [
+    0.86,
+    0.85,
+    0.8
+   ],
+   "punho": [
+    0.05,
+    0.16,
+    0.09
+   ],
+   "punho_debrum": [
+    0.86,
+    0.85,
+    0.8
+   ],
+   "pala": [
+    0.05,
+    0.16,
+    0.09
+   ],
+   "debrum": [
+    0.86,
+    0.85,
+    0.8
+   ],
+   "viras": [
+    0.05,
+    0.16,
+    0.09
+   ],
+   "viras_debrum": [
+    0.86,
+    0.85,
+    0.8
+   ],
+   "platina": [
+    0.07,
+    0.26,
+    0.11
+   ],
+   "platina_borda": [
+    0.07,
+    0.26,
+    0.11
+   ],
+   "botoes": [
+    0.74,
+    0.75,
+    0.76
+   ],
+   "calca": [
+    0.05,
+    0.16,
+    0.09
+   ],
+   "polaina": [
+    0.06,
+    0.06,
+    0.07
+   ],
+   "sapato": [
+    0.03,
+    0.028,
+    0.025
+   ],
+   "sola": [
+    0.2,
+    0.13,
+    0.08
+   ],
+   "dragona": [
+    0.07,
+    0.26,
+    0.11
+   ],
+   "dragona_meialua": [
+    0.8,
+    0.6,
+    0.12
+   ],
+   "dragona_passante": [
+    0.07,
+    0.26,
+    0.11
+   ]
+  }
+ },
+ "Granadeiro_DAL": {
+  "prefixo": "hcl_u_italia1812_elite_dal_gr",
+  "viras_externas": true,
+  "curto": "Dalmata, granadeiro",
+  "fonte": "aquarela da colecao Vinkhuijzen (NYPL), 1812, legenda do colecionador 🔶",
+  "nome": "Reino da Italia, Regimento Dalmata, granadeiro: dragonas vermelhas",
+  "cores": {
+   "casaca": [
+    0.05,
+    0.16,
+    0.09
+   ],
+   "gola": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "gola_debrum": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "lapela": [
+    0.05,
+    0.16,
+    0.09
+   ],
+   "lapela_debrum": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "punho": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "punho_debrum": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "pala": [
+    0.05,
+    0.16,
+    0.09
+   ],
+   "debrum": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "viras": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "viras_debrum": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "platina": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "platina_borda": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "botoes": [
+    0.8,
+    0.62,
+    0.28
+   ],
+   "calca": [
+    0.84,
+    0.83,
+    0.78
+   ],
+   "polaina": [
+    0.06,
+    0.06,
+    0.07
+   ],
+   "sapato": [
+    0.03,
+    0.028,
+    0.025
+   ],
+   "sola": [
+    0.2,
+    0.13,
+    0.08
+   ],
+   "dragona": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "dragona_meialua": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "dragona_passante": [
+    0.62,
+    0.07,
+    0.07
+   ]
+  }
+ },
+ "ART": {
+  "prefixo": "hcl_u_italia1812_elite_art",
+  "viras_externas": true,
+  "curto": "Artilharia",
+  "fonte": "aquarela da colecao Vinkhuijzen (NYPL), 1812, legenda do colecionador 🔶 (legenda lida com duvida)",
+  "nome": "Reino da Italia, batalhao de artilharia: casaca verde-escura, vivos e dragonas vermelhos",
+  "cores": {
+   "casaca": [
+    0.05,
+    0.16,
+    0.09
+   ],
+   "gola": [
+    0.05,
+    0.16,
+    0.09
+   ],
+   "gola_debrum": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "lapela": [
+    0.05,
+    0.16,
+    0.09
+   ],
+   "lapela_debrum": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "punho": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "punho_debrum": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "pala": [
+    0.05,
+    0.16,
+    0.09
+   ],
+   "debrum": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "viras": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "viras_debrum": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "platina": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "platina_borda": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "botoes": [
+    0.8,
+    0.62,
+    0.28
+   ],
+   "calca": [
+    0.05,
+    0.16,
+    0.09
+   ],
+   "polaina": [
+    0.06,
+    0.06,
+    0.07
+   ],
+   "sapato": [
+    0.03,
+    0.028,
+    0.025
+   ],
+   "sola": [
+    0.2,
+    0.13,
+    0.08
+   ],
+   "dragona": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "dragona_meialua": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "dragona_passante": [
+    0.62,
+    0.07,
+    0.07
+   ]
+  }
+ },
+ "Granadeiro_IT06": {
+  "prefixo": "hcl_u_italia1812_elite_it06_gr",
+  "viras_externas": true,
+  "curto": "Italia 6o, granadeiro",
+  "nome": "Reino da Italia, 6o de Linha: casaca branca, gola branca, lapelas verdes, canhoes brancos, latao; granadeiro, dragonas vermelhas",
+  "fonte": "aquarela da colecao Vinkhuijzen (NYPL), 1812, legenda do colecionador 🔶",
+  "cores": {
+   "casaca": [
+    0.86,
+    0.85,
+    0.8
+   ],
+   "gola": [
+    0.86,
+    0.85,
+    0.8
+   ],
+   "gola_debrum": [
+    0.07,
+    0.26,
+    0.11
+   ],
+   "lapela": [
+    0.07,
+    0.26,
+    0.11
+   ],
+   "lapela_debrum": [
+    0.07,
+    0.26,
+    0.11
+   ],
+   "punho": [
+    0.86,
+    0.85,
+    0.8
+   ],
+   "punho_debrum": [
+    0.07,
+    0.26,
+    0.11
+   ],
+   "pala": [
+    0.86,
+    0.85,
+    0.8
+   ],
+   "debrum": [
+    0.07,
+    0.26,
+    0.11
+   ],
+   "viras": [
+    0.86,
+    0.85,
+    0.8
+   ],
+   "viras_debrum": [
+    0.07,
+    0.26,
+    0.11
+   ],
+   "platina": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "platina_borda": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "botoes": [
+    0.8,
+    0.62,
+    0.28
+   ],
+   "calca": [
+    0.84,
+    0.83,
+    0.78
+   ],
+   "polaina": [
+    0.06,
+    0.06,
+    0.07
+   ],
+   "sapato": [
+    0.03,
+    0.028,
+    0.025
+   ],
+   "sola": [
+    0.2,
+    0.13,
+    0.08
+   ],
+   "dragona": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "dragona_meialua": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "dragona_passante": [
+    0.62,
+    0.07,
+    0.07
+   ]
+  }
+ },
+ "Oficial_IT01": {
+  "prefixo": "hcl_u_italia1812_elite_it01_of",
+  "viras_externas": true,
+  "curto": "Italia 1o, oficial",
+  "nome": "Reino da Italia, 1o de Linha: casaca branca, gola verde, lapelas e canhoes vermelhos, latao; oficial, dragonas de prata",
+  "fonte": "aquarela da colecao Vinkhuijzen (NYPL), 1812, legenda do colecionador 🔶 (-1528337)",
+  "cores": {
+   "casaca": [
+    0.86,
+    0.85,
+    0.8
+   ],
+   "gola": [
+    0.07,
+    0.26,
+    0.11
+   ],
+   "gola_debrum": [
+    0.07,
+    0.26,
+    0.11
+   ],
+   "lapela": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "lapela_debrum": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "punho": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "punho_debrum": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "pala": [
+    0.86,
+    0.85,
+    0.8
+   ],
+   "debrum": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "viras": [
+    0.86,
+    0.85,
+    0.8
+   ],
+   "viras_debrum": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "platina": [
+    0.8,
+    0.8,
+    0.82
+   ],
+   "platina_borda": [
+    0.8,
+    0.8,
+    0.82
+   ],
+   "botoes": [
+    0.8,
+    0.62,
+    0.28
+   ],
+   "calca": [
+    0.84,
+    0.83,
+    0.78
+   ],
+   "polaina": [
+    0.06,
+    0.06,
+    0.07
+   ],
+   "sapato": [
+    0.03,
+    0.028,
+    0.025
+   ],
+   "sola": [
+    0.2,
+    0.13,
+    0.08
+   ],
+   "dragona": [
+    0.8,
+    0.8,
+    0.82
+   ],
+   "dragona_meialua": [
+    0.8,
+    0.8,
+    0.82
+   ],
+   "dragona_passante": [
+    0.8,
+    0.8,
+    0.82
+   ]
+  }
+ },
+ "Oficial_IT04": {
+  "prefixo": "hcl_u_italia1812_elite_it04_of",
+  "viras_externas": true,
+  "curto": "Italia 4o, oficial",
+  "nome": "Reino da Italia, 4o de Linha: casaca branca, gola vermelha, lapelas e canhoes brancos debruados de verde, estanho; oficial, dragonas de prata",
+  "fonte": "aquarela da colecao Vinkhuijzen (NYPL), 1812, legenda do colecionador 🔶 (-1528333)",
+  "cores": {
+   "casaca": [
+    0.86,
+    0.85,
+    0.8
+   ],
+   "gola": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "gola_debrum": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "lapela": [
+    0.86,
+    0.85,
+    0.8
+   ],
+   "lapela_debrum": [
+    0.07,
+    0.26,
+    0.11
+   ],
+   "punho": [
+    0.86,
+    0.85,
+    0.8
+   ],
+   "punho_debrum": [
+    0.07,
+    0.26,
+    0.11
+   ],
+   "pala": [
+    0.86,
+    0.85,
+    0.8
+   ],
+   "debrum": [
+    0.07,
+    0.26,
+    0.11
+   ],
+   "viras": [
+    0.86,
+    0.85,
+    0.8
+   ],
+   "viras_debrum": [
+    0.07,
+    0.26,
+    0.11
+   ],
+   "platina": [
+    0.8,
+    0.8,
+    0.82
+   ],
+   "platina_borda": [
+    0.8,
+    0.8,
+    0.82
+   ],
+   "botoes": [
+    0.74,
+    0.75,
+    0.76
+   ],
+   "calca": [
+    0.84,
+    0.83,
+    0.78
+   ],
+   "polaina": [
+    0.06,
+    0.06,
+    0.07
+   ],
+   "sapato": [
+    0.03,
+    0.028,
+    0.025
+   ],
+   "sola": [
+    0.2,
+    0.13,
+    0.08
+   ],
+   "dragona": [
+    0.8,
+    0.8,
+    0.82
+   ],
+   "dragona_meialua": [
+    0.8,
+    0.8,
+    0.82
+   ],
+   "dragona_passante": [
+    0.8,
+    0.8,
+    0.82
+   ]
+  }
+ },
+ "Oficial_Granadeiro_IT05": {
+  "prefixo": "hcl_u_italia1812_elite_it05_ofgr",
+  "viras_externas": true,
+  "curto": "Italia 5o, oficial",
+  "nome": "Reino da Italia, 5o de Linha: casaca branca, gola vermelha, lapelas e canhoes verdes, estanho; oficial, dragonas de prata",
+  "fonte": "aquarela da colecao Vinkhuijzen (NYPL), 1812, legenda do colecionador 🔶 (-1528334)",
+  "cores": {
+   "casaca": [
+    0.86,
+    0.85,
+    0.8
+   ],
+   "gola": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "gola_debrum": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "lapela": [
+    0.07,
+    0.26,
+    0.11
+   ],
+   "lapela_debrum": [
+    0.07,
+    0.26,
+    0.11
+   ],
+   "punho": [
+    0.07,
+    0.26,
+    0.11
+   ],
+   "punho_debrum": [
+    0.07,
+    0.26,
+    0.11
+   ],
+   "pala": [
+    0.86,
+    0.85,
+    0.8
+   ],
+   "debrum": [
+    0.07,
+    0.26,
+    0.11
+   ],
+   "viras": [
+    0.86,
+    0.85,
+    0.8
+   ],
+   "viras_debrum": [
+    0.07,
+    0.26,
+    0.11
+   ],
+   "platina": [
+    0.8,
+    0.8,
+    0.82
+   ],
+   "platina_borda": [
+    0.8,
+    0.8,
+    0.82
+   ],
+   "botoes": [
+    0.74,
+    0.75,
+    0.76
+   ],
+   "calca": [
+    0.84,
+    0.83,
+    0.78
+   ],
+   "polaina": [
+    0.06,
+    0.06,
+    0.07
+   ],
+   "sapato": [
+    0.03,
+    0.028,
+    0.025
+   ],
+   "sola": [
+    0.2,
+    0.13,
+    0.08
+   ],
+   "dragona": [
+    0.8,
+    0.8,
+    0.82
+   ],
+   "dragona_meialua": [
+    0.8,
+    0.8,
+    0.82
+   ],
+   "dragona_passante": [
+    0.8,
+    0.8,
+    0.82
    ]
   }
  }
