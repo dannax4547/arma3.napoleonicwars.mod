@@ -217,3 +217,5 @@ player forceAddUniform "HCL_U_BRU1815_B06"; removeHeadgear player; player addHea
 | B3 | Kiwer da linha | `HCL_H_BRU1815_Kiwer_Linha_1` / `_2` / `_3` | Número certo no escudo, também na Res 2 |
 | B4 | Kiwer ligeiro e Avantgarde | `HCL_H_BRU1815_Kiwer_Ligeiro`, `_Avantgarde` | Corneta de metal branco, pompom, pluma |
 | B5 | Mochila | `HCL_B_BRU1815_Tornister` | Cavalo na aba; correias pretas |
+
+**2026-10-19 (tarde):** jugular de couro em todas as barretinas do `hcl_uk` (menos o bonnet highland) e crina nova do Leib-Bataillon. PBO de 194,7 MB; `pbo_verify` sem referência faltando. Não testado no jogo. Observar: **J1** a jugular sob o queixo não atravessa o rosto ao virar a cabeça, mirar ou deitar (ela é rígida no osso `Head`); **J2** a crina do Leib não bloqueia a visão em primeira pessoa (190 mm de altura).

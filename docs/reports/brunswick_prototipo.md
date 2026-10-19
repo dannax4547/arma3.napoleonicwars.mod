@@ -61,3 +61,11 @@ A ficha técnica é `docs/specs/kgl_brunswick_1815.md` §4. A fonte principal é
 - **Alamares:** pretos sobre preto, quase só se veem pelo relevo, como no original.
 - **Renders:** o tampo da Kiwer parece claro nos renders de costas. É brilho de raspão do couro no render de conferência, e a barretina portuguesa mostra o mesmo; não é a textura.
 - **Próxima etapa:** KGL e Hanôver.
+
+## 5. Ajustes de 2026-10-19 (tarde), a pedido do usuário
+
+- **Crina do Leib-Bataillon** (*"aumente mais a pumlet ... como na imagem dos batalhões de brunswick"*, depois *"mais alto"*, *"menos volume nas laterais"*, duas vezes): a franja curta virou uma **coluna de 190 mm** com a crina caindo em cone, como os soldados de 1814 da prancha [B8]. A crina cobre o terço de cima da barretina, acima da caveira, e as laterais ficam rentes à parede (v5). A barretina tem 24 mil triângulos, e a Res 2 é reduzida a 40%.
+- **Jugular em todas as barretinas** (*"todas as barretinas estão sem as alças"*): correia de couro preto com roseta de metal dos lados (latão nas britânicas e portuguesas, metal branco em Brunswick). Ela desce na frente da orelha, segue o maxilar e passa por baixo do queixo. Foi medida na cabeça do jogo (`TemplateRTM\bust.p3d`: queixo a 0,587 m, roseta a 0,726 m) e fica a ~6 mm da pele. Brunswick tem fonte [B1][B2]; britânicas e portuguesas não têm fonte lida (🔶). O bonnet highland ficou sem.
+  - **Erro corrigido:** a primeira versão descia até o peito, porque a cabeça do jogo tem ombros e o "queixo" era o ponto mais baixo da frente. Agora o queixo é procurado só no rosto, logo atrás da ponta do nariz.
+- **Build com as jugulares** (19/10, 12:44): 16 barretinas reassadas; 167 PAA, 0 falhas; nenhum modelo sem esqueleto; `hcl_uk.pbo` 194,7 MB; `pbo_verify`: 221 arquivos, 220 referências, nenhuma faltando.
+- **Pausado pelo usuário** antes dos renders dos soldados com jugular. A conferência foi feita só na cabeça do jogo (frente, lado e de baixo, sem textura). **Não visto no jogo.**
