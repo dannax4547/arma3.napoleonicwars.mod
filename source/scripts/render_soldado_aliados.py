@@ -51,7 +51,10 @@ UNI = {"casaca": (J(r"source\models\coats\hcl_uniforme_fr\hcl_uniforme_fr_LOD0.b
                   J(r"source\textures\hcl_uniforme_italia"), "hcl_u_italia1812_{}_co.png", J(r"source\textures\hcl_uniforme_fr\hcl_u_fr1812_nohq.png")),
        "italia_elite": (J(r"source\models\coats\hcl_uniforme_fr\hcl_uniforme_fr_elite_LOD0.blend"), "HCL_U_Fr1812_Elite_LOD0",
                         J(r"source\textures\hcl_uniforme_italia_elite"), "hcl_u_italia1812_elite_{}_co.png",
-                        J(r"source\textures\hcl_uniforme_fr_elite\hcl_u_fr1812_elite_nohq.png"))}
+                        J(r"source\textures\hcl_uniforme_fr_elite\hcl_u_fr1812_elite_nohq.png")),
+       # Confederation of the Rhine lot 1 (2026-10-20): variants wue01..wuejk, bav01..bavl7
+       "reno": (J(r"source\models\coats\hcl_uniforme_fr\hcl_uniforme_fr_LOD0.blend"), "HCL_U_Fr1812_01_LOD0",
+                J(r"source\textures\hcl_uniforme_reno"), "hcl_u_reno1811_{}_co.png", J(r"source\textures\hcl_uniforme_fr\hcl_u_fr1812_nohq.png"))}
 
 
 def load(blend, names):
@@ -128,9 +131,12 @@ SRCS = [(J(r"source\models\shakos\hcl_shako_fr\hcl_shako_fr_texturas_v3.blend"),
         (J(r"source\models\bonnet\hcl_bonnet_varsovia\hcl_bonnet_varsovia_texturas.blend"), "HCL_Bonnet_Varsovia_", J(r"source\textures\hcl_bonnet_varsovia"), "hcl_bonnet_varsovia_", "bonnetpl_"),
         (J(r"source\models\shakos\hcl_shako_italia\hcl_shako_italia_texturas.blend"), "HCL_Shako_Italia_", J(r"source\textures\hcl_shako_italia"), "hcl_shako_italia_", "shkit_"),
         (J(r"source\models\shakos\hcl_shako_italia\hcl_shako_napoles_texturas.blend"), "HCL_Shako_Napoles_", J(r"source\textures\hcl_shako_napoles"), "hcl_shako_napoles_", "shkna_"),
-        (J(r"source\models\bonnet\hcl_bonnet_italia\hcl_bonnet_italia_texturas.blend"), "HCL_Bonnet_Italia_", J(r"source\textures\hcl_bonnet_italia"), "hcl_bonnet_italia_", "bonnetit_")]
+        (J(r"source\models\bonnet\hcl_bonnet_italia\hcl_bonnet_italia_texturas.blend"), "HCL_Bonnet_Italia_", J(r"source\textures\hcl_bonnet_italia"), "hcl_bonnet_italia_", "bonnetit_"),
+        # Rhine crested helmets: one texture blend per state (own mod atlas)
+        (J(r"source\models\raupenhelm\hcl_raupenhelm\hcl_raupenhelm_texturas_wurttemberg.blend"), "HCL_Raupenhelm_", J(r"source\textures\hcl_raupenhelm"), "hcl_raupenhelm_", "rhw_"),
+        (J(r"source\models\raupenhelm\hcl_raupenhelm\hcl_raupenhelm_texturas_baviera.blend"), "HCL_Raupenhelm_", J(r"source\textures\hcl_raupenhelm"), "hcl_raupenhelm_", "rhb_")]
 for blend, pre, tdir_, tpre, tagp in SRCS:
-    mine = lambda t: (t.startswith(tagp) if tagp else not t.startswith(("bonnet_", "suica_", "czapka_", "bonnetpl_", "shkit_", "shkna_", "bonnetit_")))
+    mine = lambda t: (t.startswith(tagp) if tagp else not t.startswith(("bonnet_", "suica_", "czapka_", "bonnetpl_", "shkit_", "shkna_", "bonnetit_", "rhw_", "rhb_")))
     want = [t[len(tagp):] for t in tags if t not in shk and mine(t)]
     if not want or not os.path.exists(blend):
         continue

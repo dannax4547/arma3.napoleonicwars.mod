@@ -203,6 +203,22 @@ player forceAddUniform "HCL_U_Italia1812_NA07"; removeHeadgear player; player ad
 | I7 | Outros corpos | `_DAL`, `_Granadeiro_DAL`, `_RES`, `_MIL`, `_VOL`, `_BRE`, `_DRA`, `_ART` | Azul-claro da Guarda de Milão; lapelas rosa dos dragões; calça cinza de Brescia |
 | I8 | Linha (correções e oficiais) | `_Voltigeur_IT03/IT05` (agora verdes), `_Granadeiro_IT06`, `_Oficial_IT01/IT04`, `_Oficial_Granadeiro_IT05` | Dragonas de prata dos oficiais |
 
+## 10. Confederação do Reno, lote 1 (Württemberg e Baviera), `hcl_reno.pbo` (2026-10-20, não testado no jogo)
+
+Montagem: 55,3 MB, 3/3 modelos com esqueleto, `pbo_verify` com 45 referências, nenhuma faltando. Relatório: `docs/reports/reno_1811.md`. O `hcl_reno` não precisa do `hcl_fr`.
+
+```sqf
+player forceAddUniform "HCL_U_Reno1811_WUE01"; removeHeadgear player; player addHeadgear "HCL_H_Reno1811_Raupenhelm_Wurttemberg";
+player forceAddUniform "HCL_U_Reno1811_BAV07"; removeHeadgear player; player addHeadgear "HCL_H_Reno1811_Raupenhelm_Baviera";
+```
+
+| ID | Item | Classes | Observar |
+|---|---|---|---|
+| R1 | Capacete de lagarta (Raupenhelm) | `HCL_H_Reno1811_Raupenhelm_Wurttemberg`, `_Baviera` | Encaixe na cabeça (calota 3 cm acima); crista sem atravessar a mochila nem o pescoço ao olhar para cima; placa (brasão / oval coroado) legível; desempenho (33 mil triângulos; a Res 2 não tem as mechas) |
+| R2 | Casacas de Württemberg | `HCL_U_Reno1811_WUE01` … `_WUE09`, `_WUE10P`, `_WUE10A`, `_WUEJK` | Azul-escuro que não fique preto; golas amarela, laranja, branca, rosa, azul-clara e vermelha |
+| R3 | Casacas da Baviera | `HCL_U_Reno1811_BAV01` … `_BAV13`, `_BAV11L/V/P`, `_BAVL1` … `_BAVL7` | Azul-claro; lapelas de cada regimento; ligeiros verdes com calça cinza |
+| R4 | Nomes no Arsenal | todos | Inglês: "Wuerttemberg / Bavaria, Nth Line Infantry Regiment 'nome'" |
+
 ## 9. França, variantes pedidas pelo usuário (2026-10-19, `hcl_fr.pbo` remontado, não testado no jogo)
 
 O `hcl_fr` foi remontado com os scripts deste worktree (`build_mod_fr.ps1 <raiz> <pasta de scripts>`, parâmetro novo e opcional). 147,5 MB; Binarize 0, 19 modelos com esqueleto; `pbo_verify`: 122 referências, nenhuma faltando. As duas peças só mudam a textura `_co` (mesmo modelo); não têm fonte histórica (variante do usuário).

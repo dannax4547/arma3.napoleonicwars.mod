@@ -96,7 +96,57 @@ def _ita(comp, key):
     return ITA_UNI[key]
 
 
+# ---- Confederation of the Rhine, lot 1 (2026-10-20): Wuerttemberg and Bavaria c. 1811 (variantes_reno.py; names follow
+# the collector's captions of the Vinkhuijzen watercolours)
+RENO_UNI = {
+    "WUE01": "Wuerttemberg, 1st Line Infantry Regiment 'Prinz Paul'",
+    "WUE02": "Wuerttemberg, 2nd Line Infantry Regiment 'Herzog Wilhelm'",
+    "WUE03": "Wuerttemberg, 3rd Line Infantry Regiment",
+    "WUE04": "Wuerttemberg, 4th Line Infantry Regiment",
+    "WUE05": "Wuerttemberg, 5th Line Infantry Regiment 'Prinz Friedrich'",
+    "WUE06": "Wuerttemberg, 6th Line Infantry Regiment 'Kronprinz'",
+    "WUE07": "Wuerttemberg, 7th Line Infantry Regiment",
+    "WUE08": "Wuerttemberg, 8th Line Infantry Regiment 'von Neubronn'",
+    "WUE09": "Wuerttemberg, 9th Line Infantry Regiment",
+    "WUE10P": "Wuerttemberg, Light Infantry Regiment No. 10 (black facings)",
+    "WUE10A": "Wuerttemberg, Light Infantry Regiment No. 10 (light blue facings)",
+    "WUEJK": "Wuerttemberg, 1st Jaeger Battalion 'Koenig'",
+    "BAV01": "Bavaria, 1st Line Infantry Regiment 'Koenig'",
+    "BAV02": "Bavaria, 2nd Line Infantry Regiment 'Kronprinz'",
+    "BAV04": "Bavaria, 4th Line Infantry Regiment 'Sachsen-Hildburghausen'",
+    "BAV06": "Bavaria, 6th Line Infantry Regiment 'Herzog Wilhelm'",
+    "BAV07": "Bavaria, 7th Line Infantry Regiment 'Loewenstein'",
+    "BAV08": "Bavaria, 8th Line Infantry Regiment 'Herzog Pius'",
+    "BAV09": "Bavaria, 9th Line Infantry Regiment 'Ysenburg'",
+    "BAV10": "Bavaria, 10th Line Infantry Regiment 'Junker'",
+    "BAV11L": "Bavaria, 11th Line Infantry Regiment 'Kinkel' (plate figure, orange lapels)",
+    "BAV11V": "Bavaria, 11th Line Infantry Regiment 'Kinkel' (plate figure, green lapels)",
+    "BAV11P": "Bavaria, 11th Line Infantry Regiment 'Kinkel' (plate figure, black lapels)",
+    "BAV13": "Bavaria, 13th Line Infantry Regiment",
+    "BAVL1": "Bavaria, 1st Light Infantry Battalion 'Gedoni'",
+    "BAVL2": "Bavaria, 2nd Light Infantry Battalion 'Wreden'",
+    "BAVL3": "Bavaria, 3rd Light Infantry Battalion 'Bernclau'",
+    "BAVL4": "Bavaria, 4th Light Infantry Battalion 'Theobald'",
+    "BAVL5": "Bavaria, 5th Light Infantry Battalion 'Butler'",
+    "BAVL6": "Bavaria, 6th Light Infantry Battalion 'La Roche'",
+    "BAVL7": "Bavaria, 7th Light Infantry Battalion 'Guenther'",
+}
+RENO_HEAD = {"Raupenhelm_Wurttemberg": "Wuerttemberg Crested Helmet (Raupenhelm) 1811 - brass front plate, red and yellow cockade",
+             "Raupenhelm_Baviera": "Bavarian Crested Helmet (Raupenhelm) 1811 - crowned oval plate, white and blue cockade"}
+
+
 def name(cls):
+    m = re.fullmatch(r"HCL_Reno1811_Soldado_(\w+)", cls)
+    if m and m[1] in RENO_UNI:
+        return f"Soldier, {RENO_UNI[m[1]]}{T}"
+    if cls == "HCL_Reno1811_Soldado_Base":
+        return "Soldier, Confederation of the Rhine 1811" + T
+    m = re.fullmatch(r"HCL_U_Reno1811_(\w+)", cls)
+    if m and m[1] in RENO_UNI:
+        return f"[HCL] Coat 1811 - {RENO_UNI[m[1]]}"
+    m = re.fullmatch(r"HCL_H_Reno1811_(\w+)", cls)
+    if m and m[1] in RENO_HEAD:
+        return f"[HCL] {RENO_HEAD[m[1]]}"
     m = re.fullmatch(r"HCL_Italia1812_Soldado_" + ITA_PRE + ITA_KEY, cls)
     if m:
         return f"Soldier, {_ita(m[1], m[2])}{T}"

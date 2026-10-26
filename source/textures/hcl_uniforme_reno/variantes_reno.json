@@ -1,0 +1,3040 @@
+{
+ "WUE01": {
+  "prefixo": "hcl_u_reno1811_wue01",
+  "curto": "Wuerttemberg 1o Prinz Paul",
+  "nome": "Wuerttemberg 1811, 1o Prinz Paul, amarelo: casaca azul-escura",
+  "fonte": "aquarela Vinkhuijzen (NYPL), album 'Wuerttemberg 1811', prancha 022 ('1. Regiment Linie Prinz Paul'), legenda do colecionador 🔶",
+  "cores": {
+   "casaca": [
+    0.08,
+    0.1,
+    0.24
+   ],
+   "gola": [
+    0.8,
+    0.6,
+    0.12
+   ],
+   "gola_debrum": [
+    0.8,
+    0.6,
+    0.12
+   ],
+   "lapela": [
+    0.08,
+    0.1,
+    0.24
+   ],
+   "lapela_debrum": [
+    0.8,
+    0.6,
+    0.12
+   ],
+   "punho": [
+    0.8,
+    0.6,
+    0.12
+   ],
+   "punho_debrum": [
+    0.8,
+    0.6,
+    0.12
+   ],
+   "pala": [
+    0.08,
+    0.1,
+    0.24
+   ],
+   "debrum": [
+    0.8,
+    0.6,
+    0.12
+   ],
+   "viras": [
+    0.08,
+    0.1,
+    0.24
+   ],
+   "viras_debrum": [
+    0.8,
+    0.6,
+    0.12
+   ],
+   "platina": [
+    0.08,
+    0.1,
+    0.24
+   ],
+   "platina_borda": [
+    0.8,
+    0.6,
+    0.12
+   ],
+   "botoes": [
+    0.74,
+    0.75,
+    0.76
+   ],
+   "calca": [
+    0.84,
+    0.82,
+    0.72
+   ],
+   "polaina": [
+    0.06,
+    0.06,
+    0.07
+   ],
+   "sapato": [
+    0.03,
+    0.028,
+    0.025
+   ],
+   "sola": [
+    0.2,
+    0.13,
+    0.08
+   ]
+  }
+ },
+ "WUE02": {
+  "prefixo": "hcl_u_reno1811_wue02",
+  "curto": "Wuerttemberg 2o Herzog Wilhelm",
+  "nome": "Wuerttemberg 1811, 2o Herzog Wilhelm, laranja: casaca azul-escura",
+  "fonte": "aquarela Vinkhuijzen (NYPL), album 'Wuerttemberg 1811', prancha 020 ('2. Linie Regiment Herzog Wilhelm'), legenda do colecionador 🔶",
+  "cores": {
+   "casaca": [
+    0.08,
+    0.1,
+    0.24
+   ],
+   "gola": [
+    0.85,
+    0.42,
+    0.12
+   ],
+   "gola_debrum": [
+    0.85,
+    0.42,
+    0.12
+   ],
+   "lapela": [
+    0.08,
+    0.1,
+    0.24
+   ],
+   "lapela_debrum": [
+    0.85,
+    0.42,
+    0.12
+   ],
+   "punho": [
+    0.85,
+    0.42,
+    0.12
+   ],
+   "punho_debrum": [
+    0.85,
+    0.42,
+    0.12
+   ],
+   "pala": [
+    0.08,
+    0.1,
+    0.24
+   ],
+   "debrum": [
+    0.85,
+    0.42,
+    0.12
+   ],
+   "viras": [
+    0.08,
+    0.1,
+    0.24
+   ],
+   "viras_debrum": [
+    0.85,
+    0.42,
+    0.12
+   ],
+   "platina": [
+    0.08,
+    0.1,
+    0.24
+   ],
+   "platina_borda": [
+    0.85,
+    0.42,
+    0.12
+   ],
+   "botoes": [
+    0.74,
+    0.75,
+    0.76
+   ],
+   "calca": [
+    0.84,
+    0.82,
+    0.72
+   ],
+   "polaina": [
+    0.06,
+    0.06,
+    0.07
+   ],
+   "sapato": [
+    0.03,
+    0.028,
+    0.025
+   ],
+   "sola": [
+    0.2,
+    0.13,
+    0.08
+   ]
+  }
+ },
+ "WUE03": {
+  "prefixo": "hcl_u_reno1811_wue03",
+  "curto": "Wuerttemberg 3o",
+  "nome": "Wuerttemberg 1811, 3o, branco: casaca azul-escura",
+  "fonte": "aquarela Vinkhuijzen (NYPL), album 'Wuerttemberg 1811', prancha 021 ('3. Linie Regiment Infanterie'), legenda do colecionador 🔶",
+  "cores": {
+   "casaca": [
+    0.08,
+    0.1,
+    0.24
+   ],
+   "gola": [
+    0.86,
+    0.85,
+    0.8
+   ],
+   "gola_debrum": [
+    0.86,
+    0.85,
+    0.8
+   ],
+   "lapela": [
+    0.08,
+    0.1,
+    0.24
+   ],
+   "lapela_debrum": [
+    0.86,
+    0.85,
+    0.8
+   ],
+   "punho": [
+    0.86,
+    0.85,
+    0.8
+   ],
+   "punho_debrum": [
+    0.86,
+    0.85,
+    0.8
+   ],
+   "pala": [
+    0.08,
+    0.1,
+    0.24
+   ],
+   "debrum": [
+    0.86,
+    0.85,
+    0.8
+   ],
+   "viras": [
+    0.08,
+    0.1,
+    0.24
+   ],
+   "viras_debrum": [
+    0.86,
+    0.85,
+    0.8
+   ],
+   "platina": [
+    0.08,
+    0.1,
+    0.24
+   ],
+   "platina_borda": [
+    0.86,
+    0.85,
+    0.8
+   ],
+   "botoes": [
+    0.74,
+    0.75,
+    0.76
+   ],
+   "calca": [
+    0.84,
+    0.82,
+    0.72
+   ],
+   "polaina": [
+    0.06,
+    0.06,
+    0.07
+   ],
+   "sapato": [
+    0.03,
+    0.028,
+    0.025
+   ],
+   "sola": [
+    0.2,
+    0.13,
+    0.08
+   ]
+  }
+ },
+ "WUE04": {
+  "prefixo": "hcl_u_reno1811_wue04",
+  "curto": "Wuerttemberg 4o",
+  "nome": "Wuerttemberg 1811, 4o, rosa: casaca azul-escura",
+  "fonte": "aquarela Vinkhuijzen (NYPL), album 'Wuerttemberg 1811', prancha 019 ('Linie Infanterie Regiment No 4'), legenda do colecionador 🔶",
+  "cores": {
+   "casaca": [
+    0.08,
+    0.1,
+    0.24
+   ],
+   "gola": [
+    0.86,
+    0.55,
+    0.62
+   ],
+   "gola_debrum": [
+    0.86,
+    0.55,
+    0.62
+   ],
+   "lapela": [
+    0.08,
+    0.1,
+    0.24
+   ],
+   "lapela_debrum": [
+    0.86,
+    0.55,
+    0.62
+   ],
+   "punho": [
+    0.86,
+    0.55,
+    0.62
+   ],
+   "punho_debrum": [
+    0.86,
+    0.55,
+    0.62
+   ],
+   "pala": [
+    0.08,
+    0.1,
+    0.24
+   ],
+   "debrum": [
+    0.86,
+    0.55,
+    0.62
+   ],
+   "viras": [
+    0.08,
+    0.1,
+    0.24
+   ],
+   "viras_debrum": [
+    0.86,
+    0.55,
+    0.62
+   ],
+   "platina": [
+    0.08,
+    0.1,
+    0.24
+   ],
+   "platina_borda": [
+    0.86,
+    0.55,
+    0.62
+   ],
+   "botoes": [
+    0.74,
+    0.75,
+    0.76
+   ],
+   "calca": [
+    0.84,
+    0.82,
+    0.72
+   ],
+   "polaina": [
+    0.06,
+    0.06,
+    0.07
+   ],
+   "sapato": [
+    0.03,
+    0.028,
+    0.025
+   ],
+   "sola": [
+    0.2,
+    0.13,
+    0.08
+   ]
+  }
+ },
+ "WUE05": {
+  "prefixo": "hcl_u_reno1811_wue05",
+  "curto": "Wuerttemberg 5o Prinz Friedrich",
+  "nome": "Wuerttemberg 1811, 5o Prinz Friedrich, azul-claro: casaca azul-escura",
+  "fonte": "aquarela Vinkhuijzen (NYPL), album 'Wuerttemberg 1811', prancha 018 ('Lin. Regiment No 5 Prinz Friedrich, Grenadier'), legenda do colecionador 🔶",
+  "cores": {
+   "casaca": [
+    0.08,
+    0.1,
+    0.24
+   ],
+   "gola": [
+    0.42,
+    0.6,
+    0.84
+   ],
+   "gola_debrum": [
+    0.42,
+    0.6,
+    0.84
+   ],
+   "lapela": [
+    0.08,
+    0.1,
+    0.24
+   ],
+   "lapela_debrum": [
+    0.42,
+    0.6,
+    0.84
+   ],
+   "punho": [
+    0.42,
+    0.6,
+    0.84
+   ],
+   "punho_debrum": [
+    0.42,
+    0.6,
+    0.84
+   ],
+   "pala": [
+    0.08,
+    0.1,
+    0.24
+   ],
+   "debrum": [
+    0.42,
+    0.6,
+    0.84
+   ],
+   "viras": [
+    0.08,
+    0.1,
+    0.24
+   ],
+   "viras_debrum": [
+    0.42,
+    0.6,
+    0.84
+   ],
+   "platina": [
+    0.08,
+    0.1,
+    0.24
+   ],
+   "platina_borda": [
+    0.42,
+    0.6,
+    0.84
+   ],
+   "botoes": [
+    0.74,
+    0.75,
+    0.76
+   ],
+   "calca": [
+    0.84,
+    0.82,
+    0.72
+   ],
+   "polaina": [
+    0.06,
+    0.06,
+    0.07
+   ],
+   "sapato": [
+    0.03,
+    0.028,
+    0.025
+   ],
+   "sola": [
+    0.2,
+    0.13,
+    0.08
+   ]
+  }
+ },
+ "WUE06": {
+  "prefixo": "hcl_u_reno1811_wue06",
+  "curto": "Wuerttemberg 6o Kronprinz",
+  "nome": "Wuerttemberg 1811, 6o Kronprinz, gola vermelha, canhoes brancos debruados de vermelho: casaca azul-escura",
+  "fonte": "aquarela Vinkhuijzen (NYPL), album 'Wuerttemberg 1811', prancha 017 ('Linie Infanterie Regiment No 6 Kronprinz'), legenda do colecionador 🔶",
+  "cores": {
+   "casaca": [
+    0.08,
+    0.1,
+    0.24
+   ],
+   "gola": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "gola_debrum": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "lapela": [
+    0.08,
+    0.1,
+    0.24
+   ],
+   "lapela_debrum": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "punho": [
+    0.86,
+    0.85,
+    0.8
+   ],
+   "punho_debrum": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "pala": [
+    0.08,
+    0.1,
+    0.24
+   ],
+   "debrum": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "viras": [
+    0.08,
+    0.1,
+    0.24
+   ],
+   "viras_debrum": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "platina": [
+    0.08,
+    0.1,
+    0.24
+   ],
+   "platina_borda": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "botoes": [
+    0.8,
+    0.62,
+    0.28
+   ],
+   "calca": [
+    0.84,
+    0.82,
+    0.72
+   ],
+   "polaina": [
+    0.06,
+    0.06,
+    0.07
+   ],
+   "sapato": [
+    0.03,
+    0.028,
+    0.025
+   ],
+   "sola": [
+    0.2,
+    0.13,
+    0.08
+   ]
+  }
+ },
+ "WUE08": {
+  "prefixo": "hcl_u_reno1811_wue08",
+  "curto": "Wuerttemberg 8o von Neubronn",
+  "nome": "Wuerttemberg 1811, 8o von Neubronn, vermelho: casaca azul-escura",
+  "fonte": "aquarela Vinkhuijzen (NYPL), album 'Wuerttemberg 1811', prancha 016 ('Linie Regiment Infanterie No 8 Neubronn'), legenda do colecionador 🔶",
+  "cores": {
+   "casaca": [
+    0.08,
+    0.1,
+    0.24
+   ],
+   "gola": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "gola_debrum": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "lapela": [
+    0.08,
+    0.1,
+    0.24
+   ],
+   "lapela_debrum": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "punho": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "punho_debrum": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "pala": [
+    0.08,
+    0.1,
+    0.24
+   ],
+   "debrum": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "viras": [
+    0.08,
+    0.1,
+    0.24
+   ],
+   "viras_debrum": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "platina": [
+    0.08,
+    0.1,
+    0.24
+   ],
+   "platina_borda": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "botoes": [
+    0.8,
+    0.62,
+    0.28
+   ],
+   "calca": [
+    0.84,
+    0.82,
+    0.72
+   ],
+   "polaina": [
+    0.06,
+    0.06,
+    0.07
+   ],
+   "sapato": [
+    0.03,
+    0.028,
+    0.025
+   ],
+   "sola": [
+    0.2,
+    0.13,
+    0.08
+   ]
+  }
+ },
+ "WUE09": {
+  "prefixo": "hcl_u_reno1811_wue09",
+  "curto": "Wuerttemberg 9o",
+  "nome": "Wuerttemberg 1811, 9o, vermelho (a lista de 1813 diz preto ❓): casaca azul-escura",
+  "fonte": "aquarela Vinkhuijzen (NYPL), album 'Wuerttemberg 1811', prancha 014 ('Linie Infanterie Regiment No 9'), legenda do colecionador 🔶",
+  "cores": {
+   "casaca": [
+    0.08,
+    0.1,
+    0.24
+   ],
+   "gola": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "gola_debrum": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "lapela": [
+    0.08,
+    0.1,
+    0.24
+   ],
+   "lapela_debrum": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "punho": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "punho_debrum": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "pala": [
+    0.08,
+    0.1,
+    0.24
+   ],
+   "debrum": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "viras": [
+    0.08,
+    0.1,
+    0.24
+   ],
+   "viras_debrum": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "platina": [
+    0.08,
+    0.1,
+    0.24
+   ],
+   "platina_borda": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "botoes": [
+    0.8,
+    0.62,
+    0.28
+   ],
+   "calca": [
+    0.84,
+    0.82,
+    0.72
+   ],
+   "polaina": [
+    0.06,
+    0.06,
+    0.07
+   ],
+   "sapato": [
+    0.03,
+    0.028,
+    0.025
+   ],
+   "sola": [
+    0.2,
+    0.13,
+    0.08
+   ]
+  }
+ },
+ "WUE07": {
+  "prefixo": "hcl_u_reno1811_wue07",
+  "curto": "Wuerttemberg 7o",
+  "nome": "Wuerttemberg, 7o de Linha: casaca azul-escura, vermelho, botoes amarelos",
+  "fonte": "sem prancha em 1811: lista de 1813 de [MD-W] (Knoetel-Sieg pp. 78-79) 🔶",
+  "cores": {
+   "casaca": [
+    0.08,
+    0.1,
+    0.24
+   ],
+   "gola": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "gola_debrum": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "lapela": [
+    0.08,
+    0.1,
+    0.24
+   ],
+   "lapela_debrum": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "punho": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "punho_debrum": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "pala": [
+    0.08,
+    0.1,
+    0.24
+   ],
+   "debrum": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "viras": [
+    0.08,
+    0.1,
+    0.24
+   ],
+   "viras_debrum": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "platina": [
+    0.08,
+    0.1,
+    0.24
+   ],
+   "platina_borda": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "botoes": [
+    0.8,
+    0.62,
+    0.28
+   ],
+   "calca": [
+    0.84,
+    0.82,
+    0.72
+   ],
+   "polaina": [
+    0.06,
+    0.06,
+    0.07
+   ],
+   "sapato": [
+    0.03,
+    0.028,
+    0.025
+   ],
+   "sola": [
+    0.2,
+    0.13,
+    0.08
+   ]
+  }
+ },
+ "WUE10P": {
+  "prefixo": "hcl_u_reno1811_wue10p",
+  "curto": "Wuerttemberg ligeira 10 (preto)",
+  "nome": "Wuerttemberg 1811, Infantaria Ligeira 'No 10': casaca verde-escura, peças pretas, vivo vermelho",
+  "fonte": "aquarela Vinkhuijzen (NYPL), album 'Wuerttemberg 1811', prancha 012 ('Leichte Infanterie Reg. No 10'), legenda do colecionador 🔶",
+  "cores": {
+   "casaca": [
+    0.06,
+    0.18,
+    0.11
+   ],
+   "gola": [
+    0.06,
+    0.06,
+    0.07
+   ],
+   "gola_debrum": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "lapela": [
+    0.06,
+    0.06,
+    0.07
+   ],
+   "lapela_debrum": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "punho": [
+    0.06,
+    0.06,
+    0.07
+   ],
+   "punho_debrum": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "pala": [
+    0.06,
+    0.18,
+    0.11
+   ],
+   "debrum": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "viras": [
+    0.06,
+    0.18,
+    0.11
+   ],
+   "viras_debrum": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "platina": [
+    0.06,
+    0.18,
+    0.11
+   ],
+   "platina_borda": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "botoes": [
+    0.74,
+    0.75,
+    0.76
+   ],
+   "calca": [
+    0.06,
+    0.18,
+    0.11
+   ],
+   "polaina": [
+    0.06,
+    0.06,
+    0.07
+   ],
+   "sapato": [
+    0.03,
+    0.028,
+    0.025
+   ],
+   "sola": [
+    0.2,
+    0.13,
+    0.08
+   ]
+  }
+ },
+ "WUE10A": {
+  "prefixo": "hcl_u_reno1811_wue10a",
+  "curto": "Wuerttemberg ligeira 10 (azul-claro)",
+  "nome": "Wuerttemberg 1811, Infantaria Ligeira 'No 10': casaca verde-escura, peças azul-claras",
+  "fonte": "aquarela Vinkhuijzen (NYPL), album 'Wuerttemberg 1811', prancha 013 ('Regiment Leichte Infanterie No 10'), legenda do colecionador 🔶 - duas pranchas com o mesmo numero ❓",
+  "cores": {
+   "casaca": [
+    0.06,
+    0.18,
+    0.11
+   ],
+   "gola": [
+    0.42,
+    0.6,
+    0.84
+   ],
+   "gola_debrum": [
+    0.42,
+    0.6,
+    0.84
+   ],
+   "lapela": [
+    0.42,
+    0.6,
+    0.84
+   ],
+   "lapela_debrum": [
+    0.42,
+    0.6,
+    0.84
+   ],
+   "punho": [
+    0.42,
+    0.6,
+    0.84
+   ],
+   "punho_debrum": [
+    0.42,
+    0.6,
+    0.84
+   ],
+   "pala": [
+    0.06,
+    0.18,
+    0.11
+   ],
+   "debrum": [
+    0.42,
+    0.6,
+    0.84
+   ],
+   "viras": [
+    0.06,
+    0.18,
+    0.11
+   ],
+   "viras_debrum": [
+    0.42,
+    0.6,
+    0.84
+   ],
+   "platina": [
+    0.06,
+    0.18,
+    0.11
+   ],
+   "platina_borda": [
+    0.42,
+    0.6,
+    0.84
+   ],
+   "botoes": [
+    0.74,
+    0.75,
+    0.76
+   ],
+   "calca": [
+    0.06,
+    0.18,
+    0.11
+   ],
+   "polaina": [
+    0.06,
+    0.06,
+    0.07
+   ],
+   "sapato": [
+    0.03,
+    0.028,
+    0.025
+   ],
+   "sola": [
+    0.2,
+    0.13,
+    0.08
+   ]
+  }
+ },
+ "WUEJK": {
+  "prefixo": "hcl_u_reno1811_wuejk",
+  "curto": "Wuerttemberg Jaeger Koenig",
+  "nome": "Wuerttemberg 1811, 1o Batalhao de Jaeger 'Koenig': casaca verde-escura, peças pretas",
+  "fonte": "aquarela Vinkhuijzen (NYPL), album 'Wuerttemberg 1811', prancha 011 ('Erstes Bataillon Jaeger Koenig'), legenda do colecionador 🔶",
+  "cores": {
+   "casaca": [
+    0.06,
+    0.18,
+    0.11
+   ],
+   "gola": [
+    0.06,
+    0.06,
+    0.07
+   ],
+   "gola_debrum": [
+    0.06,
+    0.06,
+    0.07
+   ],
+   "lapela": [
+    0.06,
+    0.06,
+    0.07
+   ],
+   "lapela_debrum": [
+    0.06,
+    0.06,
+    0.07
+   ],
+   "punho": [
+    0.06,
+    0.06,
+    0.07
+   ],
+   "punho_debrum": [
+    0.06,
+    0.06,
+    0.07
+   ],
+   "pala": [
+    0.06,
+    0.18,
+    0.11
+   ],
+   "debrum": [
+    0.06,
+    0.06,
+    0.07
+   ],
+   "viras": [
+    0.06,
+    0.18,
+    0.11
+   ],
+   "viras_debrum": [
+    0.06,
+    0.06,
+    0.07
+   ],
+   "platina": [
+    0.06,
+    0.18,
+    0.11
+   ],
+   "platina_borda": [
+    0.06,
+    0.06,
+    0.07
+   ],
+   "botoes": [
+    0.8,
+    0.62,
+    0.28
+   ],
+   "calca": [
+    0.06,
+    0.18,
+    0.11
+   ],
+   "polaina": [
+    0.06,
+    0.06,
+    0.07
+   ],
+   "sapato": [
+    0.03,
+    0.028,
+    0.025
+   ],
+   "sola": [
+    0.2,
+    0.13,
+    0.08
+   ]
+  }
+ },
+ "BAV01": {
+  "prefixo": "hcl_u_reno1811_bav01",
+  "curto": "Baviera 1o Koenig",
+  "nome": "Baviera 1811, 1o Koenig, vermelho: casaca azul-clara",
+  "fonte": "aquarela Vinkhuijzen (NYPL), album 'Baiern 1811', prancha 003 ('Infanterie Regiment Koenig No 1'), legenda do colecionador 🔶",
+  "cores": {
+   "casaca": [
+    0.4,
+    0.56,
+    0.8
+   ],
+   "gola": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "gola_debrum": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "lapela": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "lapela_debrum": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "punho": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "punho_debrum": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "pala": [
+    0.4,
+    0.56,
+    0.8
+   ],
+   "debrum": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "viras": [
+    0.4,
+    0.56,
+    0.8
+   ],
+   "viras_debrum": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "platina": [
+    0.4,
+    0.56,
+    0.8
+   ],
+   "platina_borda": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "botoes": [
+    0.8,
+    0.62,
+    0.28
+   ],
+   "calca": [
+    0.86,
+    0.85,
+    0.8
+   ],
+   "polaina": [
+    0.06,
+    0.06,
+    0.07
+   ],
+   "sapato": [
+    0.03,
+    0.028,
+    0.025
+   ],
+   "sola": [
+    0.2,
+    0.13,
+    0.08
+   ]
+  }
+ },
+ "BAV02": {
+  "prefixo": "hcl_u_reno1811_bav02",
+  "curto": "Baviera 2o Kronprinz",
+  "nome": "Baviera 1811, 2o Kronprinz, vermelho (a prancha mostra alamares amarelos nas lapelas, nao pintados ❓): casaca azul-clara",
+  "fonte": "aquarela Vinkhuijzen (NYPL), album 'Baiern 1811', prancha 005 ('Infanterie Regiment Kronprinz No 2'), legenda do colecionador 🔶",
+  "cores": {
+   "casaca": [
+    0.4,
+    0.56,
+    0.8
+   ],
+   "gola": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "gola_debrum": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "lapela": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "lapela_debrum": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "punho": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "punho_debrum": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "pala": [
+    0.4,
+    0.56,
+    0.8
+   ],
+   "debrum": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "viras": [
+    0.4,
+    0.56,
+    0.8
+   ],
+   "viras_debrum": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "platina": [
+    0.4,
+    0.56,
+    0.8
+   ],
+   "platina_borda": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "botoes": [
+    0.8,
+    0.62,
+    0.28
+   ],
+   "calca": [
+    0.86,
+    0.85,
+    0.8
+   ],
+   "polaina": [
+    0.06,
+    0.06,
+    0.07
+   ],
+   "sapato": [
+    0.03,
+    0.028,
+    0.025
+   ],
+   "sola": [
+    0.2,
+    0.13,
+    0.08
+   ]
+  }
+ },
+ "BAV04": {
+  "prefixo": "hcl_u_reno1811_bav04",
+  "curto": "Baviera 4o Sachsen-Hildburghausen",
+  "nome": "Baviera 1811, 4o Sachsen-Hildburghausen, amarelo: casaca azul-clara",
+  "fonte": "aquarela Vinkhuijzen (NYPL), album 'Baiern 1811', prancha 006 ('Infanterie Regiment Sachsen-Hildburghausen No 4'), legenda do colecionador 🔶",
+  "cores": {
+   "casaca": [
+    0.4,
+    0.56,
+    0.8
+   ],
+   "gola": [
+    0.8,
+    0.6,
+    0.12
+   ],
+   "gola_debrum": [
+    0.8,
+    0.6,
+    0.12
+   ],
+   "lapela": [
+    0.8,
+    0.6,
+    0.12
+   ],
+   "lapela_debrum": [
+    0.8,
+    0.6,
+    0.12
+   ],
+   "punho": [
+    0.8,
+    0.6,
+    0.12
+   ],
+   "punho_debrum": [
+    0.8,
+    0.6,
+    0.12
+   ],
+   "pala": [
+    0.4,
+    0.56,
+    0.8
+   ],
+   "debrum": [
+    0.8,
+    0.6,
+    0.12
+   ],
+   "viras": [
+    0.4,
+    0.56,
+    0.8
+   ],
+   "viras_debrum": [
+    0.8,
+    0.6,
+    0.12
+   ],
+   "platina": [
+    0.4,
+    0.56,
+    0.8
+   ],
+   "platina_borda": [
+    0.8,
+    0.6,
+    0.12
+   ],
+   "botoes": [
+    0.8,
+    0.62,
+    0.28
+   ],
+   "calca": [
+    0.86,
+    0.85,
+    0.8
+   ],
+   "polaina": [
+    0.06,
+    0.06,
+    0.07
+   ],
+   "sapato": [
+    0.03,
+    0.028,
+    0.025
+   ],
+   "sola": [
+    0.2,
+    0.13,
+    0.08
+   ]
+  }
+ },
+ "BAV06": {
+  "prefixo": "hcl_u_reno1811_bav06",
+  "curto": "Baviera 6o Herzog Wilhelm",
+  "nome": "Baviera 1811, 6o Herzog Wilhelm, vermelho: casaca azul-clara",
+  "fonte": "aquarela Vinkhuijzen (NYPL), album 'Baiern 1811', prancha 015 ('Infanterie Regiment Herzog Wilhelm No 6'), legenda do colecionador 🔶",
+  "cores": {
+   "casaca": [
+    0.4,
+    0.56,
+    0.8
+   ],
+   "gola": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "gola_debrum": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "lapela": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "lapela_debrum": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "punho": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "punho_debrum": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "pala": [
+    0.4,
+    0.56,
+    0.8
+   ],
+   "debrum": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "viras": [
+    0.4,
+    0.56,
+    0.8
+   ],
+   "viras_debrum": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "platina": [
+    0.4,
+    0.56,
+    0.8
+   ],
+   "platina_borda": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "botoes": [
+    0.8,
+    0.62,
+    0.28
+   ],
+   "calca": [
+    0.86,
+    0.85,
+    0.8
+   ],
+   "polaina": [
+    0.06,
+    0.06,
+    0.07
+   ],
+   "sapato": [
+    0.03,
+    0.028,
+    0.025
+   ],
+   "sola": [
+    0.2,
+    0.13,
+    0.08
+   ]
+  }
+ },
+ "BAV07": {
+  "prefixo": "hcl_u_reno1811_bav07",
+  "curto": "Baviera 7o Loewenstein",
+  "nome": "Baviera 1811, 7o Loewenstein, rosa-carmim: casaca azul-clara",
+  "fonte": "aquarela Vinkhuijzen (NYPL), album 'Baiern 1811', prancha 014 ('Infanterie Regiment Loewenstein No 7'), legenda do colecionador 🔶",
+  "cores": {
+   "casaca": [
+    0.4,
+    0.56,
+    0.8
+   ],
+   "gola": [
+    0.72,
+    0.25,
+    0.42
+   ],
+   "gola_debrum": [
+    0.72,
+    0.25,
+    0.42
+   ],
+   "lapela": [
+    0.72,
+    0.25,
+    0.42
+   ],
+   "lapela_debrum": [
+    0.72,
+    0.25,
+    0.42
+   ],
+   "punho": [
+    0.72,
+    0.25,
+    0.42
+   ],
+   "punho_debrum": [
+    0.72,
+    0.25,
+    0.42
+   ],
+   "pala": [
+    0.4,
+    0.56,
+    0.8
+   ],
+   "debrum": [
+    0.72,
+    0.25,
+    0.42
+   ],
+   "viras": [
+    0.4,
+    0.56,
+    0.8
+   ],
+   "viras_debrum": [
+    0.72,
+    0.25,
+    0.42
+   ],
+   "platina": [
+    0.4,
+    0.56,
+    0.8
+   ],
+   "platina_borda": [
+    0.72,
+    0.25,
+    0.42
+   ],
+   "botoes": [
+    0.8,
+    0.62,
+    0.28
+   ],
+   "calca": [
+    0.86,
+    0.85,
+    0.8
+   ],
+   "polaina": [
+    0.06,
+    0.06,
+    0.07
+   ],
+   "sapato": [
+    0.03,
+    0.028,
+    0.025
+   ],
+   "sola": [
+    0.2,
+    0.13,
+    0.08
+   ]
+  }
+ },
+ "BAV08": {
+  "prefixo": "hcl_u_reno1811_bav08",
+  "curto": "Baviera 8o Herzog Pius",
+  "nome": "Baviera 1811, 8o Herzog Pius, amarelo: casaca azul-clara",
+  "fonte": "aquarela Vinkhuijzen (NYPL), album 'Baiern 1811', prancha 013 ('Infanterie Regiment Herzog Pius No 8'), legenda do colecionador 🔶",
+  "cores": {
+   "casaca": [
+    0.4,
+    0.56,
+    0.8
+   ],
+   "gola": [
+    0.8,
+    0.6,
+    0.12
+   ],
+   "gola_debrum": [
+    0.8,
+    0.6,
+    0.12
+   ],
+   "lapela": [
+    0.8,
+    0.6,
+    0.12
+   ],
+   "lapela_debrum": [
+    0.8,
+    0.6,
+    0.12
+   ],
+   "punho": [
+    0.8,
+    0.6,
+    0.12
+   ],
+   "punho_debrum": [
+    0.8,
+    0.6,
+    0.12
+   ],
+   "pala": [
+    0.4,
+    0.56,
+    0.8
+   ],
+   "debrum": [
+    0.8,
+    0.6,
+    0.12
+   ],
+   "viras": [
+    0.4,
+    0.56,
+    0.8
+   ],
+   "viras_debrum": [
+    0.8,
+    0.6,
+    0.12
+   ],
+   "platina": [
+    0.4,
+    0.56,
+    0.8
+   ],
+   "platina_borda": [
+    0.8,
+    0.6,
+    0.12
+   ],
+   "botoes": [
+    0.8,
+    0.62,
+    0.28
+   ],
+   "calca": [
+    0.86,
+    0.85,
+    0.8
+   ],
+   "polaina": [
+    0.06,
+    0.06,
+    0.07
+   ],
+   "sapato": [
+    0.03,
+    0.028,
+    0.025
+   ],
+   "sola": [
+    0.2,
+    0.13,
+    0.08
+   ]
+  }
+ },
+ "BAV09": {
+  "prefixo": "hcl_u_reno1811_bav09",
+  "curto": "Baviera 9o Ysenburg",
+  "nome": "Baviera 1811, 9o Ysenburg, gola vermelha, lapelas amarelas: casaca azul-clara",
+  "fonte": "aquarela Vinkhuijzen (NYPL), album 'Baiern 1811', prancha 012 ('Infanterie Regiment Ysenburg No 9'), legenda do colecionador 🔶",
+  "cores": {
+   "casaca": [
+    0.4,
+    0.56,
+    0.8
+   ],
+   "gola": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "gola_debrum": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "lapela": [
+    0.8,
+    0.6,
+    0.12
+   ],
+   "lapela_debrum": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "punho": [
+    0.8,
+    0.6,
+    0.12
+   ],
+   "punho_debrum": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "pala": [
+    0.4,
+    0.56,
+    0.8
+   ],
+   "debrum": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "viras": [
+    0.4,
+    0.56,
+    0.8
+   ],
+   "viras_debrum": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "platina": [
+    0.4,
+    0.56,
+    0.8
+   ],
+   "platina_borda": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "botoes": [
+    0.8,
+    0.62,
+    0.28
+   ],
+   "calca": [
+    0.86,
+    0.85,
+    0.8
+   ],
+   "polaina": [
+    0.06,
+    0.06,
+    0.07
+   ],
+   "sapato": [
+    0.03,
+    0.028,
+    0.025
+   ],
+   "sola": [
+    0.2,
+    0.13,
+    0.08
+   ]
+  }
+ },
+ "BAV10": {
+  "prefixo": "hcl_u_reno1811_bav10",
+  "curto": "Baviera 10o Junker",
+  "nome": "Baviera 1811, 10o Junker, gola vermelha, lapelas amarelas (igual ao 9o na aquarela ❓): casaca azul-clara",
+  "fonte": "aquarela Vinkhuijzen (NYPL), album 'Baiern 1811', prancha 011 ('Infanterie Regiment Junker No 10'), legenda do colecionador 🔶",
+  "cores": {
+   "casaca": [
+    0.4,
+    0.56,
+    0.8
+   ],
+   "gola": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "gola_debrum": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "lapela": [
+    0.8,
+    0.6,
+    0.12
+   ],
+   "lapela_debrum": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "punho": [
+    0.8,
+    0.6,
+    0.12
+   ],
+   "punho_debrum": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "pala": [
+    0.4,
+    0.56,
+    0.8
+   ],
+   "debrum": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "viras": [
+    0.4,
+    0.56,
+    0.8
+   ],
+   "viras_debrum": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "platina": [
+    0.4,
+    0.56,
+    0.8
+   ],
+   "platina_borda": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "botoes": [
+    0.8,
+    0.62,
+    0.28
+   ],
+   "calca": [
+    0.86,
+    0.85,
+    0.8
+   ],
+   "polaina": [
+    0.06,
+    0.06,
+    0.07
+   ],
+   "sapato": [
+    0.03,
+    0.028,
+    0.025
+   ],
+   "sola": [
+    0.2,
+    0.13,
+    0.08
+   ]
+  }
+ },
+ "BAV11L": {
+  "prefixo": "hcl_u_reno1811_bav11l",
+  "curto": "Baviera prancha do 11o Kinkel",
+  "nome": "Baviera 1811, prancha do 11o Kinkel, figura da esquerda: lapelas laranja ❓: casaca azul-clara",
+  "fonte": "aquarela Vinkhuijzen (NYPL), album 'Baiern 1811', prancha 010 ('Infanterie Regiment Kinkel No 11 (figura da esquerda)'), legenda do colecionador 🔶",
+  "cores": {
+   "casaca": [
+    0.4,
+    0.56,
+    0.8
+   ],
+   "gola": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "gola_debrum": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "lapela": [
+    0.85,
+    0.42,
+    0.12
+   ],
+   "lapela_debrum": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "punho": [
+    0.85,
+    0.42,
+    0.12
+   ],
+   "punho_debrum": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "pala": [
+    0.4,
+    0.56,
+    0.8
+   ],
+   "debrum": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "viras": [
+    0.4,
+    0.56,
+    0.8
+   ],
+   "viras_debrum": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "platina": [
+    0.4,
+    0.56,
+    0.8
+   ],
+   "platina_borda": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "botoes": [
+    0.8,
+    0.62,
+    0.28
+   ],
+   "calca": [
+    0.86,
+    0.85,
+    0.8
+   ],
+   "polaina": [
+    0.06,
+    0.06,
+    0.07
+   ],
+   "sapato": [
+    0.03,
+    0.028,
+    0.025
+   ],
+   "sola": [
+    0.2,
+    0.13,
+    0.08
+   ]
+  }
+ },
+ "BAV11V": {
+  "prefixo": "hcl_u_reno1811_bav11v",
+  "curto": "Baviera prancha do 11o Kinkel",
+  "nome": "Baviera 1811, prancha do 11o Kinkel, figura do centro: lapelas verdes ❓: casaca azul-clara",
+  "fonte": "aquarela Vinkhuijzen (NYPL), album 'Baiern 1811', prancha 010 ('Infanterie Regiment Kinkel No 11 (figura do centro)'), legenda do colecionador 🔶",
+  "cores": {
+   "casaca": [
+    0.4,
+    0.56,
+    0.8
+   ],
+   "gola": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "gola_debrum": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "lapela": [
+    0.12,
+    0.4,
+    0.18
+   ],
+   "lapela_debrum": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "punho": [
+    0.12,
+    0.4,
+    0.18
+   ],
+   "punho_debrum": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "pala": [
+    0.4,
+    0.56,
+    0.8
+   ],
+   "debrum": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "viras": [
+    0.4,
+    0.56,
+    0.8
+   ],
+   "viras_debrum": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "platina": [
+    0.4,
+    0.56,
+    0.8
+   ],
+   "platina_borda": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "botoes": [
+    0.8,
+    0.62,
+    0.28
+   ],
+   "calca": [
+    0.86,
+    0.85,
+    0.8
+   ],
+   "polaina": [
+    0.06,
+    0.06,
+    0.07
+   ],
+   "sapato": [
+    0.03,
+    0.028,
+    0.025
+   ],
+   "sola": [
+    0.2,
+    0.13,
+    0.08
+   ]
+  }
+ },
+ "BAV11P": {
+  "prefixo": "hcl_u_reno1811_bav11p",
+  "curto": "Baviera prancha do 11o Kinkel",
+  "nome": "Baviera 1811, prancha do 11o Kinkel, figura da direita: lapelas pretas ❓: casaca azul-clara",
+  "fonte": "aquarela Vinkhuijzen (NYPL), album 'Baiern 1811', prancha 010 ('Infanterie Regiment Kinkel No 11 (figura da direita)'), legenda do colecionador 🔶",
+  "cores": {
+   "casaca": [
+    0.4,
+    0.56,
+    0.8
+   ],
+   "gola": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "gola_debrum": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "lapela": [
+    0.06,
+    0.06,
+    0.07
+   ],
+   "lapela_debrum": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "punho": [
+    0.06,
+    0.06,
+    0.07
+   ],
+   "punho_debrum": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "pala": [
+    0.4,
+    0.56,
+    0.8
+   ],
+   "debrum": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "viras": [
+    0.4,
+    0.56,
+    0.8
+   ],
+   "viras_debrum": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "platina": [
+    0.4,
+    0.56,
+    0.8
+   ],
+   "platina_borda": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "botoes": [
+    0.8,
+    0.62,
+    0.28
+   ],
+   "calca": [
+    0.86,
+    0.85,
+    0.8
+   ],
+   "polaina": [
+    0.06,
+    0.06,
+    0.07
+   ],
+   "sapato": [
+    0.03,
+    0.028,
+    0.025
+   ],
+   "sola": [
+    0.2,
+    0.13,
+    0.08
+   ]
+  }
+ },
+ "BAV13": {
+  "prefixo": "hcl_u_reno1811_bav13",
+  "curto": "Baviera 13o",
+  "nome": "Baviera 1811, 13o, gola vermelha, lapelas pretas debruadas de vermelho: casaca azul-clara",
+  "fonte": "aquarela Vinkhuijzen (NYPL), album 'Baiern 1811', prancha 009 ('Infanterie Regiment No 13'), legenda do colecionador 🔶",
+  "cores": {
+   "casaca": [
+    0.4,
+    0.56,
+    0.8
+   ],
+   "gola": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "gola_debrum": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "lapela": [
+    0.06,
+    0.06,
+    0.07
+   ],
+   "lapela_debrum": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "punho": [
+    0.06,
+    0.06,
+    0.07
+   ],
+   "punho_debrum": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "pala": [
+    0.4,
+    0.56,
+    0.8
+   ],
+   "debrum": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "viras": [
+    0.4,
+    0.56,
+    0.8
+   ],
+   "viras_debrum": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "platina": [
+    0.4,
+    0.56,
+    0.8
+   ],
+   "platina_borda": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "botoes": [
+    0.8,
+    0.62,
+    0.28
+   ],
+   "calca": [
+    0.86,
+    0.85,
+    0.8
+   ],
+   "polaina": [
+    0.06,
+    0.06,
+    0.07
+   ],
+   "sapato": [
+    0.03,
+    0.028,
+    0.025
+   ],
+   "sola": [
+    0.2,
+    0.13,
+    0.08
+   ]
+  }
+ },
+ "BAVL1": {
+  "prefixo": "hcl_u_reno1811_bavl1",
+  "curto": "Baviera 1o Batalhao Ligeiro Gedoni",
+  "nome": "Baviera 1811, 1o Batalhao Ligeiro Gedoni, gola vermelha: casaca verde, lapelas pretas, vivo vermelho, calca cinza",
+  "fonte": "aquarela Vinkhuijzen (NYPL), album 'Baiern 1811', prancha 007 ('Leichte Infanterie Bataillon No 1 Gedoni'), legenda do colecionador 🔶",
+  "cores": {
+   "casaca": [
+    0.06,
+    0.18,
+    0.11
+   ],
+   "gola": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "gola_debrum": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "lapela": [
+    0.06,
+    0.06,
+    0.07
+   ],
+   "lapela_debrum": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "punho": [
+    0.06,
+    0.06,
+    0.07
+   ],
+   "punho_debrum": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "pala": [
+    0.06,
+    0.18,
+    0.11
+   ],
+   "debrum": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "viras": [
+    0.06,
+    0.18,
+    0.11
+   ],
+   "viras_debrum": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "platina": [
+    0.06,
+    0.18,
+    0.11
+   ],
+   "platina_borda": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "botoes": [
+    0.8,
+    0.62,
+    0.28
+   ],
+   "calca": [
+    0.55,
+    0.56,
+    0.56
+   ],
+   "polaina": [
+    0.06,
+    0.06,
+    0.07
+   ],
+   "sapato": [
+    0.03,
+    0.028,
+    0.025
+   ],
+   "sola": [
+    0.2,
+    0.13,
+    0.08
+   ]
+  }
+ },
+ "BAVL2": {
+  "prefixo": "hcl_u_reno1811_bavl2",
+  "curto": "Baviera 2o Batalhao Ligeiro Wreden",
+  "nome": "Baviera 1811, 2o Batalhao Ligeiro Wreden, gola vermelha: casaca verde, lapelas pretas, vivo vermelho, calca cinza",
+  "fonte": "aquarela Vinkhuijzen (NYPL), album 'Baiern 1811', prancha 019 ('Leichte Infanterie Bataillon No 2 Wreden'), legenda do colecionador 🔶",
+  "cores": {
+   "casaca": [
+    0.06,
+    0.18,
+    0.11
+   ],
+   "gola": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "gola_debrum": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "lapela": [
+    0.06,
+    0.06,
+    0.07
+   ],
+   "lapela_debrum": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "punho": [
+    0.06,
+    0.06,
+    0.07
+   ],
+   "punho_debrum": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "pala": [
+    0.06,
+    0.18,
+    0.11
+   ],
+   "debrum": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "viras": [
+    0.06,
+    0.18,
+    0.11
+   ],
+   "viras_debrum": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "platina": [
+    0.06,
+    0.18,
+    0.11
+   ],
+   "platina_borda": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "botoes": [
+    0.8,
+    0.62,
+    0.28
+   ],
+   "calca": [
+    0.55,
+    0.56,
+    0.56
+   ],
+   "polaina": [
+    0.06,
+    0.06,
+    0.07
+   ],
+   "sapato": [
+    0.03,
+    0.028,
+    0.025
+   ],
+   "sola": [
+    0.2,
+    0.13,
+    0.08
+   ]
+  }
+ },
+ "BAVL3": {
+  "prefixo": "hcl_u_reno1811_bavl3",
+  "curto": "Baviera 3o Batalhao Ligeiro Bernclau",
+  "nome": "Baviera 1811, 3o Batalhao Ligeiro Bernclau, gola amarelo-palida ❓: casaca verde, lapelas pretas, vivo vermelho, calca cinza",
+  "fonte": "aquarela Vinkhuijzen (NYPL), album 'Baiern 1811', prancha 018 ('Leichte Infanterie Bataillon No 3 Bernclau'), legenda do colecionador 🔶",
+  "cores": {
+   "casaca": [
+    0.06,
+    0.18,
+    0.11
+   ],
+   "gola": [
+    0.85,
+    0.8,
+    0.55
+   ],
+   "gola_debrum": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "lapela": [
+    0.06,
+    0.06,
+    0.07
+   ],
+   "lapela_debrum": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "punho": [
+    0.06,
+    0.06,
+    0.07
+   ],
+   "punho_debrum": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "pala": [
+    0.06,
+    0.18,
+    0.11
+   ],
+   "debrum": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "viras": [
+    0.06,
+    0.18,
+    0.11
+   ],
+   "viras_debrum": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "platina": [
+    0.06,
+    0.18,
+    0.11
+   ],
+   "platina_borda": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "botoes": [
+    0.8,
+    0.62,
+    0.28
+   ],
+   "calca": [
+    0.55,
+    0.56,
+    0.56
+   ],
+   "polaina": [
+    0.06,
+    0.06,
+    0.07
+   ],
+   "sapato": [
+    0.03,
+    0.028,
+    0.025
+   ],
+   "sola": [
+    0.2,
+    0.13,
+    0.08
+   ]
+  }
+ },
+ "BAVL4": {
+  "prefixo": "hcl_u_reno1811_bavl4",
+  "curto": "Baviera 4o Batalhao Ligeiro Theobald",
+  "nome": "Baviera 1811, 4o Batalhao Ligeiro Theobald, gola preta: casaca verde, lapelas pretas, vivo vermelho, calca cinza",
+  "fonte": "aquarela Vinkhuijzen (NYPL), album 'Baiern 1811', prancha 017 ('Leichte Infanterie Bataillon No 4 Theobald'), legenda do colecionador 🔶",
+  "cores": {
+   "casaca": [
+    0.06,
+    0.18,
+    0.11
+   ],
+   "gola": [
+    0.06,
+    0.06,
+    0.07
+   ],
+   "gola_debrum": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "lapela": [
+    0.06,
+    0.06,
+    0.07
+   ],
+   "lapela_debrum": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "punho": [
+    0.06,
+    0.06,
+    0.07
+   ],
+   "punho_debrum": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "pala": [
+    0.06,
+    0.18,
+    0.11
+   ],
+   "debrum": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "viras": [
+    0.06,
+    0.18,
+    0.11
+   ],
+   "viras_debrum": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "platina": [
+    0.06,
+    0.18,
+    0.11
+   ],
+   "platina_borda": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "botoes": [
+    0.8,
+    0.62,
+    0.28
+   ],
+   "calca": [
+    0.55,
+    0.56,
+    0.56
+   ],
+   "polaina": [
+    0.06,
+    0.06,
+    0.07
+   ],
+   "sapato": [
+    0.03,
+    0.028,
+    0.025
+   ],
+   "sola": [
+    0.2,
+    0.13,
+    0.08
+   ]
+  }
+ },
+ "BAVL5": {
+  "prefixo": "hcl_u_reno1811_bavl5",
+  "curto": "Baviera 5o Batalhao Ligeiro Butler",
+  "nome": "Baviera 1811, 5o Batalhao Ligeiro Butler, gola amarela: casaca verde, lapelas pretas, vivo vermelho, calca cinza",
+  "fonte": "aquarela Vinkhuijzen (NYPL), album 'Baiern 1811', prancha 016 ('Leichte Infanterie Bataillon No 5 Butler'), legenda do colecionador 🔶",
+  "cores": {
+   "casaca": [
+    0.06,
+    0.18,
+    0.11
+   ],
+   "gola": [
+    0.8,
+    0.6,
+    0.12
+   ],
+   "gola_debrum": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "lapela": [
+    0.06,
+    0.06,
+    0.07
+   ],
+   "lapela_debrum": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "punho": [
+    0.06,
+    0.06,
+    0.07
+   ],
+   "punho_debrum": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "pala": [
+    0.06,
+    0.18,
+    0.11
+   ],
+   "debrum": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "viras": [
+    0.06,
+    0.18,
+    0.11
+   ],
+   "viras_debrum": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "platina": [
+    0.06,
+    0.18,
+    0.11
+   ],
+   "platina_borda": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "botoes": [
+    0.8,
+    0.62,
+    0.28
+   ],
+   "calca": [
+    0.55,
+    0.56,
+    0.56
+   ],
+   "polaina": [
+    0.06,
+    0.06,
+    0.07
+   ],
+   "sapato": [
+    0.03,
+    0.028,
+    0.025
+   ],
+   "sola": [
+    0.2,
+    0.13,
+    0.08
+   ]
+  }
+ },
+ "BAVL6": {
+  "prefixo": "hcl_u_reno1811_bavl6",
+  "curto": "Baviera 6o Batalhao Ligeiro La Roche",
+  "nome": "Baviera 1811, 6o Batalhao Ligeiro La Roche, gola amarela: casaca verde, lapelas pretas, vivo vermelho, calca cinza",
+  "fonte": "aquarela Vinkhuijzen (NYPL), album 'Baiern 1811', prancha 021 ('Leichte Infanterie Bataillon No 6 La Roche'), legenda do colecionador 🔶",
+  "cores": {
+   "casaca": [
+    0.06,
+    0.18,
+    0.11
+   ],
+   "gola": [
+    0.8,
+    0.6,
+    0.12
+   ],
+   "gola_debrum": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "lapela": [
+    0.06,
+    0.06,
+    0.07
+   ],
+   "lapela_debrum": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "punho": [
+    0.06,
+    0.06,
+    0.07
+   ],
+   "punho_debrum": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "pala": [
+    0.06,
+    0.18,
+    0.11
+   ],
+   "debrum": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "viras": [
+    0.06,
+    0.18,
+    0.11
+   ],
+   "viras_debrum": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "platina": [
+    0.06,
+    0.18,
+    0.11
+   ],
+   "platina_borda": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "botoes": [
+    0.8,
+    0.62,
+    0.28
+   ],
+   "calca": [
+    0.55,
+    0.56,
+    0.56
+   ],
+   "polaina": [
+    0.06,
+    0.06,
+    0.07
+   ],
+   "sapato": [
+    0.03,
+    0.028,
+    0.025
+   ],
+   "sola": [
+    0.2,
+    0.13,
+    0.08
+   ]
+  }
+ },
+ "BAVL7": {
+  "prefixo": "hcl_u_reno1811_bavl7",
+  "curto": "Baviera 7o Batalhao Ligeiro Guenther",
+  "nome": "Baviera 1811, 7o Batalhao Ligeiro Guenther, gola azul-clara: casaca verde, lapelas pretas, vivo vermelho, calca cinza",
+  "fonte": "aquarela Vinkhuijzen (NYPL), album 'Baiern 1811', prancha 020 ('Leichte Infanterie Bataillon No 7 Guenther'), legenda do colecionador 🔶",
+  "cores": {
+   "casaca": [
+    0.06,
+    0.18,
+    0.11
+   ],
+   "gola": [
+    0.42,
+    0.6,
+    0.84
+   ],
+   "gola_debrum": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "lapela": [
+    0.06,
+    0.06,
+    0.07
+   ],
+   "lapela_debrum": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "punho": [
+    0.06,
+    0.06,
+    0.07
+   ],
+   "punho_debrum": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "pala": [
+    0.06,
+    0.18,
+    0.11
+   ],
+   "debrum": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "viras": [
+    0.06,
+    0.18,
+    0.11
+   ],
+   "viras_debrum": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "platina": [
+    0.06,
+    0.18,
+    0.11
+   ],
+   "platina_borda": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "botoes": [
+    0.8,
+    0.62,
+    0.28
+   ],
+   "calca": [
+    0.55,
+    0.56,
+    0.56
+   ],
+   "polaina": [
+    0.06,
+    0.06,
+    0.07
+   ],
+   "sapato": [
+    0.03,
+    0.028,
+    0.025
+   ],
+   "sola": [
+    0.2,
+    0.13,
+    0.08
+   ]
+  }
+ }
+}
