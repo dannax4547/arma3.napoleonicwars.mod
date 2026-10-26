@@ -237,3 +237,12 @@ player forceAddUniform "HCL_U_KGL1812_KL1"; removeHeadgear player; player addHea
 | K3 | KGL ligeiros | `HCL_U_KGL1812_KR1`, `KR2`, `HCL_H_KGL1812_Stovepipe_Ligeira` | Jaqueta verde, correame preto |
 | K4 | Hanôver | `HCL_U_HAN1815_H01` … `H08`, `HCL_H_HAN1815_Stovepipe` | Placa oval com GR; Peine com vistas amarelo-claro |
 | K5 | Calça (correção da outra sessão) | Linha e flanco britânicos e KGL | Emenda do assento lisa, sem degrau |
+
+**2026-10-26: calça das casacas britânicas de linha reparada** (pedido do usuário, *"consertar a calça e remontar"*). A versão v1 da calça inteiriça, feita pela sessão do remaster, deixava 28 faces do assento abaixo de 0,95 m, que apareciam como um fio escuro na cintura. Foram feitos:
+- `unir_calca.py` em modo de reparo (28 faces removidas);
+- os pesos de novo (6.281 vértices, soma 1);
+- a repintura da linha britânica (L01–L04) e da KGL (KL1) com a cópia principal do pintor (`vida=1`, a AO que tira o fio);
+- 183 PAA, 0 falhas;
+- o PBO de 223,2 MB, com `pbo_verify` sem referência faltando.
+
+Cópias de segurança em `_antes_reparo_calca/`. O render de costas mostra a calça contínua. Não testado no jogo; observar **K5** (emenda do assento).
