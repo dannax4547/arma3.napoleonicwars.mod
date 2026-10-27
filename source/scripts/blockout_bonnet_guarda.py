@@ -29,6 +29,7 @@ from mathutils import Vector, Matrix
 
 sys.path.append(os.path.dirname(os.path.abspath(__file__)))
 import shako_fit
+import pelo_v6
 from plumet import plumet, feather_material
 
 args = sys.argv[sys.argv.index("--") + 1:]
@@ -44,7 +45,8 @@ scene = bpy.context.scene
 # 135 x 115 mm, plume socket 24 cm above the band
 HS = 0.304              # side up to the top at the FRONT
 DOME = 0.046            # rounded edge into a flat-ish top (front total 0.35 m)
-BACK_RISE = 0.114       # the back is 39 cm: 11.4 % higher than the front
+BACK_RISE = -0.08       # v6b (user 2026-10-27 "na frente e mais alto e atras mais baixo"): the back 8 % LOWER
+                        # than the front (was +0.114, the back 39 cm against 35, after fr.wikipedia)
 SWELL = 1.39            # top / band (27 cm at the top)
 PLATE_W, PLATE_STRETCH = 0.217, 1.89      # plate width; vertical stretch of the mod art (its tile is squashed 🔶)
 PLATE_Z0 = 0.016
@@ -126,17 +128,24 @@ for (r0, z0), (r1, z1) in zip(prof, prof[1:]):
 L_ = np.array(L_) / L_[-1]
 PR = np.array(prof)
 S_SIDE = float(np.interp(HS, PR[:, 1], L_))     # s at the top of the side
+RF_MAX = float(PR[:, 0].max())  # v6d: the slope to the back follows the fore-aft position, not the angle
+
+
+def top_fade(s):
+    """v6e: no lumps on the top, where the flat top patch sits (they poked through it): 1 on the side ... 0 on the top."""
+    f = (s - S_SIDE) / (1 - S_SIDE)
+    return min(1.0, max(0.0, (0.25 - f) / 0.15))
 
 
 def tuft(th, s):
     """Low-frequency lumps of the fur mass (m), deterministic."""
-    return 0.0050 * (math.sin(5 * th + 1.3) * math.sin(9 * s + 0.4) + 0.6 * math.sin(11 * th - 7 * s + 2.0)) * min(1.0, s * 8)
+    return 0.0050 * (math.sin(5 * th + 1.3) * math.sin(9 * s + 0.4) + 0.6 * math.sin(11 * th - 7 * s + 2.0)) * min(1.0, s * 8) * top_fade(s)
 
 
 def S(th, s, off=0.0, lumps=True):
     """Shell point; th = 0 is the FRONT (-Y), +90 deg the wearer's left (+X). off along the outward normal."""
     rf = float(np.interp(s, L_, PR[:, 0])); z = float(np.interp(s, L_, PR[:, 1]))
-    p = Vector((base_hw * rf * math.sin(th), -base_hd * rf * math.cos(th), z * (1 + BACK_RISE * (1 - math.cos(th)) / 2)))
+    p = Vector((base_hw * rf * math.sin(th), -base_hd * rf * math.cos(th), z * (1 + BACK_RISE * (1 - math.cos(th) * rf / RF_MAX) / 2)))
     if off or lumps:
         n = Sn(th, s)
         p = p + n * (off + (tuft(th, s) if lumps else 0.0))
@@ -146,7 +155,7 @@ def S(th, s, off=0.0, lumps=True):
 def Sn(th, s, e=1e-3):
     def raw(t_, s_):
         rf = float(np.interp(s_, L_, PR[:, 0])); z = float(np.interp(s_, L_, PR[:, 1]))
-        return Vector((base_hw * rf * math.sin(t_), -base_hd * rf * math.cos(t_), z * (1 + BACK_RISE * (1 - math.cos(t_)) / 2)))
+        return Vector((base_hw * rf * math.sin(t_), -base_hd * rf * math.cos(t_), z * (1 + BACK_RISE * (1 - math.cos(t_) * rf / RF_MAX) / 2)))
     s0, s1 = max(0.0, s - e), min(1.0, s + e)
     dth = raw(th + e, s) - raw(th - e, s)
     ds = raw(th, s1) - raw(th, s0)
@@ -252,7 +261,7 @@ def plate(tag, root):
 def top_patch(tag, root):
     """Red top patch on the back of the dome, a white lace cross on it. Returns (centre th, s, radius) to keep the
     hair locks off it."""
-    th0, s0 = math.pi, S_SIDE + (1 - S_SIDE) * 0.30
+    th0, s0 = math.pi, S_SIDE + (1 - S_SIDE) * 0.80   # v6b (user 2026-10-27 "centraliza mais"): near the top centre (was 0.30)
     c = S(th0, s0, 0.0, lumps=False)
     n = Sn(th0, s0)
     u = Vector((1, 0, 0)); v_ = n.cross(u).normalized(); u = v_.cross(n).normalized()
@@ -516,25 +525,34 @@ def hair(tag, root, plate_box, patch, seed=5):
 
     def in_patch(p, grow):
         d = p - pc
+        if d.length > max(R_c, Ra_c) + grow + 0.004:     # v6b: only at the patch, not the column under it down the back
+            return False
         return (d.dot(pu) / (Ra_c + grow)) ** 2 + (d.dot(pv) / (R_c + grow)) ** 2 < 1.0
 
-    def lock(th, s, L, W, lift, extra_ang=0.0, drop_below=0.0, short=False, near_plate=False, over=False, tuck=0.0):
+    def lock(th, s, L, W, lift, extra_ang=0.0, drop_below=0.0, short=False, near_plate=False, over=False, tuck=0.0,
+             away=False):
         p0 = S(th, s, 0.0)
         n = Sn(th, s)
         g = Vector((0, 0, -1)) - n * (-n.z)
         if g.length < 0.15:
             g = Vector((p0.x, p0.y, 0.0))
         g.normalize()
+        if away:                                            # v6c: beside the top patch: away from it, never over it
+            a = p0 - pc
+            a = a - n * n.dot(a)
+            if a.length > 1e-6:
+                g = a.normalized()
         side = n.cross(g).normalized()
         ang = rnd.uniform(-0.45, 0.45) + extra_ang
         if near_plate:
             ang = rnd.uniform(-0.15, 0.15)                  # straight down beside / above the plate
+        if away:
+            ang = rnd.uniform(-0.25, 0.25)
         d = (g * math.cos(ang) + side * math.sin(ang)).normalized()
         sd = n.cross(d).normalized()
         curl = rnd.uniform(-0.006, 0.006)
-        pts, wid = [], []
-        st = ((0.0, 0.95), (1.0, 0.20)) if short else ((0.0, 0.80), (0.34, 1.0), (0.68, 0.78), (1.0, 0.10))
-        for t, wf in st:
+
+        def centre(t):
             if over:
                 rise = 0.0125 * min(1.0, t * 3.0)           # over the plate: clear of it
             else:
@@ -543,22 +561,8 @@ def hair(tag, root, plate_box, patch, seed=5):
             p = p0 + n * (0.0015 + rise) + dd * (L * t) + sd * (curl * t * t)
             if drop_below and t > 0:                       # over the band edge: the tip falls straight down
                 p = p + Vector((0, 0, -drop_below * t ** 2))
-            pts.append(p); wid.append(W * wf / 2)
-        sh = rnd.uniform(0.0, 1.0)
-        rows = []
-        for p, hw, (t, _) in zip(pts, wid, st):
-            cup = n * (0.35 * hw)
-            rows.append((bm.verts.new(p - sd * hw - cup), bm.verts.new(p + n * 0.0012), bm.verts.new(p + sd * hw - cup), t))
-        for k in range(len(rows) - 1):
-            (a0, m0, b0, t0), (a1, m1, b1, t1) = rows[k], rows[k + 1]
-            for (x0, x1, y1, y0, u0, u1) in ((a0, m0, m1, a1, 0.0, 0.5), (m0, b0, b1, m1, 0.5, 1.0)):
-                f = bm.faces.new((x0, x1, y1, y0))
-                for l, uv in zip(f.loops, ((u0, t0), (u1, t0), (u1, t1), (u0, t1))):
-                    l[uvl].uv = uv
-                f[tint] = sh; f.smooth = True
-                f.normal_update()
-                if f.normal.dot(n) < 0:
-                    f.normal_flip()
+            return p
+        pelo_v6.lock(bm, uvl, tint, rnd, centre, n, sd, W, short=short)    # v6 (2026-10-26): narrow lock, 3 parting tips
 
     def place(n_th, n_rows, layer):
         for j in range(n_rows):
@@ -607,7 +611,9 @@ def hair(tag, root, plate_box, patch, seed=5):
                 if L < 0.014:
                     continue
                 near = bool(plate_box) and abs(th) < half_th + 0.08 and z0 < z_p1 + 0.08
-                lock(th, s, L, W, lift, swirl, drop, short=layer == "base", near_plate=near, over=over, tuck=tuck)
+                away = (p0 - pc).length < max(R_c, Ra_c) + L + 0.005     # v6c: long enough to reach the top patch
+                lock(th, s, L, W, lift, swirl, drop, short=layer == "base", near_plate=near, over=over, tuck=tuck,
+                     away=away)
                 count[layer] += 1
 
     place(60, 30, "base")                                   # 4 triangles per lock

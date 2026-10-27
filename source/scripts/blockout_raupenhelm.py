@@ -21,6 +21,7 @@ from mathutils import Vector, Matrix
 
 sys.path.append(os.path.dirname(os.path.abspath(__file__)))
 import shako_fit
+import pelo_v6
 
 args = sys.argv[sys.argv.index("--") + 1:]
 SAMPLES, OUT_BLEND, RENDER_DIR = args[:3]
@@ -364,9 +365,11 @@ class Crest:
         return p, tg, n
 
     def size(self, u):
-        # rises fast at the front, fullest at peak_u, tapering to the nape
+        # rises fast at the front, fullest at peak_u, tapering to the back of the skull
+        # v3 (2026-10-27, user: "acho que ela esta de tras para frente"): the mass is at the FRONT, the tail thin and
+        # ending high on the back (back_z ~ 0.11), as on the 1811 watercolours; v2 hung its fullest part over the nape
         a = u / self.peak_u if u < self.peak_u else 1 - (u - self.peak_u) / (1 - self.peak_u)
-        f = math.sin(math.pi / 2 * max(0.0, min(1.0, a))) ** (0.55 if u < self.peak_u else 0.9)
+        f = math.sin(math.pi / 2 * max(0.0, min(1.0, a))) ** (0.55 if u < self.peak_u else 1.5)
         ends = math.sin(math.pi / 2 * min(1.0, u / 0.08)) ** 0.5 * math.sin(math.pi / 2 * min(1.0, (1 - u) / 0.06)) ** 0.5
         return (0.18 + 0.82 * f) * ends                            # rounded nose and tail (v2)
 
@@ -405,38 +408,29 @@ def crest_hair(tag, cr, seed):
 
     def lock(u, v, L, W, lift, short):
         p0, n, tg = cr.point(u, v)
-        # Bavaria (curl): combed away from the fullest point, forward on the nose (it rolls over the front) and back
-        # toward the nape; Wuerttemberg: all back, so the front plate stays clear (watercolour 020)
-        fw = cr.curl > 0 and u < cr.peak_u
-        back = (-tg if fw else tg) - n * n.dot(-tg if fw else tg)
-        if back.length < 1e-6:
-            back = n.orthogonal()
-        back.normalize()
-        up = Vector((0, 0, 1)) - n * n.z
-        up = up.normalized() if up.length > 1e-6 else back
+        # combed away from the fullest point: forward on the nose (it rolls over the front), back toward the nape, and
+        # standing up at the peak itself (v3: a gradual turn, the v2 switch left a parting line across the crest)
+        # v3b: the fur LIES on the roll: along the crest (forward on the nose, back on the tail) and down its sides
+        # around the section (away from the top line); standing it up at the peak made a hedgehog
+        s_dir = max(-1.0, min(1.0, (u - cr.peak_u) / 0.10)) if cr.curl > 0 else 1.0
+        along = tg * s_dir - n * n.dot(tg * s_dir)
+        e = 0.02
+        side = cr.point(u, v + e)[0] - cr.point(u, v - e)[0]          # around the section, toward +v
+        side = side - n * n.dot(side)
+        sgn = (1.0 if v > 0 else -1.0) if abs(v) > 0.15 else rnd.choice((-1.0, 1.0))
+        d = along * 0.75 + (side.normalized() if side.length > 1e-9 else along) * (0.55 * sgn * min(1.0, 0.4 + abs(v)))
+        if d.length < 1e-6:
+            d = n.orthogonal()
+        d.normalize()
         ang = rnd.uniform(-0.35, 0.35)
-        d = (back * 0.85 + up * 0.25 * math.cos(v)).normalized()
         d = (d * math.cos(ang) + n.cross(d) * math.sin(ang)).normalized()
         sd = n.cross(d).normalized()
-        st = ((0.0, 0.95), (1.0, 0.2)) if short else ((0.0, 0.8), (0.34, 1.0), (0.68, 0.78), (1.0, 0.10))
-        sh = rnd.uniform(0.0, 1.0)
-        rows = []
-        for t, wf in st:
+        L = L * (0.40 + 0.60 * cr.size(u))                         # v3: short fur on the thin tail (no fringe at the nape)
+
+        def centre(t):
             rise = lift * (4.0 * t * (1.0 - t) + 0.22 * t) - lift * 0.9 * t * t
-            p = p0 + n * (0.0015 + rise) + d * (L * t)
-            hw = W * wf / 2
-            cup = n * (0.35 * hw)
-            rows.append((bm.verts.new(p - sd * hw - cup), bm.verts.new(p + n * 0.0012), bm.verts.new(p + sd * hw - cup), t))
-        for k in range(len(rows) - 1):
-            (a0, m0, b0, t0), (a1, m1, b1, t1) = rows[k], rows[k + 1]
-            for (x0, x1, y1, y0, u0, u1) in ((a0, m0, m1, a1, 0.0, 0.5), (m0, b0, b1, m1, 0.5, 1.0)):
-                f = bm.faces.new((x0, x1, y1, y0))
-                for l, uv in zip(f.loops, ((u0, t0), (u1, t0), (u1, t1), (u0, t1))):
-                    l[uvl].uv = uv
-                f[tint] = sh; f.smooth = True
-                f.normal_update()
-                if f.normal.dot(n) < 0:
-                    f.normal_flip()
+            return p0 + n * (0.0015 + rise) + d * (L * t)
+        pelo_v6.lock(bm, uvl, tint, rnd, centre, n, sd, W, short=short)    # v6 locks (2026-10-26)
 
     for layer, nu, nv in (("base", 44, 20), ("longa", 40, 18)):
         for j in range(nu):
@@ -556,9 +550,9 @@ WUE_BOX = ("amarelo", "vermelho", "vermelho")   # WurtembergINF_2 c6 r4 (3180..3
 BAV_BOX = ("branco", "azul_claro", "branco")    # BavariaINF c0 r0 (20..97, 195..272): white, light blue ring
 VARIANTS = [
     ("wurttemberg", os.path.join(PL_DIR, "placa_wurttemberg.json"), 0.150, 0.075, 0.011, True, WUE_BOX,
-     dict(front_z=0.088, back_z=0.040, h_max=0.062, w_max=0.046, curl=0.0, peak_u=0.33), False),
+     dict(front_z=0.088, back_z=0.110, h_max=0.066, w_max=0.046, curl=0.028, peak_u=0.20), False),
     ("baviera", os.path.join(PL_DIR, "placa_baviera.json"), 0.046, 0.080, 0.028, True, BAV_BOX,
-     dict(front_z=0.108, back_z=0.040, h_max=0.070, w_max=0.048, curl=0.040, peak_u=0.26), True),
+     dict(front_z=0.108, back_z=0.105, h_max=0.074, w_max=0.048, curl=0.048, peak_u=0.17), True),
 ]
 SPACING = 0.55
 roots = [helmet(t, i * SPACING, *rest) for i, (t, *rest) in enumerate(VARIANTS)]

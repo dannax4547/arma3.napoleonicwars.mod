@@ -231,3 +231,36 @@ O `hcl_fr` foi remontado com os scripts deste worktree (`build_mod_fr.ps1 <raiz>
 ```sqf
 player forceAddUniform "HCL_U_Fr1812_Granadeiro_F01_Verde"; removeHeadgear player; player addHeadgear "HCL_H_Fr1812_Ligeira_Carabineiro_Gala_Azul";
 ```
+
+## 11. Barretinas de pelo renovadas e crista nova do capacete de lagarta (2026-10-27, não testado no jogo)
+
+Pedidos do usuário: "renova as bearskins" (todas, inclusive o Reino Unido), "a parte de trás está errada", "na frente é mais alto e atrás mais baixo", "centraliza mais a parte circular vermelha"; e, no capacete de lagarta, "está de trás para frente".
+
+- Pelo v6 (`source/scripts/pelo_v6.py`): mechas estreitas que se abrem em três pontas finas e uma textura de fios finos, no lugar das mechas largas (que pareciam telhas).
+- Barretinas da Guarda, Suíça, Varsóvia, Itália e Nápoles: a frente ficou mais alta e as costas 8 % mais baixas. Antes as costas eram mais altas (35/39 cm, segundo a Wikipédia francesa); o pedido do usuário prevalece. Também sumiu a faixa lisa que descia pelas costas embaixo da calota (erro antigo do teste da calota). A calota vermelha fica perto do centro do topo, inteira à vista, e o pelo em volta dela aponta para fora.
+- Capacete de lagarta (Württemberg, Baviera): o P3D não estava invertido (a frente está em −Z, igual às barretinas e aos pés do personagem de exemplo). O problema era a crista. Agora a massa fica na frente, enrolando sobre a placa, e a cauda é fina e termina alta.
+
+| PBO | Tamanho | Verificação fora do jogo |
+|---|---|---|
+| `hcl_fr.pbo` | 147,7 MB | 122 referências, nenhuma faltando |
+| `hcl_italia.pbo` | 151,9 MB | 121 referências, nenhuma faltando |
+| `hcl_suica.pbo` | 59,3 MB | 48 referências, nenhuma faltando |
+| `hcl_varsovia.pbo` | 93,6 MB | 74 referências, nenhuma faltando |
+| `hcl_uk.pbo` | 223,2 MB | 30 modelos com esqueleto, 244 referências, nenhuma faltando |
+| `hcl_reno.pbo` | 55,3 MB | 45 referências, nenhuma faltando |
+
+```sqf
+removeHeadgear player; player addHeadgear "HCL_H_Fr1812_Guarda_Bonnet_Granadeiro_Gala";
+removeHeadgear player; player addHeadgear "HCL_H_Suica1812_Bonnet_Granadeiro_Gala";
+removeHeadgear player; player addHeadgear "HCL_H_Varsovia1810_Bonnet_Granadeiro_Gala";
+removeHeadgear player; player addHeadgear "HCL_H_Italia1812_Bonnet_Italia_Granadeiro_Gala";
+removeHeadgear player; player addHeadgear "HCL_H_UK1812_Bonnet_Highland";
+removeHeadgear player; player addHeadgear "HCL_H_Reno1811_Raupenhelm_Wurttemberg";
+```
+
+| ID | Item | Observar |
+|---|---|---|
+| B1 | Pelo das barretinas | Mechas finas, sem cara de telha; desempenho (cerca de 48 mil triângulos na Res 1) |
+| B2 | Costas | Pelo contínuo até a borda, sem faixa lisa; o topo desce para trás |
+| B3 | Calota vermelha | Perto do centro do topo, inteira, sem pelo nem pele passando por cima |
+| B4 | Capacete de lagarta | Crista com a massa na frente e enrolada sobre a placa; a cauda não encosta na nuca |

@@ -240,6 +240,19 @@ SHADES = (0.82, 1.0, 1.15)
 
 
 def paint_fur_tile(img_px, nrm_px, smdi_px, origin, rgb, shade):
+    """Hair lock tile v6 (2026-10-26, pelo_v6.paint_tile): fine strands converging on the three parting tips of the v6
+    locks. The v5 painter is kept below as paint_fur_tile_v5 (record)."""
+    sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+    import pelo_v6
+    n = int(TILE * RES)
+    x0, y0 = int(origin[0] * RES), int(origin[1] * RES)
+    col, nrm, _ = pelo_v6.paint_tile(n, rgb, shade, int(1000 * shade) + 77)
+    img_px[y0:y0 + n, x0:x0 + n, :3] = col
+    nrm_px[y0:y0 + n, x0:x0 + n, :3] = nrm
+    smdi_px[y0:y0 + n, x0:x0 + n, :3] = (1.0, *SMDI["pele"])
+
+
+def paint_fur_tile_v5(img_px, nrm_px, smdi_px, origin, rgb, shade):
     """Hair lock tile (u across the lock, v root -> tip): ~180 strands waving down the lock, thinning and fading toward
     the tip, the lock's edges darker (they curl into the mass), a warm sheen on the strand crests."""
     n = int(TILE * RES)
