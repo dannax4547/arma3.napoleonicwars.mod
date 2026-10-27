@@ -16,6 +16,7 @@ from mathutils import Vector, Matrix
 
 sys.path.append(os.path.dirname(os.path.abspath(__file__)))
 import shako_fit
+import pelo_v6
 
 args = sys.argv[sys.argv.index("--") + 1:]
 SAMPLES, OUT_BLEND, RENDER_DIR = args[:3]
@@ -496,23 +497,16 @@ def fronds(tag, root, seed=11):
         return pts, n, d
 
     def emit(pts, n, d, W):
+        """v6 (2026-10-26, "renova as bearskins"): the frond is a pelo_v6 lock along the same path (narrower, its tip
+        split in three fine wisps), instead of one wide leaf."""
         sd = n.cross(d).normalized()
-        sh = rnd.uniform(0.0, 1.0)
-        rows = []
-        for p, wf, t in pts:
-            hw = W * wf / 2
-            cup = n * (0.30 * hw)
-            rows.append((bm.verts.new(p - sd * hw - cup), bm.verts.new(p + n * 0.0015), bm.verts.new(p + sd * hw - cup), t))
-        for kk in range(len(rows) - 1):
-            (a0, m0, b0, t0), (a1, m1, b1, t1) = rows[kk], rows[kk + 1]
-            for (x0, x1, y1, y0, u0, u1) in ((a0, m0, m1, a1, 0.0, 0.5), (m0, b0, b1, m1, 0.5, 1.0)):
-                f = bm.faces.new((x0, x1, y1, y0))
-                for l, uv in zip(f.loops, ((u0, t0), (u1, t0), (u1, t1), (u0, t1))):
-                    l[uvl].uv = uv
-                f[tint] = sh; f.smooth = True
-                f.normal_update()
-                if f.normal.dot(n) < 0:
-                    f.normal_flip()
+
+        def centre(t):
+            for (pa, _, ta), (pb, _, tb) in zip(pts, pts[1:]):
+                if t <= tb:
+                    return pa.lerp(pb, (t - ta) / max(1e-9, tb - ta))
+            return pts[-1][0]
+        pelo_v6.lock(bm, uvl, tint, rnd, centre, n, sd, W)
 
     for layer, n_th, n_rows in (("base", 40, 14), ("cima", 36, 15)):
         for j in range(n_rows):
