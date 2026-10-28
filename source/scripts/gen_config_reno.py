@@ -15,6 +15,10 @@ U_P3D = "hcl_u_reno1811"
 # headgear entries: (p3d base, material base, class suffix, _co base)
 HEAD = [(f"hcl_h_reno_raupenhelm_{t}", f"hcl_raupenhelm_{t}", f"Raupenhelm_{c}", f"hcl_raupenhelm_{t}")
         for t, c in (("wurttemberg", "Wurttemberg"), ("baviera", "Baviera"))]
+# lot 2 (2026-10-27): Saxon shakos 1810 (build_p3d_reno.py SHAKO_TAGS)
+HEAD += [(f"hcl_h_reno_shako_saxonia_{t}", f"hcl_shako_saxonia_{t}",
+          "Shako_Saxonia_" + "_".join(x.capitalize() for x in t.split("_")), f"hcl_shako_saxonia_{t}")
+         for t in ("fuzileiro", "fuzileiro_koenig", "granadeiro_gala", "ligeira", "jaeger")]
 
 
 def cls_u(v):            # WUE01 -> HCL_U_Reno1811_WUE01

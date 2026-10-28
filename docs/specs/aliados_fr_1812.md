@@ -159,6 +159,20 @@ O 3º, o 5º e o 12º de linha não têm prancha no álbum. Ficam fora até have
 
 Os oito regimentos de linha da reforma de 1810 estão todos. Pares com a mesma cor (König/Niesemeuschel, Max/Rechten) se distinguem pelo botão, que a aquarela não mostra ❓.
 
+Barretina (lote 2, 2026-10-27), lida nas pranchas em alta resolução (005, 006) e nas miniaturas (036, 019, 020):
+
+| Peça | Valor | Fonte |
+|---|---|---|
+| Corpo | Feltro preto, pala, jugulares de escamas; sem divisas laterais nas aquarelas | 🖼 [VK-REN] 005, 006, 036 |
+| Placa | Escudo de latão sob coroa com a cifra "FA" (Friedrich August) | 🎮 arte do mod `saxonINF1812` c3 r4, traçada em `placa_saxonia.json` |
+| Cocar | Branco | 🎮 idem (disco branco plissado) |
+| Linha | Cordões **brancos**; pompom pequeno: branco (005) ou branco com topo vermelho (036, König) | 🖼 🔶 |
+| Granadeiro | Pluma **vermelha** alta, cordões e borlas **vermelhos** | 🖼 006 |
+| Ligeira | Cordões **verdes**, tufo pequeno vermelho e verde (no modelo, pompom verde 🔶); calça cinza | 🖼 020 (miniatura) |
+| Jäger | Pluma **preta** alta, cordões verdes; calça cinza | 🖼 019 (miniatura) |
+
+A Guarda (037/038, barretina de pele) e o granadeiro com casaca de dragonas (006) precisam da casaca de elite e ficam para depois.
+
 #### Vestfália — álbuns "1809" e "1810–1815" (gravuras em fila + aquarelas)
 
 | Prancha | Legenda | Casaca / peças |

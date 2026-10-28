@@ -3036,5 +3036,985 @@
     0.08
    ]
   }
+ },
+ "SAXKO": {
+  "prefixo": "hcl_u_reno1811_saxko",
+  "curto": "Saxonia Regimento Koenig",
+  "nome": "Saxonia 1810, Regimento Koenig, vermelho: casaca branca",
+  "fonte": "aquarela Vinkhuijzen (NYPL), album 'Sachsen 1810', prancha 036 ('Linie Infanterie Regiment Koenig'), legenda do colecionador 🔶",
+  "cores": {
+   "casaca": [
+    0.86,
+    0.85,
+    0.8
+   ],
+   "gola": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "gola_debrum": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "lapela": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "lapela_debrum": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "punho": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "punho_debrum": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "pala": [
+    0.86,
+    0.85,
+    0.8
+   ],
+   "debrum": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "viras": [
+    0.86,
+    0.85,
+    0.8
+   ],
+   "viras_debrum": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "platina": [
+    0.86,
+    0.85,
+    0.8
+   ],
+   "platina_borda": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "botoes": [
+    0.8,
+    0.62,
+    0.28
+   ],
+   "calca": [
+    0.86,
+    0.85,
+    0.8
+   ],
+   "polaina": [
+    0.06,
+    0.06,
+    0.07
+   ],
+   "sapato": [
+    0.03,
+    0.028,
+    0.025
+   ],
+   "sola": [
+    0.2,
+    0.13,
+    0.08
+   ]
+  }
+ },
+ "SAXNI": {
+  "prefixo": "hcl_u_reno1811_saxni",
+  "curto": "Saxonia Regimento von Niesemeuschel",
+  "nome": "Saxonia 1810, Regimento von Niesemeuschel, vermelho: casaca branca",
+  "fonte": "aquarela Vinkhuijzen (NYPL), album 'Sachsen 1810', prancha 010 ('Linie Infanterie Regiment Niesemeuschel'), legenda do colecionador 🔶",
+  "cores": {
+   "casaca": [
+    0.86,
+    0.85,
+    0.8
+   ],
+   "gola": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "gola_debrum": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "lapela": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "lapela_debrum": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "punho": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "punho_debrum": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "pala": [
+    0.86,
+    0.85,
+    0.8
+   ],
+   "debrum": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "viras": [
+    0.86,
+    0.85,
+    0.8
+   ],
+   "viras_debrum": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "platina": [
+    0.86,
+    0.85,
+    0.8
+   ],
+   "platina_borda": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "botoes": [
+    0.8,
+    0.62,
+    0.28
+   ],
+   "calca": [
+    0.86,
+    0.85,
+    0.8
+   ],
+   "polaina": [
+    0.06,
+    0.06,
+    0.07
+   ],
+   "sapato": [
+    0.03,
+    0.028,
+    0.025
+   ],
+   "sola": [
+    0.2,
+    0.13,
+    0.08
+   ]
+  }
+ },
+ "SAXAN": {
+  "prefixo": "hcl_u_reno1811_saxan",
+  "curto": "Saxonia Regimento Prinz Anton",
+  "nome": "Saxonia 1810, Regimento Prinz Anton, azul-claro: casaca branca",
+  "fonte": "aquarela Vinkhuijzen (NYPL), album 'Sachsen 1810', prancha 007 ('Linie Infanterie Regiment Prinz Anton'), legenda do colecionador 🔶",
+  "cores": {
+   "casaca": [
+    0.86,
+    0.85,
+    0.8
+   ],
+   "gola": [
+    0.42,
+    0.6,
+    0.84
+   ],
+   "gola_debrum": [
+    0.42,
+    0.6,
+    0.84
+   ],
+   "lapela": [
+    0.42,
+    0.6,
+    0.84
+   ],
+   "lapela_debrum": [
+    0.42,
+    0.6,
+    0.84
+   ],
+   "punho": [
+    0.42,
+    0.6,
+    0.84
+   ],
+   "punho_debrum": [
+    0.42,
+    0.6,
+    0.84
+   ],
+   "pala": [
+    0.86,
+    0.85,
+    0.8
+   ],
+   "debrum": [
+    0.42,
+    0.6,
+    0.84
+   ],
+   "viras": [
+    0.86,
+    0.85,
+    0.8
+   ],
+   "viras_debrum": [
+    0.42,
+    0.6,
+    0.84
+   ],
+   "platina": [
+    0.86,
+    0.85,
+    0.8
+   ],
+   "platina_borda": [
+    0.42,
+    0.6,
+    0.84
+   ],
+   "botoes": [
+    0.8,
+    0.62,
+    0.28
+   ],
+   "calca": [
+    0.86,
+    0.85,
+    0.8
+   ],
+   "polaina": [
+    0.06,
+    0.06,
+    0.07
+   ],
+   "sapato": [
+    0.03,
+    0.028,
+    0.025
+   ],
+   "sola": [
+    0.2,
+    0.13,
+    0.08
+   ]
+  }
+ },
+ "SAXLO": {
+  "prefixo": "hcl_u_reno1811_saxlo",
+  "curto": "Saxonia Regimento von Loew",
+  "nome": "Saxonia 1810, Regimento von Loew, azul: casaca branca",
+  "fonte": "aquarela Vinkhuijzen (NYPL), album 'Sachsen 1810', prancha 043 ('Infanterie Regiment von Loew'), legenda do colecionador 🔶",
+  "cores": {
+   "casaca": [
+    0.86,
+    0.85,
+    0.8
+   ],
+   "gola": [
+    0.14,
+    0.24,
+    0.58
+   ],
+   "gola_debrum": [
+    0.14,
+    0.24,
+    0.58
+   ],
+   "lapela": [
+    0.14,
+    0.24,
+    0.58
+   ],
+   "lapela_debrum": [
+    0.14,
+    0.24,
+    0.58
+   ],
+   "punho": [
+    0.14,
+    0.24,
+    0.58
+   ],
+   "punho_debrum": [
+    0.14,
+    0.24,
+    0.58
+   ],
+   "pala": [
+    0.86,
+    0.85,
+    0.8
+   ],
+   "debrum": [
+    0.14,
+    0.24,
+    0.58
+   ],
+   "viras": [
+    0.86,
+    0.85,
+    0.8
+   ],
+   "viras_debrum": [
+    0.14,
+    0.24,
+    0.58
+   ],
+   "platina": [
+    0.86,
+    0.85,
+    0.8
+   ],
+   "platina_borda": [
+    0.14,
+    0.24,
+    0.58
+   ],
+   "botoes": [
+    0.8,
+    0.62,
+    0.28
+   ],
+   "calca": [
+    0.86,
+    0.85,
+    0.8
+   ],
+   "polaina": [
+    0.06,
+    0.06,
+    0.07
+   ],
+   "sapato": [
+    0.03,
+    0.028,
+    0.025
+   ],
+   "sola": [
+    0.2,
+    0.13,
+    0.08
+   ]
+  }
+ },
+ "SAXMA": {
+  "prefixo": "hcl_u_reno1811_saxma",
+  "curto": "Saxonia Regimento Prinz Maximilian",
+  "nome": "Saxonia 1810, Regimento Prinz Maximilian, amarelo: casaca branca",
+  "fonte": "aquarela Vinkhuijzen (NYPL), album 'Sachsen 1810', prancha 035 ('Infanterie Regiment Prinz Max'), legenda do colecionador 🔶",
+  "cores": {
+   "casaca": [
+    0.86,
+    0.85,
+    0.8
+   ],
+   "gola": [
+    0.8,
+    0.6,
+    0.12
+   ],
+   "gola_debrum": [
+    0.8,
+    0.6,
+    0.12
+   ],
+   "lapela": [
+    0.8,
+    0.6,
+    0.12
+   ],
+   "lapela_debrum": [
+    0.8,
+    0.6,
+    0.12
+   ],
+   "punho": [
+    0.8,
+    0.6,
+    0.12
+   ],
+   "punho_debrum": [
+    0.8,
+    0.6,
+    0.12
+   ],
+   "pala": [
+    0.86,
+    0.85,
+    0.8
+   ],
+   "debrum": [
+    0.8,
+    0.6,
+    0.12
+   ],
+   "viras": [
+    0.86,
+    0.85,
+    0.8
+   ],
+   "viras_debrum": [
+    0.8,
+    0.6,
+    0.12
+   ],
+   "platina": [
+    0.86,
+    0.85,
+    0.8
+   ],
+   "platina_borda": [
+    0.8,
+    0.6,
+    0.12
+   ],
+   "botoes": [
+    0.8,
+    0.62,
+    0.28
+   ],
+   "calca": [
+    0.86,
+    0.85,
+    0.8
+   ],
+   "polaina": [
+    0.06,
+    0.06,
+    0.07
+   ],
+   "sapato": [
+    0.03,
+    0.028,
+    0.025
+   ],
+   "sola": [
+    0.2,
+    0.13,
+    0.08
+   ]
+  }
+ },
+ "SAXRE": {
+  "prefixo": "hcl_u_reno1811_saxre",
+  "curto": "Saxonia Regimento von Rechten",
+  "nome": "Saxonia 1810, Regimento von Rechten, amarelo: casaca branca",
+  "fonte": "aquarela Vinkhuijzen (NYPL), album 'Sachsen 1810', prancha 008 ('Linie Infanterie Regiment Rechten'), legenda do colecionador 🔶",
+  "cores": {
+   "casaca": [
+    0.86,
+    0.85,
+    0.8
+   ],
+   "gola": [
+    0.8,
+    0.6,
+    0.12
+   ],
+   "gola_debrum": [
+    0.8,
+    0.6,
+    0.12
+   ],
+   "lapela": [
+    0.8,
+    0.6,
+    0.12
+   ],
+   "lapela_debrum": [
+    0.8,
+    0.6,
+    0.12
+   ],
+   "punho": [
+    0.8,
+    0.6,
+    0.12
+   ],
+   "punho_debrum": [
+    0.8,
+    0.6,
+    0.12
+   ],
+   "pala": [
+    0.86,
+    0.85,
+    0.8
+   ],
+   "debrum": [
+    0.8,
+    0.6,
+    0.12
+   ],
+   "viras": [
+    0.86,
+    0.85,
+    0.8
+   ],
+   "viras_debrum": [
+    0.8,
+    0.6,
+    0.12
+   ],
+   "platina": [
+    0.86,
+    0.85,
+    0.8
+   ],
+   "platina_borda": [
+    0.8,
+    0.6,
+    0.12
+   ],
+   "botoes": [
+    0.8,
+    0.62,
+    0.28
+   ],
+   "calca": [
+    0.86,
+    0.85,
+    0.8
+   ],
+   "polaina": [
+    0.06,
+    0.06,
+    0.07
+   ],
+   "sapato": [
+    0.03,
+    0.028,
+    0.025
+   ],
+   "sola": [
+    0.2,
+    0.13,
+    0.08
+   ]
+  }
+ },
+ "SAXFA": {
+  "prefixo": "hcl_u_reno1811_saxfa",
+  "curto": "Saxonia Regimento Prinz Friedrich August",
+  "nome": "Saxonia 1810, Regimento Prinz Friedrich August, verde-escuro: casaca branca",
+  "fonte": "aquarela Vinkhuijzen (NYPL), album 'Sachsen 1810', prancha 044 ('Infanterie Regiment Prinz Friedrich August'), legenda do colecionador 🔶",
+  "cores": {
+   "casaca": [
+    0.86,
+    0.85,
+    0.8
+   ],
+   "gola": [
+    0.05,
+    0.22,
+    0.12
+   ],
+   "gola_debrum": [
+    0.05,
+    0.22,
+    0.12
+   ],
+   "lapela": [
+    0.05,
+    0.22,
+    0.12
+   ],
+   "lapela_debrum": [
+    0.05,
+    0.22,
+    0.12
+   ],
+   "punho": [
+    0.05,
+    0.22,
+    0.12
+   ],
+   "punho_debrum": [
+    0.05,
+    0.22,
+    0.12
+   ],
+   "pala": [
+    0.86,
+    0.85,
+    0.8
+   ],
+   "debrum": [
+    0.05,
+    0.22,
+    0.12
+   ],
+   "viras": [
+    0.86,
+    0.85,
+    0.8
+   ],
+   "viras_debrum": [
+    0.05,
+    0.22,
+    0.12
+   ],
+   "platina": [
+    0.86,
+    0.85,
+    0.8
+   ],
+   "platina_borda": [
+    0.05,
+    0.22,
+    0.12
+   ],
+   "botoes": [
+    0.8,
+    0.62,
+    0.28
+   ],
+   "calca": [
+    0.86,
+    0.85,
+    0.8
+   ],
+   "polaina": [
+    0.06,
+    0.06,
+    0.07
+   ],
+   "sapato": [
+    0.03,
+    0.028,
+    0.025
+   ],
+   "sola": [
+    0.2,
+    0.13,
+    0.08
+   ]
+  }
+ },
+ "SAXCL": {
+  "prefixo": "hcl_u_reno1811_saxcl",
+  "curto": "Saxonia Regimento Prinz Clemens",
+  "nome": "Saxonia 1810, Regimento Prinz Clemens, verde-claro: casaca branca",
+  "fonte": "aquarela Vinkhuijzen (NYPL), album 'Sachsen 1810', prancha 005 ('Linie Infanterie Regiment Prinz Clemens'), legenda do colecionador 🔶",
+  "cores": {
+   "casaca": [
+    0.86,
+    0.85,
+    0.8
+   ],
+   "gola": [
+    0.16,
+    0.46,
+    0.38
+   ],
+   "gola_debrum": [
+    0.16,
+    0.46,
+    0.38
+   ],
+   "lapela": [
+    0.16,
+    0.46,
+    0.38
+   ],
+   "lapela_debrum": [
+    0.16,
+    0.46,
+    0.38
+   ],
+   "punho": [
+    0.16,
+    0.46,
+    0.38
+   ],
+   "punho_debrum": [
+    0.16,
+    0.46,
+    0.38
+   ],
+   "pala": [
+    0.86,
+    0.85,
+    0.8
+   ],
+   "debrum": [
+    0.16,
+    0.46,
+    0.38
+   ],
+   "viras": [
+    0.86,
+    0.85,
+    0.8
+   ],
+   "viras_debrum": [
+    0.16,
+    0.46,
+    0.38
+   ],
+   "platina": [
+    0.86,
+    0.85,
+    0.8
+   ],
+   "platina_borda": [
+    0.16,
+    0.46,
+    0.38
+   ],
+   "botoes": [
+    0.8,
+    0.62,
+    0.28
+   ],
+   "calca": [
+    0.86,
+    0.85,
+    0.8
+   ],
+   "polaina": [
+    0.06,
+    0.06,
+    0.07
+   ],
+   "sapato": [
+    0.03,
+    0.028,
+    0.025
+   ],
+   "sola": [
+    0.2,
+    0.13,
+    0.08
+   ]
+  }
+ },
+ "SAXLI": {
+  "prefixo": "hcl_u_reno1811_saxli",
+  "curto": "Saxonia ligeira",
+  "nome": "Saxonia 1810, Infantaria Ligeira: casaca verde, peças pretas, vivo vermelho, calca cinza",
+  "fonte": "aquarela Vinkhuijzen (NYPL), album 'Sachsen 1810', prancha 020 ('Leichte Infanterie'), legenda do colecionador 🔶",
+  "cores": {
+   "casaca": [
+    0.06,
+    0.18,
+    0.11
+   ],
+   "gola": [
+    0.06,
+    0.06,
+    0.07
+   ],
+   "gola_debrum": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "lapela": [
+    0.06,
+    0.06,
+    0.07
+   ],
+   "lapela_debrum": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "punho": [
+    0.06,
+    0.06,
+    0.07
+   ],
+   "punho_debrum": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "pala": [
+    0.06,
+    0.18,
+    0.11
+   ],
+   "debrum": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "viras": [
+    0.06,
+    0.18,
+    0.11
+   ],
+   "viras_debrum": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "platina": [
+    0.06,
+    0.18,
+    0.11
+   ],
+   "platina_borda": [
+    0.62,
+    0.07,
+    0.07
+   ],
+   "botoes": [
+    0.8,
+    0.62,
+    0.28
+   ],
+   "calca": [
+    0.55,
+    0.56,
+    0.56
+   ],
+   "polaina": [
+    0.06,
+    0.06,
+    0.07
+   ],
+   "sapato": [
+    0.03,
+    0.028,
+    0.025
+   ],
+   "sola": [
+    0.2,
+    0.13,
+    0.08
+   ]
+  }
+ },
+ "SAXJG": {
+  "prefixo": "hcl_u_reno1811_saxjg",
+  "curto": "Saxonia Jaeger",
+  "nome": "Saxonia 1810, Jaeger: casaca verde, peças pretas, calca cinza",
+  "fonte": "aquarela Vinkhuijzen (NYPL), album 'Sachsen 1810', prancha 019 ('Jaeger'), legenda do colecionador 🔶",
+  "cores": {
+   "casaca": [
+    0.06,
+    0.18,
+    0.11
+   ],
+   "gola": [
+    0.06,
+    0.06,
+    0.07
+   ],
+   "gola_debrum": [
+    0.06,
+    0.06,
+    0.07
+   ],
+   "lapela": [
+    0.06,
+    0.06,
+    0.07
+   ],
+   "lapela_debrum": [
+    0.06,
+    0.06,
+    0.07
+   ],
+   "punho": [
+    0.06,
+    0.06,
+    0.07
+   ],
+   "punho_debrum": [
+    0.06,
+    0.06,
+    0.07
+   ],
+   "pala": [
+    0.06,
+    0.18,
+    0.11
+   ],
+   "debrum": [
+    0.06,
+    0.06,
+    0.07
+   ],
+   "viras": [
+    0.06,
+    0.18,
+    0.11
+   ],
+   "viras_debrum": [
+    0.06,
+    0.06,
+    0.07
+   ],
+   "platina": [
+    0.06,
+    0.18,
+    0.11
+   ],
+   "platina_borda": [
+    0.06,
+    0.06,
+    0.07
+   ],
+   "botoes": [
+    0.8,
+    0.62,
+    0.28
+   ],
+   "calca": [
+    0.55,
+    0.56,
+    0.56
+   ],
+   "polaina": [
+    0.06,
+    0.06,
+    0.07
+   ],
+   "sapato": [
+    0.03,
+    0.028,
+    0.025
+   ],
+   "sola": [
+    0.2,
+    0.13,
+    0.08
+   ]
+  }
  }
 }

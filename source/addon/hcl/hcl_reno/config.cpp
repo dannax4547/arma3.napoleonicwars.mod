@@ -9,7 +9,7 @@ class CfgPatches
 	{
 		author = "Historical Clothing";
 		units[] = {};
-		weapons[] = {"HCL_U_Reno1811_BAV01", "HCL_U_Reno1811_BAV02", "HCL_U_Reno1811_BAV04", "HCL_U_Reno1811_BAV06", "HCL_U_Reno1811_BAV07", "HCL_U_Reno1811_BAV08", "HCL_U_Reno1811_BAV09", "HCL_U_Reno1811_BAV10", "HCL_U_Reno1811_BAV11L", "HCL_U_Reno1811_BAV11P", "HCL_U_Reno1811_BAV11V", "HCL_U_Reno1811_BAV13", "HCL_U_Reno1811_BAVL1", "HCL_U_Reno1811_BAVL2", "HCL_U_Reno1811_BAVL3", "HCL_U_Reno1811_BAVL4", "HCL_U_Reno1811_BAVL5", "HCL_U_Reno1811_BAVL6", "HCL_U_Reno1811_BAVL7", "HCL_U_Reno1811_WUE01", "HCL_U_Reno1811_WUE02", "HCL_U_Reno1811_WUE03", "HCL_U_Reno1811_WUE04", "HCL_U_Reno1811_WUE05", "HCL_U_Reno1811_WUE06", "HCL_U_Reno1811_WUE07", "HCL_U_Reno1811_WUE08", "HCL_U_Reno1811_WUE09", "HCL_U_Reno1811_WUE10A", "HCL_U_Reno1811_WUE10P", "HCL_U_Reno1811_WUEJK", "HCL_H_Reno1811_Raupenhelm_Wurttemberg", "HCL_H_Reno1811_Raupenhelm_Baviera"};
+		weapons[] = {"HCL_U_Reno1811_BAV01", "HCL_U_Reno1811_BAV02", "HCL_U_Reno1811_BAV04", "HCL_U_Reno1811_BAV06", "HCL_U_Reno1811_BAV07", "HCL_U_Reno1811_BAV08", "HCL_U_Reno1811_BAV09", "HCL_U_Reno1811_BAV10", "HCL_U_Reno1811_BAV11L", "HCL_U_Reno1811_BAV11P", "HCL_U_Reno1811_BAV11V", "HCL_U_Reno1811_BAV13", "HCL_U_Reno1811_BAVL1", "HCL_U_Reno1811_BAVL2", "HCL_U_Reno1811_BAVL3", "HCL_U_Reno1811_BAVL4", "HCL_U_Reno1811_BAVL5", "HCL_U_Reno1811_BAVL6", "HCL_U_Reno1811_BAVL7", "HCL_U_Reno1811_SAXAN", "HCL_U_Reno1811_SAXCL", "HCL_U_Reno1811_SAXFA", "HCL_U_Reno1811_SAXJG", "HCL_U_Reno1811_SAXKO", "HCL_U_Reno1811_SAXLI", "HCL_U_Reno1811_SAXLO", "HCL_U_Reno1811_SAXMA", "HCL_U_Reno1811_SAXNI", "HCL_U_Reno1811_SAXRE", "HCL_U_Reno1811_WUE01", "HCL_U_Reno1811_WUE02", "HCL_U_Reno1811_WUE03", "HCL_U_Reno1811_WUE04", "HCL_U_Reno1811_WUE05", "HCL_U_Reno1811_WUE06", "HCL_U_Reno1811_WUE07", "HCL_U_Reno1811_WUE08", "HCL_U_Reno1811_WUE09", "HCL_U_Reno1811_WUE10A", "HCL_U_Reno1811_WUE10P", "HCL_U_Reno1811_WUEJK", "HCL_H_Reno1811_Raupenhelm_Wurttemberg", "HCL_H_Reno1811_Raupenhelm_Baviera", "HCL_H_Reno1811_Shako_Saxonia_Fuzileiro", "HCL_H_Reno1811_Shako_Saxonia_Fuzileiro_Koenig", "HCL_H_Reno1811_Shako_Saxonia_Granadeiro_Gala", "HCL_H_Reno1811_Shako_Saxonia_Ligeira", "HCL_H_Reno1811_Shako_Saxonia_Jaeger"};
 		requiredVersion = 0.1;
 		requiredAddons[] = {"A3_Characters_F"};
 	};
@@ -151,6 +151,66 @@ class CfgVehicles
 		displayName = "Soldier, Bavaria, 7th Light Infantry Battalion 'Guenther' (HCL test)";
 		uniformClass = "HCL_U_Reno1811_BAVL7";
 		hiddenSelectionsTextures[] = {"\hcl\hcl_reno\data\hcl_u_reno1811_bavl7_co.paa"};
+	};
+	class HCL_Reno1811_Soldado_SAXAN: HCL_Reno1811_Soldado_Base
+	{
+		displayName = "Soldier, Saxony, Line Infantry Regiment 'Prinz Anton' (HCL test)";
+		uniformClass = "HCL_U_Reno1811_SAXAN";
+		hiddenSelectionsTextures[] = {"\hcl\hcl_reno\data\hcl_u_reno1811_saxan_co.paa"};
+	};
+	class HCL_Reno1811_Soldado_SAXCL: HCL_Reno1811_Soldado_Base
+	{
+		displayName = "Soldier, Saxony, Line Infantry Regiment 'Prinz Clemens' (HCL test)";
+		uniformClass = "HCL_U_Reno1811_SAXCL";
+		hiddenSelectionsTextures[] = {"\hcl\hcl_reno\data\hcl_u_reno1811_saxcl_co.paa"};
+	};
+	class HCL_Reno1811_Soldado_SAXFA: HCL_Reno1811_Soldado_Base
+	{
+		displayName = "Soldier, Saxony, Line Infantry Regiment 'Prinz Friedrich August' (HCL test)";
+		uniformClass = "HCL_U_Reno1811_SAXFA";
+		hiddenSelectionsTextures[] = {"\hcl\hcl_reno\data\hcl_u_reno1811_saxfa_co.paa"};
+	};
+	class HCL_Reno1811_Soldado_SAXJG: HCL_Reno1811_Soldado_Base
+	{
+		displayName = "Soldier, Saxony, Jaeger (HCL test)";
+		uniformClass = "HCL_U_Reno1811_SAXJG";
+		hiddenSelectionsTextures[] = {"\hcl\hcl_reno\data\hcl_u_reno1811_saxjg_co.paa"};
+	};
+	class HCL_Reno1811_Soldado_SAXKO: HCL_Reno1811_Soldado_Base
+	{
+		displayName = "Soldier, Saxony, Line Infantry Regiment 'Koenig' (HCL test)";
+		uniformClass = "HCL_U_Reno1811_SAXKO";
+		hiddenSelectionsTextures[] = {"\hcl\hcl_reno\data\hcl_u_reno1811_saxko_co.paa"};
+	};
+	class HCL_Reno1811_Soldado_SAXLI: HCL_Reno1811_Soldado_Base
+	{
+		displayName = "Soldier, Saxony, Light Infantry (HCL test)";
+		uniformClass = "HCL_U_Reno1811_SAXLI";
+		hiddenSelectionsTextures[] = {"\hcl\hcl_reno\data\hcl_u_reno1811_saxli_co.paa"};
+	};
+	class HCL_Reno1811_Soldado_SAXLO: HCL_Reno1811_Soldado_Base
+	{
+		displayName = "Soldier, Saxony, Line Infantry Regiment 'von Loew' (HCL test)";
+		uniformClass = "HCL_U_Reno1811_SAXLO";
+		hiddenSelectionsTextures[] = {"\hcl\hcl_reno\data\hcl_u_reno1811_saxlo_co.paa"};
+	};
+	class HCL_Reno1811_Soldado_SAXMA: HCL_Reno1811_Soldado_Base
+	{
+		displayName = "Soldier, Saxony, Line Infantry Regiment 'Prinz Maximilian' (HCL test)";
+		uniformClass = "HCL_U_Reno1811_SAXMA";
+		hiddenSelectionsTextures[] = {"\hcl\hcl_reno\data\hcl_u_reno1811_saxma_co.paa"};
+	};
+	class HCL_Reno1811_Soldado_SAXNI: HCL_Reno1811_Soldado_Base
+	{
+		displayName = "Soldier, Saxony, Line Infantry Regiment 'von Niesemeuschel' (HCL test)";
+		uniformClass = "HCL_U_Reno1811_SAXNI";
+		hiddenSelectionsTextures[] = {"\hcl\hcl_reno\data\hcl_u_reno1811_saxni_co.paa"};
+	};
+	class HCL_Reno1811_Soldado_SAXRE: HCL_Reno1811_Soldado_Base
+	{
+		displayName = "Soldier, Saxony, Line Infantry Regiment 'von Rechten' (HCL test)";
+		uniformClass = "HCL_U_Reno1811_SAXRE";
+		hiddenSelectionsTextures[] = {"\hcl\hcl_reno\data\hcl_u_reno1811_saxre_co.paa"};
 	};
 	class HCL_Reno1811_Soldado_WUE01: HCL_Reno1811_Soldado_Base
 	{
@@ -559,6 +619,176 @@ class CfgWeapons
 			mass = 40;
 		};
 	};
+	class HCL_U_Reno1811_SAXAN: Uniform_Base
+	{
+		author = "Historical Clothing";
+		scope = 2;
+		displayName = "[HCL] Coat 1810 - Saxony, Line Infantry Regiment 'Prinz Anton'";
+		picture = "\A3\characters_f\data\ui\icon_U_BasicBody_ca.paa";
+		model = "\A3\Characters_F\Common\Suitpacks\suitpack_universal_F.p3d";
+		hiddenSelections[] = {"camo"};
+		hiddenSelectionsTextures[] = {"\A3\Characters_F\Common\Suitpacks\data\suitpack_soldier_blufor_co.paa"};
+		class ItemInfo: UniformItem
+		{
+			uniformModel = "-";
+			uniformClass = "HCL_Reno1811_Soldado_SAXAN";
+			containerClass = "Supply40";
+			mass = 40;
+		};
+	};
+	class HCL_U_Reno1811_SAXCL: Uniform_Base
+	{
+		author = "Historical Clothing";
+		scope = 2;
+		displayName = "[HCL] Coat 1810 - Saxony, Line Infantry Regiment 'Prinz Clemens'";
+		picture = "\A3\characters_f\data\ui\icon_U_BasicBody_ca.paa";
+		model = "\A3\Characters_F\Common\Suitpacks\suitpack_universal_F.p3d";
+		hiddenSelections[] = {"camo"};
+		hiddenSelectionsTextures[] = {"\A3\Characters_F\Common\Suitpacks\data\suitpack_soldier_blufor_co.paa"};
+		class ItemInfo: UniformItem
+		{
+			uniformModel = "-";
+			uniformClass = "HCL_Reno1811_Soldado_SAXCL";
+			containerClass = "Supply40";
+			mass = 40;
+		};
+	};
+	class HCL_U_Reno1811_SAXFA: Uniform_Base
+	{
+		author = "Historical Clothing";
+		scope = 2;
+		displayName = "[HCL] Coat 1810 - Saxony, Line Infantry Regiment 'Prinz Friedrich August'";
+		picture = "\A3\characters_f\data\ui\icon_U_BasicBody_ca.paa";
+		model = "\A3\Characters_F\Common\Suitpacks\suitpack_universal_F.p3d";
+		hiddenSelections[] = {"camo"};
+		hiddenSelectionsTextures[] = {"\A3\Characters_F\Common\Suitpacks\data\suitpack_soldier_blufor_co.paa"};
+		class ItemInfo: UniformItem
+		{
+			uniformModel = "-";
+			uniformClass = "HCL_Reno1811_Soldado_SAXFA";
+			containerClass = "Supply40";
+			mass = 40;
+		};
+	};
+	class HCL_U_Reno1811_SAXJG: Uniform_Base
+	{
+		author = "Historical Clothing";
+		scope = 2;
+		displayName = "[HCL] Coat 1810 - Saxony, Jaeger";
+		picture = "\A3\characters_f\data\ui\icon_U_BasicBody_ca.paa";
+		model = "\A3\Characters_F\Common\Suitpacks\suitpack_universal_F.p3d";
+		hiddenSelections[] = {"camo"};
+		hiddenSelectionsTextures[] = {"\A3\Characters_F\Common\Suitpacks\data\suitpack_soldier_blufor_co.paa"};
+		class ItemInfo: UniformItem
+		{
+			uniformModel = "-";
+			uniformClass = "HCL_Reno1811_Soldado_SAXJG";
+			containerClass = "Supply40";
+			mass = 40;
+		};
+	};
+	class HCL_U_Reno1811_SAXKO: Uniform_Base
+	{
+		author = "Historical Clothing";
+		scope = 2;
+		displayName = "[HCL] Coat 1810 - Saxony, Line Infantry Regiment 'Koenig'";
+		picture = "\A3\characters_f\data\ui\icon_U_BasicBody_ca.paa";
+		model = "\A3\Characters_F\Common\Suitpacks\suitpack_universal_F.p3d";
+		hiddenSelections[] = {"camo"};
+		hiddenSelectionsTextures[] = {"\A3\Characters_F\Common\Suitpacks\data\suitpack_soldier_blufor_co.paa"};
+		class ItemInfo: UniformItem
+		{
+			uniformModel = "-";
+			uniformClass = "HCL_Reno1811_Soldado_SAXKO";
+			containerClass = "Supply40";
+			mass = 40;
+		};
+	};
+	class HCL_U_Reno1811_SAXLI: Uniform_Base
+	{
+		author = "Historical Clothing";
+		scope = 2;
+		displayName = "[HCL] Coat 1810 - Saxony, Light Infantry";
+		picture = "\A3\characters_f\data\ui\icon_U_BasicBody_ca.paa";
+		model = "\A3\Characters_F\Common\Suitpacks\suitpack_universal_F.p3d";
+		hiddenSelections[] = {"camo"};
+		hiddenSelectionsTextures[] = {"\A3\Characters_F\Common\Suitpacks\data\suitpack_soldier_blufor_co.paa"};
+		class ItemInfo: UniformItem
+		{
+			uniformModel = "-";
+			uniformClass = "HCL_Reno1811_Soldado_SAXLI";
+			containerClass = "Supply40";
+			mass = 40;
+		};
+	};
+	class HCL_U_Reno1811_SAXLO: Uniform_Base
+	{
+		author = "Historical Clothing";
+		scope = 2;
+		displayName = "[HCL] Coat 1810 - Saxony, Line Infantry Regiment 'von Loew'";
+		picture = "\A3\characters_f\data\ui\icon_U_BasicBody_ca.paa";
+		model = "\A3\Characters_F\Common\Suitpacks\suitpack_universal_F.p3d";
+		hiddenSelections[] = {"camo"};
+		hiddenSelectionsTextures[] = {"\A3\Characters_F\Common\Suitpacks\data\suitpack_soldier_blufor_co.paa"};
+		class ItemInfo: UniformItem
+		{
+			uniformModel = "-";
+			uniformClass = "HCL_Reno1811_Soldado_SAXLO";
+			containerClass = "Supply40";
+			mass = 40;
+		};
+	};
+	class HCL_U_Reno1811_SAXMA: Uniform_Base
+	{
+		author = "Historical Clothing";
+		scope = 2;
+		displayName = "[HCL] Coat 1810 - Saxony, Line Infantry Regiment 'Prinz Maximilian'";
+		picture = "\A3\characters_f\data\ui\icon_U_BasicBody_ca.paa";
+		model = "\A3\Characters_F\Common\Suitpacks\suitpack_universal_F.p3d";
+		hiddenSelections[] = {"camo"};
+		hiddenSelectionsTextures[] = {"\A3\Characters_F\Common\Suitpacks\data\suitpack_soldier_blufor_co.paa"};
+		class ItemInfo: UniformItem
+		{
+			uniformModel = "-";
+			uniformClass = "HCL_Reno1811_Soldado_SAXMA";
+			containerClass = "Supply40";
+			mass = 40;
+		};
+	};
+	class HCL_U_Reno1811_SAXNI: Uniform_Base
+	{
+		author = "Historical Clothing";
+		scope = 2;
+		displayName = "[HCL] Coat 1810 - Saxony, Line Infantry Regiment 'von Niesemeuschel'";
+		picture = "\A3\characters_f\data\ui\icon_U_BasicBody_ca.paa";
+		model = "\A3\Characters_F\Common\Suitpacks\suitpack_universal_F.p3d";
+		hiddenSelections[] = {"camo"};
+		hiddenSelectionsTextures[] = {"\A3\Characters_F\Common\Suitpacks\data\suitpack_soldier_blufor_co.paa"};
+		class ItemInfo: UniformItem
+		{
+			uniformModel = "-";
+			uniformClass = "HCL_Reno1811_Soldado_SAXNI";
+			containerClass = "Supply40";
+			mass = 40;
+		};
+	};
+	class HCL_U_Reno1811_SAXRE: Uniform_Base
+	{
+		author = "Historical Clothing";
+		scope = 2;
+		displayName = "[HCL] Coat 1810 - Saxony, Line Infantry Regiment 'von Rechten'";
+		picture = "\A3\characters_f\data\ui\icon_U_BasicBody_ca.paa";
+		model = "\A3\Characters_F\Common\Suitpacks\suitpack_universal_F.p3d";
+		hiddenSelections[] = {"camo"};
+		hiddenSelectionsTextures[] = {"\A3\Characters_F\Common\Suitpacks\data\suitpack_soldier_blufor_co.paa"};
+		class ItemInfo: UniformItem
+		{
+			uniformModel = "-";
+			uniformClass = "HCL_Reno1811_Soldado_SAXRE";
+			containerClass = "Supply40";
+			mass = 40;
+		};
+	};
 	class HCL_U_Reno1811_WUE01: Uniform_Base
 	{
 		author = "Historical Clothing";
@@ -804,6 +1034,141 @@ class CfgWeapons
 		{
 			mass = 15;
 			uniformModel = "\hcl\hcl_reno\hcl_h_reno_raupenhelm_baviera.p3d";
+			modelSides[] = {0, 1, 2, 3};
+			hiddenSelections[] = {"camo"};
+			class HitpointsProtectionInfo
+			{
+				class Head
+				{
+					hitpointName = "HitHead";
+					armor = 0;
+					passThrough = 1;
+				};
+			};
+		};
+	};
+	class HCL_H_Reno1811_Shako_Saxonia_Fuzileiro: H_HelmetB
+	{
+		author = "Historical Clothing";
+		scope = 2;
+		displayName = "[HCL] Saxon Shako 1810 - crowned 'FA' plate, white cords, white pompom";
+		descriptionShort = "HCL test - no protection";
+		picture = "\A3\characters_f\Data\UI\icon_H_helmet_plain_ca.paa";
+		model = "\hcl\hcl_reno\hcl_h_reno_shako_saxonia_fuzileiro.p3d";
+		hiddenSelections[] = {"camo"};
+		hiddenSelectionsTextures[] = {"\hcl\hcl_reno\data\hcl_shako_saxonia_fuzileiro_co.paa"};
+		class ItemInfo: ItemInfo
+		{
+			mass = 15;
+			uniformModel = "\hcl\hcl_reno\hcl_h_reno_shako_saxonia_fuzileiro.p3d";
+			modelSides[] = {0, 1, 2, 3};
+			hiddenSelections[] = {"camo"};
+			class HitpointsProtectionInfo
+			{
+				class Head
+				{
+					hitpointName = "HitHead";
+					armor = 0;
+					passThrough = 1;
+				};
+			};
+		};
+	};
+	class HCL_H_Reno1811_Shako_Saxonia_Fuzileiro_Koenig: H_HelmetB
+	{
+		author = "Historical Clothing";
+		scope = 2;
+		displayName = "[HCL] Saxon Shako 1810 - crowned 'FA' plate, white cords, red pompom";
+		descriptionShort = "HCL test - no protection";
+		picture = "\A3\characters_f\Data\UI\icon_H_helmet_plain_ca.paa";
+		model = "\hcl\hcl_reno\hcl_h_reno_shako_saxonia_fuzileiro_koenig.p3d";
+		hiddenSelections[] = {"camo"};
+		hiddenSelectionsTextures[] = {"\hcl\hcl_reno\data\hcl_shako_saxonia_fuzileiro_koenig_co.paa"};
+		class ItemInfo: ItemInfo
+		{
+			mass = 15;
+			uniformModel = "\hcl\hcl_reno\hcl_h_reno_shako_saxonia_fuzileiro_koenig.p3d";
+			modelSides[] = {0, 1, 2, 3};
+			hiddenSelections[] = {"camo"};
+			class HitpointsProtectionInfo
+			{
+				class Head
+				{
+					hitpointName = "HitHead";
+					armor = 0;
+					passThrough = 1;
+				};
+			};
+		};
+	};
+	class HCL_H_Reno1811_Shako_Saxonia_Granadeiro_Gala: H_HelmetB
+	{
+		author = "Historical Clothing";
+		scope = 2;
+		displayName = "[HCL] Saxon Grenadier Shako 1810 - crowned 'FA' plate, red cords and plume";
+		descriptionShort = "HCL test - no protection";
+		picture = "\A3\characters_f\Data\UI\icon_H_helmet_plain_ca.paa";
+		model = "\hcl\hcl_reno\hcl_h_reno_shako_saxonia_granadeiro_gala.p3d";
+		hiddenSelections[] = {"camo"};
+		hiddenSelectionsTextures[] = {"\hcl\hcl_reno\data\hcl_shako_saxonia_granadeiro_gala_co.paa"};
+		class ItemInfo: ItemInfo
+		{
+			mass = 15;
+			uniformModel = "\hcl\hcl_reno\hcl_h_reno_shako_saxonia_granadeiro_gala.p3d";
+			modelSides[] = {0, 1, 2, 3};
+			hiddenSelections[] = {"camo"};
+			class HitpointsProtectionInfo
+			{
+				class Head
+				{
+					hitpointName = "HitHead";
+					armor = 0;
+					passThrough = 1;
+				};
+			};
+		};
+	};
+	class HCL_H_Reno1811_Shako_Saxonia_Ligeira: H_HelmetB
+	{
+		author = "Historical Clothing";
+		scope = 2;
+		displayName = "[HCL] Saxon Light Infantry Shako 1810 - crowned 'FA' plate, green cords, green pompom";
+		descriptionShort = "HCL test - no protection";
+		picture = "\A3\characters_f\Data\UI\icon_H_helmet_plain_ca.paa";
+		model = "\hcl\hcl_reno\hcl_h_reno_shako_saxonia_ligeira.p3d";
+		hiddenSelections[] = {"camo"};
+		hiddenSelectionsTextures[] = {"\hcl\hcl_reno\data\hcl_shako_saxonia_ligeira_co.paa"};
+		class ItemInfo: ItemInfo
+		{
+			mass = 15;
+			uniformModel = "\hcl\hcl_reno\hcl_h_reno_shako_saxonia_ligeira.p3d";
+			modelSides[] = {0, 1, 2, 3};
+			hiddenSelections[] = {"camo"};
+			class HitpointsProtectionInfo
+			{
+				class Head
+				{
+					hitpointName = "HitHead";
+					armor = 0;
+					passThrough = 1;
+				};
+			};
+		};
+	};
+	class HCL_H_Reno1811_Shako_Saxonia_Jaeger: H_HelmetB
+	{
+		author = "Historical Clothing";
+		scope = 2;
+		displayName = "[HCL] Saxon Jaeger Shako 1810 - crowned 'FA' plate, green cords, black plume";
+		descriptionShort = "HCL test - no protection";
+		picture = "\A3\characters_f\Data\UI\icon_H_helmet_plain_ca.paa";
+		model = "\hcl\hcl_reno\hcl_h_reno_shako_saxonia_jaeger.p3d";
+		hiddenSelections[] = {"camo"};
+		hiddenSelectionsTextures[] = {"\hcl\hcl_reno\data\hcl_shako_saxonia_jaeger_co.paa"};
+		class ItemInfo: ItemInfo
+		{
+			mass = 15;
+			uniformModel = "\hcl\hcl_reno\hcl_h_reno_shako_saxonia_jaeger.p3d";
 			modelSides[] = {0, 1, 2, 3};
 			hiddenSelections[] = {"camo"};
 			class HitpointsProtectionInfo

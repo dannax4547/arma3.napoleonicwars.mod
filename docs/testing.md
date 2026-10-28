@@ -264,3 +264,20 @@ removeHeadgear player; player addHeadgear "HCL_H_Reno1811_Raupenhelm_Wurttemberg
 | B2 | Costas | Pelo contínuo até a borda, sem faixa lisa; o topo desce para trás |
 | B3 | Calota vermelha | Perto do centro do topo, inteira, sem pelo nem pele passando por cima |
 | B4 | Capacete de lagarta | Crista com a massa na frente e enrolada sobre a placa; a cauda não encosta na nuca |
+
+## 12. Confederação do Reno, lote 2 (Saxônia 1810), `hcl_reno.pbo` (2026-10-28, não testado no jogo)
+
+Montagem: 96,8 MB, 8/8 modelos com esqueleto (casaca, 2 capacetes de lagarta, 5 barretinas saxônicas), `pbo_verify` com 80 referências, nenhuma faltando. Os avisos "Cannot load material" de `hl_white_bald_muscular`, `meat` e `meatbones` são materiais do jogo usados pelo modelo dos Samples e aparecem em todas as montagens. Relatório: `docs/reports/reno_1811.md` §5.
+
+```sqf
+player forceAddUniform "HCL_U_Reno1811_SAXKO"; removeHeadgear player; player addHeadgear "HCL_H_Reno1811_Shako_Saxonia_Fuzileiro_Koenig";
+player forceAddUniform "HCL_U_Reno1811_SAXCL"; removeHeadgear player; player addHeadgear "HCL_H_Reno1811_Shako_Saxonia_Granadeiro_Gala";
+player forceAddUniform "HCL_U_Reno1811_SAXJG"; removeHeadgear player; player addHeadgear "HCL_H_Reno1811_Shako_Saxonia_Jaeger";
+```
+
+| ID | Item | Classes | Observar |
+|---|---|---|---|
+| S1 | Barretinas saxônicas | `HCL_H_Reno1811_Shako_Saxonia_Fuzileiro`, `_Fuzileiro_Koenig`, `_Granadeiro_Gala`, `_Ligeira`, `_Jaeger` | Encaixe; placa coroada com "FA" legível e inteira abaixo do cocar branco; cordões e borlas do lado direito |
+| S2 | Casacas de linha | `HCL_U_Reno1811_SAXKO`, `_SAXNI`, `_SAXAN`, `_SAXLO`, `_SAXMA`, `_SAXRE`, `_SAXFA`, `_SAXCL` | Branco que não estoure com luz forte; cores distintivas |
+| S3 | Ligeira e Jäger | `HCL_U_Reno1811_SAXLI`, `_SAXJG` | Verde com peças pretas, calça cinza |
+| S4 | Nomes no Arsenal | todos | "Coat 1810 - Saxony, Line Infantry Regiment '...'" |

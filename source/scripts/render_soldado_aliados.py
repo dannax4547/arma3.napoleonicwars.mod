@@ -134,9 +134,11 @@ SRCS = [(J(r"source\models\shakos\hcl_shako_fr\hcl_shako_fr_texturas_v3.blend"),
         (J(r"source\models\bonnet\hcl_bonnet_italia\hcl_bonnet_italia_texturas.blend"), "HCL_Bonnet_Italia_", J(r"source\textures\hcl_bonnet_italia"), "hcl_bonnet_italia_", "bonnetit_"),
         # Rhine crested helmets: one texture blend per state (own mod atlas)
         (J(r"source\models\raupenhelm\hcl_raupenhelm\hcl_raupenhelm_texturas_wurttemberg.blend"), "HCL_Raupenhelm_", J(r"source\textures\hcl_raupenhelm"), "hcl_raupenhelm_", "rhw_"),
-        (J(r"source\models\raupenhelm\hcl_raupenhelm\hcl_raupenhelm_texturas_baviera.blend"), "HCL_Raupenhelm_", J(r"source\textures\hcl_raupenhelm"), "hcl_raupenhelm_", "rhb_")]
+        (J(r"source\models\raupenhelm\hcl_raupenhelm\hcl_raupenhelm_texturas_baviera.blend"), "HCL_Raupenhelm_", J(r"source\textures\hcl_raupenhelm"), "hcl_raupenhelm_", "rhb_"),
+        # Saxon shakos 1810 (lot 2, 2026-10-27)
+        (J(r"source\models\shakos\hcl_shako_reno\hcl_shako_saxonia_texturas.blend"), "HCL_Shako_Saxonia_", J(r"source\textures\hcl_shako_reno"), "hcl_shako_saxonia_", "shksx_")]
 for blend, pre, tdir_, tpre, tagp in SRCS:
-    mine = lambda t: (t.startswith(tagp) if tagp else not t.startswith(("bonnet_", "suica_", "czapka_", "bonnetpl_", "shkit_", "shkna_", "bonnetit_", "rhw_", "rhb_")))
+    mine = lambda t: (t.startswith(tagp) if tagp else not t.startswith(("bonnet_", "suica_", "czapka_", "bonnetpl_", "shkit_", "shkna_", "bonnetit_", "rhw_", "rhb_", "shksx_")))
     want = [t[len(tagp):] for t in tags if t not in shk and mine(t)]
     if not want or not os.path.exists(blend):
         continue

@@ -21,6 +21,9 @@ DATA = PREFIX + r"\data"
 LOG = []
 HELMET_TAGS = ["wurttemberg", "baviera"]
 HELMET_BLEND = r"source\models\raupenhelm\hcl_raupenhelm\hcl_raupenhelm_texturas_{}.blend"
+# lot 2 (2026-10-27): Saxon shakos 1810 (blockout_shako_reno.py nacao=saxonia + texturizar_aliados.py raiz=SX_)
+SHAKO_TAGS = {"saxonia": ["fuzileiro", "fuzileiro_koenig", "granadeiro_gala", "ligeira", "jaeger"]}
+SHAKO_BLEND = r"source\models\shakos\hcl_shako_reno\hcl_shako_{}_texturas.blend"
 
 
 def log(s):
@@ -129,5 +132,13 @@ for tg in HELMET_TAGS:
     log(f"CAPACETE {tg}: de {os.path.basename(blend)}")
     headgear(o, (DATA + rf"\hcl_raupenhelm_{tg}_co.paa", DATA + rf"\hcl_raupenhelm_{tg}.rvmat"),
              f"hcl_h_reno_raupenhelm_{tg}.p3d", "raupenhelm_" + tg, lod2_polys=lod2)
+for nacao, tags in SHAKO_TAGS.items():
+    blend = SHAKO_BLEND.format(nacao)
+    for tg in tags:
+        name = f"HCL_Shako_{nacao.capitalize()}_{tg}_LOD0"
+        o = next(x for x in append(os.path.join(ROOT, blend), [name]) if x.name.startswith(name))
+        log(f"BARRETINA {nacao} {tg}: de {os.path.basename(blend)}")
+        headgear(o, (DATA + rf"\hcl_shako_{nacao}_{tg}_co.paa", DATA + rf"\hcl_shako_{nacao}_{tg}.rvmat"),
+                 f"hcl_h_reno_shako_{nacao}_{tg}.p3d", f"{nacao}_{tg}", lod2_decimate=0.4)
 
 open(out("build_p3d_log.txt"), "w", encoding="utf-8").write("\n".join(LOG) + "\n")

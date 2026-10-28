@@ -17,6 +17,10 @@ foreach ($s in "nohq", "smdi") { $jobs += , @("$t\hcl_uniforme_fr\hcl_u_fr1812_$
 foreach ($g in "wurttemberg", "baviera") {
     foreach ($s in "co", "nohq", "smdi") { $jobs += , @("$t\hcl_raupenhelm\hcl_raupenhelm_${g}_${s}.png", "$dst\hcl_raupenhelm_${g}_${s}.paa") }
 }
+# lot 2 (2026-10-27): Saxon shakos 1810 (texturizar_aliados.py raiz=SX_ into source/textures/hcl_shako_reno)
+foreach ($g in "fuzileiro", "fuzileiro_koenig", "granadeiro_gala", "ligeira", "jaeger") {
+    foreach ($s in "co", "nohq", "smdi") { $jobs += , @("$t\hcl_shako_reno\hcl_shako_saxonia_${g}_${s}.png", "$dst\hcl_shako_saxonia_${g}_${s}.paa") }
+}
 
 $fail = 0
 New-Item -ItemType Directory -Force $dst | Out-Null

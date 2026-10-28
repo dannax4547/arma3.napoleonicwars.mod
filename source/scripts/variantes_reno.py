@@ -1,5 +1,5 @@
 # Colour variants of the Confederation of the Rhine infantry, lot 1: Wuerttemberg and Bavaria c. 1811, the two states
-# with the crested helmet (blockout_raupenhelm.py). Spec docs/specs/aliados_fr_1812.md section 2.0; user 2026-10-19:
+# with the crested helmet (blockout_raupenhelm.py); lot 2 (2026-10-27): Saxony 1810 (blockout_shako_reno.py). Spec docs/specs/aliados_fr_1812.md section 2.0; user 2026-10-19:
 # "remember to add ALL of these regiments". Writes the variant file read by generate_uniform_textures_v2.py (unchanged,
 # shared painter) on the 1812 coat (HCL_U_Fr1812_01_LOD0):
 #   source/textures/hcl_uniforme_reno/variantes_reno.json
@@ -98,6 +98,29 @@ LIGHT_BAV = [  # key, plate, caption, collar
 for key, pl, cap, gola, txt in LIGHT_BAV:
     add(key, f"Baviera {txt.split(',')[0]}", f"Baviera 1811, {txt}: casaca verde, lapelas pretas, vivo vermelho, calca cinza",
         VKB.format(pl, cap), coat(DKG, gola, BLACK, BLACK, RED, DKG, BRASS, calca=GREY))
+
+VKS = "aquarela Vinkhuijzen (NYPL), album 'Sachsen 1810', prancha {} ('{}'), legenda do colecionador 🔶"
+# ---- Saxony after the 1810 reform (lot 2, 2026-10-27): white coat, collar / lapels / cuffs in the facing colour, white
+# breeches, black gaiters (plates 036, 005). Turnbacks white piped in the facing colour 🔶. The pairs with the same colour
+# (Koenig / Niesemeuschel, Prinz Max / von Rechten) differ by the buttons, not readable on the watercolours ❓: all brass.
+MBLUE, DKG2, LGRN = [0.14, 0.24, 0.58], [0.05, 0.22, 0.12], [0.16, 0.46, 0.38]
+SAX = [  # key, plate, caption, facing colour, text
+    ("SAXKO", "036", "Linie Infanterie Regiment Koenig", RED, "Regimento Koenig, vermelho"),
+    ("SAXNI", "010", "Linie Infanterie Regiment Niesemeuschel", RED, "Regimento von Niesemeuschel, vermelho"),
+    ("SAXAN", "007", "Linie Infanterie Regiment Prinz Anton", LBLUE, "Regimento Prinz Anton, azul-claro"),
+    ("SAXLO", "043", "Infanterie Regiment von Loew", MBLUE, "Regimento von Loew, azul"),
+    ("SAXMA", "035", "Infanterie Regiment Prinz Max", YEL, "Regimento Prinz Maximilian, amarelo"),
+    ("SAXRE", "008", "Linie Infanterie Regiment Rechten", YEL, "Regimento von Rechten, amarelo"),
+    ("SAXFA", "044", "Infanterie Regiment Prinz Friedrich August", DKG2, "Regimento Prinz Friedrich August, verde-escuro"),
+    ("SAXCL", "005", "Linie Infanterie Regiment Prinz Clemens", LGRN, "Regimento Prinz Clemens, verde-claro"),
+]
+for key, pl, cap, fc, txt in SAX:
+    add(key, f"Saxonia {txt.split(',')[0]}", f"Saxonia 1810, {txt}: casaca branca", VKS.format(pl, cap),
+        coat(WHI, fc, fc, fc, fc, WHI, BRASS, calca=WHI))
+add("SAXLI", "Saxonia ligeira", "Saxonia 1810, Infantaria Ligeira: casaca verde, peças pretas, vivo vermelho, calca cinza",
+    VKS.format("020", "Leichte Infanterie"), coat(DKG, BLACK, BLACK, BLACK, RED, DKG, BRASS, calca=GREY))
+add("SAXJG", "Saxonia Jaeger", "Saxonia 1810, Jaeger: casaca verde, peças pretas, calca cinza",
+    VKS.format("019", "Jaeger"), coat(DKG, BLACK, BLACK, BLACK, BLACK, DKG, BRASS, calca=GREY))
 
 out = sys.argv[1]
 os.makedirs(out, exist_ok=True)
