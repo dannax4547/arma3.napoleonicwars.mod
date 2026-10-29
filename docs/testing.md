@@ -296,3 +296,14 @@ player forceAddUniform "HCL_U_Reno1811_WESAE"; removeHeadgear player; player add
 |---|---|---|---|
 | V1 | Barretinas vestfalianas | `HCL_H_Reno1811_Shako_Vestfalia_Fuzileiro`, `_Granadeiro_Campanha`, `_Granadeiro_Gala`, `_Voltigeur_Gala` | Placa em losango, divisas amarelas dos lados, cocar branco de centro azul |
 | V2 | Casacas | `HCL_U_Reno1811_WESAC`, `_WESAE`, `_WES05`, `_WES07` | Azul-claro, azul-escuro, laranja, gola amarela |
+
+## 14. Preto nas partes brancas: fundo das texturas preenchido (2026-10-29, não testado no jogo)
+
+O usuário viu no jogo "um preto nas partes brancas". Causa provável: nas texturas de cor (`_co`) o espaço entre as peças do molde era preto puro (0,0,0), com só 2–4 px de margem. Os mipmaps menores, usados com a distância, misturam esse preto nas bordas, e no branco isso aparece como riscos e manchas pretas. As texturas não têm canal alfa (24 bits), então a causa não é transparência.
+
+Correção: `source/scripts/preencher_fundo.py` preenche só os pixels de preto exato com a cor das peças vizinhas (push-pull), sem mudar nenhum pixel das peças. Foi aplicado às 157 texturas de cor de `hcl_suica`, `hcl_varsovia`, `hcl_italia` e `hcl_reno`; depois os PAA foram convertidos de novo (sem falhas) e os quatro PBOs remontados (nenhuma referência faltando). Deve rodar depois de cada bake ou pintura, antes da conversão para PAA. `hcl_fr`, `hcl_uk` e `hcl_pruss` têm o mesmo fundo preto e aguardam a decisão do usuário.
+
+| ID | Observar |
+|---|---|
+| P1 | Casacas brancas (Saxônia, Vestfália, Itália, 13º de Varsóvia) e calças brancas: sem riscos nem manchas pretas nas costuras, de perto e de longe |
+| P2 | Cordões e plumas brancos, cocares: sem contorno preto |
