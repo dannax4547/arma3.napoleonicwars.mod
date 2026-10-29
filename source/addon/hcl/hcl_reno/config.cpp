@@ -9,7 +9,7 @@ class CfgPatches
 	{
 		author = "Historical Clothing";
 		units[] = {};
-		weapons[] = {"HCL_U_Reno1811_BAV01", "HCL_U_Reno1811_BAV02", "HCL_U_Reno1811_BAV04", "HCL_U_Reno1811_BAV06", "HCL_U_Reno1811_BAV07", "HCL_U_Reno1811_BAV08", "HCL_U_Reno1811_BAV09", "HCL_U_Reno1811_BAV10", "HCL_U_Reno1811_BAV11L", "HCL_U_Reno1811_BAV11P", "HCL_U_Reno1811_BAV11V", "HCL_U_Reno1811_BAV13", "HCL_U_Reno1811_BAVL1", "HCL_U_Reno1811_BAVL2", "HCL_U_Reno1811_BAVL3", "HCL_U_Reno1811_BAVL4", "HCL_U_Reno1811_BAVL5", "HCL_U_Reno1811_BAVL6", "HCL_U_Reno1811_BAVL7", "HCL_U_Reno1811_SAXAN", "HCL_U_Reno1811_SAXCL", "HCL_U_Reno1811_SAXFA", "HCL_U_Reno1811_SAXJG", "HCL_U_Reno1811_SAXKO", "HCL_U_Reno1811_SAXLI", "HCL_U_Reno1811_SAXLO", "HCL_U_Reno1811_SAXMA", "HCL_U_Reno1811_SAXNI", "HCL_U_Reno1811_SAXRE", "HCL_U_Reno1811_WUE01", "HCL_U_Reno1811_WUE02", "HCL_U_Reno1811_WUE03", "HCL_U_Reno1811_WUE04", "HCL_U_Reno1811_WUE05", "HCL_U_Reno1811_WUE06", "HCL_U_Reno1811_WUE07", "HCL_U_Reno1811_WUE08", "HCL_U_Reno1811_WUE09", "HCL_U_Reno1811_WUE10A", "HCL_U_Reno1811_WUE10P", "HCL_U_Reno1811_WUEJK", "HCL_H_Reno1811_Raupenhelm_Wurttemberg", "HCL_H_Reno1811_Raupenhelm_Baviera", "HCL_H_Reno1811_Shako_Saxonia_Fuzileiro", "HCL_H_Reno1811_Shako_Saxonia_Fuzileiro_Koenig", "HCL_H_Reno1811_Shako_Saxonia_Granadeiro_Gala", "HCL_H_Reno1811_Shako_Saxonia_Ligeira", "HCL_H_Reno1811_Shako_Saxonia_Jaeger"};
+		weapons[] = {"HCL_U_Reno1811_BAV01", "HCL_U_Reno1811_BAV02", "HCL_U_Reno1811_BAV04", "HCL_U_Reno1811_BAV06", "HCL_U_Reno1811_BAV07", "HCL_U_Reno1811_BAV08", "HCL_U_Reno1811_BAV09", "HCL_U_Reno1811_BAV10", "HCL_U_Reno1811_BAV11L", "HCL_U_Reno1811_BAV11P", "HCL_U_Reno1811_BAV11V", "HCL_U_Reno1811_BAV13", "HCL_U_Reno1811_BAVL1", "HCL_U_Reno1811_BAVL2", "HCL_U_Reno1811_BAVL3", "HCL_U_Reno1811_BAVL4", "HCL_U_Reno1811_BAVL5", "HCL_U_Reno1811_BAVL6", "HCL_U_Reno1811_BAVL7", "HCL_U_Reno1811_SAXAN", "HCL_U_Reno1811_SAXCL", "HCL_U_Reno1811_SAXFA", "HCL_U_Reno1811_SAXJG", "HCL_U_Reno1811_SAXKO", "HCL_U_Reno1811_SAXLI", "HCL_U_Reno1811_SAXLO", "HCL_U_Reno1811_SAXMA", "HCL_U_Reno1811_SAXNI", "HCL_U_Reno1811_SAXRE", "HCL_U_Reno1811_WES05", "HCL_U_Reno1811_WES07", "HCL_U_Reno1811_WESAC", "HCL_U_Reno1811_WESAE", "HCL_U_Reno1811_WUE01", "HCL_U_Reno1811_WUE02", "HCL_U_Reno1811_WUE03", "HCL_U_Reno1811_WUE04", "HCL_U_Reno1811_WUE05", "HCL_U_Reno1811_WUE06", "HCL_U_Reno1811_WUE07", "HCL_U_Reno1811_WUE08", "HCL_U_Reno1811_WUE09", "HCL_U_Reno1811_WUE10A", "HCL_U_Reno1811_WUE10P", "HCL_U_Reno1811_WUEJK", "HCL_H_Reno1811_Raupenhelm_Wurttemberg", "HCL_H_Reno1811_Raupenhelm_Baviera", "HCL_H_Reno1811_Shako_Saxonia_Fuzileiro", "HCL_H_Reno1811_Shako_Saxonia_Fuzileiro_Koenig", "HCL_H_Reno1811_Shako_Saxonia_Granadeiro_Gala", "HCL_H_Reno1811_Shako_Saxonia_Ligeira", "HCL_H_Reno1811_Shako_Saxonia_Jaeger", "HCL_H_Reno1811_Shako_Vestfalia_Fuzileiro", "HCL_H_Reno1811_Shako_Vestfalia_Granadeiro_Campanha", "HCL_H_Reno1811_Shako_Vestfalia_Granadeiro_Gala", "HCL_H_Reno1811_Shako_Vestfalia_Voltigeur_Gala"};
 		requiredVersion = 0.1;
 		requiredAddons[] = {"A3_Characters_F"};
 	};
@@ -211,6 +211,30 @@ class CfgVehicles
 		displayName = "Soldier, Saxony, Line Infantry Regiment 'von Rechten' (HCL test)";
 		uniformClass = "HCL_U_Reno1811_SAXRE";
 		hiddenSelectionsTextures[] = {"\hcl\hcl_reno\data\hcl_u_reno1811_saxre_co.paa"};
+	};
+	class HCL_Reno1811_Soldado_WES05: HCL_Reno1811_Soldado_Base
+	{
+		displayName = "Soldier, Westphalia, 5th Line Infantry Regiment (orange facings) (HCL test)";
+		uniformClass = "HCL_U_Reno1811_WES05";
+		hiddenSelectionsTextures[] = {"\hcl\hcl_reno\data\hcl_u_reno1811_wes05_co.paa"};
+	};
+	class HCL_Reno1811_Soldado_WES07: HCL_Reno1811_Soldado_Base
+	{
+		displayName = "Soldier, Westphalia, 7th Line Infantry Regiment (yellow collar) (HCL test)";
+		uniformClass = "HCL_U_Reno1811_WES07";
+		hiddenSelectionsTextures[] = {"\hcl\hcl_reno\data\hcl_u_reno1811_wes07_co.paa"};
+	};
+	class HCL_Reno1811_Soldado_WESAC: HCL_Reno1811_Soldado_Base
+	{
+		displayName = "Soldier, Westphalia, Line Infantry (light blue facings) (HCL test)";
+		uniformClass = "HCL_U_Reno1811_WESAC";
+		hiddenSelectionsTextures[] = {"\hcl\hcl_reno\data\hcl_u_reno1811_wesac_co.paa"};
+	};
+	class HCL_Reno1811_Soldado_WESAE: HCL_Reno1811_Soldado_Base
+	{
+		displayName = "Soldier, Westphalia, Line Infantry (dark blue facings, 2nd and 8th Regiments) (HCL test)";
+		uniformClass = "HCL_U_Reno1811_WESAE";
+		hiddenSelectionsTextures[] = {"\hcl\hcl_reno\data\hcl_u_reno1811_wesae_co.paa"};
 	};
 	class HCL_Reno1811_Soldado_WUE01: HCL_Reno1811_Soldado_Base
 	{
@@ -789,6 +813,74 @@ class CfgWeapons
 			mass = 40;
 		};
 	};
+	class HCL_U_Reno1811_WES05: Uniform_Base
+	{
+		author = "Historical Clothing";
+		scope = 2;
+		displayName = "[HCL] Coat 1809 - Westphalia, 5th Line Infantry Regiment (orange facings)";
+		picture = "\A3\characters_f\data\ui\icon_U_BasicBody_ca.paa";
+		model = "\A3\Characters_F\Common\Suitpacks\suitpack_universal_F.p3d";
+		hiddenSelections[] = {"camo"};
+		hiddenSelectionsTextures[] = {"\A3\Characters_F\Common\Suitpacks\data\suitpack_soldier_blufor_co.paa"};
+		class ItemInfo: UniformItem
+		{
+			uniformModel = "-";
+			uniformClass = "HCL_Reno1811_Soldado_WES05";
+			containerClass = "Supply40";
+			mass = 40;
+		};
+	};
+	class HCL_U_Reno1811_WES07: Uniform_Base
+	{
+		author = "Historical Clothing";
+		scope = 2;
+		displayName = "[HCL] Coat 1809 - Westphalia, 7th Line Infantry Regiment (yellow collar)";
+		picture = "\A3\characters_f\data\ui\icon_U_BasicBody_ca.paa";
+		model = "\A3\Characters_F\Common\Suitpacks\suitpack_universal_F.p3d";
+		hiddenSelections[] = {"camo"};
+		hiddenSelectionsTextures[] = {"\A3\Characters_F\Common\Suitpacks\data\suitpack_soldier_blufor_co.paa"};
+		class ItemInfo: UniformItem
+		{
+			uniformModel = "-";
+			uniformClass = "HCL_Reno1811_Soldado_WES07";
+			containerClass = "Supply40";
+			mass = 40;
+		};
+	};
+	class HCL_U_Reno1811_WESAC: Uniform_Base
+	{
+		author = "Historical Clothing";
+		scope = 2;
+		displayName = "[HCL] Coat 1809 - Westphalia, Line Infantry (light blue facings)";
+		picture = "\A3\characters_f\data\ui\icon_U_BasicBody_ca.paa";
+		model = "\A3\Characters_F\Common\Suitpacks\suitpack_universal_F.p3d";
+		hiddenSelections[] = {"camo"};
+		hiddenSelectionsTextures[] = {"\A3\Characters_F\Common\Suitpacks\data\suitpack_soldier_blufor_co.paa"};
+		class ItemInfo: UniformItem
+		{
+			uniformModel = "-";
+			uniformClass = "HCL_Reno1811_Soldado_WESAC";
+			containerClass = "Supply40";
+			mass = 40;
+		};
+	};
+	class HCL_U_Reno1811_WESAE: Uniform_Base
+	{
+		author = "Historical Clothing";
+		scope = 2;
+		displayName = "[HCL] Coat 1809 - Westphalia, Line Infantry (dark blue facings, 2nd and 8th Regiments)";
+		picture = "\A3\characters_f\data\ui\icon_U_BasicBody_ca.paa";
+		model = "\A3\Characters_F\Common\Suitpacks\suitpack_universal_F.p3d";
+		hiddenSelections[] = {"camo"};
+		hiddenSelectionsTextures[] = {"\A3\Characters_F\Common\Suitpacks\data\suitpack_soldier_blufor_co.paa"};
+		class ItemInfo: UniformItem
+		{
+			uniformModel = "-";
+			uniformClass = "HCL_Reno1811_Soldado_WESAE";
+			containerClass = "Supply40";
+			mass = 40;
+		};
+	};
 	class HCL_U_Reno1811_WUE01: Uniform_Base
 	{
 		author = "Historical Clothing";
@@ -1169,6 +1261,114 @@ class CfgWeapons
 		{
 			mass = 15;
 			uniformModel = "\hcl\hcl_reno\hcl_h_reno_shako_saxonia_jaeger.p3d";
+			modelSides[] = {0, 1, 2, 3};
+			hiddenSelections[] = {"camo"};
+			class HitpointsProtectionInfo
+			{
+				class Head
+				{
+					hitpointName = "HitHead";
+					armor = 0;
+					passThrough = 1;
+				};
+			};
+		};
+	};
+	class HCL_H_Reno1811_Shako_Vestfalia_Fuzileiro: H_HelmetB
+	{
+		author = "Historical Clothing";
+		scope = 2;
+		displayName = "[HCL] Westphalian Shako 1809 - lozenge plate, white and blue cockade, dark blue pompom";
+		descriptionShort = "HCL test - no protection";
+		picture = "\A3\characters_f\Data\UI\icon_H_helmet_plain_ca.paa";
+		model = "\hcl\hcl_reno\hcl_h_reno_shako_vestfalia_fuzileiro.p3d";
+		hiddenSelections[] = {"camo"};
+		hiddenSelectionsTextures[] = {"\hcl\hcl_reno\data\hcl_shako_vestfalia_fuzileiro_co.paa"};
+		class ItemInfo: ItemInfo
+		{
+			mass = 15;
+			uniformModel = "\hcl\hcl_reno\hcl_h_reno_shako_vestfalia_fuzileiro.p3d";
+			modelSides[] = {0, 1, 2, 3};
+			hiddenSelections[] = {"camo"};
+			class HitpointsProtectionInfo
+			{
+				class Head
+				{
+					hitpointName = "HitHead";
+					armor = 0;
+					passThrough = 1;
+				};
+			};
+		};
+	};
+	class HCL_H_Reno1811_Shako_Vestfalia_Granadeiro_Campanha: H_HelmetB
+	{
+		author = "Historical Clothing";
+		scope = 2;
+		displayName = "[HCL] Westphalian Grenadier Shako 1809 - lozenge plate, red ball pompom";
+		descriptionShort = "HCL test - no protection";
+		picture = "\A3\characters_f\Data\UI\icon_H_helmet_plain_ca.paa";
+		model = "\hcl\hcl_reno\hcl_h_reno_shako_vestfalia_granadeiro_campanha.p3d";
+		hiddenSelections[] = {"camo"};
+		hiddenSelectionsTextures[] = {"\hcl\hcl_reno\data\hcl_shako_vestfalia_granadeiro_campanha_co.paa"};
+		class ItemInfo: ItemInfo
+		{
+			mass = 15;
+			uniformModel = "\hcl\hcl_reno\hcl_h_reno_shako_vestfalia_granadeiro_campanha.p3d";
+			modelSides[] = {0, 1, 2, 3};
+			hiddenSelections[] = {"camo"};
+			class HitpointsProtectionInfo
+			{
+				class Head
+				{
+					hitpointName = "HitHead";
+					armor = 0;
+					passThrough = 1;
+				};
+			};
+		};
+	};
+	class HCL_H_Reno1811_Shako_Vestfalia_Granadeiro_Gala: H_HelmetB
+	{
+		author = "Historical Clothing";
+		scope = 2;
+		displayName = "[HCL] Westphalian Grenadier Shako 1809 - lozenge plate, red plume, white cords";
+		descriptionShort = "HCL test - no protection";
+		picture = "\A3\characters_f\Data\UI\icon_H_helmet_plain_ca.paa";
+		model = "\hcl\hcl_reno\hcl_h_reno_shako_vestfalia_granadeiro_gala.p3d";
+		hiddenSelections[] = {"camo"};
+		hiddenSelectionsTextures[] = {"\hcl\hcl_reno\data\hcl_shako_vestfalia_granadeiro_gala_co.paa"};
+		class ItemInfo: ItemInfo
+		{
+			mass = 15;
+			uniformModel = "\hcl\hcl_reno\hcl_h_reno_shako_vestfalia_granadeiro_gala.p3d";
+			modelSides[] = {0, 1, 2, 3};
+			hiddenSelections[] = {"camo"};
+			class HitpointsProtectionInfo
+			{
+				class Head
+				{
+					hitpointName = "HitHead";
+					armor = 0;
+					passThrough = 1;
+				};
+			};
+		};
+	};
+	class HCL_H_Reno1811_Shako_Vestfalia_Voltigeur_Gala: H_HelmetB
+	{
+		author = "Historical Clothing";
+		scope = 2;
+		displayName = "[HCL] Westphalian Voltigeur Shako 1809 - lozenge plate, green and yellow plume, green cords";
+		descriptionShort = "HCL test - no protection";
+		picture = "\A3\characters_f\Data\UI\icon_H_helmet_plain_ca.paa";
+		model = "\hcl\hcl_reno\hcl_h_reno_shako_vestfalia_voltigeur_gala.p3d";
+		hiddenSelections[] = {"camo"};
+		hiddenSelectionsTextures[] = {"\hcl\hcl_reno\data\hcl_shako_vestfalia_voltigeur_gala_co.paa"};
+		class ItemInfo: ItemInfo
+		{
+			mass = 15;
+			uniformModel = "\hcl\hcl_reno\hcl_h_reno_shako_vestfalia_voltigeur_gala.p3d";
 			modelSides[] = {0, 1, 2, 3};
 			hiddenSelections[] = {"camo"};
 			class HitpointsProtectionInfo

@@ -141,6 +141,11 @@ RENO_UNI = {
     "SAXCL": "Saxony, Line Infantry Regiment 'Prinz Clemens'",
     "SAXLI": "Saxony, Light Infantry",
     "SAXJG": "Saxony, Jaeger",
+    # lot 3 (2026-10-28): Westphalia 1809 (album "Westphalen 1809")
+    "WESAC": "Westphalia, Line Infantry (light blue facings)",
+    "WESAE": "Westphalia, Line Infantry (dark blue facings, 2nd and 8th Regiments)",
+    "WES05": "Westphalia, 5th Line Infantry Regiment (orange facings)",
+    "WES07": "Westphalia, 7th Line Infantry Regiment (yellow collar)",
 }
 RENO_HEAD = {"Raupenhelm_Wurttemberg": "Wuerttemberg Crested Helmet (Raupenhelm) 1811 - brass front plate, red and yellow cockade",
              "Raupenhelm_Baviera": "Bavarian Crested Helmet (Raupenhelm) 1811 - crowned oval plate, white and blue cockade",
@@ -148,7 +153,11 @@ RENO_HEAD = {"Raupenhelm_Wurttemberg": "Wuerttemberg Crested Helmet (Raupenhelm)
              "Shako_Saxonia_Fuzileiro_Koenig": "Saxon Shako 1810 - crowned 'FA' plate, white cords, red pompom",
              "Shako_Saxonia_Granadeiro_Gala": "Saxon Grenadier Shako 1810 - crowned 'FA' plate, red cords and plume",
              "Shako_Saxonia_Ligeira": "Saxon Light Infantry Shako 1810 - crowned 'FA' plate, green cords, green pompom",
-             "Shako_Saxonia_Jaeger": "Saxon Jaeger Shako 1810 - crowned 'FA' plate, green cords, black plume"}
+             "Shako_Saxonia_Jaeger": "Saxon Jaeger Shako 1810 - crowned 'FA' plate, green cords, black plume",
+             "Shako_Vestfalia_Fuzileiro": "Westphalian Shako 1809 - lozenge plate, white and blue cockade, dark blue pompom",
+             "Shako_Vestfalia_Granadeiro_Campanha": "Westphalian Grenadier Shako 1809 - lozenge plate, red ball pompom",
+             "Shako_Vestfalia_Granadeiro_Gala": "Westphalian Grenadier Shako 1809 - lozenge plate, red plume, white cords",
+             "Shako_Vestfalia_Voltigeur_Gala": "Westphalian Voltigeur Shako 1809 - lozenge plate, green and yellow plume, green cords"}
 
 
 def name(cls):
@@ -159,7 +168,8 @@ def name(cls):
         return "Soldier, Confederation of the Rhine 1811" + T
     m = re.fullmatch(r"HCL_U_Reno1811_(\w+)", cls)
     if m and m[1] in RENO_UNI:
-        return f"[HCL] Coat {'1810' if m[1].startswith('SAX') else '1811'} - {RENO_UNI[m[1]]}"
+        yr = "1810" if m[1].startswith("SAX") else "1809" if m[1].startswith("WES") else "1811"
+        return f"[HCL] Coat {yr} - {RENO_UNI[m[1]]}"
     m = re.fullmatch(r"HCL_H_Reno1811_(\w+)", cls)
     if m and m[1] in RENO_HEAD:
         return f"[HCL] {RENO_HEAD[m[1]]}"

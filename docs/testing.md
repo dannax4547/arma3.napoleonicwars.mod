@@ -281,3 +281,18 @@ player forceAddUniform "HCL_U_Reno1811_SAXJG"; removeHeadgear player; player add
 | S2 | Casacas de linha | `HCL_U_Reno1811_SAXKO`, `_SAXNI`, `_SAXAN`, `_SAXLO`, `_SAXMA`, `_SAXRE`, `_SAXFA`, `_SAXCL` | Branco que não estoure com luz forte; cores distintivas |
 | S3 | Ligeira e Jäger | `HCL_U_Reno1811_SAXLI`, `_SAXJG` | Verde com peças pretas, calça cinza |
 | S4 | Nomes no Arsenal | todos | "Coat 1810 - Saxony, Line Infantry Regiment '...'" |
+
+## 13. Confederação do Reno, lote 3 (Vestfália 1809), `hcl_reno.pbo` (2026-10-29, não testado no jogo)
+
+Montagem: 126,5 MB, 12/12 modelos com esqueleto (casaca, 2 capacetes de lagarta, 5 barretinas saxônicas, 4 vestfalianas), `pbo_verify` com 104 referências, nenhuma faltando. O PBO foi empacotado em `release\_atualizacao\hcl_reno.pbo`, porque o da pasta Addons estava em uso (o jogo não estava aberto). Copie-o por cima de `release\@Historical_Clothing\Addons\hcl_reno.pbo` antes de testar. Relatório: `docs/reports/reno_1811.md` §6.
+
+```sqf
+player forceAddUniform "HCL_U_Reno1811_WESAC"; removeHeadgear player; player addHeadgear "HCL_H_Reno1811_Shako_Vestfalia_Voltigeur_Gala";
+player forceAddUniform "HCL_U_Reno1811_WES05"; removeHeadgear player; player addHeadgear "HCL_H_Reno1811_Shako_Vestfalia_Granadeiro_Campanha";
+player forceAddUniform "HCL_U_Reno1811_WESAE"; removeHeadgear player; player addHeadgear "HCL_H_Reno1811_Shako_Vestfalia_Fuzileiro";
+```
+
+| ID | Item | Classes | Observar |
+|---|---|---|---|
+| V1 | Barretinas vestfalianas | `HCL_H_Reno1811_Shako_Vestfalia_Fuzileiro`, `_Granadeiro_Campanha`, `_Granadeiro_Gala`, `_Voltigeur_Gala` | Placa em losango, divisas amarelas dos lados, cocar branco de centro azul |
+| V2 | Casacas | `HCL_U_Reno1811_WESAC`, `_WESAE`, `_WES05`, `_WES07` | Azul-claro, azul-escuro, laranja, gola amarela |

@@ -122,6 +122,20 @@ add("SAXLI", "Saxonia ligeira", "Saxonia 1810, Infantaria Ligeira: casaca verde,
 add("SAXJG", "Saxonia Jaeger", "Saxonia 1810, Jaeger: casaca verde, peças pretas, calca cinza",
     VKS.format("019", "Jaeger"), coat(DKG, BLACK, BLACK, BLACK, BLACK, DKG, BRASS, calca=GREY))
 
+VKF = "aquarela Vinkhuijzen (NYPL), album 'Westphalen 1809', prancha {} ('{}'), legenda do colecionador 🔶"
+# ---- Westphalia 1809 (lot 3, 2026-10-28): white coat of French cut, collar / lapels / cuffs in the facing colour, white
+# breeches; index of scratchpad/fontes_reno/wes_thumbs (NYPL ids in the spec). Buttons yellow (061) for all ❓.
+WES = [  # key, plates, caption, collar, lapels, cuffs, text
+    ("WESAC", "006, 007", "Linie Grenadier / Linie Voltigeur", LBLUE, LBLUE, LBLUE, "Linha, peças azul-claras"),
+    ("WESAE", "000, 046, 047", "Infanterie; Fusilier du 8e; Grenadier du 2e de ligne", DKB, DKB, DKB,
+     "Linha, peças azul-escuras (2o e 8o de Linha)"),
+    ("WES05", "004, 005", "5. Linie Regiment, Grenadier / Voltigeur-Musketier", ORANGE, ORANGE, ORANGE, "5o de Linha, laranja"),
+    ("WES07", "061", "Voltigeur 7me R. d'Inf. de ligne", YEL, DKB, DKB, "7o de Linha, gola amarela, lapelas e canhoes escuros 🔶"),
+]
+for key, pl, cap, gola, lap, punho, txt in WES:
+    add(key, f"Vestfalia {txt.split(',')[0]}", f"Vestfalia 1809, {txt}: casaca branca", VKF.format(pl, cap),
+        coat(WHI, gola, lap, punho, gola, WHI, BRASS, calca=WHI))
+
 out = sys.argv[1]
 os.makedirs(out, exist_ok=True)
 json.dump(V, open(os.path.join(out, "variantes_reno.json"), "w", encoding="utf-8"), ensure_ascii=False, indent=1)

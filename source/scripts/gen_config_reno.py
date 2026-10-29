@@ -19,6 +19,10 @@ HEAD = [(f"hcl_h_reno_raupenhelm_{t}", f"hcl_raupenhelm_{t}", f"Raupenhelm_{c}",
 HEAD += [(f"hcl_h_reno_shako_saxonia_{t}", f"hcl_shako_saxonia_{t}",
           "Shako_Saxonia_" + "_".join(x.capitalize() for x in t.split("_")), f"hcl_shako_saxonia_{t}")
          for t in ("fuzileiro", "fuzileiro_koenig", "granadeiro_gala", "ligeira", "jaeger")]
+# lot 3 (2026-10-28): Westphalian shakos 1809
+HEAD += [(f"hcl_h_reno_shako_vestfalia_{t}", f"hcl_shako_vestfalia_{t}",
+          "Shako_Vestfalia_" + "_".join(x.capitalize() for x in t.split("_")), f"hcl_shako_vestfalia_{t}")
+         for t in ("fuzileiro", "granadeiro_campanha", "granadeiro_gala", "voltigeur_gala")]
 
 
 def cls_u(v):            # WUE01 -> HCL_U_Reno1811_WUE01

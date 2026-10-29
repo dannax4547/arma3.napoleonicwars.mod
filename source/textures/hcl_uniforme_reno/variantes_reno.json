@@ -4016,5 +4016,397 @@
     0.08
    ]
   }
+ },
+ "WESAC": {
+  "prefixo": "hcl_u_reno1811_wesac",
+  "curto": "Vestfalia Linha",
+  "nome": "Vestfalia 1809, Linha, peças azul-claras: casaca branca",
+  "fonte": "aquarela Vinkhuijzen (NYPL), album 'Westphalen 1809', prancha 006, 007 ('Linie Grenadier / Linie Voltigeur'), legenda do colecionador 🔶",
+  "cores": {
+   "casaca": [
+    0.86,
+    0.85,
+    0.8
+   ],
+   "gola": [
+    0.42,
+    0.6,
+    0.84
+   ],
+   "gola_debrum": [
+    0.42,
+    0.6,
+    0.84
+   ],
+   "lapela": [
+    0.42,
+    0.6,
+    0.84
+   ],
+   "lapela_debrum": [
+    0.42,
+    0.6,
+    0.84
+   ],
+   "punho": [
+    0.42,
+    0.6,
+    0.84
+   ],
+   "punho_debrum": [
+    0.42,
+    0.6,
+    0.84
+   ],
+   "pala": [
+    0.86,
+    0.85,
+    0.8
+   ],
+   "debrum": [
+    0.42,
+    0.6,
+    0.84
+   ],
+   "viras": [
+    0.86,
+    0.85,
+    0.8
+   ],
+   "viras_debrum": [
+    0.42,
+    0.6,
+    0.84
+   ],
+   "platina": [
+    0.86,
+    0.85,
+    0.8
+   ],
+   "platina_borda": [
+    0.42,
+    0.6,
+    0.84
+   ],
+   "botoes": [
+    0.8,
+    0.62,
+    0.28
+   ],
+   "calca": [
+    0.86,
+    0.85,
+    0.8
+   ],
+   "polaina": [
+    0.06,
+    0.06,
+    0.07
+   ],
+   "sapato": [
+    0.03,
+    0.028,
+    0.025
+   ],
+   "sola": [
+    0.2,
+    0.13,
+    0.08
+   ]
+  }
+ },
+ "WESAE": {
+  "prefixo": "hcl_u_reno1811_wesae",
+  "curto": "Vestfalia Linha",
+  "nome": "Vestfalia 1809, Linha, peças azul-escuras (2o e 8o de Linha): casaca branca",
+  "fonte": "aquarela Vinkhuijzen (NYPL), album 'Westphalen 1809', prancha 000, 046, 047 ('Infanterie; Fusilier du 8e; Grenadier du 2e de ligne'), legenda do colecionador 🔶",
+  "cores": {
+   "casaca": [
+    0.86,
+    0.85,
+    0.8
+   ],
+   "gola": [
+    0.08,
+    0.1,
+    0.24
+   ],
+   "gola_debrum": [
+    0.08,
+    0.1,
+    0.24
+   ],
+   "lapela": [
+    0.08,
+    0.1,
+    0.24
+   ],
+   "lapela_debrum": [
+    0.08,
+    0.1,
+    0.24
+   ],
+   "punho": [
+    0.08,
+    0.1,
+    0.24
+   ],
+   "punho_debrum": [
+    0.08,
+    0.1,
+    0.24
+   ],
+   "pala": [
+    0.86,
+    0.85,
+    0.8
+   ],
+   "debrum": [
+    0.08,
+    0.1,
+    0.24
+   ],
+   "viras": [
+    0.86,
+    0.85,
+    0.8
+   ],
+   "viras_debrum": [
+    0.08,
+    0.1,
+    0.24
+   ],
+   "platina": [
+    0.86,
+    0.85,
+    0.8
+   ],
+   "platina_borda": [
+    0.08,
+    0.1,
+    0.24
+   ],
+   "botoes": [
+    0.8,
+    0.62,
+    0.28
+   ],
+   "calca": [
+    0.86,
+    0.85,
+    0.8
+   ],
+   "polaina": [
+    0.06,
+    0.06,
+    0.07
+   ],
+   "sapato": [
+    0.03,
+    0.028,
+    0.025
+   ],
+   "sola": [
+    0.2,
+    0.13,
+    0.08
+   ]
+  }
+ },
+ "WES05": {
+  "prefixo": "hcl_u_reno1811_wes05",
+  "curto": "Vestfalia 5o de Linha",
+  "nome": "Vestfalia 1809, 5o de Linha, laranja: casaca branca",
+  "fonte": "aquarela Vinkhuijzen (NYPL), album 'Westphalen 1809', prancha 004, 005 ('5. Linie Regiment, Grenadier / Voltigeur-Musketier'), legenda do colecionador 🔶",
+  "cores": {
+   "casaca": [
+    0.86,
+    0.85,
+    0.8
+   ],
+   "gola": [
+    0.85,
+    0.42,
+    0.12
+   ],
+   "gola_debrum": [
+    0.85,
+    0.42,
+    0.12
+   ],
+   "lapela": [
+    0.85,
+    0.42,
+    0.12
+   ],
+   "lapela_debrum": [
+    0.85,
+    0.42,
+    0.12
+   ],
+   "punho": [
+    0.85,
+    0.42,
+    0.12
+   ],
+   "punho_debrum": [
+    0.85,
+    0.42,
+    0.12
+   ],
+   "pala": [
+    0.86,
+    0.85,
+    0.8
+   ],
+   "debrum": [
+    0.85,
+    0.42,
+    0.12
+   ],
+   "viras": [
+    0.86,
+    0.85,
+    0.8
+   ],
+   "viras_debrum": [
+    0.85,
+    0.42,
+    0.12
+   ],
+   "platina": [
+    0.86,
+    0.85,
+    0.8
+   ],
+   "platina_borda": [
+    0.85,
+    0.42,
+    0.12
+   ],
+   "botoes": [
+    0.8,
+    0.62,
+    0.28
+   ],
+   "calca": [
+    0.86,
+    0.85,
+    0.8
+   ],
+   "polaina": [
+    0.06,
+    0.06,
+    0.07
+   ],
+   "sapato": [
+    0.03,
+    0.028,
+    0.025
+   ],
+   "sola": [
+    0.2,
+    0.13,
+    0.08
+   ]
+  }
+ },
+ "WES07": {
+  "prefixo": "hcl_u_reno1811_wes07",
+  "curto": "Vestfalia 7o de Linha",
+  "nome": "Vestfalia 1809, 7o de Linha, gola amarela, lapelas e canhoes escuros 🔶: casaca branca",
+  "fonte": "aquarela Vinkhuijzen (NYPL), album 'Westphalen 1809', prancha 061 ('Voltigeur 7me R. d'Inf. de ligne'), legenda do colecionador 🔶",
+  "cores": {
+   "casaca": [
+    0.86,
+    0.85,
+    0.8
+   ],
+   "gola": [
+    0.8,
+    0.6,
+    0.12
+   ],
+   "gola_debrum": [
+    0.8,
+    0.6,
+    0.12
+   ],
+   "lapela": [
+    0.08,
+    0.1,
+    0.24
+   ],
+   "lapela_debrum": [
+    0.8,
+    0.6,
+    0.12
+   ],
+   "punho": [
+    0.08,
+    0.1,
+    0.24
+   ],
+   "punho_debrum": [
+    0.8,
+    0.6,
+    0.12
+   ],
+   "pala": [
+    0.86,
+    0.85,
+    0.8
+   ],
+   "debrum": [
+    0.8,
+    0.6,
+    0.12
+   ],
+   "viras": [
+    0.86,
+    0.85,
+    0.8
+   ],
+   "viras_debrum": [
+    0.8,
+    0.6,
+    0.12
+   ],
+   "platina": [
+    0.86,
+    0.85,
+    0.8
+   ],
+   "platina_borda": [
+    0.8,
+    0.6,
+    0.12
+   ],
+   "botoes": [
+    0.8,
+    0.62,
+    0.28
+   ],
+   "calca": [
+    0.86,
+    0.85,
+    0.8
+   ],
+   "polaina": [
+    0.06,
+    0.06,
+    0.07
+   ],
+   "sapato": [
+    0.03,
+    0.028,
+    0.025
+   ],
+   "sola": [
+    0.2,
+    0.13,
+    0.08
+   ]
+  }
  }
 }

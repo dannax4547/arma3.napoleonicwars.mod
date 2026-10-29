@@ -1,0 +1,47 @@
+{
+ "image": "C:/Users/lucas/Documents/HistoricalClothing/work/ntw/reno/WestphaliaINF_diffuse.png",
+ "box": [
+  1530,
+  2044,
+  1706,
+  2224
+ ],
+ "iso": null,
+ "nota": "Losango da barretina da Vestfalia (atlas WestphaliaINF c3 r4, Reto). A regiao do atlas e igual a do ItalyINF (comparada em 2026-10-28; so uma faixa clara no topo da caixa difere), por isso o contorno e o mesmo de placa_losango_italia.json. Original: Losango do Reino da Italia (atlas ItalyINF c3 r4, Reto). A regiao do atlas e identica pixel a pixel a do FranceINF (medido 2026-10-18 por limiar de cor), por isso o contorno e o mesmo de hcl_shako_fr/placa_losango.json.",
+ "loops": [
+  [
+   [
+    80.25,
+    13.0
+   ],
+   [
+    93.75,
+    13.0
+   ],
+   [
+    161.0,
+    82.74
+   ],
+   [
+    161.0,
+    97.26
+   ],
+   [
+    93.75,
+    167.0
+   ],
+   [
+    80.25,
+    167.0
+   ],
+   [
+    13.0,
+    97.26
+   ],
+   [
+    13.0,
+    82.74
+   ]
+  ]
+ ]
+}

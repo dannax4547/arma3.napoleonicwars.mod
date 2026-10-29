@@ -8,6 +8,13 @@
 #     "Prinz Clemens": white 🔶), the grenadier (plate 006) with a tall RED plume and RED cords and tassels, the light
 #     infantry (020) with GREEN cords and a small red-and-green tuft (here a green pompom 🔶), the Jaeger (019) with a
 #     tall BLACK plume and green cords. Same crowned plate for all (the light plates are too small to read it 🔶).
+#   - nacao=vestfalia (2026-10-28): Westphalia, Vinkhuijzen albums "1809" [VK-REN] (session index of
+#     scratchpad/fontes_reno/wes_thumbs): every line shako has a brass LOZENGE plate and YELLOW side chevrons (004-007,
+#     061); the cockade is WHITE with a BLUE centre (061), not the French tricolour. The mod art (WestphaliaINF c3 r4) is
+#     the generic French shako: its lozenge is pixel-identical to ItalyINF's, so the outline is the Italian one
+#     (placa_losango_vestfalia.json) and the relief (an eagle) comes from the mod art 🔶 (the watercolours are too small
+#     to read the plate's device). Fusilier: dark blue pompom (046, "Fusilier du 8e"); grenadier: tall red plume (006)
+#     and white cords (000), campaign red ball (004); voltigeur: green plume with a yellow tip (007), green cords (061).
 # The Italian / Neapolitan notes of the source script, kept for the record:
 #   - nacao=italia: the brass LOZENGE plate of the mod art (ItalyINF c3 r4; the atlas region is identical to FranceINF's,
 #     so the measured outline is the French one, copied as placa_losango_italia.json); cockade red ring, white ring,
@@ -33,7 +40,7 @@ args = sys.argv[sys.argv.index("--") + 1:]
 SAMPLES, OUT_BLEND, RENDER_DIR = args[:3]
 OPT = dict(a.split("=", 1) for a in args[3:] if "=" in a)
 NACAO = OPT.get("nacao", "saxonia")
-RAIZ = {"saxonia": "SX_"}[NACAO]
+RAIZ = {"saxonia": "SX_", "vestfalia": "WF_"}[NACAO]
 # absolute paths: Blender resolves a relative render path against the drive root when no .blend is open (renders of
 # 2026-10-10 and 2026-10-12 landed in C:\docs\... that way)
 OUT_BLEND, RENDER_DIR = os.path.abspath(OUT_BLEND), os.path.abspath(RENDER_DIR)
@@ -85,8 +92,9 @@ def wall_n(theta, z):
 
 
 SHK_DIR = os.path.abspath(OPT["dir"])                # source/models/shakos/hcl_shako_reno
-PLATES = {"saxonia": os.path.join(SHK_DIR, "placa_saxonia.json")}
-PLATE_W = {"saxonia": 0.076}                        # the crowned shield is 0.62 as wide as high
+PLATES = {"saxonia": os.path.join(SHK_DIR, "placa_saxonia.json"),
+          "vestfalia": os.path.join(SHK_DIR, "placa_losango_vestfalia.json")}
+PLATE_W = {"saxonia": 0.076, "vestfalia": 0.118}    # the crowned shield is 0.62 as wide as high; the lozenge as Italy's
 ATLAS_PX = 4096
 ROSETTE_BOX = (1726, 2268, 1776, 2323)             # star rosette, same place in saxonINF1812 (tile c3 r4)
 COL = dict(feltro=(0.015, 0.015, 0.016), couro=(0.03, 0.025, 0.02), latao=(0.70, 0.50, 0.16), ganse=(0.55, 0.54, 0.50),
@@ -504,7 +512,8 @@ def shako(tag, x_off, lace, chevron, top, cords=None, rank_bands=None, plate=Non
     zc = H - COCK_R - 0.004
     c0 = P(0, zc, 0.0018); nc = wall_n(0, zc)
     # Saxony: a white cockade (mod art saxonINF1812 c3 r4)
-    rings = {"saxonia": ("branco", "branco", "branco")}[NACAO]
+    rings = {"saxonia": ("branco", "branco", "branco"),
+             "vestfalia": ("branco", "azul", "azul")}[NACAO]          # Westphalia: white rim, blue centre (061)
     pleated(f"{tag}_cocar_fora", c0, nc, COCK_R * 0.62, COCK_R, 0.003, 36, rings[0], root)
     pleated(f"{tag}_cocar_meio", c0 + nc * 0.0012, nc, COCK_R * 0.30, COCK_R * 0.66, 0.003, 28, rings[1], root)
     disc(f"{tag}_cocar_centro", c0 + nc * 0.0036, nc, COCK_R * 0.33, 0.0015, rings[2], root, segs=32)
@@ -520,8 +529,10 @@ def shako(tag, x_off, lace, chevron, top, cords=None, rank_bands=None, plate=Non
     # plate traced from the mod art (grenadiers: the plate flanked by two grenades), between the bottom band and the
     # cockade
     plate_kind = plate or NACAO
-    # Saxony: the crown of the shield stays clear BELOW the cockade (at 0.55 x its radius it was hidden behind it)
-    traced_plate(f"{tag}_placa", PLATES[plate_kind], BAND_BOT + 0.003, zc - COCK_R - 0.003,
+    # Saxony: the crown of the shield stays clear BELOW the cockade (at 0.55 x its radius it was hidden behind it);
+    # the lozenge's top point goes under the cockade as on the French and Italian shakos
+    z_top_pl = zc - COCK_R - 0.003 if plate_kind == "saxonia" else zc - COCK_R * 0.55
+    traced_plate(f"{tag}_placa", PLATES[plate_kind], BAND_BOT + 0.003, z_top_pl,
                  PLATE_W[plate_kind], 0.0024, metal, root)
     # top ornament
     front_top = P(0, H, -0.010)
@@ -584,6 +595,11 @@ VARIANTS = {  # tag, lace, chevrons, top ornament, cords
                 ("granadeiro_gala", None, False, ("plumet", [(0.0, "vermelho")]), "vermelho"),     # 006 grenadier
                 ("ligeira", None, False, ("lentilha", "verde"), "verde"),                          # 020 light infantry 🔶
                 ("jaeger", None, False, ("plumet", [(0.0, "preto")]), "verde")],                   # 019 Jaeger
+    # Westphalia 1809: yellow side chevrons on every shako
+    "vestfalia": [("fuzileiro", None, "amarelo", ("lentilha", "azul"), None),                          # 046
+                  ("granadeiro_campanha", None, "amarelo", ("bola", "vermelho"), None),                # 004
+                  ("granadeiro_gala", None, "amarelo", ("plumet", [(0.0, "vermelho")]), "branco"),     # 006, 000
+                  ("voltigeur_gala", None, "amarelo", ("plumet", [(0.0, "verde"), (0.75, "amarelo")]), "verde")],  # 007, 061
 }[NACAO]
 SPACING = 0.42
 roots = [shako(t, i * SPACING, *rest) for i, (t, *rest) in enumerate(VARIANTS)]

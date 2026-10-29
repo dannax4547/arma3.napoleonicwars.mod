@@ -22,7 +22,8 @@ LOG = []
 HELMET_TAGS = ["wurttemberg", "baviera"]
 HELMET_BLEND = r"source\models\raupenhelm\hcl_raupenhelm\hcl_raupenhelm_texturas_{}.blend"
 # lot 2 (2026-10-27): Saxon shakos 1810 (blockout_shako_reno.py nacao=saxonia + texturizar_aliados.py raiz=SX_)
-SHAKO_TAGS = {"saxonia": ["fuzileiro", "fuzileiro_koenig", "granadeiro_gala", "ligeira", "jaeger"]}
+SHAKO_TAGS = {"saxonia": ["fuzileiro", "fuzileiro_koenig", "granadeiro_gala", "ligeira", "jaeger"],
+              "vestfalia": ["fuzileiro", "granadeiro_campanha", "granadeiro_gala", "voltigeur_gala"]}   # lot 3 (2026-10-28): Westphalia 1809
 SHAKO_BLEND = r"source\models\shakos\hcl_shako_reno\hcl_shako_{}_texturas.blend"
 
 

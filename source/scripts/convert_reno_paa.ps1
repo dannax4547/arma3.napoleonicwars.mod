@@ -21,6 +21,10 @@ foreach ($g in "wurttemberg", "baviera") {
 foreach ($g in "fuzileiro", "fuzileiro_koenig", "granadeiro_gala", "ligeira", "jaeger") {
     foreach ($s in "co", "nohq", "smdi") { $jobs += , @("$t\hcl_shako_reno\hcl_shako_saxonia_${g}_${s}.png", "$dst\hcl_shako_saxonia_${g}_${s}.paa") }
 }
+# lot 3 (2026-10-28): Westphalian shakos 1809
+foreach ($g in "fuzileiro", "granadeiro_campanha", "granadeiro_gala", "voltigeur_gala") {
+    foreach ($s in "co", "nohq", "smdi") { $jobs += , @("$t\hcl_shako_reno\hcl_shako_vestfalia_${g}_${s}.png", "$dst\hcl_shako_vestfalia_${g}_${s}.paa") }
+}
 
 $fail = 0
 New-Item -ItemType Directory -Force $dst | Out-Null

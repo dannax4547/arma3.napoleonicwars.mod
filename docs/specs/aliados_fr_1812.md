@@ -188,6 +188,22 @@ A Guarda (037/038, barretina de pele) e o granadeiro com casaca de dragonas (006
 | 007 | "Garde Jäger" | verde-escura |
 | 009 | "Leichte Infanterie" | verde-escura, calça com faixa amarela |
 
+Releitura de 2026-10-28 (lote 3). A lista da categoria foi baixada de novo e a numeração mudou: o índice novo está em `scratchpad/fontes_reno/wes_thumbs/indice.txt`, e os IDs NYPL abaixo valem para qualquer numeração. Pranchas em alta resolução: 004–007, 061–063, 094, 095. As 000, 046 e 047 foram lidas só nas miniaturas.
+
+| Índice novo (NYPL) | Legenda | O que mostra |
+|---|---|---|
+| 000 (b14896507-1513554) | "Westphalia - Infanterie" | Granadeiro: casaca branca, gola e canhões azul-escuros, dragonas vermelhas; barretina de **placa em losango**, cordões **brancos**, pluma vermelha |
+| 004 (-1513530) | "5. Linie Regiment, Grenadier" | Lapelas **laranja**, dragonas vermelhas, pompom vermelho; barretina de placa em losango e **divisas amarelas** |
+| 005 (-1513531) | "5. Linie Regiment, Voltigeur-Musketier" | Lapelas laranja, pompom escuro |
+| 006 (-1513532) | "Linie Grenadier" | Lapelas **azul-claras**, dragonas vermelhas, pluma vermelha alta |
+| 007 (-1513533) | "Linie Voltigeur" | Lapelas azul-claras, pluma **verde com ponta amarela** |
+| 010 | "Leichte Infanterie" (fila) | Verde-escura, calça escura com faixa amarela; pequena demais para ler as peças ❓ (fica para depois) |
+| 046 (-1513380) | "Fusilier du 8e d'Inf de ligne" | Casaca branca, peças azul-escuras, pompom **azul-escuro**, patrona com "8" |
+| 047 (-1513385) | "Grenadier du 2e de ligne en tenue de campagne" | Peças azul-escuras, dragonas vermelhas, barretina de pele |
+| 061 (-1513381) | "Voltigeur 7me R. d'Inf. de ligne" | Gola **amarela**, lapelas e canhões escuros 🔶, dragonas verdes; barretina com divisas amarelas, cordões e pompom verdes, **cocar branco de centro azul** |
+
+Barretina vestefaliana: corpo francês com placa de latão em losango, divisas amarelas e cocar branco de centro azul (061; não o tricolor francês da arte do mod). A arte do mod (`WestphaliaINF` c3 r4) é a barretina genérica francesa. O losango é igual pixel a pixel ao do `ItalyINF`, por isso o contorno é o italiano, e o relevo (uma águia) vem da arte 🔶, já que as aquarelas são pequenas demais para ler a placa. O conflito azul-escuro × azul-claro (§2.4) fica com as duas versões: as filas de 1809 (006, 007) mostram azul-claro, e as figuras do 2º e do 8º (046, 047) e a 000 mostram azul-escuro.
+
 ### 2.1 Württemberg — o grupo com melhor fonte de cores
 
 | Item | Valor | Confiança |
