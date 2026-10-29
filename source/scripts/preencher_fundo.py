@@ -3,15 +3,18 @@
 # blend that black into the islands' edges (black seams, worst on white cloth). Every exactly-black pixel is filled
 # by push-pull from the surrounding islands (average of the valid pixels at each coarser level, then back up), so the
 # islands' own pixels stay identical and the background takes the colour of the nearest cloth.
-#   blender -b --factory-startup --python preencher_fundo.py -- <png or folder> [...]
-# Folders: every *_co.png in them (not recursive). Run after the bake / painter, before the PAA conversion.
+#   blender -b --factory-startup --python preencher_fundo.py -- <png | folder | @list.txt> [...]
+# Folders: every *_co.png in them (not recursive); @list.txt: the png paths listed in it, one per line. Run after the
+# bake / painter, before the PAA conversion.
 import bpy, sys, os
 import numpy as np
 
 args = sys.argv[sys.argv.index("--") + 1:]
 files = []
 for a in args:
-    if os.path.isdir(a):
+    if a.startswith("@"):                            # @list.txt: one png path per line
+        files += [l.strip() for l in open(a[1:], encoding="utf-8") if l.strip()]
+    elif os.path.isdir(a):
         files += sorted(os.path.join(a, f) for f in os.listdir(a) if f.lower().endswith("_co.png"))
     else:
         files.append(a)
