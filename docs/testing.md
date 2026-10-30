@@ -308,3 +308,19 @@ Correção: `source/scripts/preencher_fundo.py` preenche só os pixels de preto 
 | P1 | Casacas brancas (Saxônia, Vestfália, Itália, 13º de Varsóvia) e calças brancas: sem riscos nem manchas pretas nas costuras, de perto e de longe |
 | P2 | Cordões e plumas brancos, cocares: sem contorno preto |
 | P3 | França, Reino Unido, Portugal, Brunswick, KGL, Hanôver e Prússia: as mesmas costuras, sobretudo em calças, coletes e correames brancos |
+
+## 15. Correção do §14: tira do assento da calça sem pintura (2026-10-30, não testado no jogo)
+
+O diagnóstico do §14 estava errado. A imagem do usuário mostrou um mosaico cinza, vermelho e verde no assento da calça de uma casaca italiana. O "preto nas partes brancas" não eram costuras: era a tira do assento e da virilha da calça de peça única, criada por `unir_calca.py` em 2026-10-19 14:50 no modelo francês de linha (`hcl_uniforme_fr_LOD0.blend`) e colocada em espaço livre da textura. As casacas pintadas antes disso não tinham tinta nessa tira. Ela aparecia preta, e o preenchimento do §14 trocou o preto pelas cores das peças vizinhas.
+
+Medição: em cada casaca da França, 140 faces da calça (7,9 % da área da farda) estavam sobre preto puro nas cópias `_antes_fundo`. Suíça, Varsóvia e Itália não têm cópias e deram o mesmo sinal na medida da cor da calça. As 45 casacas do Reno foram pintadas depois da mudança e estão certas. Nos outros modelos só as mãos ficam fora da pintura, o que é normal porque elas usam a textura do jogo. Dessas, Portugal, caçadores, Brunswick e Prússia foram testados por amostra; a Prússia passou também na medida da calça em todas as 17.
+
+Correção: as 33 casacas afetadas (França 4, Suíça 4, Varsóvia 5, Itália e Nápoles 20) foram pintadas de novo sobre o modelo atual, verificadas antes do preenchimento, e os quatro PBOs remontados. O preenchimento continua, mas só deve rodar depois de verificar que nenhuma face ficou sem pintura.
+
+Verificação fora do jogo: antes do preenchimento, nenhuma face da calça sobre preto puro nas 33 casacas; a medida da cor da calça ficou igual à do Reno (19,7–20 % nas calças brancas, por causa das sombras nas dobras; 0 % nas escuras). Renders de perto do assento (`HCL_U_Italia1812_IT03`, `HCL_U_Fr1812_F01`) sem mosaico. `hcl_fr` 151,3 MB (19 modelos com esqueleto, 122 referências), `hcl_suica` 60,3 MB (7, 48), `hcl_varsovia` 97,2 MB (10, 74), `hcl_italia` 153,5 MB (17, 121), nenhuma referência faltando.
+
+Continua pendente: uma linha fina e escura na cintura, na frente, em todas as casacas deste modelo. É a faixa da primeira versão da calça (remaster de 19/10), ainda não reparada.
+
+| ID | Observar |
+|---|---|
+| T1 | Assento e virilha da calça nas 33 casacas: da mesma cor da calça, sem mosaico nem preto (ex.: `HCL_U_Italia1812_IT03`, `HCL_U_Fr1812_F01`, `HCL_U_Suica1812_S1`, `HCL_U_Varsovia1810_L1810`) |
