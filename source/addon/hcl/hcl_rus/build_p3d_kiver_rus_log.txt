@@ -1,0 +1,9 @@
+MODELO hcl_h_fr_fuzileiro_losango.p3d: LODs 1, 2, 1100, 10000, 1e+13; visuais com LODNoShadow=1; View Pilot e Geometry copiados
+KIVER 1808_granadeiro: Res 1-4 5310 / 2654 / 1326 / 530 triangulos (100 % / 50 % / 25 % / 10 %); sombra 360 triangulos em 3 cascos (kiver, pompom, pluma), arestas abertas 0; base do corpo z 0.700; altura 0.576..1.361; partes removidas Res 2-4 0/0/7; rvmat couro, crina, feltro, la, latao, pano, verniz
+P3D hcl_h_rus1808_granadeiro.p3d: 7 LODs 1:2786p/5310f, 2:1459p/2654f, 3:731p/1326f, 4:312p/530f, 1100:0p/0f, 10000:186p/360f, 1e+13:0p/0f
+KIVER 1808_mosqueteiro: Res 1-4 4694 / 2346 / 1172 / 468 triangulos (100 % / 50 % / 25 % / 10 %); sombra 188 triangulos em 2 cascos (kiver, pompom), arestas abertas 0; base do corpo z 0.700; altura 0.576..1.005; partes removidas Res 2-4 0/0/5; rvmat couro, feltro, la, latao, pano, verniz
+P3D hcl_h_rus1808_mosqueteiro.p3d: 7 LODs 1:2470p/4694f, 2:1297p/2346f, 3:646p/1172f, 4:277p/468f, 1100:0p/0f, 10000:98p/188f, 1e+13:0p/0f
+KIVER 1812_granadeiro: Res 1-4 5244 / 2622 / 1307 / 523 triangulos (100 % / 50 % / 25 % / 10 %); sombra 340 triangulos em 3 cascos (kiver, pompom, pluma), arestas abertas 0; base do corpo z 0.700; altura 0.573..1.347; partes removidas Res 2-4 0/0/7; rvmat couro, crina, la, latao, pano, verniz
+P3D hcl_h_rus1812_granadeiro.p3d: 7 LODs 1:2753p/5244f, 2:1434p/2622f, 3:720p/1307f, 4:309p/523f, 1100:0p/0f, 10000:176p/340f, 1e+13:0p/0f
+KIVER 1812_mosqueteiro: Res 1-4 4628 / 2314 / 1157 / 463 triangulos (100 % / 50 % / 25 % / 10 %); sombra 180 triangulos em 2 cascos (kiver, pompom), arestas abertas 0; base do corpo z 0.700; altura 0.573..0.991; partes removidas Res 2-4 0/0/5; rvmat couro, la, latao, pano, verniz
+P3D hcl_h_rus1812_mosqueteiro.p3d: 7 LODs 1:2437p/4628f, 2:1272p/2314f, 3:637p/1157f, 4:275p/463f, 1100:0p/0f, 10000:94p/180f, 1e+13:0p/0f

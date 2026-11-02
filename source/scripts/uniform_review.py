@@ -21,7 +21,27 @@ bm.verts.ensure_lookup_table(); bm.faces.ensure_lookup_table()
 PART = bm.faces.layers.int.get("hcl_part")
 parts = ob["hcl_partes"].split(",")
 mats = [m.name for m in me.materials]
-body = Body(os.path.join(samples, "A3_character_example.p3d"))
+class BlendBody:
+    """Without the Samples: the official example body already imported into the project
+    (source/models/coats/hcl_uniforme_pruss/ref_corpo_arma3_samples.blend, object REF_A3_character_example_LOD0),
+    without its proxy points. Gives the two members used here: bvh and H()."""
+    def __init__(self, path):
+        with bpy.data.libraries.load(os.path.abspath(path), link=False) as (src, dst):
+            dst.objects = ["REF_A3_character_example_LOD0"]
+        o = dst.objects[0]
+        names = {g.index: g.name.lower() for g in o.vertex_groups}
+        proxy = {v.index for v in o.data.vertices
+                 if any(names[g.group].startswith(("proxy", "-")) for g in v.groups if g.weight > 0)}
+        pts = [o.matrix_world @ v.co for v in o.data.vertices]
+        polys = [list(p.vertices) for p in o.data.polygons if not proxy & set(p.vertices)]
+        self.bvh = BVHTree.FromPolygons(pts, polys)
+        self.ground = min(pts[i].z for p in polys for i in p)
+
+    def H(self, z):
+        return z - self.ground
+
+
+body = BlendBody(samples) if samples.lower().endswith(".blend") else Body(os.path.join(samples, "A3_character_example.p3d"))
 budget = 12000
 
 print(f"REVIEW {name}: verts={len(bm.verts)} faces={len(bm.faces)} parts={len(parts)}")

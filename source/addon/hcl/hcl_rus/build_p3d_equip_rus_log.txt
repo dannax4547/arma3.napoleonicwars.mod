@@ -1,0 +1,7 @@
+hcl_v_rus1812_correame: Res 1 3176 triangles, 1627 points; bones ['LeftArm', 'LeftShoulder', 'LeftUpLeg', 'Pelvis', 'RightArm', 'RightShoulder', 'RightUpLeg', 'Spine', 'Spine1', 'Spine2', 'Spine3', 'neck']
+P3D hcl_v_rus1812_correame.p3d: 2 LODs 1:1627p/3176f, 1e+13:0p/0f
+hcl_v_rus1812_correame.rvmat written
+hcl_b_rus1812_mochila: greatcoat roll removed (capote, capote_correia, capote_fivela, capote_ponta), 1208 faces left
+hcl_b_rus1812_mochila: Res 1 2456 triangles, 1260 points; bones ['LeftArm', 'LeftShoulder', 'Pelvis', 'RightArm', 'RightShoulder', 'Spine', 'Spine1', 'Spine2', 'Spine3', 'neck']
+P3D hcl_b_rus1812_mochila.p3d: 2 LODs 1:1260p/2456f, 1e+13:0p/0f
+hcl_b_rus1812_mochila.rvmat written

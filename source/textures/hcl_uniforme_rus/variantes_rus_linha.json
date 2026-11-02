@@ -1,0 +1,294 @@
+{
+ "R01": {
+  "prefixo": "hcl_u_rus1812_linha_v01",
+  "nome": "Mosqueteiros, casaca de 1812 verde-escura, gola, punhos e viradas vermelhos, portinhola verde-escura, calca branca, polainas pretas ate o joelho; 1o regimento da divisao: platina vermelha",
+  "fonte": "V10B (tabela de 30 abr 1802; ordens de 7 nov 1807, 9 jan 1810 e 1 jan 1812); dossie HIST-RUS-INF-COAT-1812-001 C10-C13. Tons ESTIMADOS (sem atlas do mod nesta maquina)",
+  "curto": "platina vermelha",
+  "cores": {
+   "casaca": [
+    0.08,
+    0.17,
+    0.11
+   ],
+   "gola": [
+    0.56,
+    0.09,
+    0.1
+   ],
+   "punho": [
+    0.56,
+    0.09,
+    0.1
+   ],
+   "viras": [
+    0.56,
+    0.09,
+    0.1
+   ],
+   "pala": [
+    0.08,
+    0.17,
+    0.11
+   ],
+   "debrum": [
+    0.08,
+    0.17,
+    0.11
+   ],
+   "botoes": [
+    0.8,
+    0.62,
+    0.28
+   ],
+   "calca": [
+    0.8,
+    0.79,
+    0.74
+   ],
+   "polaina": [
+    0.045,
+    0.045,
+    0.045
+   ],
+   "sapato": [
+    0.03,
+    0.028,
+    0.025
+   ],
+   "sola": [
+    0.2,
+    0.13,
+    0.08
+   ],
+   "platina": [
+    0.56,
+    0.09,
+    0.1
+   ],
+   "platina_borda": [
+    0.56,
+    0.09,
+    0.1
+   ]
+  }
+ },
+ "R02": {
+  "prefixo": "hcl_u_rus1812_linha_v02",
+  "nome": "Mosqueteiros, casaca de 1812 verde-escura, gola, punhos e viradas vermelhos, portinhola verde-escura, calca branca, polainas pretas ate o joelho; 2o regimento da divisao: platina branca",
+  "fonte": "V10B (tabela de 30 abr 1802; ordens de 7 nov 1807, 9 jan 1810 e 1 jan 1812); dossie HIST-RUS-INF-COAT-1812-001 C10-C13. Tons ESTIMADOS (sem atlas do mod nesta maquina)",
+  "curto": "platina branca",
+  "cores": {
+   "casaca": [
+    0.08,
+    0.17,
+    0.11
+   ],
+   "gola": [
+    0.56,
+    0.09,
+    0.1
+   ],
+   "punho": [
+    0.56,
+    0.09,
+    0.1
+   ],
+   "viras": [
+    0.56,
+    0.09,
+    0.1
+   ],
+   "pala": [
+    0.08,
+    0.17,
+    0.11
+   ],
+   "debrum": [
+    0.08,
+    0.17,
+    0.11
+   ],
+   "botoes": [
+    0.8,
+    0.62,
+    0.28
+   ],
+   "calca": [
+    0.8,
+    0.79,
+    0.74
+   ],
+   "polaina": [
+    0.045,
+    0.045,
+    0.045
+   ],
+   "sapato": [
+    0.03,
+    0.028,
+    0.025
+   ],
+   "sola": [
+    0.2,
+    0.13,
+    0.08
+   ],
+   "platina": [
+    0.84,
+    0.84,
+    0.81
+   ],
+   "platina_borda": [
+    0.84,
+    0.84,
+    0.81
+   ]
+  }
+ },
+ "R03": {
+  "prefixo": "hcl_u_rus1812_linha_v03",
+  "nome": "Mosqueteiros, casaca de 1812 verde-escura, gola, punhos e viradas vermelhos, portinhola verde-escura, calca branca, polainas pretas ate o joelho; 3o regimento da divisao: platina amarela",
+  "fonte": "V10B (tabela de 30 abr 1802; ordens de 7 nov 1807, 9 jan 1810 e 1 jan 1812); dossie HIST-RUS-INF-COAT-1812-001 C10-C13. Tons ESTIMADOS (sem atlas do mod nesta maquina)",
+  "curto": "platina amarela",
+  "cores": {
+   "casaca": [
+    0.08,
+    0.17,
+    0.11
+   ],
+   "gola": [
+    0.56,
+    0.09,
+    0.1
+   ],
+   "punho": [
+    0.56,
+    0.09,
+    0.1
+   ],
+   "viras": [
+    0.56,
+    0.09,
+    0.1
+   ],
+   "pala": [
+    0.08,
+    0.17,
+    0.11
+   ],
+   "debrum": [
+    0.08,
+    0.17,
+    0.11
+   ],
+   "botoes": [
+    0.8,
+    0.62,
+    0.28
+   ],
+   "calca": [
+    0.8,
+    0.79,
+    0.74
+   ],
+   "polaina": [
+    0.045,
+    0.045,
+    0.045
+   ],
+   "sapato": [
+    0.03,
+    0.028,
+    0.025
+   ],
+   "sola": [
+    0.2,
+    0.13,
+    0.08
+   ],
+   "platina": [
+    0.82,
+    0.66,
+    0.16
+   ],
+   "platina_borda": [
+    0.82,
+    0.66,
+    0.16
+   ]
+  }
+ },
+ "R04": {
+  "prefixo": "hcl_u_rus1812_linha_v04",
+  "nome": "Mosqueteiros, casaca de 1812 verde-escura, gola, punhos e viradas vermelhos, portinhola verde-escura, calca branca, polainas pretas ate o joelho; 4o regimento da divisao: platina verde-escura debruada de vermelho",
+  "fonte": "V10B (tabela de 30 abr 1802; ordens de 7 nov 1807, 9 jan 1810 e 1 jan 1812); dossie HIST-RUS-INF-COAT-1812-001 C10-C13. Tons ESTIMADOS (sem atlas do mod nesta maquina)",
+  "curto": "platina verde-escura debruada de vermelho",
+  "cores": {
+   "casaca": [
+    0.08,
+    0.17,
+    0.11
+   ],
+   "gola": [
+    0.56,
+    0.09,
+    0.1
+   ],
+   "punho": [
+    0.56,
+    0.09,
+    0.1
+   ],
+   "viras": [
+    0.56,
+    0.09,
+    0.1
+   ],
+   "pala": [
+    0.08,
+    0.17,
+    0.11
+   ],
+   "debrum": [
+    0.08,
+    0.17,
+    0.11
+   ],
+   "botoes": [
+    0.8,
+    0.62,
+    0.28
+   ],
+   "calca": [
+    0.8,
+    0.79,
+    0.74
+   ],
+   "polaina": [
+    0.045,
+    0.045,
+    0.045
+   ],
+   "sapato": [
+    0.03,
+    0.028,
+    0.025
+   ],
+   "sola": [
+    0.2,
+    0.13,
+    0.08
+   ],
+   "platina": [
+    0.08,
+    0.17,
+    0.11
+   ],
+   "platina_borda": [
+    0.56,
+    0.09,
+    0.1
+   ]
+  }
+ }
+}

@@ -1,0 +1,294 @@
+{
+ "C01": {
+  "prefixo": "hcl_u_rus1812_capote_v01",
+  "nome": "Capote (shinel) cinza de la crua, gola vermelha, punhos redondos cinza, 7 botoes de latao, calca branca, polainas pretas ate o joelho; 1o regimento da divisao (ou regimento de granadeiros): platina vermelha",
+  "fonte": "V10B: tabela de 30 abr 1802 (capote), 7 nov 1807 (gola vermelha), 3 fev 1811 (granadeiros), 12 abr 1812 (platinas). Tons ESTIMADOS (sem atlas)",
+  "curto": "platina vermelha",
+  "cores": {
+   "casaca": [
+    0.42,
+    0.41,
+    0.38
+   ],
+   "gola": [
+    0.56,
+    0.09,
+    0.1
+   ],
+   "punho": [
+    0.42,
+    0.41,
+    0.38
+   ],
+   "viras": [
+    0.42,
+    0.41,
+    0.38
+   ],
+   "pala": [
+    0.42,
+    0.41,
+    0.38
+   ],
+   "debrum": [
+    0.42,
+    0.41,
+    0.38
+   ],
+   "botoes": [
+    0.8,
+    0.62,
+    0.28
+   ],
+   "calca": [
+    0.8,
+    0.79,
+    0.74
+   ],
+   "polaina": [
+    0.045,
+    0.045,
+    0.045
+   ],
+   "sapato": [
+    0.03,
+    0.028,
+    0.025
+   ],
+   "sola": [
+    0.2,
+    0.13,
+    0.08
+   ],
+   "platina": [
+    0.56,
+    0.09,
+    0.1
+   ],
+   "platina_borda": [
+    0.56,
+    0.09,
+    0.1
+   ]
+  }
+ },
+ "C02": {
+  "prefixo": "hcl_u_rus1812_capote_v02",
+  "nome": "Capote (shinel) cinza de la crua, gola vermelha, punhos redondos cinza, 7 botoes de latao, calca branca, polainas pretas ate o joelho; 2o regimento da divisao: platina branca",
+  "fonte": "V10B: tabela de 30 abr 1802 (capote), 7 nov 1807 (gola vermelha), 3 fev 1811 (granadeiros), 12 abr 1812 (platinas). Tons ESTIMADOS (sem atlas)",
+  "curto": "platina branca",
+  "cores": {
+   "casaca": [
+    0.42,
+    0.41,
+    0.38
+   ],
+   "gola": [
+    0.56,
+    0.09,
+    0.1
+   ],
+   "punho": [
+    0.42,
+    0.41,
+    0.38
+   ],
+   "viras": [
+    0.42,
+    0.41,
+    0.38
+   ],
+   "pala": [
+    0.42,
+    0.41,
+    0.38
+   ],
+   "debrum": [
+    0.42,
+    0.41,
+    0.38
+   ],
+   "botoes": [
+    0.8,
+    0.62,
+    0.28
+   ],
+   "calca": [
+    0.8,
+    0.79,
+    0.74
+   ],
+   "polaina": [
+    0.045,
+    0.045,
+    0.045
+   ],
+   "sapato": [
+    0.03,
+    0.028,
+    0.025
+   ],
+   "sola": [
+    0.2,
+    0.13,
+    0.08
+   ],
+   "platina": [
+    0.84,
+    0.84,
+    0.81
+   ],
+   "platina_borda": [
+    0.84,
+    0.84,
+    0.81
+   ]
+  }
+ },
+ "C03": {
+  "prefixo": "hcl_u_rus1812_capote_v03",
+  "nome": "Capote (shinel) cinza de la crua, gola vermelha, punhos redondos cinza, 7 botoes de latao, calca branca, polainas pretas ate o joelho; 3o regimento da divisao: platina amarela",
+  "fonte": "V10B: tabela de 30 abr 1802 (capote), 7 nov 1807 (gola vermelha), 3 fev 1811 (granadeiros), 12 abr 1812 (platinas). Tons ESTIMADOS (sem atlas)",
+  "curto": "platina amarela",
+  "cores": {
+   "casaca": [
+    0.42,
+    0.41,
+    0.38
+   ],
+   "gola": [
+    0.56,
+    0.09,
+    0.1
+   ],
+   "punho": [
+    0.42,
+    0.41,
+    0.38
+   ],
+   "viras": [
+    0.42,
+    0.41,
+    0.38
+   ],
+   "pala": [
+    0.42,
+    0.41,
+    0.38
+   ],
+   "debrum": [
+    0.42,
+    0.41,
+    0.38
+   ],
+   "botoes": [
+    0.8,
+    0.62,
+    0.28
+   ],
+   "calca": [
+    0.8,
+    0.79,
+    0.74
+   ],
+   "polaina": [
+    0.045,
+    0.045,
+    0.045
+   ],
+   "sapato": [
+    0.03,
+    0.028,
+    0.025
+   ],
+   "sola": [
+    0.2,
+    0.13,
+    0.08
+   ],
+   "platina": [
+    0.82,
+    0.66,
+    0.16
+   ],
+   "platina_borda": [
+    0.82,
+    0.66,
+    0.16
+   ]
+  }
+ },
+ "C04": {
+  "prefixo": "hcl_u_rus1812_capote_v04",
+  "nome": "Capote (shinel) cinza de la crua, gola vermelha, punhos redondos cinza, 7 botoes de latao, calca branca, polainas pretas ate o joelho; 4o regimento da divisao: platina verde-escura debruada de vermelho",
+  "fonte": "V10B: tabela de 30 abr 1802 (capote), 7 nov 1807 (gola vermelha), 3 fev 1811 (granadeiros), 12 abr 1812 (platinas). Tons ESTIMADOS (sem atlas)",
+  "curto": "platina verde-escura debruada de vermelho",
+  "cores": {
+   "casaca": [
+    0.42,
+    0.41,
+    0.38
+   ],
+   "gola": [
+    0.56,
+    0.09,
+    0.1
+   ],
+   "punho": [
+    0.42,
+    0.41,
+    0.38
+   ],
+   "viras": [
+    0.42,
+    0.41,
+    0.38
+   ],
+   "pala": [
+    0.42,
+    0.41,
+    0.38
+   ],
+   "debrum": [
+    0.42,
+    0.41,
+    0.38
+   ],
+   "botoes": [
+    0.8,
+    0.62,
+    0.28
+   ],
+   "calca": [
+    0.8,
+    0.79,
+    0.74
+   ],
+   "polaina": [
+    0.045,
+    0.045,
+    0.045
+   ],
+   "sapato": [
+    0.03,
+    0.028,
+    0.025
+   ],
+   "sola": [
+    0.2,
+    0.13,
+    0.08
+   ],
+   "platina": [
+    0.08,
+    0.17,
+    0.11
+   ],
+   "platina_borda": [
+    0.56,
+    0.09,
+    0.1
+   ]
+  }
+ }
+}

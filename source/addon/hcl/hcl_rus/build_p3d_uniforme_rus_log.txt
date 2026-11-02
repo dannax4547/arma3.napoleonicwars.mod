@@ -1,0 +1,8 @@
+PESOS: 62 grupos de hcl_pruss_pesos_v2.blend; 6470 vertices por indice (os fixos coincidem, desvio max 0.0000 mm); 16 botoes novos pelo pano sob eles; soma dos pesos 1.000..1.000; ossos por vertice ate 4
+SALVO C:\Users\SpartanGamerBR\Workspace Github\arma3.napoleonicwars.mod\source\models\pesos\hcl_rus_pesos.blend
+MODELO hcl_u_fr1812.p3d: maos ('a3\\characters_f\\heads\\data\\hl_white_bald_co.tga', 'a3\\characters_f\\heads\\data\\hl_white_bald_muscular.rvmat'); 11 proxies no Res 1; LODs mantidos 10000, 10010, 1e+13, 1e+15, 2e+15, 5e+15, 7e+15
+  Res 2: 5982 triangulos; maos 1256 faces; proxies 11; vertices sem peso 0; soma dos pesos 1.000..1.000
+  Res 3: 2990 triangulos; maos 358 faces; proxies 11; vertices sem peso 0; soma dos pesos 1.000..1.000
+  Res 4: 1524 triangulos; maos 80 faces; proxies 11; vertices sem peso 0; soma dos pesos 1.000..1.000
+CASACA hcl_u_rus1812_linha: Res 1-4 11960 / 5982 / 2990 / 1524 triangulos (100 % / 50 % / 25 % / 13 %); View Pilot 11960 (+10 proxies); proxies 11 no Res 1; 67 selecoes de ossos; maos 2560 faces no Res 1
+P3D hcl_u_rus1812_linha.p3d: 12 LODs 1:6503p/11971f, 2:3469p/5993f, 3:1744p/3001f, 4:963p/1535f, 1100:6500p/11970f, 10000:329p/607f, 10010:139p/264f, 1e+13:42p/54f, 1e+15:44p/4f, 2e+15:1p/0f, 5e+15:38p/0f, 7e+15:1000p/1770f
